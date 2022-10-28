@@ -36,7 +36,19 @@ actions:
   - action_set_uncomplete
   - action_add_category
   - action_remove_category
-  
+
+slots:
+  activity:
+    type: text
+    influence_conversation: false
+  category:
+    type: text
+    influence_conversation: false
+  username:
+    type: text
+    influence_conversation: false
+
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
