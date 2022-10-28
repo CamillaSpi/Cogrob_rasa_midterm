@@ -105,21 +105,21 @@ nlu:
     - add [stand_up](activity) in [weekly](category)
     - add [swimmming](activity) in [monthly](category)
     - add [play](activity) in [commitments](category)
-    - add [jogging](activity) in [quicly](category)
+    - add [jogging](activity) in [quickly](category)
     - add activity [run](activity) in [weekly](category)
     - add activity [bed](activity) in [daily](category)
     - add activity [stand_up](activity) in [commitments](category)
     - add activity [swimmming](activity) in [projects](category)
     - add activity [play](activity) in [monthly](category)
-    - add activity [jogging](activity) in [quicly](category)
+    - add activity [jogging](activity) in [quickly](category)
     - add [run](activity) in category [commitments](category)
     - add [bed](activity) in category [weekly](category)
     - add [stand_up](activity) in category [daily](category)
-    - add [swimmming](activity) in category [quicly](category)
+    - add [swimmming](activity) in category [quickly](category)
     - add [play](activity) in category [projects](category)
     - add [jogging](activity) in category [monthly](category)
     - add activity [run](activity) in category [monthly](category)
-    - add activity [bed](activity) in category [quicly](category)
+    - add activity [bed](activity) in category [quickly](category)
     - add activity [stand_up](activity) in category [projects](category)
     - add activity [swimmming](activity) in category [commitments](category)
     - add activity [play](activity) in category [daily](category)
@@ -131,15 +131,61 @@ nlu:
     - I want to add an action to [commitments](category) list
     - I want to add an action to [projects](category) list
     - I want to add an action to [monthly](category) list
-    - I want to add an action to [quicly](category) list
+    - I want to add an action to [quickly](category) list
     - hi, I want to add an action to [weekly](category) list
     - hi, I want to add an action to [daily](category) list
     - hi, I want to add an action to [commitments](category) list
     - hi, I want to add an action to [projects](category) list
     - hello, I want to add an action to [monthly](category) list
-    - hello, I want to add an action to [quicly](category) list
+    - hello, I want to add an action to [quickly](category) list
     - hello I want to add an action to my list
     - hi I want to add an action to my list
+    - add [run](activity) at [11:00](deadline)
+    - add [bed](activity) at [13:00](deadline)
+    - add [stand_up](activity) at [9:30](deadline)
+    - add [swimmming](activity) at [01:45](deadline)
+    - add [play](activity) at [00:00](deadline)
+    - add [jogging](activity) at [3:00](deadline)
+    - add [run](activity) in [daily](category) at [4:25](deadline)
+    - add [bed](activity) in [projects](category) at [2:55](deadline)
+    - add [stand_up](activity) in [weekly](category) at [16:00](deadline)
+    - add [swimmming](activity) in [monthly](category) at [20:00](deadline)
+    - add [play](activity) in [commitments](category) at [22:20](deadline)
+    - add [jogging](activity) in [quickly](category) at [14:50](deadline)
+    - add activity [run](activity) in [weekly](category) at [19:41](deadline)
+    - add activity [bed](activity) in [daily](category) at [12:35](deadline)
+    - add activity [stand_up](activity) in [commitments](category) at [17:30](deadline)
+    - add activity [swimmming](activity) in [projects](category) at [18:30](deadline)
+    - add activity [play](activity) in [monthly](category) at [9:40](deadline)
+    - add activity [jogging](activity) in [quickly](category) at [7:00](deadline)
+    - add [run](activity) in category [commitments](category) at [6:30](deadline)
+    - add [bed](activity) in category [weekly](category) at [8:00](deadline)
+    - add [stand_up](activity) in category [daily](category) at [10:25](deadline)
+    - add [swimmming](activity) in category [quickly](category) at [16:30](deadline)
+    - add [play](activity) in category [projects](category) at [19:00](deadline)
+    - add [jogging](activity) in category [monthly](category) at [20:30](deadline)
+    - add activity [run](activity) in category [monthly](category) at [21:10](deadline)
+    - add activity [bed](activity) in category [quickly](category) at [9:40](deadline)
+    - add activity [stand_up](activity) in category [projects](category) at [5:12](deadline)
+    - add activity [swimmming](activity) in category [commitments](category) at [13:39](deadline)
+    - add activity [play](activity) in category [daily](category) at [3:29](deadline)
+    - add activity [jogging](activity) in category [weekly](category) at [11:00](deadline)
+    - I want to add an action at [11:00](deadline)
+    - I want to add an action to a list at [13:39](deadline)
+    - I want to add an action to [weekly](category) list at [21:10](deadline)
+    - I want to add an action to [daily](category) list at [9:40](deadline)
+    - I want to add an action to [commitments](category) list at [19:00](deadline)
+    - I want to add an action to [projects](category) list at [16:30](deadline)
+    - I want to add an action to [monthly](category) list at [7:00](deadline)
+    - I want to add an action to [quickly](category) list at [6:30](deadline)
+    - hi, I want to add an action to [weekly](category) list at [18:30](deadline)
+    - hi, I want to add an action to [daily](category) list at [17:30](deadline)
+    - hi, I want to add an action to [commitments](category) list at [22:20](deadline)
+    - hi, I want to add an action to [projects](category) list at [16:00](deadline)
+    - hello, I want to add an action to [monthly](category) list at [14:50](deadline)
+    - hello, I want to add an action to [quickly](category) list at [3:29](deadline)
+    - hello I want to add an action to my list at [12:37](deadline)
+    - hi I want to add an action to my list at [18:14](deadline)
 
 - intent: remove_item
   examples: |
