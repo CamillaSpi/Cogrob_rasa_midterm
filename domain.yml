@@ -58,6 +58,40 @@ forms:
       category:
         - type: from_entity
           entity: category
+      deadline:
+        - type: from_entity
+          entity: deadline
+          
+  remove_item_form:
+    required_slots:
+      activity:
+        - type: from_entity
+          entity: activity
+      category:
+        - type: from_entity
+          entity: category
+
+  set_complete_form:
+    required_slots:
+      activity:
+        - type: from_entity
+          entity: activity
+      category:
+        - type: from_entity
+          entity: category
+      deadline:
+        - type: from_entity
+          entity: deadline
+          
+  set_uncomplete_form:
+    required_slots:
+      activity:
+        - type: from_entity
+          entity: activity
+      category:
+        - type: from_entity
+          entity: category
+
 
 responses:
   utter_greet:
