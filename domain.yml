@@ -18,7 +18,80 @@ intents:
 entities:
   - activity
   - category
+  - deadline
   - username
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_deadline
+  - utter_ask_category
+  - action_add_item
+  - action_remove_item
+  - action_set_complete
+  - action_set_uncomplete
+  - action_add_category
+  - action_remove_category
+
+slots:
+  activity:
+    type: text
+    influence_conversation: false
+  category:
+    type: text
+    influence_conversation: false
+  username:
+    type: text
+    influence_conversation: false
+
+forms:
+  add_item_form:
+    required_slots:
+      activity:
+        - type: from_entity
+          entity: activity
+      category:
+        - type: from_entity
+          entity: category
+      deadline:
+        - type: from_entity
+          entity: deadline
+          
+  remove_item_form:
+    required_slots:
+      activity:
+        - type: from_entity
+          entity: activity
+      category:
+        - type: from_entity
+          entity: category
+
+  set_complete_form:
+    required_slots:
+      activity:
+        - type: from_entity
+          entity: activity
+      category:
+        - type: from_entity
+          entity: category
+      deadline:
+        - type: from_entity
+          entity: deadline
+          
+  set_uncomplete_form:
+    required_slots:
+      activity:
+        - type: from_entity
+          entity: activity
+      category:
+        - type: from_entity
+          entity: category
+
 
 responses:
   utter_greet:
@@ -39,6 +112,12 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_ask_deadline:
+  - text: "Please insert the deadline"
+
+  utter_ask_category:
+  - text: "Please insert the category of the item"
 
 session_config:
   session_expiration_time: 60
