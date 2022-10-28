@@ -91,3 +91,28 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: add_item
+  examples: |
+    - i want to add an action to my list
+    - i want to add an action
+    - add [run](activitie)
+    - add [bed](activitie)
+    - add [stand_up](activitie)
+    - add [swimmming](activitie)
+    - add [play](activitie)
+    - add [jogging](activitie)
+    - i want to add an action to my list
+    - i want to add an action to my list
+    - i want to add an action to my list
+
+- intent: remove_item
+  examples: |
+- intent: set_complete
+  examples: |
+- intent: set_uncomplete
+  examples: |
+- intent: add_category
+  examples: |
+- intent: remove_category
+  examples: |
