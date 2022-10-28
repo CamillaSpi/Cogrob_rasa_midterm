@@ -15,6 +15,11 @@ intents:
   - add_category
   - remove_category
 
+entities:
+  - activity
+  - category
+  - username
+
 responses:
   utter_greet:
   - text: "Hey! How are you?"
