@@ -20,6 +20,23 @@ entities:
   - category
   - username
 
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_deadline
+  - utter_ask_category
+  - action_add_item
+  - action_remove_item
+  - action_set_complete
+  - action_set_uncomplete
+  - action_add_category
+  - action_remove_category
+  
 responses:
   utter_greet:
   - text: "Hey! How are you?"
