@@ -18,6 +18,7 @@ intents:
 entities:
   - activity
   - category
+  - deadline
   - username
 
 actions:
@@ -48,6 +49,15 @@ slots:
     type: text
     influence_conversation: false
 
+forms:
+  add_item_form:
+    required_slots:
+      activity:
+        - type: from_entity
+          entity: activity
+      category:
+        - type: from_entity
+          entity: category
 
 responses:
   utter_greet:
