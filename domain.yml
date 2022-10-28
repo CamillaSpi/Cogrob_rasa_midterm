@@ -8,6 +8,12 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - add_item
+  - remove_item
+  - set_complete
+  - set_uncomplete
+  - add_category
+  - remove_category
 
 responses:
   utter_greet:
