@@ -149,5 +149,12 @@ nlu:
   examples: |
 - intent: add_category
   examples: |
+    - add the category [sport](category)
+    - category: [school](category)
+    - I want to add [university](category) category
+    - add new [personal](category) category
+    - the category to add is [household](category)
+    - new category: [job](category)
+    - I want to use a new category [events](category)
 - intent: remove_category
   examples: |
