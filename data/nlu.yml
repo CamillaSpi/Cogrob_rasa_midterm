@@ -267,5 +267,32 @@ nlu:
   examples: |
 - intent: add_category
   examples: |
+    - add the category [sport](category)
+    - category: [school](category)
+    - I want to add [university](category) category
+    - add new [personal](category) category
+    - the category to add is [household](category)
+    - new category: [job](category)
+    - I want to use a new category [events](category)
 - intent: remove_category
   examples: |
+    - I want to remove a category
+    - I want to remove the category [weekly](category) 
+    - I want to remove the category [daily](category) 
+    - I want to remove the category [commitments](category) 
+    - I want to remove the category [projects](category) 
+    - I want to remove the category [monthly](category) 
+    - I want to remove the category [quicly](category) 
+    - hi, I want to remove the category [weekly](category) 
+    - hi, I want to remove the category [daily](category) 
+    - hi, I want to remove the category [commitments](category) 
+    - hi, I want to remove the category [projects](category) 
+    - hello, I want to remove the category [monthly](category) 
+    - hello, I want to remove the category [quicly](category) 
+    - I want to remove the category [gym](category) 
+    - I want to remove the category [sports](category) 
+    - I want to remove the category [study](category) 
+    - I want to remove the category [school](category) 
+    - I want to remove the category [university](category) 
+    - I want to remove the category [personal](category) 
+    - hi, I want to remove the category [work](category) 
