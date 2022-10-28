@@ -57,6 +57,12 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_ask_deadline:
+  - text: "Please insert the deadline"
+
+  utter_ask_category:
+  - text: "Please insert the category of the item"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
