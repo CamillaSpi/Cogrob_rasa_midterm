@@ -31,6 +31,8 @@ actions:
   - utter_iamabot
   - utter_ask_deadline
   - utter_ask_category
+  - utter_ask_activity
+  - utter_complete_insert_action
   - action_add_item
   - action_remove_item
   - action_set_complete
@@ -119,8 +121,14 @@ responses:
   utter_ask_deadline:
   - text: "Please insert the deadline"
 
+  utter_ask_activity:
+  - text: "Please insert the activity"
+
   utter_ask_category:
   - text: "Please insert the category of the item"
+
+  utter_complete_insert_action:
+  - text: "Staj fort o frat"
 
 session_config:
   session_expiration_time: 60
