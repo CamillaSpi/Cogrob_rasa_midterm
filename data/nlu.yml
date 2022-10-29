@@ -117,6 +117,7 @@ nlu:
     - [fuel](activity)
     - [refuel](activity)
     - [search](activity)
+    - [sport](activity)
     - [daily](category)
     - [weekly](category)
     - [projects](category)
@@ -148,6 +149,8 @@ nlu:
     - [school](category)
     - [sport](category)
     - [work](category)
+    - [vacation](category)
+    - [holiday](category)
     - [3:29](deadline)
     - [22:20](deadline)
     - [9:40](deadline)
@@ -488,6 +491,23 @@ nlu:
     - hello I want to set incomplete an action in my list 
     - hi I want to set incomplete an action in my list 
     - Hi I want to set incomplete all action in [monthly](category) list
+    - undo complete [run](activity)
+    - undo complete [bed](activity)
+    - undo complete [stand_up](activity)
+    - undo complete [swimmming](activity)
+    - undo complete [play](activity)
+    - undo complete [jogging](activity)
+    - undo complete [run](activity) in [daily](category)
+    - undo complete [bed](activity) in [projects](category)
+    - undo complete [stand_up](activity) in [weekly](category)
+    - undo complete [swimmming](activity) in [monthly](category)
+    - undo complete [play](activity) in [commitments](category)
+    - undo complete [jogging](activity) in [quickly](category)
+    - undo complete activity [run](activity) in [weekly](category)
+    - undo complete activity [bed](activity) in [daily](category)
+    - undo complete activity [stand_up](activity) in [commitments](category)
+    - undo complete activity [swimmming](activity) in [projects](category)
+    - undo complete activity [play](activity) in [monthly](category)
     
 - intent: add_category
   examples: |
