@@ -404,8 +404,63 @@ nlu:
     - hello I want to set complete an action in my list 
     - hi I want to set complete an action in my list 
     - Hi I want to set complete all action in [monthly](category) list
+    - I have complete activity [swimming](activity) in category [gym](category)
+    - I have complete activity [run](activity) in category [commitments](category)
+    - I have complete activity [play](activity) in category [projects](category)
+    - I have complete activity [stand_up](activity) in category [daily](category)
+    - I have complete activity [jogging](activity) in category [gym](category)
 - intent: set_uncomplete
   examples: |
+    - set action incomplete 
+    - Hi, set action incomplete
+    - set incomplete [run](activity)
+    - set incomplete [bed](activity)
+    - set incomplete [stand_up](activity)
+    - set incomplete [swimmming](activity)
+    - set incomplete [play](activity)
+    - set incomplete [jogging](activity)
+    - set incomplete [run](activity) in [daily](category)
+    - set incomplete [bed](activity) in [projects](category)
+    - set incomplete [stand_up](activity) in [weekly](category)
+    - set incomplete [swimmming](activity) in [monthly](category)
+    - set incomplete [play](activity) in [commitments](category)
+    - set incomplete [jogging](activity) in [quickly](category)
+    - set incomplete activity [run](activity) in [weekly](category)
+    - set incomplete activity [bed](activity) in [daily](category)
+    - set incomplete activity [stand_up](activity) in [commitments](category)
+    - set incomplete activity [swimmming](activity) in [projects](category)
+    - set incomplete activity [play](activity) in [monthly](category)
+    - set incomplete activity [jogging](activity) in [quickly](category)
+    - set incomplete [run](activity) in category [commitments](category)
+    - set incomplete [bed](activity) in category [weekly](category)
+    - set incomplete [stand_up](activity) in category [daily](category)
+    - set incomplete [swimmming](activity) in category [quickly](category)
+    - set incomplete [play](activity) in category [projects](category)
+    - set incomplete [jogging](activity) in category [monthly](category)
+    - set incomplete activity [run](activity) in category [monthly](category)
+    - set incomplete activity [bed](activity) in category [quickly](category)
+    - set incomplete activity [stand_up](activity) in category [projects](category)
+    - set incomplete activity [swimmming](activity) in category [commitments](category)
+    - set incomplete activity [play](activity) in category [daily](category)
+    - set incomplete activity [jogging](activity) in category [weekly](category)
+    - I want to set incomplete an action 
+    - I want to set incomplete an action in a list 
+    - I want to set incomplete an action in [weekly](category) list 
+    - I want to set incomplete an action in [daily](category) list
+    - I want to set incomplete an action in [commitments](category) list 
+    - I want to set incomplete an action in [projects](category) list 
+    - I want to set incomplete an action in [monthly](category) list
+    - I want to set incomplete an action in [quickly](category) list
+    - hi, I want to set incomplete an action in [weekly](category) list 
+    - hi, I want to set incomplete an action in [daily](category) list 
+    - hi, I want to set incomplete an action in [commitments](category) list 
+    - hi, I want to set incomplete an action in [projects](category) list 
+    - hello, I want to set incomplete an action in [monthly](category) list 
+    - hello, I want to set incomplete an action in [quickly](category) list
+    - hello I want to set incomplete an action in my list 
+    - hi I want to set incomplete an action in my list 
+    - Hi I want to set incomplete all action in [monthly](category) list
+    
 - intent: add_category
   examples: |
     - add the category [sport](category)
