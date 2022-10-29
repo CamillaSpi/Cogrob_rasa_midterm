@@ -464,25 +464,48 @@ nlu:
 - intent: add_category
   examples: |
     - add the category [sport](category)
+    - add the category [medications](category)
+    - add the category [engineering](category)
     - category: [school](category)
     - I want to add [university](category) category
-    - add new [personal](category) category
+    - I want to add [profession](category) category
+    - I want to add [vacation](category) category
+    - add new [personal](category)category
+    - add new [bank](category)category
+    - add new [diet](category)category
     - the category to add is [household](category)
+    - the category to add is [university](category)
+    - the category to add is [volunteering](category)
     - new category: [job](category)
     - I want to use a new category [events](category)
+    - I want to use a new category [medical](category)
+    - I want to use a new category [sports](category)
     - new category: [volunteering](category)
-    - I want to add a category
-    - I want to add a new category [vacation](category)
-    - hi, I want to add a new category [research] (category)
-    - hi, I want to add a category [weekly] (category)
-    - hi, I want to insert the category [daily] (category)
-    - new category to add: [projects](category)
-    - hi, please add the following [medical](category)
     - category: [bills](category)
+    - I want to add a category
+    - I want to insert a category
+    - I want to use  a new category
+    - new category: [school](category)
+    - I want to add a new category [vacation](category)
+    - I want to add a new category [leisure](category)
+    - hi, I want to add a new category [research] (category)
+    - hi, I want to add a new category [events] (category)
+    - hi, I want to add a category [weekly](category)
+    - hi, I want to insert the category [daily](category)
+    - hi, I want to insert the category [projects](category)
+    - new category to add: [projects](category)
+    - new category to add: [bills](category)
+    - hi, please add the following [medical](category)
+    - hi, please add the following [finance](category)
+    - hi, please add the following [shopping](category)
+    - category: [school](category)
+    - category: [payments](category)
+    - hello, I want to add the category [household](category)
     - I want to add a category [bank](category)
     - hi, please add the following [diet](category)
     - I want to add  the category [commitments](category) 
     - hello, I want to add the category [work](category)
+    - hello, I want to add the category [research](category)
     - I want to add the category [sports](category) 
 
 - intent: remove_category
