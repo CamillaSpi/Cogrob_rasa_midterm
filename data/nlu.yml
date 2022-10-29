@@ -355,6 +355,54 @@ nlu:
     - hi I want to remove an action to my list at [18:14](deadline)
 - intent: set_complete
   examples: |
+    - set action complete 
+    - Hi, set action complete
+    - set complete [run](activity)
+    - set complete [bed](activity)
+    - set complete [stand_up](activity)
+    - set complete [swimmming](activity)
+    - set complete [play](activity)
+    - set complete [jogging](activity)
+    - set complete [run](activity) in [daily](category)
+    - set complete [bed](activity) in [projects](category)
+    - set complete [stand_up](activity) in [weekly](category)
+    - set complete [swimmming](activity) in [monthly](category)
+    - set complete [play](activity) in [commitments](category)
+    - set complete [jogging](activity) in [quickly](category)
+    - set complete activity [run](activity) in [weekly](category)
+    - set complete activity [bed](activity) in [daily](category)
+    - set complete activity [stand_up](activity) in [commitments](category)
+    - set complete activity [swimmming](activity) in [projects](category)
+    - set complete activity [play](activity) in [monthly](category)
+    - set complete activity [jogging](activity) in [quickly](category)
+    - set complete [run](activity) in category [commitments](category)
+    - set complete [bed](activity) in category [weekly](category)
+    - set complete [stand_up](activity) in category [daily](category)
+    - set complete [swimmming](activity) in category [quickly](category)
+    - set complete [play](activity) in category [projects](category)
+    - set complete [jogging](activity) in category [monthly](category)
+    - set complete activity [run](activity) in category [monthly](category)
+    - set complete activity [bed](activity) in category [quickly](category)
+    - set complete activity [stand_up](activity) in category [projects](category)
+    - set complete activity [swimmming](activity) in category [commitments](category)
+    - set complete activity [play](activity) in category [daily](category)
+    - set complete activity [jogging](activity) in category [weekly](category)
+    - I want to set complete an action 
+    - I want to set complete an action in a list 
+    - I want to set complete an action in [weekly](category) list 
+    - I want to set complete an action in [daily](category) list
+    - I want to set complete an action in [commitments](category) list 
+    - I want to set complete an action in [projects](category) list 
+    - I want to set complete an action in [monthly](category) list
+    - I want to set complete an action in [quickly](category) list
+    - hi, I want to set complete an action in [weekly](category) list 
+    - hi, I want to set complete an action in [daily](category) list 
+    - hi, I want to set complete an action in [commitments](category) list 
+    - hi, I want to set complete an action in [projects](category) list 
+    - hello, I want to set complete an action in [monthly](category) list 
+    - hello, I want to set complete an action in [quickly](category) list
+    - hello I want to set complete an action in my list 
+    - hi I want to set complete an action in my list 
 - intent: set_uncomplete
   examples: |
 - intent: add_category
