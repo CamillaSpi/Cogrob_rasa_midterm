@@ -138,6 +138,8 @@ nlu:
     - [medical](category)
     - [research](category)
     - [volunteering](category)
+    - [finance](category)
+    - [payments](category)
     - [events](category)
     - [job](category)
     - [household](category)
@@ -212,6 +214,18 @@ nlu:
     - add activity [jogging](activity) in category [weekly](category)
     - I want to add an action
     - I want to add an action to a list
+    - I want to add an action [run](activity) to [weekly](category) list
+    - I want to add an action [swimmming](activity) to [daily](category) list
+    - I want to add an action [play](activity) to [commitments](category) list
+    - I want to add an action [stand_up](activity) to [projects](category) list
+    - I want to add an action [jogging](activity) to [monthly](category) list
+    - I want to add an action [shopping](activity) to [quickly](category) list
+    - I want to add an action [run](activity) to [weekly](category)
+    - I want to add an action [leisure](activity) to [daily](category)
+    - I want to add an action [payments](activity) to [commitments](category)
+    - I want to add an action [stand_up](activity) to [projects](category)
+    - I want to add an action [jogging](activity) to [monthly](category)
+    - I want to add an action [shopping](activity) to [quickly](category)
     - I want to add an action to [weekly](category) list
     - I want to add an action to [daily](category) list
     - I want to add an action to [commitments](category) list
