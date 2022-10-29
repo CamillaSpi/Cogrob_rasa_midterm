@@ -403,6 +403,7 @@ nlu:
     - hello, I want to set complete an action in [quickly](category) list
     - hello I want to set complete an action in my list 
     - hi I want to set complete an action in my list 
+    - Hi I want to set complete all action in [monthly](category) list
 - intent: set_uncomplete
   examples: |
 - intent: add_category
