@@ -363,7 +363,7 @@ nlu:
     - remove activity [bed](activity) in category [quickly](category) at [9:40](deadline)
     - remove activity [stand_up](activity) in category [projects](category) at [5:12](deadline)
     - remove activity [swimmming](activity) in category [commitments](category) at [13:39](deadline)
-    - remove activity [play](activity) in category [daily](category) at [3:29](deadline)[13:39]
+    - remove activity [play](activity) in category [daily](category) at [13:29](deadline)
     - remove activity [jogging](activity) in category [weekly](category) at [11:00](deadline)
     - I want to remove an action at [11:00](deadline)
     - I want to remove an action to a list at [13:39](deadline)
