@@ -498,9 +498,9 @@ nlu:
     - I want to add [university](category) category
     - I want to add [profession](category) category
     - I want to add [vacation](category) category
-    - add new [personal](category)category
-    - add new [bank](category)category
-    - add new [diet](category)category
+    - add new [personal](category) category
+    - add new [bank](category) category
+    - add new [diet](category) category
     - the category to add is [household](category)
     - the category to add is [university](category)
     - the category to add is [volunteering](category)
