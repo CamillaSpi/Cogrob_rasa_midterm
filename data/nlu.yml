@@ -92,6 +92,78 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: inform
+  examples: |
+    - [run](activity)
+    - [bed](activity)
+    - [stand_up](activity)
+    - [swimmming](activity)
+    - [play](activity)
+    - [jogging](activity)
+    - [study](activity)
+    - [sleep](activity)
+    - [walk](activity)
+    - [exit](activity)
+    - [cooking](activity)
+    - [note](activity)
+    - [reed](activity)
+    - [shopping](activity)
+    - [ring](activity)
+    - [playing](activity)
+    - [match](activity)
+    - [cards](activity)
+    - [paint](activity)
+    - [draw](activity)
+    - [travel](activity)
+    - [fuel](activity)
+    - [refuel](activity)
+    - [search](activity)
+    - [daily](category)
+    - [weekly](category)
+    - [projects](category)
+    - [monthly](category)
+    - [commitments](category)
+    - [quickly](category)
+    - [calendary](category)
+    - [wishes](category)
+    - [desires](category)
+    - [carriage](category)
+    - [trolley](category)
+    - [deadlines](category)
+    - [exams](category)
+    - [subjects](category)
+    - [3:29](deadline)
+    - [22:20](deadline)
+    - [9:40](deadline)
+    - [21:10](deadline)
+    - [13:39](deadline)
+    - [11:00](deadline)
+    - [3:29](deadline)
+    - [13:39](deadline)
+    - [5:12](deadline)
+    - [9:40](deadline)
+    - [21:10](deadline)
+    - [20:30](deadline)
+    - [19:00](deadline)
+    - [16:30](deadline)
+    - [10:25](deadline)
+    - [8:00](deadline)
+    - [6:30](deadline)
+    - [7:00](deadline)
+    - [9:40](deadline)
+    - [18:30](deadline)
+    - [17:30](deadline)
+    - [12:35](deadline)
+    - [19:41](deadline)
+    - [14:50](deadline)
+    - [22:20](deadline)
+    - [14:50](deadline)
+    - [22:20](deadline)
+    - [20:00](deadline)
+    - [16:00](deadline)
+    - [2:55](deadline)
+    - [4:25](deadline)
+
 - intent: add_item
   examples: |
     - add [run](activity)
@@ -189,10 +261,206 @@ nlu:
 
 - intent: remove_item
   examples: |
+    - remove [run](activity)
+    - remove [bed](activity)
+    - remove [stand_up](activity)
+    - remove [swimmming](activity)
+    - remove [play](activity)
+    - remove [jogging](activity)
+    - remove [run](activity) in [daily](category)
+    - remove [bed](activity) in [projects](category)
+    - remove [stand_up](activity) in [weekly](category)
+    - remove [swimmming](activity) in [monthly](category)
+    - remove [play](activity) in [commitments](category)
+    - remove [jogging](activity) in [quickly](category)
+    - remove activity [run](activity) in [weekly](category)
+    - remove activity [bed](activity) in [daily](category)
+    - remove activity [stand_up](activity) in [commitments](category)
+    - remove activity [swimmming](activity) in [projects](category)
+    - remove activity [play](activity) in [monthly](category)
+    - remove activity [jogging](activity) in [quickly](category)
+    - remove [run](activity) in category [commitments](category)
+    - remove [bed](activity) in category [weekly](category)
+    - remove [stand_up](activity) in category [daily](category)
+    - remove [swimmming](activity) in category [quickly](category)
+    - remove [play](activity) in category [projects](category)
+    - remove [jogging](activity) in category [monthly](category)
+    - remove activity [run](activity) in category [monthly](category)
+    - remove activity [bed](activity) in category [quickly](category)
+    - remove activity [stand_up](activity) in category [projects](category)
+    - remove activity [swimmming](activity) in category [commitments](category)
+    - remove activity [play](activity) in category [daily](category)
+    - remove activity [jogging](activity) in category [weekly](category)
+    - I want to remove an action
+    - I want to remove an action to a list
+    - I want to remove an action to [weekly](category) list
+    - I want to remove an action to [daily](category) list
+    - I want to remove an action to [commitments](category) list
+    - I want to remove an action to [projects](category) list
+    - I want to remove an action to [monthly](category) list
+    - I want to remove an action to [quickly](category) list
+    - hi, I want to remove an action to [weekly](category) list
+    - hi, I want to remove an action to [daily](category) list
+    - hi, I want to remove an action to [commitments](category) list
+    - hi, I want to remove an action to [projects](category) list
+    - hello, I want to remove an action to [monthly](category) list
+    - hello, I want to remove an action to [quickly](category) list
+    - hello I want to remove an action to my list
+    - hi I want to remove an action to my list
+    - remove [run](activity) at [11:00](deadline)
+    - remove [bed](activity) at [13:00](deadline)
+    - remove [stand_up](activity) at [9:30](deadline)
+    - remove [swimmming](activity) at [01:45](deadline)
+    - remove [play](activity) at [00:00](deadline)
+    - remove [jogging](activity) at [3:00](deadline)
+    - remove [run](activity) in [daily](category) at [4:25](deadline)
+    - remove [bed](activity) in [projects](category) at [2:55](deadline)
+    - remove [stand_up](activity) in [weekly](category) at [16:00](deadline)
+    - remove [swimmming](activity) in [monthly](category) at [20:00](deadline)
+    - remove [play](activity) in [commitments](category) at [22:20](deadline)
+    - remove [jogging](activity) in [quickly](category) at [14:50](deadline)
+    - remove activity [run](activity) in [weekly](category) at [19:41](deadline)
+    - remove activity [bed](activity) in [daily](category) at [12:35](deadline)
+    - remove activity [stand_up](activity) in [commitments](category) at [17:30](deadline)
+    - remove activity [swimmming](activity) in [projects](category) at [18:30](deadline)
+    - remove activity [play](activity) in [monthly](category) at [9:40](deadline)
+    - remove activity [jogging](activity) in [quickly](category) at [7:00](deadline)
+    - remove [run](activity) in category [commitments](category) at [6:30](deadline)
+    - remove [bed](activity) in category [weekly](category) at [8:00](deadline)
+    - remove [stand_up](activity) in category [daily](category) at [10:25](deadline)
+    - remove [swimmming](activity) in category [quickly](category) at [16:30](deadline)
+    - remove [play](activity) in category [projects](category) at [19:00](deadline)
+    - remove [jogging](activity) in category [monthly](category) at [20:30](deadline)
+    - remove activity [run](activity) in category [monthly](category) at [21:10](deadline)
+    - remove activity [bed](activity) in category [quickly](category) at [9:40](deadline)
+    - remove activity [stand_up](activity) in category [projects](category) at [5:12](deadline)
+    - remove activity [swimmming](activity) in category [commitments](category) at [13:39](deadline)
+    - remove activity [play](activity) in category [daily](category) at [3:29](deadline)[13:39](deadline)[5:12](deadline)[9:40](deadline)[21:10](deadline)[20:30](deadline)[19:00](deadline)[16:30](deadline)[10:25](deadline)[8:00](deadline)[6:30](deadline)[7:00](deadline)[9:40](deadline)[18:30](deadline)[17:30](deadline)[12:35](deadline)[19:41](deadline)[14:50](deadline)[22:20](deadline)[14:50](deadline)[22:20](deadline)[20:00](deadline)[16:00](deadline)[2:55](deadline)[4:25](deadline)
+    - remove activity [jogging](activity) in category [weekly](category) at [11:00](deadline)
+    - I want to remove an action at [11:00](deadline)
+    - I want to remove an action to a list at [13:39](deadline)
+    - I want to remove an action to [weekly](category) list at [21:10](deadline)
+    - I want to remove an action to [daily](category) list at [9:40](deadline)
+    - I want to remove an action to [commitments](category) list at [19:00](deadline)
+    - I want to remove an action to [projects](category) list at [16:30](deadline)
+    - I want to remove an action to [monthly](category) list at [7:00](deadline)
+    - I want to remove an action to [quickly](category) list at [6:30](deadline)
+    - hi, I want to remove an action to [weekly](category) list at [18:30](deadline)
+    - hi, I want to remove an action to [daily](category) list at [17:30](deadline)
+    - hi, I want to remove an action to [commitments](category) list at [22:20](deadline)
+    - hi, I want to remove an action to [projects](category) list at [16:00](deadline)
+    - hello, I want to remove an action to [monthly](category) list at [14:50](deadline)
+    - hello, I want to remove an action to [quickly](category) list at [3:29](deadline)
+    - hello I want to remove an action to my list at [12:37](deadline)
+    - hi I want to remove an action to my list at [18:14](deadline)
 - intent: set_complete
   examples: |
+    - set action complete 
+    - Hi, set action complete
+    - set complete [run](activity)
+    - set complete [bed](activity)
+    - set complete [stand_up](activity)
+    - set complete [swimmming](activity)
+    - set complete [play](activity)
+    - set complete [jogging](activity)
+    - set complete [run](activity) in [daily](category)
+    - set complete [bed](activity) in [projects](category)
+    - set complete [stand_up](activity) in [weekly](category)
+    - set complete [swimmming](activity) in [monthly](category)
+    - set complete [play](activity) in [commitments](category)
+    - set complete [jogging](activity) in [quickly](category)
+    - set complete activity [run](activity) in [weekly](category)
+    - set complete activity [bed](activity) in [daily](category)
+    - set complete activity [stand_up](activity) in [commitments](category)
+    - set complete activity [swimmming](activity) in [projects](category)
+    - set complete activity [play](activity) in [monthly](category)
+    - set complete activity [jogging](activity) in [quickly](category)
+    - set complete [run](activity) in category [commitments](category)
+    - set complete [bed](activity) in category [weekly](category)
+    - set complete [stand_up](activity) in category [daily](category)
+    - set complete [swimmming](activity) in category [quickly](category)
+    - set complete [play](activity) in category [projects](category)
+    - set complete [jogging](activity) in category [monthly](category)
+    - set complete activity [run](activity) in category [monthly](category)
+    - set complete activity [bed](activity) in category [quickly](category)
+    - set complete activity [stand_up](activity) in category [projects](category)
+    - set complete activity [swimmming](activity) in category [commitments](category)
+    - set complete activity [play](activity) in category [daily](category)
+    - set complete activity [jogging](activity) in category [weekly](category)
+    - I want to set complete an action 
+    - I want to set complete an action in a list 
+    - I want to set complete an action in [weekly](category) list 
+    - I want to set complete an action in [daily](category) list
+    - I want to set complete an action in [commitments](category) list 
+    - I want to set complete an action in [projects](category) list 
+    - I want to set complete an action in [monthly](category) list
+    - I want to set complete an action in [quickly](category) list
+    - hi, I want to set complete an action in [weekly](category) list 
+    - hi, I want to set complete an action in [daily](category) list 
+    - hi, I want to set complete an action in [commitments](category) list 
+    - hi, I want to set complete an action in [projects](category) list 
+    - hello, I want to set complete an action in [monthly](category) list 
+    - hello, I want to set complete an action in [quickly](category) list
+    - hello I want to set complete an action in my list 
+    - hi I want to set complete an action in my list 
+    - Hi I want to set complete all action in [monthly](category) list
+    - I have complete activity [swimming](activity) in category [gym](category)
+    - I have complete activity [run](activity) in category [commitments](category)
+    - I have complete activity [play](activity) in category [projects](category)
+    - I have complete activity [stand_up](activity) in category [daily](category)
+    - I have complete activity [jogging](activity) in category [gym](category)
 - intent: set_uncomplete
   examples: |
+    - set action incomplete 
+    - Hi, set action incomplete
+    - set incomplete [run](activity)
+    - set incomplete [bed](activity)
+    - set incomplete [stand_up](activity)
+    - set incomplete [swimmming](activity)
+    - set incomplete [play](activity)
+    - set incomplete [jogging](activity)
+    - set incomplete [run](activity) in [daily](category)
+    - set incomplete [bed](activity) in [projects](category)
+    - set incomplete [stand_up](activity) in [weekly](category)
+    - set incomplete [swimmming](activity) in [monthly](category)
+    - set incomplete [play](activity) in [commitments](category)
+    - set incomplete [jogging](activity) in [quickly](category)
+    - set incomplete activity [run](activity) in [weekly](category)
+    - set incomplete activity [bed](activity) in [daily](category)
+    - set incomplete activity [stand_up](activity) in [commitments](category)
+    - set incomplete activity [swimmming](activity) in [projects](category)
+    - set incomplete activity [play](activity) in [monthly](category)
+    - set incomplete activity [jogging](activity) in [quickly](category)
+    - set incomplete [run](activity) in category [commitments](category)
+    - set incomplete [bed](activity) in category [weekly](category)
+    - set incomplete [stand_up](activity) in category [daily](category)
+    - set incomplete [swimmming](activity) in category [quickly](category)
+    - set incomplete [play](activity) in category [projects](category)
+    - set incomplete [jogging](activity) in category [monthly](category)
+    - set incomplete activity [run](activity) in category [monthly](category)
+    - set incomplete activity [bed](activity) in category [quickly](category)
+    - set incomplete activity [stand_up](activity) in category [projects](category)
+    - set incomplete activity [swimmming](activity) in category [commitments](category)
+    - set incomplete activity [play](activity) in category [daily](category)
+    - set incomplete activity [jogging](activity) in category [weekly](category)
+    - I want to set incomplete an action 
+    - I want to set incomplete an action in a list 
+    - I want to set incomplete an action in [weekly](category) list 
+    - I want to set incomplete an action in [daily](category) list
+    - I want to set incomplete an action in [commitments](category) list 
+    - I want to set incomplete an action in [projects](category) list 
+    - I want to set incomplete an action in [monthly](category) list
+    - I want to set incomplete an action in [quickly](category) list
+    - hi, I want to set incomplete an action in [weekly](category) list 
+    - hi, I want to set incomplete an action in [daily](category) list 
+    - hi, I want to set incomplete an action in [commitments](category) list 
+    - hi, I want to set incomplete an action in [projects](category) list 
+    - hello, I want to set incomplete an action in [monthly](category) list 
+    - hello, I want to set incomplete an action in [quickly](category) list
+    - hello I want to set incomplete an action in my list 
+    - hi I want to set incomplete an action in my list 
+    - Hi I want to set incomplete all action in [monthly](category) list
+    
 - intent: add_category
   examples: |
     - add the category [sport](category)

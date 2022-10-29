@@ -27,7 +27,6 @@ actions:
   - utter_did_that_help
   - utter_happy
   - utter_goodbye
-  - utter_goodbye
   - utter_iamabot
   - utter_ask_deadline
   - utter_ask_category
