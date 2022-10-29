@@ -133,6 +133,8 @@ nlu:
     - [subjects](category)
     - [diet](category)
     - [bank](category)
+    - [leisure](category)
+    - [medications](category)
     - [medical](category)
     - [research](category)
     - [volunteering](category)
