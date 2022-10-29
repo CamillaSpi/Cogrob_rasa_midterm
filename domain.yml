@@ -14,6 +14,7 @@ intents:
   - set_uncomplete
   - add_category
   - remove_category
+  - inform
 
 entities:
   - activity
@@ -45,6 +46,9 @@ slots:
     type: text
     influence_conversation: false
   username:
+    type: text
+    influence_conversation: false
+  deadline:
     type: text
     influence_conversation: false
 

@@ -19,7 +19,6 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - good afternoon
     - cu
     - good by
     - cee you later
@@ -132,6 +131,19 @@ nlu:
     - [deadlines](category)
     - [exams](category)
     - [subjects](category)
+    - [diet](category)
+    - [bank](category)
+    - [medical](category)
+    - [research](category)
+    - [volunteering](category)
+    - [events](category)
+    - [job](category)
+    - [household](category)
+    - [personal](category)
+    - [university](category)
+    - [school](category)
+    - [sport](category)
+    - [work](category)
     - [3:29](deadline)
     - [22:20](deadline)
     - [9:40](deadline)
@@ -335,7 +347,7 @@ nlu:
     - remove activity [bed](activity) in category [quickly](category) at [9:40](deadline)
     - remove activity [stand_up](activity) in category [projects](category) at [5:12](deadline)
     - remove activity [swimmming](activity) in category [commitments](category) at [13:39](deadline)
-    - remove activity [play](activity) in category [daily](category) at [3:29](deadline)[13:39](deadline)[5:12](deadline)[9:40](deadline)[21:10](deadline)[20:30](deadline)[19:00](deadline)[16:30](deadline)[10:25](deadline)[8:00](deadline)[6:30](deadline)[7:00](deadline)[9:40](deadline)[18:30](deadline)[17:30](deadline)[12:35](deadline)[19:41](deadline)[14:50](deadline)[22:20](deadline)[14:50](deadline)[22:20](deadline)[20:00](deadline)[16:00](deadline)[2:55](deadline)[4:25](deadline)
+    - remove activity [play](activity) in category [daily](category) at [13:29](deadline)
     - remove activity [jogging](activity) in category [weekly](category) at [11:00](deadline)
     - I want to remove an action at [11:00](deadline)
     - I want to remove an action to a list at [13:39](deadline)
