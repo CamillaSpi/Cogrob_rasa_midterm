@@ -29,7 +29,7 @@ class Database:
             deadline TIME(0) NOT NULL,
             completed BOOLEAN NOT NULL,
             FOREIGN KEY (username) REFERENCES users(username),
-            FOREIGN KEY (category) REFERENCES categories()
+            FOREIGN KEY (category) REFERENCES categories(category)
         );
     ''')
     conn.commit()
@@ -37,9 +37,10 @@ class Database:
   
   @staticmethod
   def insertItem(username, activity ,category,deadline):
+    print('sto inserendo ' , username, activity ,category,deadline)
     conn.execute('''
       INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,?);
-    ''', (username, activity ,category,deadline,"False"))
+    ''', (username, activity ,category,deadline,False))
 
     conn.commit()
 
