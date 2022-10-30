@@ -15,8 +15,7 @@ intents:
   - add_category
   - remove_category
   - inform
-  #aggiunte da blonde
-  - want_activities
+  - view_activities
 
 entities:
   - activity
@@ -41,7 +40,7 @@ actions:
   - action_set_uncomplete
   - action_add_category
   - action_remove_category
-  - action_want_activities
+  - action_view_activities
 
 slots:
   activity:
@@ -107,7 +106,6 @@ forms:
         - type: from_entity
           entity: deadline
 
-#aggiunte da matty blonde
   add_category_form:
     required_slots:
       username:
@@ -123,13 +121,13 @@ forms:
         - type: from_entity
           entity: category
 
-  want_category_form:
+  view_category_form:
       required_slots:
         username:
           - type: from_entity
             entity: username
 
-  want_activities_form:
+  view_activities_form:
       required_slots:
         username:
           - type: from_entity

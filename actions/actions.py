@@ -144,7 +144,7 @@ class actionSetInComplete(Action):
 
 class wantActivitiesForm(Action):
     def name(self) -> Text:
-        return "action_want_activities"
+        return "action_view_activities"
     
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,

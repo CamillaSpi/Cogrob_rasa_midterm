@@ -78,7 +78,6 @@ rules:
     - requested_slot: null
   - action: action_set_uncomplete
 
-#add category
 - rule: add category
   steps:
     - intent: add_category
@@ -94,7 +93,8 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: action_add_category
-#remove category
+
+
 - rule: remove activity with deadline
   steps:
     - intent: remove_category
