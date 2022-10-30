@@ -200,7 +200,7 @@ nlu:
     - add activity [run](activity) in [weekly](category)
     - add activity [bed](activity) in [daily](category)
     - add activity [stand_up](activity) in [commitments](category)
-    - add activity [swimmming](activity) in [projects](category)
+    - add activity [study](activity) in [projects](category)
     - add activity [play](activity) in [monthly](category)
     - add activity [jogging](activity) in [quickly](category)
     - add [run](activity) in category [commitments](category)
@@ -224,7 +224,7 @@ nlu:
     - I want to add an action [jogging](activity) to [monthly](category) list
     - I want to add an action [shopping](activity) to [quickly](category) list
     - I want to add an action [run](activity) to [weekly](category)
-    - I want to add an action [leisure](activity) to [daily](category)
+    - I want to add an action [study](activity) to [daily](category)
     - I want to add an action [payments](activity) to [commitments](category)
     - I want to add an action [stand_up](activity) to [projects](category)
     - I want to add an action [jogging](activity) to [monthly](category)
@@ -293,7 +293,7 @@ nlu:
 - intent: remove_item
   examples: |
     - remove [run](activity)
-    - remove [bed](activity)
+    - remove [study](activity)
     - remove [stand_up](activity)
     - remove [swimmming](activity)
     - remove [play](activity)
@@ -344,7 +344,7 @@ nlu:
     - remove [swimmming](activity) at [01:45](deadline)
     - remove [play](activity) at [00:00](deadline)
     - remove [jogging](activity) at [3:00](deadline)
-    - remove [run](activity) in [daily](category) at [4:25](deadline)
+    - remove [study](activity) in [daily](category) at [4:25](deadline)
     - remove [bed](activity) in [projects](category) at [2:55](deadline)
     - remove [stand_up](activity) in [weekly](category) at [16:00](deadline)
     - remove [swimmming](activity) in [monthly](category) at [20:00](deadline)
@@ -402,7 +402,7 @@ nlu:
     - set complete [jogging](activity) in [quickly](category)
     - set complete activity [run](activity) in [weekly](category)
     - set complete activity [bed](activity) in [daily](category)
-    - set complete activity [stand_up](activity) in [commitments](category)
+    - set complete activity [study](activity) in [commitments](category)
     - set complete activity [swimmming](activity) in [projects](category)
     - set complete activity [play](activity) in [monthly](category)
     - set complete activity [jogging](activity) in [quickly](category)
@@ -457,7 +457,7 @@ nlu:
     - set incomplete [play](activity) in [commitments](category)
     - set incomplete [jogging](activity) in [quickly](category)
     - set incomplete activity [run](activity) in [weekly](category)
-    - set incomplete activity [bed](activity) in [daily](category)
+    - set incomplete activity [study](activity) in [daily](category)
     - set incomplete activity [stand_up](activity) in [commitments](category)
     - set incomplete activity [swimmming](activity) in [projects](category)
     - set incomplete activity [play](activity) in [monthly](category)
@@ -478,7 +478,7 @@ nlu:
     - I want to set incomplete an action in a list 
     - I want to set incomplete an action in [weekly](category) list 
     - I want to set incomplete an action in [daily](category) list
-    - I want to set incomplete an action in [commitments](category) list 
+    - I want to set incomplete an action in [study](category) list 
     - I want to set incomplete an action in [projects](category) list 
     - I want to set incomplete an action in [monthly](category) list
     - I want to set incomplete an action in [quickly](category) list
@@ -502,7 +502,7 @@ nlu:
     - undo complete [stand_up](activity) in [weekly](category)
     - undo complete [swimmming](activity) in [monthly](category)
     - undo complete [play](activity) in [commitments](category)
-    - undo complete [jogging](activity) in [quickly](category)
+    - undo complete [study](activity) in [quickly](category)
     - undo complete activity [run](activity) in [weekly](category)
     - undo complete activity [bed](activity) in [daily](category)
     - undo complete activity [stand_up](activity) in [commitments](category)
@@ -511,7 +511,7 @@ nlu:
     
 - intent: add_category
   examples: |
-    - add the category [sport](category)
+    - add the category [study](category)
     - add the category [medications](category)
     - add the category [engineering](category)
     - category: [school](category)
@@ -582,8 +582,14 @@ nlu:
 - intent: view_activities
   examples: |
     - I want to see all my activities
-    - Show my activity
-    - Which are my activity?
+    - Show my activities
+    - show my activities
+    - Which are my activities?
+    - which are my activities?
+    - what are my activities?
+    - What are my activities?
     - show activity in [gym](category) category
-    - show activity in [study](category) list
-    
+    - show activity in [monthly](category) category
+    - show activity in [commitments](category) category
+    - show activity in [work](category) category
+    - show activity in [projects](category) category
