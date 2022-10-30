@@ -13,9 +13,11 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-from . import Database
+from actions import database_connectivity
 
-class addItemSubmit(Action):
+from database_connectivity import Database
+
+class actionAddItem(Action):
 
     def name(self) -> Text:
         return "action_add_item"
@@ -34,4 +36,63 @@ class addItemSubmit(Action):
         
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
-        
+
+    class actionRemoveItem(Action):
+
+        def name(self) -> Text:
+            return "action_remove_item"
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+                pass
+
+    class actionAddCategory(Action):
+
+        def name(self) -> Text:
+            return "action_add_category"
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+                pass
+
+    class actionRemoveCategory(Action):
+
+        def name(self) -> Text:
+            return "action_remove_category"
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+                pass
+
+    class actionSetComplete(Action):
+
+        def name(self) -> Text:
+            return "action_set_complete"
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:    
+                pass  
+    
+    class actionSetInComplete(Action):
+
+        def name(self) -> Text:
+            return "action_add_item"
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+                pass
+
+    class addItemSubmit(Action):
+
+        def name(self) -> Text:
+            return "action_add_item"
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:   
+                pass   
