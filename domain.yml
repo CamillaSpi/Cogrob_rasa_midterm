@@ -75,6 +75,9 @@ forms:
       category:
         - type: from_entity
           entity: category
+      deadline:
+        - type: from_entity
+          entity: deadline
 
   set_complete_form:
     required_slots:

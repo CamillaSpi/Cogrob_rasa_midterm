@@ -30,7 +30,7 @@ rules:
 
 - rule: remove activity with deadline
   steps:
-    - intent: add_item
+    - intent: remove_item
     - action: remove_item_form
     - active_loop: remove_item_form
 
