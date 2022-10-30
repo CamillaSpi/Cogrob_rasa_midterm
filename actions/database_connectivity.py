@@ -21,35 +21,81 @@ class Database:
 
   
   @staticmethod
-  def insert(name, emp_code, email):
+  def insertItem(username, activity ,category,deadline):
     conn.execute('''
-      INSERT INTO candidates (NAME, EMPLOYEE_CODE, EMAIL) VALUES (?, ?, ?);
-    ''', (name, emp_code, email))
+      INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,);
+    ''', (username, activity ,category,deadline,False))
     conn.commit()
 
 
   @staticmethod
-  def select():
+  def selectItems(username, category=None):
 
     cur = conn.cursor()
-
-    cur.execute('''
-      SELECT * FROM candidates;
-    ''')
+    if category == None:
+      cur.execute('''
+      SELECT * FROM activities WHERE username == (?);
+      ''',username)
+    else:
+      cur.execute('''
+      SELECT * FROM activities WHERE username == (?) AND category == (?);
+      ''',username,category)
 
     rows = cur.fetchall()
 
-    return str(rows).strip('[]') if len(rows) > 0 else "No records found"
+    return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
 
   @staticmethod
-  def delete(value):
-
-    name = value + "%"
+  def deleteItem(username, activity ,category,deadline):
 
     conn.execute('''
-      DELETE FROM candidates WHERE name like ? OR employee_code like ?
-    ''', (name, value,))
+      DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+    ''', (username, activity ,category,deadline))
+
     conn.commit()
+
+
+  @staticmethod
+  def insertCategory(username, category):
+    conn.execute('''
+      INSERT INTO categories (username, category) VALUES (?,?);
+    ''', (username,category))
+    conn.commit()
+
+
+  @staticmethod
+  def selectCategories(username):
+
+    cur = conn.cursor()
+    cur.execute('''
+    SELECT * FROM categories WHERE username == (?);
+    ''',username) 
+
+    rows = cur.fetchall()
+
+    return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
+
+  @staticmethod
+  def deleteCategory(username, category):
+
+    conn.execute('''
+      DELETE FROM categories WHERE username == ? AND category == ? 
+    ''', (username, category))
+
+    conn.commit()
+
+    
+  @staticmethod
+  def setItemStatus(username, activity ,category,deadline,completed):
+
+    conn.execute('''
+      UPDATE activities set completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+    ''', (completed, username, activity ,category,deadline))
+
+    conn.commit()
+
+
+
 
   @staticmethod
   def DataUpdate(facility_type,location):
