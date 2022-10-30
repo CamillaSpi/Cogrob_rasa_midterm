@@ -15,7 +15,112 @@ from rasa_sdk.events import SlotSet
 
 from . import Database
 
-class addItemSubmit(Action):
+class actionAddItem(Action):
+
+    def name(self) -> Text:
+        return "action_add_item"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        username = tracker.get_slot("username")
+        username = "Nando"
+        activity = tracker.get_slot("activity")
+        category = tracker.get_slot("category")
+        deadline = tracker.get_slot("deadline")
+
+        dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {deadline}") 
+        
+        Database.insertItem(username,activity ,category,deadline)
+        
+
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+
+class actionRemoveItem(Action):
+
+    def name(self) -> Text:
+        return "action_remove_item"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+        username = tracker.get_slot("username")
+        username = "Nando"
+        activity = tracker.get_slot("activity")
+        category = tracker.get_slot("category")
+        deadline = tracker.get_slot("deadline")
+
+        dispatcher.utter_message(text=f"Congratulation {username}, {activity} remove from {category}") 
+        
+        Database.deleteItem(username,activity ,category,deadline)
+        
+
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+            
+
+class actionAddCategory(Action):
+
+    def name(self) -> Text:
+        return "action_add_category"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+        username = tracker.get_slot("username")
+        username = "Nando"
+        category = tracker.get_slot("category")
+
+        dispatcher.utter_message(text=f"Congratulation {username}, {category} added as a new Category") 
+        
+        Database.insertCategory(username,category)
+        
+
+        return [SlotSet("category", None)]
+            
+
+class actionRemoveCategory(Action):
+
+    def name(self) -> Text:
+        return "action_remove_category"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
+        
+        username = tracker.get_slot("username")
+        username = "Nando"
+        category = tracker.get_slot("category")
+
+        dispatcher.utter_message(text=f"Congratulation {username}, {category} removed from your Category") 
+        
+        Database.deleteCategory(username,category)
+        
+
+        return [SlotSet("category", None)]
+
+class actionSetComplete(Action):
+
+    def name(self) -> Text:
+        return "action_set_complete"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        username = tracker.get_slot("username")
+        username = "Nando"
+        activity = tracker.get_slot("activity")
+        category = tracker.get_slot("category")
+        deadline = tracker.get_slot("deadline")
+
+        dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} completed !") 
+        
+        Database.setItemStatus(username,activity ,category,deadline,True)
+        
+
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+
+class actionSetInComplete(Action):
 
     def name(self) -> Text:
         return "action_add_item"
@@ -24,14 +129,15 @@ class addItemSubmit(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+        username = tracker.get_slot("username")
+        username = "Nando"
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         deadline = tracker.get_slot("deadline")
 
-        dispatcher.utter_message(text=f"Congratulation, {activity} added to {category}, complete before {deadline}") 
+        dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as incompleted !") 
         
-        Database.DataUpdate("facility_type","location")
+        Database.setItemStatus(username,activity ,category,deadline,False)
         
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
-        
