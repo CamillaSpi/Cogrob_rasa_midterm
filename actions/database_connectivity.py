@@ -37,7 +37,7 @@ class Database:
   
   @staticmethod
   def insertItem(username, activity ,category,deadline):
-    print('sto inserendo ' , username, activity ,category,deadline)
+    
     conn.execute('''
       INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,?);
     ''', (username, activity ,category,deadline,False))
@@ -52,8 +52,8 @@ class Database:
     cur = conn.cursor()
     if category == None:
       cur.execute('''
-      SELECT * FROM activities WHERE username == ?;
-      ''',(username))
+      SELECT * FROM activities WHERE username == (?);
+      ''',(username,))
     else:
       cur.execute('''
       SELECT * FROM activities WHERE username == ? AND category == ?;
@@ -107,12 +107,9 @@ class Database:
   def setItemStatus(username, activity ,category,deadline,completed):
 
     conn.execute('''
-      UPDATE activities set completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      UPDATE activities SET completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
     ''', (completed, username, activity ,category,deadline))
-
     conn.commit()
-
-
 
 
   @staticmethod
