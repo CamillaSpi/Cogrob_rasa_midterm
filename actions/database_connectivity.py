@@ -8,15 +8,30 @@ class Database:
 
   @staticmethod
   def initDb():
-    # conn.execute('''
-    #     CREATE TABLE IF NOT EXISTS candidates (
-    #         ID INTEGER PRIMARY KEY AUTOINCREMENT,
-    #         NAME TEXT NOT NULL,
-    #         EMPLOYEE_CODE TEXT UNIQUE NOT NULL,
-    #         EMAIL TEXT UNIQUE NOT NULL
-    #     );
-    # ''')
-    conn.execute(' SELECT * FROM test2 ')
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS users (
+            username VARCHAR(100) PRIMARY KEY,
+            name VARCHAR(100) NOT NULL
+        );
+    ''')
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS categories (
+            username VARCHAR(100) NOT NULL,
+            category VARCHAR(50) NOT NULL,
+            FOREIGN KEY (username) REFERENCES users(username)
+        );
+    ''')
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS activities (
+            username VARCHAR(100) NOT NULL,
+            activity VARCHAR(100) NOT NULL,
+            category VARCHAR(50) NOT NULL,
+            deadline TIME(0) NOT NULL,
+            completed BOOLEAN NOT NULL,
+            FOREIGN KEY (username) REFERENCES users(username),
+            FOREIGN KEY (category) REFERENCES categories()
+        );
+    ''')
     conn.commit()
 
   
