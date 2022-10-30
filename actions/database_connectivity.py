@@ -23,8 +23,9 @@ class Database:
   @staticmethod
   def insertItem(username, activity ,category,deadline):
     conn.execute('''
-      INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,);
-    ''', (username, activity ,category,deadline,False))
+      INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,?);
+    ''', (username, activity ,category,deadline,"False"))
+
     conn.commit()
 
 

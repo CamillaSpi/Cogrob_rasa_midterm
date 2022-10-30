@@ -123,7 +123,7 @@ class actionSetComplete(Action):
 class actionSetInComplete(Action):
 
     def name(self) -> Text:
-        return "action_add_item"
+        return "action_set_uncomplete"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
