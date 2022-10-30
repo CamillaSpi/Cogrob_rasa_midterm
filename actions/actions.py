@@ -13,9 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-from actions import database_connectivity
-
-from database_connectivity import Database
+from . import Database
 
 class actionAddItem(Action):
 
