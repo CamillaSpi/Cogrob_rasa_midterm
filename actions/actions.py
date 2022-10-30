@@ -13,7 +13,9 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
-from . import Repo
+from actions import database_connectivity
+
+from database_connectivity import Database
 
 class addItemSubmit(Action):
 
@@ -29,7 +31,9 @@ class addItemSubmit(Action):
         deadline = tracker.get_slot("deadline")
 
         dispatcher.utter_message(text=f"Congratulation, {activity} added to {category}, complete before {deadline}") 
-            
+        
+        Database.DataUpdate("facility_type","location")
+        
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
         
