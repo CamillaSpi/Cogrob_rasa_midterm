@@ -18,7 +18,7 @@ rules:
     - action: add_item_form
     - active_loop: add_item_form
 
-- rule: Submit activity with deadline
+- rule: Submit add activity with deadline
   condition:
   - active_loop: add_item_form
   steps:
@@ -27,3 +27,19 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: action_add_item
+
+- rule: remove activity with deadline
+  steps:
+    - intent: add_item
+    - action: remove_item_form
+    - active_loop: remove_item_form
+
+- rule: Submit remove activity with deadline
+  condition:
+  - active_loop: remove_item_form
+  steps:
+  - action: remove_item_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_remove_item
