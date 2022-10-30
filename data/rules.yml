@@ -43,10 +43,9 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: action_remove_item
-#aggiunte da matty blonde
 
 #completed action
-  - rule: complete activity with deadline
+- rule: complete activity with deadline
   steps:
     - intent: set_complete
     - action: set_complete_form
@@ -63,7 +62,7 @@ rules:
   - action: action_set_complete
 
   #uncomplited action
-    - rule: complete activity with deadline
+- rule: complete activity with deadline
   steps:
     - intent: set_uncomplete
     - action: set_uncomplete_form
