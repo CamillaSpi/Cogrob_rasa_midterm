@@ -45,13 +45,13 @@ rules:
   - action: action_remove_item
 
 #completed action
-- rule: complete activity with deadline
+- rule: set complete activity
   steps:
     - intent: set_complete
     - action: set_complete_form
     - active_loop: set_complete_form
 
-- rule: Submit complited activity with deadline
+- rule: Submit complited activity
   condition:
   - active_loop: set_complete_form
   steps:
@@ -62,13 +62,13 @@ rules:
   - action: action_set_complete
 
   #uncomplited action
-- rule: complete activity with deadline
+- rule: set uncomplete activity
   steps:
     - intent: set_uncomplete
     - action: set_uncomplete_form
     - active_loop: set_uncomplete_form
 
-- rule: Submit complited activity with deadline
+- rule: Submit uncomplited activity
   condition:
   - active_loop: set_uncomplete_form
   steps:
@@ -78,13 +78,14 @@ rules:
     - requested_slot: null
   - action: action_set_uncomplete
 
+# Add Category 
 - rule: add category
   steps:
     - intent: add_category
     - action: add_category_form
     - active_loop: add_category_form
 
-- rule: Submit add activity with deadline
+- rule: Submit add category
   condition:
   - active_loop: add_category_form
   steps:
@@ -94,14 +95,14 @@ rules:
     - requested_slot: null
   - action: action_add_category
 
-
-- rule: remove activity with deadline
+# Remove Category 
+- rule: Remove Category
   steps:
     - intent: remove_category
     - action: remove_category_form
     - active_loop: remove_category_form
 
-- rule: Submit remove activity with deadline
+- rule: Submit Remove Category
   condition:
   - active_loop: remove_category_form
   steps:
@@ -110,3 +111,4 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: action_remove_category
+  
