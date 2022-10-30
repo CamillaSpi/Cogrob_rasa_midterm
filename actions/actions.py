@@ -153,10 +153,8 @@ class wantActivitiesForm(Action):
 
         username = tracker.get_slot("username")
         username = "Nando"
-
         category = tracker.get_slot("category")
-        print(category)
 
-        dispatcher.utter_message(text=f"This are all your activities: {Database.selectItems(username)}") 
+        dispatcher.utter_message(text=f"This are all your activities: {Database.selectItems(username,category)}") 
 
         return 
