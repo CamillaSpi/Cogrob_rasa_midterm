@@ -43,3 +43,71 @@ rules:
   - slot_was_set:
     - requested_slot: null
   - action: action_remove_item
+#aggiunte da matty blonde
+
+#completed action
+  - rule: complete activity with deadline
+  steps:
+    - intent: set_complete
+    - action: set_complete_form
+    - active_loop: set_complete_form
+
+- rule: Submit complited activity with deadline
+  condition:
+  - active_loop: set_complete_form
+  steps:
+  - action: set_complete_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_set_complete
+
+  #uncomplited action
+    - rule: complete activity with deadline
+  steps:
+    - intent: set_uncomplete
+    - action: set_uncomplete_form
+    - active_loop: set_uncomplete_form
+
+- rule: Submit complited activity with deadline
+  condition:
+  - active_loop: set_uncomplete_form
+  steps:
+  - action: set_uncomplete_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_set_uncomplete
+
+#add category
+- rule: add category
+  steps:
+    - intent: add_category
+    - action: add_category_form
+    - active_loop: add_category_form
+
+- rule: Submit add activity with deadline
+  condition:
+  - active_loop: add_category_form
+  steps:
+  - action: add_category_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_add_category
+#remove category
+- rule: remove activity with deadline
+  steps:
+    - intent: remove_category
+    - action: remove_category_form
+    - active_loop: remove_category_form
+
+- rule: Submit remove activity with deadline
+  condition:
+  - active_loop: remove_category_form
+  steps:
+  - action: remove_category_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_remove_category

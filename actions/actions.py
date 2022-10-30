@@ -141,3 +141,18 @@ class actionSetInComplete(Action):
         
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+
+class wantActivitiesForm(Action):
+    def name(self) -> Text:
+        return "action_want_activities"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        username = tracker.get_slot("username")
+        username = "Nando"
+
+        dispatcher.utter_message(text=f"This are all your activities: {Database.selectItems(username)}") 
+
+        return 

@@ -28,3 +28,16 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+  #aggiunte da matty blonde
+- story: want to know activities
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: action_want_activities
+  - action: want_activities_form
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_want_activities
+  - intent: mood_great
+  - action: utter_goodbye

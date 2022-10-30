@@ -15,6 +15,8 @@ intents:
   - add_category
   - remove_category
   - inform
+  #aggiunte da blonde
+  - want_activities
 
 entities:
   - activity
@@ -39,6 +41,7 @@ actions:
   - action_set_uncomplete
   - action_add_category
   - action_remove_category
+  - action_want_activities
 
 slots:
   activity:
@@ -54,6 +57,7 @@ slots:
     type: text
     influence_conversation: false
 
+#sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity?
 forms:
   add_item_form:
     required_slots:
@@ -99,6 +103,37 @@ forms:
       category:
         - type: from_entity
           entity: category
+      deadline:
+        - type: from_entity
+          entity: deadline
+
+#aggiunte da matty blonde
+  add_category_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+          
+  remove_category_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+      category:
+        - type: from_entity
+          entity: category
+
+  want_category_form:
+      required_slots:
+        username:
+          - type: from_entity
+            entity: username
+
+  want_activities_form:
+      required_slots:
+        username:
+          - type: from_entity
+            entity: username
 
 
 responses:
