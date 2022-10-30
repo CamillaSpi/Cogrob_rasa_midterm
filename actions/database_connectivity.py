@@ -48,15 +48,16 @@ class Database:
   @staticmethod
   def selectItems(username, category=None):
 
+
     cur = conn.cursor()
     if category == None:
       cur.execute('''
-      SELECT * FROM activities WHERE username == (?);
-      ''',username)
+      SELECT * FROM activities WHERE username == ?;
+      ''',(username))
     else:
       cur.execute('''
-      SELECT * FROM activities WHERE username == (?) AND category == (?);
-      ''',username,category)
+      SELECT * FROM activities WHERE username == ? AND category == ?;
+      ''',(username,category))
 
     rows = cur.fetchall()
 

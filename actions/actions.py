@@ -8,6 +8,7 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
+from unicodedata import category
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -152,6 +153,9 @@ class wantActivitiesForm(Action):
 
         username = tracker.get_slot("username")
         username = "Nando"
+
+        category = tracker.get_slot("category")
+        print(category)
 
         dispatcher.utter_message(text=f"This are all your activities: {Database.selectItems(username)}") 
 

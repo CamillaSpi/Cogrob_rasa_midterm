@@ -578,3 +578,12 @@ nlu:
     - I want to remove the category [university](category) 
     - I want to remove the category [personal](category) 
     - hi, I want to remove the category [work](category) 
+
+- intent: view_activities
+  examples: |
+    - I want to see all my activities
+    - Show my activity
+    - Which are my activity?
+    - show activity in [gym](category) category
+    - show activity in [study](category) list
+    

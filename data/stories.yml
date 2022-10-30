@@ -34,9 +34,6 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: view_activities
-  - action: view_activities_form
-  - slot_was_set:
-    - requested_slot: null
   - action: action_view_activities
   - intent: mood_great
   - action: utter_goodbye

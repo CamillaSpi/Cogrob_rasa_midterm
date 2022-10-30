@@ -108,30 +108,17 @@ forms:
 
   add_category_form:
     required_slots:
-      username:
+      category:
         - type: from_entity
-          entity: username
+          entity: category
           
   remove_category_form:
     required_slots:
-      username:
-        - type: from_entity
-          entity: username
       category:
         - type: from_entity
           entity: category
 
-  view_category_form:
-      required_slots:
-        username:
-          - type: from_entity
-            entity: username
 
-  view_activities_form:
-      required_slots:
-        username:
-          - type: from_entity
-            entity: username
 
 
 responses:
@@ -163,8 +150,7 @@ responses:
   utter_ask_category:
   - text: "Please insert the category of the item"
 
-  utter_complete_insert_action:
-  - text: "Staj fort o frat"
+
 
 session_config:
   session_expiration_time: 60
