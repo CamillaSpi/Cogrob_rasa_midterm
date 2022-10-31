@@ -12,6 +12,22 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: Log new users in
+  steps:
+  - intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+
+- rule: Submit new user creation
+  condition:
+  - active_loop: add_new_user_form
+  steps:
+  - action: add_new_user_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_create_user
+
 - rule: add activity with deadline
   steps:
     - intent: add_item

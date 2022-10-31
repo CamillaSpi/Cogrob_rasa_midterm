@@ -26,17 +26,15 @@ class actionCreateUser(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         username = tracker.get_slot("username")
         name = tracker.get_slot("name")
-        name = "Nando"
-
-        
+                
         returnedValue= Database.createUser(username,name)
 
         if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {name}, or i should call you {username} :P") 
+            dispatcher.utter_message(text=f"Congratulation {name}, or i should call you {username} :P {returnedValue}") 
         else:
             dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
 
-        return [SlotSet("username", None),SlotSet("name", None)]
+        return []
 
 
 class actionAddItem(Action):
@@ -48,7 +46,6 @@ class actionAddItem(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         username = tracker.get_slot("username")
-        username = "Nando"
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         deadline = tracker.get_slot("deadline")

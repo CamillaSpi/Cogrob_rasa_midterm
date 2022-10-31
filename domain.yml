@@ -23,6 +23,7 @@ entities:
   - category
   - deadline
   - username
+  - name
 
 actions:
   - utter_greet
@@ -42,6 +43,8 @@ actions:
   - action_add_category
   - action_remove_category
   - action_view_activities
+  - action_create_user
+
 
 slots:
   activity:
@@ -56,9 +59,21 @@ slots:
   deadline:
     type: text
     influence_conversation: false
+  name:
+    type: text
+    influence_conversation: false
 
 #sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity?
 forms:
+  add_new_user_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+      name:
+        - type: from_entity
+          entity: name
+
   add_item_form:
     required_slots:
       username:
@@ -169,6 +184,13 @@ responses:
 
   utter_ask_category:
   - text: "Please insert the category of the item"
+ 
+  utter_ask_username:
+  - text: "What is your username?"
+  
+  utter_ask_name:
+  - text: "What did you say your name?"
+  
 
 
 

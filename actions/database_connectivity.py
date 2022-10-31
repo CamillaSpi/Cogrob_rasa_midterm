@@ -8,6 +8,8 @@ class Database:
 
   @staticmethod
   def initDb():
+    conn.execute('''PRAGMA foreign_keys = 1''')
+    conn.commit()
     conn.execute('''
         CREATE TABLE IF NOT EXISTS users (
             username VARCHAR(100) PRIMARY KEY,
@@ -23,14 +25,13 @@ class Database:
         );
     ''')
     conn.execute('''
-        CREATE TABLE IF NOT EXISTS activities (
+        CREATE TABLE activities (
             username VARCHAR(100) NOT NULL,
             activity VARCHAR(100) NOT NULL,
             category VARCHAR(50) NOT NULL,
             deadline TIME(0) NOT NULL,
             completed BOOLEAN NOT NULL,
-            FOREIGN KEY (username) REFERENCES users(username),
-            FOREIGN KEY (category) REFERENCES categories(category)
+            FOREIGN KEY (username, category) REFERENCES categories(username,category)
         );
     ''')
     conn.commit()
@@ -42,8 +43,10 @@ class Database:
         INSERT INTO users (username, name) VALUES (?, ?);
       ''', (username, name))
       conn.commit()
+      print("User inserted")
       return True
-    except sqlite3.IntegrityError:
+    except sqlite3.IntegrityError as e :
+        print("Problem!",e)
         return False
 
   @staticmethod
@@ -79,7 +82,7 @@ class Database:
 
   @staticmethod
   def deleteItem(username, activity ,category,deadline):
-    
+
     conn.execute('''
       DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
     ''', (username, activity ,category,deadline))
