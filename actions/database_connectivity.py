@@ -35,15 +35,28 @@ class Database:
     ''')
     conn.commit()
 
-  
+  @staticmethod
+  def createUser(username, name):
+    try:
+      conn.execute('''
+        INSERT INTO users (username, name) VALUES (?, ?);
+      ''', (username, name))
+      conn.commit()
+      return True
+    except sqlite3.IntegrityError:
+        return False
+
   @staticmethod
   def insertItem(username, activity ,category,deadline):
-    
-    conn.execute('''
+
+    try:
+      conn.execute('''
       INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,?);
     ''', (username, activity ,category,deadline,False))
-
-    conn.commit()
+      conn.commit()
+      return True
+    except sqlite3.IntegrityError:
+        return False
 
 
   @staticmethod
@@ -66,7 +79,7 @@ class Database:
 
   @staticmethod
   def deleteItem(username, activity ,category,deadline):
-
+    
     conn.execute('''
       DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
     ''', (username, activity ,category,deadline))
@@ -76,10 +89,15 @@ class Database:
 
   @staticmethod
   def insertCategory(username, category):
-    conn.execute('''
-      INSERT INTO categories (username, category) VALUES (?,?);
-    ''', (username,category))
-    conn.commit()
+    try:
+      conn.execute('''
+        INSERT INTO categories (username, category) VALUES (?,?);
+      ''', (username,category))
+      conn.commit()
+      return True
+    except sqlite3.IntegrityError:
+        return False
+    
 
 
   @staticmethod
