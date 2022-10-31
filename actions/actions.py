@@ -26,7 +26,7 @@ class actionCreateUser(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         username = tracker.get_slot("username")
         name = tracker.get_slot("name")
-                
+        
         returnedValue= Database.createUser(username,name)
 
         if (returnedValue):  
