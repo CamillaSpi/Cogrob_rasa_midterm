@@ -115,7 +115,7 @@ class Database:
   @staticmethod
   def deleteCategory(username, category):
 
-    conn.execute('''
+    cur.execute('''
       SELECT * FROM categories WHERE username == ? AND category == ? 
     ''', (username, category))
     
@@ -125,13 +125,12 @@ class Database:
     ''', (username, category))
       conn.commit()
       return True
-    else:
-      return False
+    return False
 
   @staticmethod
   def setItemStatus(username, activity ,category,deadline,completed):
     
-    conn.execute('''
+    cur.execute('''
       SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
     ''', (username, activity ,category,deadline))
     
@@ -140,8 +139,17 @@ class Database:
       ''', (completed, username, activity ,category,deadline))
       conn.commit()
       return True
-    else:
-      return False
+    return False
+
+  @staticmethod
+  def doesUserExists(username):
+    
+    cur.execute('''
+      SELECT * FROM users WHERE username == ?
+    ''', (username, ))
+    if(len( cur.fetchall()) > 0 ):
+      return True
+    return False
 
 
   @staticmethod

@@ -27,13 +27,10 @@ class actionCreateUser(Action):
         username = tracker.get_slot("username")
         name = tracker.get_slot("name")
         
-        returnedValue= Database.createUser(username,name)
+        Database.createUser(username,name)
 
-        if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {name}, or i should call you {username} :P") 
-        else:
-            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
-
+        dispatcher.utter_message(text=f"Congratulation {name}, or i should call you {username} :P") 
+            
         return []
 
 
@@ -49,14 +46,19 @@ class actionAddItem(Action):
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         deadline = tracker.get_slot("deadline")
-        
-        returnedValue= Database.insertItem(username,activity ,category,deadline)
 
-        if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {deadline}") 
+        if(Database.doesUserExists(username)):
+
+            returnedValue= Database.insertItem(username,activity ,category,deadline)
+
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {deadline}") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, did you create this category? or maybe you already inserted this activity :(") 
+
         else:
-            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
-        
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
 
@@ -74,13 +76,17 @@ class actionRemoveItem(Action):
         deadline = tracker.get_slot("deadline")
 
         
-        returnedValue = Database.deleteItem(username,activity ,category,deadline)
+        if(Database.doesUserExists(username)):
+            returnedValue = Database.deleteItem(username,activity ,category,deadline)
 
-        if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {username}, {activity} remove from {category}") 
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} remove from {category}") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
+
         else:
-            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
-        
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("category", None),SlotSet("deadline",None)]
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
             
@@ -96,12 +102,16 @@ class actionAddCategory(Action):
         username = tracker.get_slot("username")
         category = tracker.get_slot("category")
 
-        returnedValue = Database.insertCategory(username,category)
-        if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {username}, {category} added as a new Category") 
-        else:
-            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
+        if(Database.doesUserExists(username)):
+            returnedValue = Database.insertCategory(username,category)
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, {category} added as a new Category") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, you already inserted this category") 
 
+        else:
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("category", None)]
 
         return [SlotSet("category", None)]
             
@@ -119,12 +129,16 @@ class actionRemoveCategory(Action):
         category = tracker.get_slot("category")
 
         
-        returnedValue = Database.deleteCategory(username,category)
-        if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {username}, category {category} removed") 
+        if(Database.doesUserExists(username)):
+            returnedValue = Database.deleteCategory(username,category)
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, category {category} removed") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong,I didn't find this category :(") 
+
         else:
-            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
-        
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("category", None)]
 
         return [SlotSet("category", None)]
 
@@ -143,13 +157,17 @@ class actionSetComplete(Action):
         deadline = tracker.get_slot("deadline")
 
         
-        returnedValue = Database.setItemStatus(username,activity ,category,deadline,True)
+        if(Database.doesUserExists(username)):
+            returnedValue = Database.setItemStatus(username,activity ,category,deadline,True)
 
-        if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} completed !") 
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} completed !") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity:(") 
+
         else:
-            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
-        
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
 
@@ -168,17 +186,21 @@ class actionSetInComplete(Action):
         deadline = tracker.get_slot("deadline")
 
           
-        returnedValue = Database.setItemStatus(username,activity ,category,deadline,False)
+        if(Database.doesUserExists(username)):
+            returnedValue = Database.setItemStatus(username,activity ,category,deadline,False)
 
-        if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as incompleted !") 
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as incompleted !") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
+
         else:
-            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
-        
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
 
-class wantActivitiesForm(Action):
+class showActivities(Action):
     def name(self) -> Text:
         return "action_view_activities"
     
@@ -189,6 +211,10 @@ class wantActivitiesForm(Action):
         username = tracker.get_slot("username")
         category = tracker.get_slot("category")
 
-        dispatcher.utter_message(text=f"This are all your activities:\n{Database.selectItems(username,category)}") 
+        if(Database.doesUserExists(username)):
+            dispatcher.utter_message(text=f"This are all your activities:\n{Database.selectItems(username,category)}") 
+        else:
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("activity", None)]
 
         return [SlotSet("activity", None)]
