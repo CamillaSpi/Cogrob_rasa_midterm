@@ -1,6 +1,7 @@
 import sqlite3
 
 conn = sqlite3.connect('data.db')
+cur = conn.cursor()
 
 print("connected")
 
@@ -25,7 +26,7 @@ class Database:
         );
     ''')
     conn.execute('''
-        CREATE TABLE activities (
+        CREATE TABLE IF NOT EXISTS activities (
             username VARCHAR(100) NOT NULL,
             activity VARCHAR(100) NOT NULL,
             category VARCHAR(50) NOT NULL,
@@ -42,7 +43,6 @@ class Database:
       conn.execute('''
         INSERT INTO users (username, name) VALUES (?, ?);
       ''', (username, name))
-      conn.commit()
       print("User inserted")
       return True
     except sqlite3.IntegrityError as e :
@@ -66,14 +66,13 @@ class Database:
   def selectItems(username, category=None):
 
 
-    cur = conn.cursor()
     if category == None:
       cur.execute('''
-      SELECT * FROM activities WHERE username == (?);
+      SELECT activity,category,deadline FROM activities WHERE username == (?);
       ''',(username,))
     else:
       cur.execute('''
-      SELECT * FROM activities WHERE username == ? AND category == ?;
+      SELECT activity,category,deadline FROM activities WHERE username == ? AND category == ?;
       ''',(username,category))
 
     rows = cur.fetchall()
@@ -82,12 +81,20 @@ class Database:
 
   @staticmethod
   def deleteItem(username, activity ,category,deadline):
-
-    conn.execute('''
-      DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+    
+    cur.execute('''
+      SElECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
     ''', (username, activity ,category,deadline))
 
-    conn.commit()
+    if(len(cur.fetchall()) > 0 ):
+      conn.execute('''
+        DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      ''', (username, activity ,category,deadline))
+      conn.commit()
+      return True
+    else:
+      return False
+
 
 
   @staticmethod
@@ -106,7 +113,6 @@ class Database:
   @staticmethod
   def selectCategories(username):
 
-    cur = conn.cursor()
     cur.execute('''
     SELECT * FROM categories WHERE username == (?);
     ''',username) 
@@ -119,19 +125,32 @@ class Database:
   def deleteCategory(username, category):
 
     conn.execute('''
+      SELECT * FROM categories WHERE username == ? AND category == ? 
+    ''', (username, category))
+    
+    if(len(cur.fetchall()) > 0 ):
+      conn.execute('''
       DELETE FROM categories WHERE username == ? AND category == ? 
     ''', (username, category))
+      conn.commit()
+      return True
+    else:
+      return False
 
-    conn.commit()
-
-    
   @staticmethod
   def setItemStatus(username, activity ,category,deadline,completed):
-
+    
     conn.execute('''
-      UPDATE activities SET completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-    ''', (completed, username, activity ,category,deadline))
-    conn.commit()
+      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+    ''', (username, activity ,category,deadline))
+    
+    if(len(cur.fetchall()) > 0 ):
+      conn.execute('''UPDATE activities SET completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      ''', (completed, username, activity ,category,deadline))
+      conn.commit()
+      return True
+    else:
+      return False
 
 
   @staticmethod

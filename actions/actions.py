@@ -69,14 +69,17 @@ class actionRemoveItem(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
         username = tracker.get_slot("username")
-        username = "Nando"
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         deadline = tracker.get_slot("deadline")
 
-        dispatcher.utter_message(text=f"Congratulation {username}, {activity} remove from {category}") 
         
-        Database.deleteItem(username,activity ,category,deadline)
+        returnedValue = Database.deleteItem(username,activity ,category,deadline)
+
+        if (returnedValue):  
+            dispatcher.utter_message(text=f"Congratulation {username}, {activity} remove from {category}") 
+        else:
+            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
         
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
@@ -91,7 +94,6 @@ class actionAddCategory(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
         username = tracker.get_slot("username")
-        username = "Nando"
         category = tracker.get_slot("category")
 
         returnedValue = Database.insertCategory(username,category)
@@ -114,12 +116,14 @@ class actionRemoveCategory(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]: 
         
         username = tracker.get_slot("username")
-        username = "Nando"
         category = tracker.get_slot("category")
 
-        dispatcher.utter_message(text=f"Congratulation {username}, {category} removed from your Category") 
         
-        Database.deleteCategory(username,category)
+        returnedValue = Database.deleteCategory(username,category)
+        if (returnedValue):  
+            dispatcher.utter_message(text=f"Congratulation {username}, category {category} removed") 
+        else:
+            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
         
 
         return [SlotSet("category", None)]
@@ -134,14 +138,17 @@ class actionSetComplete(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         username = tracker.get_slot("username")
-        username = "Nando"
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         deadline = tracker.get_slot("deadline")
 
-        dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} completed !") 
         
-        Database.setItemStatus(username,activity ,category,deadline,True)
+        returnedValue = Database.setItemStatus(username,activity ,category,deadline,True)
+
+        if (returnedValue):  
+            dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} completed !") 
+        else:
+            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
         
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
@@ -156,14 +163,17 @@ class actionSetInComplete(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         username = tracker.get_slot("username")
-        username = "Nando"
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         deadline = tracker.get_slot("deadline")
 
-        dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as incompleted !") 
-        
-        Database.setItemStatus(username,activity ,category,deadline,False)
+          
+        returnedValue = Database.setItemStatus(username,activity ,category,deadline,False)
+
+        if (returnedValue):  
+            dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as incompleted !") 
+        else:
+            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
         
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
@@ -177,9 +187,8 @@ class wantActivitiesForm(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         username = tracker.get_slot("username")
-        username = "Nando"
         category = tracker.get_slot("category")
 
-        dispatcher.utter_message(text=f"This are all your activities: {Database.selectItems(username,category)}") 
+        dispatcher.utter_message(text=f"This are all your activities:\n{Database.selectItems(username,category)}") 
 
         return 
