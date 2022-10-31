@@ -30,7 +30,7 @@ class actionCreateUser(Action):
         returnedValue= Database.createUser(username,name)
 
         if (returnedValue):  
-            dispatcher.utter_message(text=f"Congratulation {name}, or i should call you {username} :P {returnedValue}") 
+            dispatcher.utter_message(text=f"Congratulation {name}, or i should call you {username} :P") 
         else:
             dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
 
@@ -191,4 +191,4 @@ class wantActivitiesForm(Action):
 
         dispatcher.utter_message(text=f"This are all your activities:\n{Database.selectItems(username,category)}") 
 
-        return 
+        return [SlotSet("activity", None)]
