@@ -32,7 +32,8 @@ class Database:
             category VARCHAR(50) NOT NULL,
             deadline TIME(0) NOT NULL,
             completed BOOLEAN NOT NULL,
-            FOREIGN KEY (username, category) REFERENCES categories(username,category)
+            FOREIGN KEY (username, category) REFERENCES categories(username,category),
+            PRIMARY KEY (username, activity, deadline) 
         );
     ''')
     conn.commit()
