@@ -51,7 +51,7 @@ stories:
     - requested_slot: null
   - action: action_add_item
 
-- story: Remove from my Activities
+- story: Remove from my Activities with negation
   steps:
   - intent: remove_item
   - action: remove_item_form
@@ -59,6 +59,20 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: utter_confirm_choice
+  - intent: deny
+  - action: utter_deny_choice
+
+- story: Remove from my Activities with confirmation
+  steps:
+  - intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_confirm_choice
+  - intent: affirm
   - action: action_remove_item
 
 - story: Show my Activities 
