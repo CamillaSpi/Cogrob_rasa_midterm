@@ -16,6 +16,7 @@ intents:
   - remove_category
   - inform
   - view_activities
+  - presentation
 
 entities:
   - activity
@@ -60,6 +61,9 @@ slots:
 forms:
   add_item_form:
     required_slots:
+      username:
+        - type: from_entity
+          entity: username
       activity:
         - type: from_entity
           entity: activity
@@ -69,9 +73,13 @@ forms:
       deadline:
         - type: from_entity
           entity: deadline
+
           
   remove_item_form:
     required_slots:
+      username:
+        - type: from_entity
+          entity: username
       activity:
         - type: from_entity
           entity: activity
@@ -84,6 +92,9 @@ forms:
 
   set_complete_form:
     required_slots:
+      username:
+        - type: from_entity
+          entity: username
       activity:
         - type: from_entity
           entity: activity
@@ -96,6 +107,9 @@ forms:
           
   set_uncomplete_form:
     required_slots:
+      username:
+        - type: from_entity
+          entity: username
       activity:
         - type: from_entity
           entity: activity
@@ -108,12 +122,18 @@ forms:
 
   add_category_form:
     required_slots:
+      username:
+        - type: from_entity
+          entity: username
       category:
         - type: from_entity
           entity: category
           
   remove_category_form:
     required_slots:
+      username:
+        - type: from_entity
+          entity: username
       category:
         - type: from_entity
           entity: category
