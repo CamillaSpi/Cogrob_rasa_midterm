@@ -29,35 +29,86 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-# - story: want to know activities
-#   steps:
-#   - intent: presentation
-#   - action: utter_greet
-#   - intent: view_activities
-#   - action: action_view_activities
-#   - intent: mood_great
-#   - action: utter_goodbye
 
-# - story: want to know activities
-#   steps:
-#   - intent: action_add_category
-#   - action: add_item_form
-#   - intent: inform
-#     entities:
-#     - username: "vitoFigo99"
-#   - action: action_add_category
-#   - action: utter_cheer_up
-#   - action: action_view_activities
-#   - intent: mood_great
-#   - action: utter_goodbye
+- story: Submit new activity with deadline
+  steps:  
+  - intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_create_user
 
-# - story: want to know activities
-#   steps:
-#   - intent: presentation
-#   - action: utter_ask_username
-#   - intent: inform
-#     entities:
-#     - username: "giacomo"
-#   - action: action_view_activities
-#   - intent: mood_great
-#   - action: utter_goodbye
+
+- story: Submit new activity with deadline
+  steps:  
+  - intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_add_item
+
+- story: Remove from my Activities
+  steps:
+  - intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_remove_item
+
+- story: Show my Activities 
+  steps:
+  - intent: view_activities
+  - action: view_activities_form
+  - active_loop: view_activities_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_view_activities
+
+
+- story: Set Complete Activity
+  steps:
+    - intent: set_complete
+    - action: set_complete_form
+    - active_loop: set_complete_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_set_complete
+
+- story: Set unComplete Activity
+  steps:
+    - intent: set_uncomplete
+    - action: set_uncomplete_form
+    - active_loop: set_uncomplete_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_set_uncomplete
+
+
+- story: Add new Category
+  steps:
+    - intent: add_category
+    - action: add_category_form
+    - active_loop: add_category_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_add_category
+
+- story: Remove new Category
+  steps:
+    - intent: remove_category
+    - action: remove_category_form
+    - active_loop: remove_category_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_remove_category

@@ -153,6 +153,12 @@ forms:
       category:
         - type: from_entity
           entity: category
+    
+  view_activities_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
 
 
 

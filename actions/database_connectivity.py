@@ -64,7 +64,7 @@ class Database:
     if category == None:
       cur.execute('''
       SELECT activity,category,deadline FROM activities WHERE username == (?);
-      ''',(username))
+      ''',(username,))
     else:
       cur.execute('''
       SELECT activity,category,deadline FROM activities WHERE username == ? AND category == ?;
