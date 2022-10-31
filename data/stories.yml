@@ -117,7 +117,7 @@ stories:
       - requested_slot: null
     - action: action_add_category
 
-- story: Remove new Category
+- story: Remove new Category with deny
   steps:
     - intent: remove_category
     - action: remove_category_form
@@ -125,4 +125,19 @@ stories:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
+    - action: utter_confirm_choice
+    - intent: deny
+    - action: utter_deny_choice
+
+- story: Remove new Category with affirm
+  steps:
+    - intent: remove_category
+    - action: remove_category_form
+    - active_loop: remove_category_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_confirm_choice
+    - intent: affirm
     - action: action_remove_category
+    
