@@ -38,26 +38,26 @@ stories:
   - intent: mood_great
   - action: utter_goodbye
 
-- story: want to know activities
-  steps:
-  - intent: action_add_category
-  - action: add_item_form
-  - intent: inform
-    entities:
-    - username: "vitoFigo99"
-  - action: action_add_category
-  - action: utter_cheer_up
-  - action: action_view_activities
-  - intent: mood_great
-  - action: utter_goodbye
+# - story: want to know activities
+#   steps:
+#   - intent: action_add_category
+#   - action: add_item_form
+#   - intent: inform
+#     entities:
+#     - username: "vitoFigo99"
+#   - action: action_add_category
+#   - action: utter_cheer_up
+#   - action: action_view_activities
+#   - intent: mood_great
+#   - action: utter_goodbye
 
-- story: want to know activities
-  steps:
-  - intent: presentation
-  - action: utter_ask_username
-  - intent: inform
-    entities:
-    - username: "giacomo"
-  - action: action_view_activities
-  - intent: mood_great
-  - action: utter_goodbye
+# - story: want to know activities
+#   steps:
+#   - intent: presentation
+#   - action: utter_ask_username
+#   - intent: inform
+#     entities:
+#     - username: "giacomo"
+#   - action: action_view_activities
+#   - intent: mood_great
+#   - action: utter_goodbye
