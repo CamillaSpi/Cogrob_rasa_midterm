@@ -119,6 +119,18 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: help
+  examples: |
+    - what you can do?
+    - what we do now?
+    - help
+    - help me
+    - I dont know what to do
+    - I need help
+    - please help
+    - pls help
+    - I need assistance
+
 - intent: inform
   examples: |
     - [Adelmaro](name)
@@ -945,3 +957,18 @@ nlu:
     - show activity in [commitments](category) category
     - show activity in [work](category) category
     - show activity in [projects](category) category
+
+- synonym: add
+  examples: |
+    - insert
+    - put
+    
+- synonym: remove
+  examples: |
+    - take off
+    - drop
+    
+- synonym: complete
+  examples: |
+    - done
+    

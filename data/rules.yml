@@ -2,6 +2,11 @@ version: "2.0"
 
 rules:
 
+- rule: help user
+  steps:
+    - intent: help
+    - action: utter_help
+    
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye

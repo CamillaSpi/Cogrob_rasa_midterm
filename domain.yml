@@ -17,6 +17,7 @@ intents:
   - inform
   - view_activities
   - presentation
+  - help
 
 entities:
   - activity
@@ -158,7 +159,12 @@ forms:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! Who are you?"
+
+  utter_help:
+  - text: "Hey, i'm your personal assistant, you can create To-Do list and i'll manage that :D"
+  - text: "Ask me to add a new activity or to create a new cateogory list!"
+  - text: "Have you try to ask me to show your activities?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -174,7 +180,7 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a bot, powered by Gruppo16."
 
   utter_ask_deadline:
   - text: "Please insert the deadline"
