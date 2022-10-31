@@ -461,98 +461,190 @@ nlu:
 
 - intent: remove_item
   examples: |
-    -hello, I'm [mattia99](username), remove [run](activity)
-    -hello, I'm [antonio68](username), remove [study](activity)
-    -hello, I'm [ferdinando1907](username), remove [stand_up](activity)
-    -hello, I'm [alessia19_07](username), remove [swimmming](activity)
-    -hello, I'm [camilla@2](username), remove [play](activity)
-    -hello, I'm [Giusy_5](username), remove [jogging](activity)
-    -hello, I am [Simone](username), remove [run](activity) in [daily](category)
-    -hello, I am [mattia99](username), remove [bed](activity) in [projects](category)
-    -hello, I am [mattia99](username), remove [stand_up](activity) in [weekly](category)
-    -hello, I am [mattia99](username), remove [swimmming](activity) in [monthly](category)
-    -hello, I am [mattia99](username), remove [play](activity) in [commitments](category)
-    -hello, I am [mattia99](username), remove [jogging](activity) in [quickly](category)
-    -hello, I am [mattia99](username), remove activity [run](activity) in [weekly](category)
-    -hello, I am [mattia99](username), remove activity [bed](activity) in [daily](category)
-    -hello, I am [mattia99](username), remove activity [stand_up](activity) in [commitments](category)
-    -hello, I am [mattia99](username), remove activity [swimmming](activity) in [projects](category)
-    -hello, I am [mattia99](username), remove activity [play](activity) in [monthly](category)
-    -hello, I am [mattia99](username), remove activity [jogging](activity) in [quickly](category)
-    -hello, I am [mattia99](username), remove [run](activity) in category [commitments](category)
-    -hello, I am [mattia99](username), remove [bed](activity) in category [weekly](category)
-    -hello, I am [mattia99](username), remove [stand_up](activity) in category [daily](category)
-    -hello, I am [mattia99](username), remove [swimmming](activity) in category [quickly](category)
-    -hello, I am [mattia99](username), remove [play](activity) in category [projects](category)
-    -hello, I'm [mattia99](username), remove [jogging](activity) in category [monthly](category)
-    -hello, I'm [mattia99](username), remove activity [run](activity) in category [monthly](category)
-    -hello, I'm [mattia99](username), remove activity [bed](activity) in category [quickly](category)
-    -I'm [mattia99](username), remove activity [stand_up](activity) in category [projects](category)
-    -I'm [mattia99](username), remove activity [swimmming](activity) in category [commitments](category)
-    -I'm [mattia99](username), remove activity [play](activity) in category [daily](category)
-    -I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category)
-    -I'm [mattia99](username), I want to remove an action
-    -I'm [mattia99](username), I want to remove an action to a list
-    -I'm [mattia99](username), I want to remove an action to [weekly](category) list
-    -I'm [mattia99](username), I want to remove an action to [daily](category) list
-    -I'm [mattia99](username), I want to remove an action to [commitments](category) list
-    -I am [mattia99](username), I want to remove an action to [projects](category) list
-    -I am [mattia99](username), I want to remove an action to [monthly](category) list
-    -I am [mattia99](username), I want to remove an action to [quickly](category) list
-    -I am [mattia99](username), hi, I want to remove an action to [weekly](category) list
-    -I am [mattia99](username), hi, I want to remove an action to [daily](category) list
-    -I am [mattia99](username), hi, I want to remove an action to [commitments](category) list
-    -I am [mattia99](username), hi, I want to remove an action to [projects](category) list
-    -I am [mattia99](username), hello, I want to remove an action to [monthly](category) list
-    -I am [mattia99](username), hello, I want to remove an action to [quickly](category) list
-    -I am [mattia99](username), hello I want to remove an action to my list
-    -I am [mattia99](username), hi I want to remove an action to my list
-    -I am [mattia99](username), remove [run](activity) at [11:00](deadline)
-    -I am [mattia99](username), remove [bed](activity) at [13:00](deadline)
-    -I am [mattia99](username), remove [stand_up](activity) at [9:30](deadline)
-    -I am [mattia99](username), remove [swimmming](activity) at [01:45](deadline)
-    -I'm [mattia99](username), remove [play](activity) at [00:00](deadline)
-    -hi, I'm [mattia99](username), remove [jogging](activity) at [3:00](deadline)
-    -hi, I'm [mattia99](username), remove [study](activity) in [daily](category) at [4:25](deadline)
-    -hi, I'm [mattia99](username), remove [bed](activity) in [projects](category) at [2:55](deadline)
-    -hi, I'm [mattia99](username), remove [stand_up](activity) in [weekly](category) at [16:00](deadline)
-    -hi, I am [mattia99](username), remove [swimmming](activity) in [monthly](category) at [20:00](deadline)
-    -hi, I'm [mattia99](username), remove [play](activity) in [commitments](category) at [22:20](deadline)
-    -hi, I'm [mattia99](username), remove [jogging](activity) in [quickly](category) at [14:50](deadline)
-    -hi, I'm [mattia99](username), remove activity [run](activity) in [weekly](category) at [19:41](deadline)
-    -hi, I'm [mattia99](username), remove activity [bed](activity) in [daily](category) at [12:35](deadline)
-    -hi, I'm [mattia99](username), remove activity [stand_up](activity) in [commitments](category) at [17:30](deadline)
-    -hi, I'm [mattia99](username), remove activity [swimmming](activity) in [projects](category) at [18:30](deadline)
-    -hi, I am [mattia99](username), remove activity [play](activity) in [monthly](category) at [9:40](deadline)
-    -hi, I'm [mattia99](username), remove activity [jogging](activity) in [quickly](category) at [7:00](deadline)
-    -hi, I'm [mattia99](username), remove [run](activity) in category [commitments](category) at [6:30](deadline)
-    -hi, I'm [mattia99](username), remove [bed](activity) in category [weekly](category) at [8:00](deadline)
-    -hi, I'm [mattia99](username), remove [stand_up](activity) in category [daily](category) at [10:25](deadline)
-    -hi, I am [mattia99](username), remove [swimmming](activity) in category [quickly](category) at [16:30](deadline)
-    -hi, I'm [mattia99](username), remove [play](activity) in category [projects](category) at [19:00](deadline)
-    -hi, I'm [mattia99](username), remove [jogging](activity) in category [monthly](category) at [20:30](deadline)
-    -hi, I'm [mattia99](username), remove activity [run](activity) in category [monthly](category) at [21:10](deadline)
-    -hi, I'm [mattia99](username), remove activity [bed](activity) in category [quickly](category) at [9:40](deadline)
-    -hi, I am [mattia99](username), remove activity [stand_up](activity) in category [projects](category) at [5:12](deadline)
-    -hello, I'm [mattia99](username), remove activity [swimmming](activity) in category [commitments](category) at [13:39](deadline)
-    -hello, I'm [mattia99](username), remove activity [play](activity) in category [daily](category) at [13:29](deadline)
-    -hello, I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category) at [11:00](deadline)
-    - I'm [mattia99](username), I want to remove an action at [11:00](deadline)
-    - I'm [mattia99](username), I want to remove an action to a list at [13:39](deadline)
-    - I'm [mattia99](username), I want to remove an action to [weekly](category) list at [21:10](deadline)
+    - remove [run](activity)
+    - remove [study](activity)
+    - remove [stand_up](activity)
+    - remove [swimmming](activity)
+    - remove [play](activity)
+    - remove [jogging](activity)
+    - remove [run](activity) in [daily](category)
+    - remove [bed](activity) in [projects](category)
+    - remove [stand_up](activity) in [weekly](category)
+    - remove [swimmming](activity) in [monthly](category)
+    - remove [play](activity) in [commitments](category)
+    - remove [jogging](activity) in [quickly](category)
+    - remove activity [run](activity) in [weekly](category)
+    - remove activity [bed](activity) in [daily](category)
+    - remove activity [stand_up](activity) in [commitments](category)
+    - remove activity [swimmming](activity) in [projects](category)
+    - remove activity [play](activity) in [monthly](category)
+    - remove activity [jogging](activity) in [quickly](category)
+    - remove [run](activity) in category [commitments](category)
+    - remove [bed](activity) in category [weekly](category)
+    - remove [stand_up](activity) in category [daily](category)
+    - remove [swimmming](activity) in category [quickly](category)
+    - remove [play](activity) in category [projects](category)
+    - remove [jogging](activity) in category [monthly](category)
+    - remove activity [run](activity) in category [monthly](category)
+    - remove activity [bed](activity) in category [quickly](category)
+    - remove activity [stand_up](activity) in category [projects](category)
+    - remove activity [swimmming](activity) in category [commitments](category)
+    - remove activity [play](activity) in category [daily](category)
+    - remove activity [jogging](activity) in category [weekly](category)
+    - I want to remove an action
+    - I want to remove an action to a list
+    - I want to remove an action to [weekly](category) list
+    - I want to remove an action to [daily](category) list
+    - I want to remove an action to [commitments](category) list
+    - I want to remove an action to [projects](category) list
+    - I want to remove an action to [monthly](category) list
+    - I want to remove an action to [quickly](category) list
+    - hi, I want to remove an action to [weekly](category) list
+    - hi, I want to remove an action to [daily](category) list
+    - hi, I want to remove an action to [commitments](category) list
+    - hi, I want to remove an action to [projects](category) list
+    - hello, I want to remove an action to [monthly](category) list
+    - hello, I want to remove an action to [quickly](category) list
+    - hello I want to remove an action to my list
+    - hi I want to remove an action to my list
+    - remove [run](activity) at [11:00](deadline)
+    - remove [bed](activity) at [13:00](deadline)
+    - remove [stand_up](activity) at [9:30](deadline)
+    - remove [swimmming](activity) at [01:45](deadline)
+    - remove [play](activity) at [00:00](deadline)
+    - remove [jogging](activity) at [3:00](deadline)
+    - remove [study](activity) in [daily](category) at [4:25](deadline)
+    - remove [bed](activity) in [projects](category) at [2:55](deadline)
+    - remove [stand_up](activity) in [weekly](category) at [16:00](deadline)
+    - remove [swimmming](activity) in [monthly](category) at [20:00](deadline)
+    - remove [play](activity) in [commitments](category) at [22:20](deadline)
+    - remove [jogging](activity) in [quickly](category) at [14:50](deadline)
+    - remove activity [run](activity) in [weekly](category) at [19:41](deadline)
+    - remove activity [bed](activity) in [daily](category) at [12:35](deadline)
+    - remove activity [stand_up](activity) in [commitments](category) at [17:30](deadline)
+    - remove activity [swimmming](activity) in [projects](category) at [18:30](deadline)
+    - remove activity [play](activity) in [monthly](category) at [9:40](deadline)
+    - remove activity [jogging](activity) in [quickly](category) at [7:00](deadline)
+    - remove [run](activity) in category [commitments](category) at [6:30](deadline)
+    - remove [bed](activity) in category [weekly](category) at [8:00](deadline)
+    - remove [stand_up](activity) in category [daily](category) at [10:25](deadline)
+    - remove [swimmming](activity) in category [quickly](category) at [16:30](deadline)
+    - remove [play](activity) in category [projects](category) at [19:00](deadline)
+    - remove [jogging](activity) in category [monthly](category) at [20:30](deadline)
+    - remove activity [run](activity) in category [monthly](category) at [21:10](deadline)
+    - remove activity [bed](activity) in category [quickly](category) at [9:40](deadline)
+    - remove activity [stand_up](activity) in category [projects](category) at [5:12](deadline)
+    - remove activity [swimmming](activity) in category [commitments](category) at [13:39](deadline)
+    - remove activity [play](activity) in category [daily](category) at [13:29](deadline)
+    - remove activity [jogging](activity) in category [weekly](category) at [11:00](deadline)
+    - I want to remove an action at [11:00](deadline)
+    - I want to remove an action to a list at [13:39](deadline)
+    - I want to remove an action to [weekly](category) list at [21:10](deadline)
+    - I want to remove an action to [daily](category) list at [9:40](deadline)
+    - I want to remove an action to [commitments](category) list at [19:00](deadline)
+    - I want to remove an action to [projects](category) list at [16:30](deadline)
+    - I want to remove an action to [monthly](category) list at [7:00](deadline)
+    - I want to remove an action to [quickly](category) list at [6:30](deadline)
+    - hi, I want to remove an action to [weekly](category) list at [18:30](deadline)
+    - hi, I want to remove an action to [daily](category) list at [17:30](deadline)
+    - hi, I want to remove an action to [commitments](category) list at [22:20](deadline)
+    - hi, I want to remove an action to [projects](category) list at [16:00](deadline)
+    - hello, I want to remove an action to [monthly](category) list at [14:50](deadline)
+    - hello, I want to remove an action to [quickly](category) list at [3:29](deadline)
+    - hello I want to remove an action to my list at [12:37](deadline)
+    - hi I want to remove an action to my list at [18:14](deadline)
+    - hello, I'm [mattia99](username), remove [run](activity)
+    - hello, I'm [antonio68](username), remove [study](activity)
+    - hello, I'm [ferdinando1907](username), remove [stand_up](activity)
+    - hello, I'm [alessia19_07](username), remove [swimmming](activity)
+    - hello, I'm [camilla@2](username), remove [play](activity)
+    - hello, I'm [Giusy_5](username), remove [jogging](activity)
+    - hello, I am [Simone](username), remove [run](activity) in [daily](category)
+    - hello, I am [mattia99](username), remove [bed](activity) in [projects](category)
+    - hello, I am [ferdinando1907](username), remove [stand_up](activity) in [weekly](category)
+    - hello, I am [camilla@2](username), remove [swimmming](activity) in [monthly](category)
+    - hello, I am [alessia19_07](username), remove [play](activity) in [commitments](category)
+    - hello, I am [mattia99](username), remove [jogging](activity) in [quickly](category)
+    - hello, I am [ferdinando1907](username), remove activity [run](activity) in [weekly](category)
+    - hello, I am [mattia99](username), remove activity [bed](activity) in [daily](category)
+    - hello, I am [Giusy_5](username), remove activity [stand_up](activity) in [commitments](category)
+    - hello, I am [alessia19_07](username), remove activity [swimmming](activity) in [projects](category)
+    - hello, I am [ferdinando1907](username), remove activity [play](activity) in [monthly](category)
+    - hello, I am [Giusy_5](username), remove activity [jogging](activity) in [quickly](category)
+    - hello, I am [camilla@2](username), remove [run](activity) in category [commitments](category)
+    - hello, I am [ferdinando1907](username), remove [bed](activity) in category [weekly](category)
+    - hello, I am [alessia19_07](username), remove [stand_up](activity) in category [daily](category)
+    - hello, I am [Giusy_5](username), remove [swimmming](activity) in category [quickly](category)
+    - hello, I am [ferdinando1907](username), remove [play](activity) in category [projects](category)
+    - hello, I'm [mattia99](username), remove [jogging](activity) in category [monthly](category)
+    - hello, I'm [alessia19_07](username), remove activity [run](activity) in category [monthly](category)
+    - hello, I'm [camilla@2](username), remove activity [bed](activity) in category [quickly](category)
+    - I'm [mattia99](username), remove activity [stand_up](activity) in category [projects](category)
+    - I'm [Giusy_5](username), remove activity [swimmming](activity) in category [commitments](category)
+    - I'm [ferdinando1907](username), remove activity [play](activity) in category [daily](category)
+    - I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category)
+    - I'm [alessia19_07](username), I want to remove an action
+    - I'm [camilla@2](username), I want to remove an action to a list
+    - I'm [ferdinando1907](username), I want to remove an action to [weekly](category) list
+    - I'm [mattia99](username), I want to remove an action to [daily](category) list
+    - I'm [Giusy_5](username), I want to remove an action to [commitments](category) list
+    - I am [camilla@2](username), I want to remove an action to [projects](category) list
+    - I am [alessia19_07](username), I want to remove an action to [monthly](category) list
+    - I am [Giusy_5](username), I want to remove an action to [quickly](category) list
+    - I am [mattia99](username), hi, I want to remove an action to [weekly](category) list
+    - I am [ferdinando1907](username), hi, I want to remove an action to [daily](category) list
+    - I am [alessia19_07](username), hi, I want to remove an action to [commitments](category) list
+    - I am [mattia99](username), hi, I want to remove an action to [projects](category) list
+    - I am [Giusy_5](username), hello, I want to remove an action to [monthly](category) list
+    - I am [mattia99](username), hello, I want to remove an action to [quickly](category) list
+    - I am [alessia19_07](username), hello I want to remove an action to my list
+    - I am [camilla@2](username), hi I want to remove an action to my list
+    - I am [Giusy_5](username), remove [run](activity) at [11:00](deadline)
+    - I am [ferdinando1907](username), remove [bed](activity) at [13:00](deadline)
+    - I am [alessia19_07](username), remove [stand_up](activity) at [9:30](deadline)
+    - I am [Giusy_5](username), remove [swimmming](activity) at [01:45](deadline)
+    - I'm [mattia99](username), remove [play](activity) at [00:00](deadline)
+    - hi, I'm [alessia19_07](username), remove [jogging](activity) at [3:00](deadline)
+    - hi, I'm [ferdinando1907](username), remove [study](activity) in [daily](category) at [4:25](deadline)
+    - hi, I'm [camilla@2](username), remove [bed](activity) in [projects](category) at [2:55](deadline)
+    - hi, I'm [Giusy_5](username), remove [stand_up](activity) in [weekly](category) at [16:00](deadline)
+    - hi, I am [alessia19_07](username), remove [swimmming](activity) in [monthly](category) at [20:00](deadline)
+    - hi, I'm [mattia99](username), remove [play](activity) in [commitments](category) at [22:20](deadline)
+    - hi, I'm [mattia99](username), remove [jogging](activity) in [quickly](category) at [14:50](deadline)
+    - hi, I'm [ferdinando1907](username), remove activity [run](activity) in [weekly](category) at [19:41](deadline)
+    - hi, I'm [Giusy_5](username), remove activity [bed](activity) in [daily](category) at [12:35](deadline)
+    - hi, I'm [mattia99](username), remove activity [stand_up](activity) in [commitments](category) at [17:30](deadline)
+    - hi, I'm [alessia19_07](username), remove activity [swimmming](activity) in [projects](category) at [18:30](deadline)
+    - hi, I am [mattia99](username), remove activity [play](activity) in [monthly](category) at [9:40](deadline)
+    - hi, I'm [mattia99](username), remove activity [jogging](activity) in [quickly](category) at [7:00](deadline)
+    - hi, I'm [Giusy_5](username), remove [run](activity) in category [commitments](category) at [6:30](deadline)
+    - hi, I'm [alessia19_07](username), remove [bed](activity) in category [weekly](category) at [8:00](deadline)
+    - hi, I'm [ferdinando1907](username), remove [stand_up](activity) in category [daily](category) at [10:25](deadline)
+    - hi, I am [alessia19_07](username), remove [swimmming](activity) in category [quickly](category) at [16:30](deadline)
+    - hi, I'm [mattia99](username), remove [play](activity) in category [projects](category) at [19:00](deadline)
+    - hi, I'm [Giusy_5](username), remove [jogging](activity) in category [monthly](category) at [20:30](deadline)
+    - hi, I'm [ferdinando1907](username), remove activity [run](activity) in category [monthly](category) at [21:10](deadline)
+    - hi, I'm [Giusy_5](username), remove activity [bed](activity) in category [quickly](category) at [9:40](deadline)
+    - hi, I am [alessia19_07](username), remove activity [stand_up](activity) in category [projects](category) at [5:12](deadline)
+    - hello, I'm [mattia99](username), remove activity [swimmming](activity) in category [commitments](category) at [13:39](deadline)
+    - hello, I'm [alessia19_07](username), remove activity [play](activity) in category [daily](category) at [13:29](deadline)
+    - hello, I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category) at [11:00](deadline)
+    - I'm [Giusy_5](username), I want to remove an action at [11:00](deadline)
+    - I'm [camilla@2](username), I want to remove an action to a list at [13:39](deadline)
+    - I'm [ferdinando1907](username), I want to remove an action to [weekly](category) list at [21:10](deadline)
     - I'm [mattia99](username), I want to remove an action to [daily](category) list at [9:40](deadline)
     - I am [mattia99](username) want to remove an action to [commitments](category) list at [19:00](deadline)
-    - I'm [mattia99](username) want to remove an action to [projects](category) list at [16:30](deadline)
-    - I'm [mattia99](username) want to remove an action to [monthly](category) list at [7:00](deadline)
-    - I'm [mattia99](username) want to remove an action to [quickly](category) list at [6:30](deadline)
+    - I'm [alessia19_07](username) want to remove an action to [projects](category) list at [16:30](deadline)
+    - I'm [Giusy_5](username) want to remove an action to [monthly](category) list at [7:00](deadline)
+    - I'm [alessia19_07](username) want to remove an action to [quickly](category) list at [6:30](deadline)
     - hi, I'm [mattia99](username) want to remove an action to [weekly](category) list at [18:30](deadline)
-    - hi, I'm [mattia99](username) want to remove an action to [daily](category) list at [17:30](deadline)
-    - hi, I am [mattia99](username) want to remove an action to [commitments](category) list at [22:20](deadline)
+    - hi, I'm [camilla@2](username) want to remove an action to [daily](category) list at [17:30](deadline)
+    - hi, I am [ferdinando1907](username) want to remove an action to [commitments](category) list at [22:20](deadline)
     - hi, I'm [mattia99](username) want to remove an action to [projects](category) list at [16:00](deadline)
     - hello, I'm [mattia99](username) want to remove an action to [monthly](category) list at [14:50](deadline)
     - I'm [mattia99](username) want to remove an action to [quickly](category) list at [3:29](deadline)
-    - hello I am [mattia99](username) want to remove an action to my list at [12:37](deadline)
-    - hi I'm [mattia99](username) want to remove an action to my list at [18:14](deadline)
+    - hello I am [alessia19_07](username) want to remove an action to my list at [12:37](deadline)
+    - hi I'm [alessia19_07](username) want to remove an action to my list at [18:14](deadline)
 - intent: set_complete
   examples: |
     - set action complete 
