@@ -31,9 +31,22 @@ stories:
 
 - story: want to know activities
   steps:
-  - intent: greet
+  - intent: presentation
   - action: utter_greet
   - intent: view_activities
+  - action: action_view_activities
+  - intent: mood_great
+  - action: utter_goodbye
+
+- story: want to know activities
+  steps:
+  - intent: action_add_category
+  - action: add_item_form
+  - intent: inform
+    entities:
+    - username: "vitoFigo99"
+  - action: action_add_category
+  - action: utter_cheer_up
   - action: action_view_activities
   - intent: mood_great
   - action: utter_goodbye
