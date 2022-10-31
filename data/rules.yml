@@ -12,6 +12,7 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+#login of new user
 - rule: Log new users in
   steps:
   - intent: presentation
@@ -28,6 +29,7 @@ rules:
     - requested_slot: null
   - action: action_create_user
 
+#add activity
 - rule: add activity with deadline
   steps:
     - intent: add_item
@@ -44,6 +46,7 @@ rules:
     - requested_slot: null
   - action: action_add_item
 
+#remove activity
 - rule: remove activity with deadline
   steps:
     - intent: remove_item
@@ -77,7 +80,7 @@ rules:
     - requested_slot: null
   - action: action_set_complete
 
-  #uncomplited action
+#uncomplited action
 - rule: set uncomplete activity
   steps:
     - intent: set_uncomplete
