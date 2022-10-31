@@ -21,7 +21,7 @@ class Database:
         CREATE TABLE IF NOT EXISTS categories (
             username VARCHAR(100) NOT NULL,
             category VARCHAR(50) NOT NULL,
-            FOREIGN KEY (username) REFERENCES users(username),
+            FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE,
             PRIMARY KEY (username,category)
         );
     ''')
@@ -32,7 +32,7 @@ class Database:
             category VARCHAR(50) NOT NULL,
             deadline TIME(0) NOT NULL,
             completed BOOLEAN NOT NULL,
-            FOREIGN KEY (username, category) REFERENCES categories(username,category),
+            FOREIGN KEY (username, category) REFERENCES categories(username,category) ON DELETE CASCADE,
             PRIMARY KEY (username, activity, deadline) 
         );
     ''')
