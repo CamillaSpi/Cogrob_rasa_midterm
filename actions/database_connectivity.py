@@ -43,15 +43,13 @@ class Database:
       conn.execute('''
         INSERT INTO users (username, name) VALUES (?, ?);
       ''', (username, name))
-      print("User inserted")
+      conn.commit()
       return True
-    except sqlite3.IntegrityError as e :
-        print("Problem!",e)
+    except sqlite3.IntegrityError:
         return False
 
   @staticmethod
   def insertItem(username, activity ,category,deadline):
-
     try:
       conn.execute('''
       INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,?);
@@ -61,15 +59,12 @@ class Database:
     except sqlite3.IntegrityError:
         return False
 
-
   @staticmethod
   def selectItems(username, category=None):
-
-
     if category == None:
       cur.execute('''
       SELECT activity,category,deadline FROM activities WHERE username == (?);
-      ''',(username,))
+      ''',(username))
     else:
       cur.execute('''
       SELECT activity,category,deadline FROM activities WHERE username == ? AND category == ?;
@@ -83,7 +78,7 @@ class Database:
   def deleteItem(username, activity ,category,deadline):
     
     cur.execute('''
-      SElECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
     ''', (username, activity ,category,deadline))
 
     if(len(cur.fetchall()) > 0 ):
@@ -95,8 +90,6 @@ class Database:
     else:
       return False
 
-
-
   @staticmethod
   def insertCategory(username, category):
     try:
@@ -107,8 +100,6 @@ class Database:
       return True
     except sqlite3.IntegrityError:
         return False
-    
-
 
   @staticmethod
   def selectCategories(username):
