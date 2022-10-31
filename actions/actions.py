@@ -16,6 +16,28 @@ from rasa_sdk.events import SlotSet
 
 from . import Database
 
+class actionCreateUser(Action):
+
+    def name(self) -> Text:
+        return "action_create_user"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        username = tracker.get_slot("username")
+        name = tracker.get_slot("name")
+
+        
+        returnedValue= Database.createUser(username,name)
+
+        if (returnedValue):  
+            dispatcher.utter_message(text=f"Congratulation {name}, or i should call you {username} :P") 
+        else:
+            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
+
+        return [SlotSet("username", None),SlotSet("name", None)]
+
+
 class actionAddItem(Action):
 
     def name(self) -> Text:
@@ -29,10 +51,13 @@ class actionAddItem(Action):
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         deadline = tracker.get_slot("deadline")
-
-        dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {deadline}") 
         
-        Database.insertItem(username,activity ,category,deadline)
+        returnedValue= Database.insertItem(username,activity ,category,deadline)
+
+        if (returnedValue):  
+            dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {deadline}") 
+        else:
+            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
         
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
@@ -71,10 +96,12 @@ class actionAddCategory(Action):
         username = "Nando"
         category = tracker.get_slot("category")
 
-        dispatcher.utter_message(text=f"Congratulation {username}, {category} added as a new Category") 
-        
-        Database.insertCategory(username,category)
-        
+        returnedValue = Database.insertCategory(username,category)
+        if (returnedValue):  
+            dispatcher.utter_message(text=f"Congratulation {username}, {category} added as a new Category") 
+        else:
+            dispatcher.utter_message(text=f"Ops! {username} something went wrong, I'm so triste for that :(") 
+
 
         return [SlotSet("category", None)]
             
