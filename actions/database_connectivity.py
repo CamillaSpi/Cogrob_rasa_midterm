@@ -159,30 +159,40 @@ class Database:
       return False
 
   @staticmethod
-  def modifyActivityCategory(username, oldcategory, category, activity, deadline):
-    conn.execute('''
-      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-    ''', (username, activity , oldcategory, deadline))
-    if(len(cur.fetchall()) > 0 ):
-      conn.execute('''UPDATE activities SET category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (category, username, activity , oldcategory, deadline))
-      conn.commit()
-      return True
-    else:
-      return False
-
-  @staticmethod
-  def modifyDeadline(username, category, activity, deadline, olddeadline):
-    conn.execute('''
-      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-    ''', (username, activity , category, olddeadline))
-    if(len(cur.fetchall()) > 0 ):
-      conn.execute('''UPDATE activities SET deadline = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (deadline, username, activity , category, olddeadline))
-      conn.commit()
-      return True
-    else:
-      return False
+  def modifyActivity(username, category, activity, deadline, newdeadline = None, newcategory = None):
+    if (newdeadline == None and newcategory != None):
+      conn.execute('''
+        SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      ''', (username, activity , category, deadline))
+      if(len(cur.fetchall()) > 0 ):
+        conn.execute('''UPDATE activities SET category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+        ''', (newcategory, username, activity , category, deadline))
+        conn.commit()
+        return True
+      else:
+        return False
+    elif (newdeadline != None and newcategory == None):
+      conn.execute('''
+        SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      ''', (username, activity , category, deadline))
+      if(len(cur.fetchall()) > 0 ):
+        conn.execute('''UPDATE activities SET deadline = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+        ''', (newdeadline, username, activity , category, deadline))
+        conn.commit()
+        return True
+      else:
+        return False
+    elif(newdeadline != None and newcategory != None):
+      conn.execute('''
+        SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      ''', (username, activity , category, deadline))
+      if(len(cur.fetchall()) > 0 ):
+        conn.execute('''UPDATE activities SET deadline = ?, category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+        ''', (newdeadline, newcategory, username, activity , category, deadline))
+        conn.commit()
+        return True
+      else:
+        return False
 
   @staticmethod
   def DataUpdate(facility_type,location):
