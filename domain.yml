@@ -37,6 +37,8 @@ actions:
   - utter_ask_category
   - utter_ask_activity
   - utter_complete_insert_action
+  - utter_confirm_choice
+  - utter_deny_choice
   - action_add_item
   - action_remove_item
   - action_set_complete
@@ -153,6 +155,13 @@ forms:
       category:
         - type: from_entity
           entity: category
+    
+  view_activities_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+
 
 
 
@@ -196,6 +205,12 @@ responses:
   
   utter_ask_name:
   - text: "What did you say your name?"
+
+  utter_confirm_choice:
+  - text: "Are you sure!?"
+
+  utter_deny_choice:
+  - text: "Ok cancelled"
   
 
 
