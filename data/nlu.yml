@@ -1137,18 +1137,18 @@ nlu:
 - intent: add_category
   examples: |
     - add the category [study](category)
-    - add the category [medications](category)
-    - add the category [engineering](category)
+    - enter the category [medications](category)
+    - put the category [engineering](category)
     - category: [school](category)
     - I want to add [university](category) category
-    - I want to add [profession](category) category
-    - I want to add [vacation](category) category
+    - I want to enter [profession](category) category
+    - I want to put [vacation](category) category
     - add new [personal](category) category
     - add new [bank](category) category
-    - add new [diet](category) category
-    - the category to add is [household](category)
+    - enter new [diet](category) category
+    - the category to put is [household](category)
     - the category to add is [university](category)
-    - the category to add is [volunteering](category)
+    - the category to enter is [volunteering](category)
     - new category: [job](category)
     - I want to use a new category [events](category)
     - I want to use a new category [medical](category)
@@ -1159,50 +1159,50 @@ nlu:
     - I want to insert a category
     - I want to use  a new category
     - new category: [school](category)
-    - I want to add a new category [vacation](category)
+    - I want to put a new category [vacation](category)
     - I want to add a new category [leisure](category)
-    - hi, I want to add a new category [research] (category)
-    - hi, I want to add a new category [events] (category)
+    - hi, I want to enter a new category [research] (category)
+    - hi, I want to put a new category [events] (category)
     - hi, I want to add a category [weekly](category)
     - hi, I want to insert the category [daily](category)
     - hi, I want to insert the category [projects](category)
     - new category to add: [projects](category)
-    - new category to add: [bills](category)
-    - hi, please add the following [medical](category)
-    - hi, please add the following [finance](category)
-    - hi, please add the following [shopping](category)
+    - new category to insert: [bills](category)
+    - hi, please insert the following [medical](category)
+    - hi, please put the following [finance](category)
+    - hi, please enter the following [shopping](category)
     - category: [school](category)
     - category: [payments](category)
     - hello, I want to add the category [household](category)
     - I want to add a category [bank](category)
-    - hi, please add the following [diet](category)
+    - hi, please insert the following [diet](category)
     - I want to add  the category [commitments](category) 
     - hello, I want to add the category [work](category)
-    - hello, I want to add the category [research](category)
-    - I want to add the category [sports](category) 
+    - hello, I want to put the category [research](category)
+    - I want to insert the category [sports](category) 
 
 - intent: remove_category
   examples: |
     - I want to remove a category
-    - I want to remove the category [weekly](category) 
-    - I want to remove the category [daily](category) 
+    - I want to cancel the category [weekly](category) 
+    - I want to delete the category [daily](category) 
     - I want to remove the category [commitments](category) 
-    - I want to remove the category [projects](category) 
-    - I want to remove the category [monthly](category) 
-    - I want to remove the category [quickly](category) 
-    - hi, I want to remove the category [weekly](category) 
+    - I want to del the category [projects](category) 
+    - I want to cancel the category [monthly](category) 
+    - I want to delete the category [quickly](category) 
+    - hi, I want to del the category [weekly](category) 
     - hi, I want to remove the category [daily](category) 
-    - hi, I want to remove the category [commitments](category) 
+    - hi, I want to delete the category [commitments](category) 
     - hi, I want to remove the category [projects](category) 
-    - hello, I want to remove the category [monthly](category) 
+    - hello, I want to cancel the category [monthly](category) 
     - hello, I want to remove the category [quickly](category) 
-    - I want to remove the category [gym](category) 
-    - I want to remove the category [sports](category) 
-    - I want to remove the category [study](category) 
-    - I want to remove the category [school](category) 
+    - I want to cancel the category [gym](category) 
+    - I want to delete the category [sports](category) 
+    - I want to del the category [study](category) 
+    - I want to cancel the category [school](category) 
     - I want to remove the category [university](category) 
-    - I want to remove the category [personal](category) 
-    - hi, I want to remove the category [work](category) 
+    - I want to delete the category [personal](category) 
+    - hi, I want to cancel the category [work](category) 
 
 - intent: view_activities
   examples: |
