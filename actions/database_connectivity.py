@@ -21,7 +21,7 @@ class Database:
         CREATE TABLE IF NOT EXISTS categories (
             username VARCHAR(100) NOT NULL,
             category VARCHAR(50) NOT NULL,
-            FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE,
+            FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
             PRIMARY KEY (username,category)
         );
     ''')
@@ -32,7 +32,7 @@ class Database:
             category VARCHAR(50) NOT NULL,
             deadline TIME(0) NOT NULL,
             completed BOOLEAN NOT NULL,
-            FOREIGN KEY (username, category) REFERENCES categories(username,category) ON DELETE CASCADE,
+            FOREIGN KEY (username, category) REFERENCES categories(username,category) ON DELETE CASCADE ON UPDATE CASCADE,
             PRIMARY KEY (username, activity, deadline) 
         );
     ''')
@@ -144,6 +144,45 @@ class Database:
     else:
       return False
 
+  @staticmethod
+  def modifyCategory(username, oldcategory, category):
+    conn.execute('''
+      SELECT * FROM categories WHERE username == ? AND category == ?
+    ''', (username, oldcategory))
+    if(len(cur.fetchall()) > 0 ):
+      conn.execute('''
+        UPDATE categories SET category = ? WHERE username == ? AND category == ?;
+      ''', (category,username,oldcategory))
+      conn.commit()
+      return True
+    else:
+      return False
+
+  @staticmethod
+  def modifyActivityCategory(username, oldcategory, category, activity, deadline):
+    conn.execute('''
+      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+    ''', (username, activity , oldcategory, deadline))
+    if(len(cur.fetchall()) > 0 ):
+      conn.execute('''UPDATE activities SET category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      ''', (category, username, activity , oldcategory, deadline))
+      conn.commit()
+      return True
+    else:
+      return False
+
+  @staticmethod
+  def modifyDeadline(username, category, activity, deadline, olddeadline):
+    conn.execute('''
+      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+    ''', (username, activity , category, olddeadline))
+    if(len(cur.fetchall()) > 0 ):
+      conn.execute('''UPDATE activities SET deadline = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      ''', (deadline, username, activity , category, olddeadline))
+      conn.commit()
+      return True
+    else:
+      return False
 
   @staticmethod
   def DataUpdate(facility_type,location):
