@@ -22,7 +22,7 @@ intents:
 entities:
   - activity
   - category
-  - deadline
+  - time
   - username
 
 actions:
@@ -32,7 +32,7 @@ actions:
   - utter_happy
   - utter_goodbye
   - utter_iamabot
-  - utter_ask_deadline
+  - utter_ask_time
   - utter_ask_category
   - utter_ask_activity
   - utter_complete_insert_action
@@ -58,7 +58,7 @@ slots:
   username:
     type: text
     influence_conversation: false
-  deadline:
+  time:
     type: text
     influence_conversation: false
 
@@ -81,9 +81,9 @@ forms:
       category:
         - type: from_entity
           entity: category
-      deadline:
+      time:
         - type: from_entity
-          entity: deadline
+          entity: time
 
           
   remove_item_form:
@@ -97,9 +97,9 @@ forms:
       category:
         - type: from_entity
           entity: category
-      deadline:
+      time:
         - type: from_entity
-          entity: deadline
+          entity: time
 
   set_complete_form:
     required_slots:
@@ -112,9 +112,9 @@ forms:
       category:
         - type: from_entity
           entity: category
-      deadline:
+      time:
         - type: from_entity
-          entity: deadline
+          entity: time
           
   set_uncomplete_form:
     required_slots:
@@ -127,9 +127,9 @@ forms:
       category:
         - type: from_entity
           entity: category
-      deadline:
+      time:
         - type: from_entity
-          entity: deadline
+          entity: time
 
   add_category_form:
     required_slots:
@@ -180,8 +180,8 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Gruppo16."
 
-  utter_ask_deadline:
-  - text: "Please insert the deadline"
+  utter_ask_time:
+  - text: "Please insert the time"
 
   utter_ask_activity:
   - text: "Please insert the activity"

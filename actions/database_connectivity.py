@@ -13,7 +13,7 @@ class Database:
     conn.commit()
     conn.execute('''
         CREATE TABLE IF NOT EXISTS users (
-            username VARCHAR(100) PRIMARY KEY,
+            username VARCHAR(100) PRIMARY KEY
         );
     ''')
     conn.execute('''
@@ -29,7 +29,7 @@ class Database:
             username VARCHAR(100) NOT NULL,
             activity VARCHAR(100) NOT NULL,
             category VARCHAR(50) NOT NULL,
-            deadline TIME(0) NOT NULL,
+            deadline DATETIME NOT NULL,
             completed BOOLEAN NOT NULL,
             FOREIGN KEY (username, category) REFERENCES categories(username,category) ON DELETE CASCADE ON UPDATE CASCADE,
             PRIMARY KEY (username, activity, deadline) 
@@ -38,14 +38,15 @@ class Database:
     conn.commit()
 
   @staticmethod
-  def createUser(username, name):
+  def createUser(username):
     try:
       conn.execute('''
         INSERT INTO users (username) VALUES (?);
       ''', (username,))
       conn.commit()
       return True
-    except sqlite3.IntegrityError:
+    except sqlite3.IntegrityError as e:
+        print(e)
         return False
 
   @staticmethod
