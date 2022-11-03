@@ -29,7 +29,7 @@ class Database:
             username VARCHAR(100) NOT NULL,
             activity VARCHAR(100) NOT NULL,
             category VARCHAR(50) NOT NULL,
-            deadline DATETIME NOT NULL,
+            deadline DATETIME,
             completed BOOLEAN NOT NULL,
             FOREIGN KEY (username, category) REFERENCES categories(username,category) ON DELETE CASCADE ON UPDATE CASCADE,
             PRIMARY KEY (username, activity, deadline) 
@@ -50,7 +50,7 @@ class Database:
         return False
 
   @staticmethod
-  def insertItem(username, activity ,category, deadline):
+  def insertItem(username, activity ,category, deadline=None):
     try:
       conn.execute('''
       INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,?);
