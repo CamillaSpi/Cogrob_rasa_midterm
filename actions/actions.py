@@ -249,3 +249,18 @@ class actionModifyCategory(Action):
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("category", None)]
         return [SlotSet("category_old", None),SlotSet("category", None)]
+
+class actionModifyActivity(Action):
+    def name(self) -> Text:
+        return "action_modify_activity"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        username = tracker.get_slot("username")
+        category_old = tracker.get_slot("category_old")
+        activity_old = tracker.get_slot("activity_old")
+        category_new = tracker.get_slot("category")
+        time = tracker.get_slot("time")
+        print(activity_old, category_old, category_new, time)

@@ -50,6 +50,7 @@ actions:
   - action_view_activities
   - action_create_user
   - action_modify_category
+  - action_modify_activity
 
 
 slots:
@@ -195,10 +196,14 @@ forms:
         - type: from_entity
           entity: category
           role: old
-      time_old:
+      activity:
         - type: from_entity
-          entity: time
-          role: old
+          entity: activity
+          role: new
+      category:
+        - type: from_entity
+          entity: category
+          role: new
 
 responses:
   utter_greet:
