@@ -41,11 +41,30 @@ stories:
   - action: action_create_user
 
 
+- story: Submit new activity without deadline
+  steps:  
+  - intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_if_deadline
+  - intent: deny
+  - action: action_add_item
+
 - story: Submit new activity with deadline
   steps:  
   - intent: add_item
   - action: add_item_form
   - active_loop: add_item_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_if_deadline
+  - intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
   - active_loop: null
   - slot_was_set:
     - requested_slot: null

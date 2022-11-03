@@ -41,6 +41,7 @@ actions:
   - utter_confirm_choice
   - utter_deny_choice
   - utter_modification_choice
+  - utter_ask_if_deadline
   - action_add_item
   - action_remove_item
   - action_set_complete
@@ -95,6 +96,9 @@ forms:
       category:
         - type: from_entity
           entity: category
+  
+  add_deadline_form: 
+    required_slots:
       time:
         - type: from_entity
           entity: time
@@ -232,6 +236,9 @@ responses:
 
   utter_ask_time:
   - text: "Please insert the time"
+
+  utter_ask_if_deadline:
+  - text: "Do you want to set a deadline for the activity?"
 
   utter_ask_activity:
   - text: "Please insert the activity"
