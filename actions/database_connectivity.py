@@ -1,4 +1,5 @@
 import sqlite3
+import hashlib
 
 conn = sqlite3.connect('data.db')
 cur = conn.cursor()
@@ -26,13 +27,14 @@ class Database:
     ''')
     conn.execute('''
         CREATE TABLE IF NOT EXISTS activities (
+            id_activity VARCHAR(256) NOT NULL,
             username VARCHAR(100) NOT NULL,
             activity VARCHAR(100) NOT NULL,
             category VARCHAR(50) NOT NULL,
             deadline DATETIME,
             completed BOOLEAN NOT NULL,
             FOREIGN KEY (username, category) REFERENCES categories(username,category) ON DELETE CASCADE ON UPDATE CASCADE,
-            PRIMARY KEY (username, activity, deadline) 
+            PRIMARY KEY (id_activity) 
         );
     ''')
     conn.commit()
@@ -52,9 +54,17 @@ class Database:
   @staticmethod
   def insertItem(username, activity ,category, deadline=None):
     try:
+      m = hashlib.sha256()
+      m.update(str(username).encode())
+      m.update(str(activity).encode())
+      m.update(str(category).encode())
+      m.update(str(deadline).encode())
+      m.digest()
+      id_activity = m.hexdigest()
+
       conn.execute('''
-      INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,?);
-    ''', (username, activity ,category,deadline,False))
+      INSERT INTO activities (id_activity,username, activity, category,deadline,completed) VALUES (?, ?, ?, ?,?,?);
+    ''', (id_activity,username, activity ,category,deadline,False))
       conn.commit()
       return True
     except sqlite3.IntegrityError as e :
