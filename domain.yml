@@ -72,7 +72,7 @@ slots:
     influence_conversation: false
   time:
     type: text
-    influence_conversation: false
+    influence_conversation: true
   time_old:
     type: text
     influence_conversation: false
@@ -96,6 +96,7 @@ forms:
       category:
         - type: from_entity
           entity: category
+          role: new
   
   add_deadline_form: 
     required_slots:
@@ -115,6 +116,7 @@ forms:
       category:
         - type: from_entity
           entity: category
+          role: new
       time:
         - type: from_entity
           entity: time
@@ -130,6 +132,7 @@ forms:
       category:
         - type: from_entity
           entity: category
+          role: new
       time:
         - type: from_entity
           entity: time

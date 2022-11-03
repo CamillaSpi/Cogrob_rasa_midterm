@@ -61,7 +61,7 @@ class actionAddItem(Action):
                     dispatcher.utter_message(text=f"Ops! {username} something went wrong, you already inserted this activity :(") 
             else:
                 dispatcher.utter_message(text=f"The category does not exists! You have to create it first") 
-                return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+                return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]

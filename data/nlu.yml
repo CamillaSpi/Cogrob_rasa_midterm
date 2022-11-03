@@ -319,6 +319,12 @@ nlu:
     - [work]{"entity": "category", "role": "new"}
     - [vacation]{"entity": "category", "role": "new"}
     - [holiday]{"entity": "category", "role": "new"}
+    - tomorrow morning
+    - 14th september 2022
+    - at 18:00
+    - yesterday
+    - on the next friday
+    - on monday
 
 - intent: add_item
   examples: |
