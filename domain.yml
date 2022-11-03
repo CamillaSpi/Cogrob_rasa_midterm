@@ -24,7 +24,6 @@ entities:
   - category
   - deadline
   - username
-  - name
 
 actions:
   - utter_greet
@@ -62,9 +61,6 @@ slots:
   deadline:
     type: text
     influence_conversation: false
-  name:
-    type: text
-    influence_conversation: false
 
 #sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity?
 forms:
@@ -73,9 +69,6 @@ forms:
       username:
         - type: from_entity
           entity: username
-      name:
-        - type: from_entity
-          entity: name
 
   add_item_form:
     required_slots:
@@ -162,10 +155,6 @@ forms:
         - type: from_entity
           entity: username
 
-
-
-
-
 responses:
   utter_greet:
   - text: "Hey! Who are you?"
@@ -202,9 +191,6 @@ responses:
  
   utter_ask_username:
   - text: "What is your username?"
-  
-  utter_ask_name:
-  - text: "What did you say your name?"
 
   utter_confirm_choice:
   - text: "Are you sure!?"
