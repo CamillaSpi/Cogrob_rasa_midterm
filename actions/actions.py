@@ -238,12 +238,15 @@ class actionModifyCategory(Action):
         category_new = tracker.get_slot("category")
         
         if(Database.doesUserExists(username)):
-            returnedValue = Database.modifyCategory(username, category_old, category_new)
-            if (returnedValue):  
-                dispatcher.utter_message(text=f"Congratulation {username}, {category_old} modified in {category_new} !") 
-            else:
-                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this category :(") 
+            if (Database.doesCategoryExists(username,category_new) == False):
 
+                returnedValue = Database.modifyCategory(username, category_old, category_new)
+                if (returnedValue):  
+                    dispatcher.utter_message(text=f"Congratulation {username}, {category_old} modified in {category_new} !") 
+                else:
+                    dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this category :(") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} the {category_new} already exists!") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("category", None)]

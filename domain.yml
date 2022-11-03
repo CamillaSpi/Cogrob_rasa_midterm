@@ -42,6 +42,7 @@ actions:
   - utter_deny_choice
   - utter_modification_choice
   - utter_ask_if_deadline
+  - utter_choice_what_to_modify
   - action_add_item
   - action_remove_item
   - action_set_complete
@@ -160,6 +161,7 @@ forms:
       category:
         - type: from_entity
           entity: category
+          role: new
           
   remove_category_form:
     required_slots:
@@ -169,6 +171,7 @@ forms:
       category:
         - type: from_entity
           entity: category
+          role: new
     
   view_activities_form:
     required_slots:
@@ -260,6 +263,10 @@ responses:
 
   utter_modification_choice:
   - text: "Which info do you weant to modify?"
+  utter_choice_what_to_modify:
+  - text: "What campo vuoi modiffare?"
+  utter_confirmed:
+  - text: " Changfed "
   
 
 
