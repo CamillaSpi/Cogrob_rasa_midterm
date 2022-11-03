@@ -51,6 +51,8 @@ class actionAddItem(Action):
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         time = tracker.get_slot("time")
+        if(len(time) == 2):
+            time = time['to']
 
         if(Database.doesUserExists(username)):
 
@@ -223,3 +225,27 @@ class showActivities(Action):
             return [SlotSet("username",None),SlotSet("activity", None)]
 
         return [SlotSet("activity", None)]
+
+class actionModifyCategory(Action):
+    def name(self) -> Text:
+        return "action_modify_category"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        username = tracker.get_slot("username")
+        category_old = tracker.get_slot("category_old")
+        category_new = tracker.get_slot("category")
+        
+        if(Database.doesUserExists(username)):
+            returnedValue = Database.modifyCategory(username, category_old, category_new)
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, {category_old} modified in {category_new} !") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this category :(") 
+
+        else:
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("category", None)]
+        return [SlotSet("category_old", None),SlotSet("category", None)]

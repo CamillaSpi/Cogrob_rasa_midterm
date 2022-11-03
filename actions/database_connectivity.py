@@ -57,7 +57,8 @@ class Database:
     ''', (username, activity ,category,deadline,False))
       conn.commit()
       return True
-    except sqlite3.IntegrityError:
+    except sqlite3.IntegrityError as e :
+        print(e)
         return False
 
   @staticmethod
@@ -65,7 +66,7 @@ class Database:
     if category == None:
       cur.execute('''
       SELECT activity,category,deadline FROM activities WHERE username == (?);
-      ''',(username))
+      ''',(username,))
     else:
       cur.execute('''
       SELECT activity,category,deadline FROM activities WHERE username == ? AND category == ?;
@@ -116,7 +117,7 @@ class Database:
   @staticmethod
   def deleteCategory(username, category):
 
-    conn.execute('''
+    cur.execute('''
       SELECT * FROM categories WHERE username == ? AND category == ? 
     ''', (username, category))
     
@@ -132,7 +133,7 @@ class Database:
   @staticmethod
   def setItemStatus(username, activity ,category,deadline,completed):
     
-    conn.execute('''
+    cur.execute('''
       SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
     ''', (username, activity ,category,deadline))
     
@@ -145,14 +146,14 @@ class Database:
       return False
 
   @staticmethod
-  def modifyCategory(username, oldcategory, category):
-    conn.execute('''
+  def modifyCategory(username, category, category_new):
+    cur.execute('''
       SELECT * FROM categories WHERE username == ? AND category == ?
-    ''', (username, oldcategory))
+    ''', (username, category))
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''
         UPDATE categories SET category = ? WHERE username == ? AND category == ?;
-      ''', (category,username,oldcategory))
+      ''', (category_new,username,category))
       conn.commit()
       return True
     else:

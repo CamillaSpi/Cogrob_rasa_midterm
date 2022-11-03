@@ -18,6 +18,8 @@ intents:
   - view_activities
   - presentation
   - help
+  - modify_category
+  - modify_activity
 
 entities:
   - activity
@@ -38,6 +40,7 @@ actions:
   - utter_complete_insert_action
   - utter_confirm_choice
   - utter_deny_choice
+  - utter_modification_choice
   - action_add_item
   - action_remove_item
   - action_set_complete
@@ -46,10 +49,17 @@ actions:
   - action_remove_category
   - action_view_activities
   - action_create_user
+  - action_modify_category
 
 
 slots:
+  activity_old:
+    type: text
+    influence_conversation: false
   activity:
+    type: text
+    influence_conversation: false
+  category_old:
     type: text
     influence_conversation: false
   category:
@@ -61,8 +71,11 @@ slots:
   time:
     type: text
     influence_conversation: false
+  time_old:
+    type: text
+    influence_conversation: false
 
-#sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity?
+#sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity? No!
 forms:
   add_new_user_form:
     required_slots:
@@ -154,6 +167,38 @@ forms:
       username:
         - type: from_entity
           entity: username
+              
+  modify_category_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+      category_old:
+        - type: from_entity
+          entity: category
+          role: old
+      category:
+        - type: from_entity
+          entity: category
+          role: new
+                 
+  modify_activity_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+      activity_old:
+        - type: from_entity
+          entity: activity
+          role: old
+      category_old:
+        - type: from_entity
+          entity: category
+          role: old
+      time_old:
+        - type: from_entity
+          entity: time
+          role: old
 
 responses:
   utter_greet:
@@ -197,6 +242,9 @@ responses:
 
   utter_deny_choice:
   - text: "Ok cancelled"
+
+  utter_modification_choice:
+  - text: "Which info do you weant to modify?"
   
 
 
