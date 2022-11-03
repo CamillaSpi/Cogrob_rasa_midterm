@@ -146,14 +146,14 @@ class Database:
       return False
 
   @staticmethod
-  def modifyCategory(username, oldcategory, category):
+  def modifyCategory(username, category, category_new):
     cur.execute('''
       SELECT * FROM categories WHERE username == ? AND category == ?
-    ''', (username, oldcategory))
+    ''', (username, category))
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''
         UPDATE categories SET category = ? WHERE username == ? AND category == ?;
-      ''', (category,username,oldcategory))
+      ''', (category_new,username,category))
       conn.commit()
       return True
     else:
