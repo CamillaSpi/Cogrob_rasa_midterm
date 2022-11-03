@@ -30,7 +30,7 @@ stories:
   - action: utter_goodbye
 
 
-- story: Submit new activity with deadline
+- story: Submit new activity with time
   steps:  
   - intent: presentation
   - action: add_new_user_form
@@ -41,7 +41,7 @@ stories:
   - action: action_create_user
 
 
-- story: Submit new activity with deadline
+- story: Submit new activity with time
   steps:  
   - intent: add_item
   - action: add_item_form

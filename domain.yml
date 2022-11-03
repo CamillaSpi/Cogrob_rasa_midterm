@@ -1,220 +1,207 @@
-version: "2.0"
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - add_item
-  - remove_item
-  - set_complete
-  - set_uncomplete
-  - add_category
-  - remove_category
-  - inform
-  - view_activities
-  - presentation
-  - help
-
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- add_item:
+    use_entities: true
+- remove_item:
+    use_entities: true
+- set_complete:
+    use_entities: true
+- set_uncomplete:
+    use_entities: true
+- add_category:
+    use_entities: true
+- remove_category:
+    use_entities: true
+- inform:
+    use_entities: true
+- view_activities:
+    use_entities: true
+- presentation:
+    use_entities: true
+- help:
+    use_entities: true
 entities:
-  - activity
-  - category
-  - deadline
-  - username
-  - name
-
-actions:
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_ask_deadline
-  - utter_ask_category
-  - utter_ask_activity
-  - utter_complete_insert_action
-  - utter_confirm_choice
-  - utter_deny_choice
-  - action_add_item
-  - action_remove_item
-  - action_set_complete
-  - action_set_uncomplete
-  - action_add_category
-  - action_remove_category
-  - action_view_activities
-  - action_create_user
-
-
+- activity
+- category
+- time
+- username
 slots:
   activity:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
   category:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
   username:
-    type: text
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
-  deadline:
-    type: text
+  time:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
-  name:
-    type: text
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
     influence_conversation: false
-
-#sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity?
+responses:
+  utter_greet:
+  - text: Hey! Who are you?
+  utter_help:
+  - text: Hey, i'm your personal assistant, you can create To-Do list and i'll manage that :D
+  - text: Ask me to add a new activity or to create a new cateogory list!
+  - text: Have you try to ask me to show your activities?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Gruppo16.
+  utter_ask_time:
+  - text: Please insert the time
+  utter_ask_activity:
+  - text: Please insert the activity
+  utter_ask_category:
+  - text: Please insert the category of the item
+  utter_ask_username:
+  - text: What is your username?
+  utter_confirm_choice:
+  - text: Are you sure!?
+  utter_deny_choice:
+  - text: Ok cancelled
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_ask_time
+- utter_ask_category
+- utter_ask_activity
+- utter_complete_insert_action
+- utter_confirm_choice
+- utter_deny_choice
+- action_add_item
+- action_remove_item
+- action_set_complete
+- action_set_uncomplete
+- action_add_category
+- action_remove_category
+- action_view_activities
+- action_create_user
 forms:
   add_new_user_form:
     required_slots:
       username:
-        - type: from_entity
-          entity: username
-      name:
-        - type: from_entity
-          entity: name
-
+      - entity: username
+        type: from_entity
   add_item_form:
     required_slots:
-      username:
-        - type: from_entity
-          entity: username
       activity:
-        - type: from_entity
-          entity: activity
+      - entity: activity
+        type: from_entity
       category:
-        - type: from_entity
-          entity: category
-      deadline:
-        - type: from_entity
-          entity: deadline
-
-          
+      - entity: category
+        type: from_entity
+      time:
+      - entity: time
+        type: from_entity
+      username:
+      - entity: username
+        type: from_entity
   remove_item_form:
     required_slots:
-      username:
-        - type: from_entity
-          entity: username
       activity:
-        - type: from_entity
-          entity: activity
+      - entity: activity
+        type: from_entity
       category:
-        - type: from_entity
-          entity: category
-      deadline:
-        - type: from_entity
-          entity: deadline
-
+      - entity: category
+        type: from_entity
+      time:
+      - entity: time
+        type: from_entity
+      username:
+      - entity: username
+        type: from_entity
   set_complete_form:
     required_slots:
-      username:
-        - type: from_entity
-          entity: username
       activity:
-        - type: from_entity
-          entity: activity
+      - entity: activity
+        type: from_entity
       category:
-        - type: from_entity
-          entity: category
-      deadline:
-        - type: from_entity
-          entity: deadline
-          
+      - entity: category
+        type: from_entity
+      time:
+      - entity: time
+        type: from_entity
+      username:
+      - entity: username
+        type: from_entity
   set_uncomplete_form:
     required_slots:
-      username:
-        - type: from_entity
-          entity: username
       activity:
-        - type: from_entity
-          entity: activity
+      - entity: activity
+        type: from_entity
       category:
-        - type: from_entity
-          entity: category
-      deadline:
-        - type: from_entity
-          entity: deadline
-
+      - entity: category
+        type: from_entity
+      time:
+      - entity: time
+        type: from_entity
+      username:
+      - entity: username
+        type: from_entity
   add_category_form:
     required_slots:
-      username:
-        - type: from_entity
-          entity: username
       category:
-        - type: from_entity
-          entity: category
-          
+      - entity: category
+        type: from_entity
+      username:
+      - entity: username
+        type: from_entity
   remove_category_form:
     required_slots:
-      username:
-        - type: from_entity
-          entity: username
       category:
-        - type: from_entity
-          entity: category
-    
+      - entity: category
+        type: from_entity
+      username:
+      - entity: username
+        type: from_entity
   view_activities_form:
     required_slots:
       username:
-        - type: from_entity
-          entity: username
-
-
-
-
-
-responses:
-  utter_greet:
-  - text: "Hey! Who are you?"
-
-  utter_help:
-  - text: "Hey, i'm your personal assistant, you can create To-Do list and i'll manage that :D"
-  - text: "Ask me to add a new activity or to create a new cateogory list!"
-  - text: "Have you try to ask me to show your activities?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Gruppo16."
-
-  utter_ask_deadline:
-  - text: "Please insert the deadline"
-
-  utter_ask_activity:
-  - text: "Please insert the activity"
-
-  utter_ask_category:
-  - text: "Please insert the category of the item"
- 
-  utter_ask_username:
-  - text: "What is your username?"
-  
-  utter_ask_name:
-  - text: "What did you say your name?"
-
-  utter_confirm_choice:
-  - text: "Are you sure!?"
-
-  utter_deny_choice:
-  - text: "Ok cancelled"
-  
-
-
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+      - entity: username
+        type: from_entity
+e2e_actions: []

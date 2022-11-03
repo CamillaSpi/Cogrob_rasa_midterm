@@ -27,6 +27,13 @@ pipeline:
   - name: FallbackClassifier
     threshold: 0.3
     ambiguity_threshold: 0.1
+  - name: "DucklingEntityExtractor"
+    # url of the running duckling server
+    url: "http://localhost:8000"
+    # dimensions to extract
+    timezone: "Europe/Rome"
+    dimensions: ["time"]
+    timeout : 3
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

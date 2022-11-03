@@ -25,11 +25,10 @@ class actionCreateUser(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         username = tracker.get_slot("username")
-        name = tracker.get_slot("name")
         
-        Database.createUser(username,name)
+        Database.createUser(username)
 
-        dispatcher.utter_message(text=f"Congratulation {name}, or i should call you {username} :P") 
+        dispatcher.utter_message(text=f"Congratulation {name} you account is correctly created:P") 
             
         return []
 
@@ -45,22 +44,22 @@ class actionAddItem(Action):
         username = tracker.get_slot("username")
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
-        deadline = tracker.get_slot("deadline")
+        time = tracker.get_slot("time")
 
         if(Database.doesUserExists(username)):
 
-            returnedValue= Database.insertItem(username,activity ,category,deadline)
+            returnedValue= Database.insertItem(username,activity ,category,time)
 
             if (returnedValue):  
-                dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {deadline}") 
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {time}") 
             else:
                 dispatcher.utter_message(text=f"Ops! {username} something went wrong, did you create this category? or maybe you already inserted this activity :(") 
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
 
 class actionRemoveItem(Action):
 
@@ -73,11 +72,11 @@ class actionRemoveItem(Action):
         username = tracker.get_slot("username")
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
-        deadline = tracker.get_slot("deadline")
+        time = tracker.get_slot("time")
 
         
         if(Database.doesUserExists(username)):
-            returnedValue = Database.deleteItem(username,activity ,category,deadline)
+            returnedValue = Database.deleteItem(username,activity ,category,time)
 
             if (returnedValue):  
                 dispatcher.utter_message(text=f"Congratulation {username}, {activity} remove from {category}") 
@@ -86,9 +85,9 @@ class actionRemoveItem(Action):
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("category", None),SlotSet("deadline",None)]
+            return [SlotSet("username",None),SlotSet("category", None),SlotSet("time",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
             
 
 class actionAddCategory(Action):
@@ -154,11 +153,11 @@ class actionSetComplete(Action):
         username = tracker.get_slot("username")
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
-        deadline = tracker.get_slot("deadline")
+        time = tracker.get_slot("time")
 
         
         if(Database.doesUserExists(username)):
-            returnedValue = Database.setItemStatus(username,activity ,category,deadline,True)
+            returnedValue = Database.setItemStatus(username,activity ,category,time,True)
 
             if (returnedValue):  
                 dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} completed !") 
@@ -167,9 +166,9 @@ class actionSetComplete(Action):
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
 
 class actionSetInComplete(Action):
 
@@ -183,11 +182,11 @@ class actionSetInComplete(Action):
         username = tracker.get_slot("username")
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
-        deadline = tracker.get_slot("deadline")
+        time = tracker.get_slot("time")
 
           
         if(Database.doesUserExists(username)):
-            returnedValue = Database.setItemStatus(username,activity ,category,deadline,False)
+            returnedValue = Database.setItemStatus(username,activity ,category,time,False)
 
             if (returnedValue):  
                 dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as incompleted !") 
@@ -196,9 +195,9 @@ class actionSetInComplete(Action):
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("deadline",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
 
 class showActivities(Action):
     def name(self) -> Text:

@@ -13,8 +13,7 @@ class Database:
     conn.commit()
     conn.execute('''
         CREATE TABLE IF NOT EXISTS users (
-            username VARCHAR(100) PRIMARY KEY,
-            name VARCHAR(100) NOT NULL
+            username VARCHAR(100) PRIMARY KEY
         );
     ''')
     conn.execute('''
@@ -30,7 +29,7 @@ class Database:
             username VARCHAR(100) NOT NULL,
             activity VARCHAR(100) NOT NULL,
             category VARCHAR(50) NOT NULL,
-            deadline TIME(0) NOT NULL,
+            time TIME(0) NOT NULL,
             completed BOOLEAN NOT NULL,
             FOREIGN KEY (username, category) REFERENCES categories(username,category)
         );
@@ -41,19 +40,19 @@ class Database:
   def createUser(username, name):
     try:
       conn.execute('''
-        INSERT INTO users (username, name) VALUES (?, ?);
-      ''', (username, name))
+        INSERT INTO users (username) VALUES (?);
+      ''', (username,))
       conn.commit()
       return True
     except sqlite3.IntegrityError:
         return False
 
   @staticmethod
-  def insertItem(username, activity ,category,deadline):
+  def insertItem(username, activity ,category,time):
     try:
       conn.execute('''
-      INSERT INTO activities (username, activity, category,deadline,completed) VALUES (?, ?, ?,?,?);
-    ''', (username, activity ,category,deadline,False))
+      INSERT INTO activities (username, activity, category,time,completed) VALUES (?, ?, ?,?,?);
+    ''', (username, activity ,category,time,False))
       conn.commit()
       return True
     except sqlite3.IntegrityError:
@@ -63,11 +62,11 @@ class Database:
   def selectItems(username, category=None):
     if category == None:
       cur.execute('''
-      SELECT activity,category,deadline FROM activities WHERE username == (?);
+      SELECT activity,category,time FROM activities WHERE username == (?);
       ''',(username,))
     else:
       cur.execute('''
-      SELECT activity,category,deadline FROM activities WHERE username == ? AND category == ?;
+      SELECT activity,category,time FROM activities WHERE username == ? AND category == ?;
       ''',(username,category))
 
     rows = cur.fetchall()
@@ -75,16 +74,16 @@ class Database:
     return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
 
   @staticmethod
-  def deleteItem(username, activity ,category,deadline):
+  def deleteItem(username, activity ,category,time):
     
     cur.execute('''
-      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-    ''', (username, activity ,category,deadline))
+      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND time == ?
+    ''', (username, activity ,category,time))
 
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''
-        DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (username, activity ,category,deadline))
+        DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND time == ?
+      ''', (username, activity ,category,time))
       conn.commit()
       return True
     else:
@@ -128,15 +127,15 @@ class Database:
     return False
 
   @staticmethod
-  def setItemStatus(username, activity ,category,deadline,completed):
+  def setItemStatus(username, activity ,category,time,completed):
     
     cur.execute('''
-      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-    ''', (username, activity ,category,deadline))
+      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND time == ?
+    ''', (username, activity ,category,time))
     
     if(len(cur.fetchall()) > 0 ):
-      conn.execute('''UPDATE activities SET completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (completed, username, activity ,category,deadline))
+      conn.execute('''UPDATE activities SET completed = ? WHERE username == ? AND activity == ? AND category == ? AND time == ?
+      ''', (completed, username, activity ,category,time))
       conn.commit()
       return True
     return False
