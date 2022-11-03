@@ -160,40 +160,37 @@ class Database:
       return False
 
   @staticmethod
-  def modifyActivity(username, category, activity, deadline, newdeadline = None, newcategory = None):
-    if (newdeadline == None and newcategory != None):
+  def modifyActivity(username, category, activity, deadline, newdeadline = None, newcategory = None, newactivity = None):
+    try:
       conn.execute('''
         SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
       ''', (username, activity , category, deadline))
       if(len(cur.fetchall()) > 0 ):
-        conn.execute('''UPDATE activities SET category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-        ''', (newcategory, username, activity , category, deadline))
+        if (newdeadline == None and newcategory != None and newactivity == None):
+          conn.execute('''UPDATE activities SET category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+          ''', (newcategory, username, activity , category, deadline))
+        elif (newdeadline != None and newcategory == None and newactivity == None):
+          conn.execute('''UPDATE activities SET deadline = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+          ''', (newdeadline, username, activity , category, deadline))
+        elif (newdeadline == None and newcategory == None and newactivity != None):
+          conn.execute('''UPDATE activities SET activity = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+          ''', (newactivity, username, activity , category, deadline))
+        elif (newdeadline == None and newcategory != None and newactivity != None):
+          conn.execute('''UPDATE activities SET activity = ?, category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+          ''', (newactivity, newcategory, username, activity , category, deadline))
+        elif (newdeadline != None and newcategory == None and newactivity != None):
+          conn.execute('''UPDATE activities SET activity = ?, deadline = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+          ''', (newactivity, newdeadline, username, activity , category, deadline))
+        elif (newdeadline != None and newcategory != None and newactivity == None):
+          conn.execute('''UPDATE activities SET deadline = ?, category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+          ''', (newdeadline, newcategory, username, activity , category, deadline))
         conn.commit()
         return True
       else:
         return False
-    elif (newdeadline != None and newcategory == None):
-      conn.execute('''
-        SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (username, activity , category, deadline))
-      if(len(cur.fetchall()) > 0 ):
-        conn.execute('''UPDATE activities SET deadline = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-        ''', (newdeadline, username, activity , category, deadline))
-        conn.commit()
-        return True
-      else:
-        return False
-    elif(newdeadline != None and newcategory != None):
-      conn.execute('''
-        SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (username, activity , category, deadline))
-      if(len(cur.fetchall()) > 0 ):
-        conn.execute('''UPDATE activities SET deadline = ?, category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-        ''', (newdeadline, newcategory, username, activity , category, deadline))
-        conn.commit()
-        return True
-      else:
-        return False
+    except sqlite3.IntegrityError:
+      return False
+
 
   @staticmethod
   def doesUserExists(username):
