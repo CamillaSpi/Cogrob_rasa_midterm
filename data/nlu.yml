@@ -352,34 +352,34 @@ nlu:
     - add activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
     - enter activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
     - put activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - I want to add an action
-    - I want to insert an action to a list
-    - I want to add an action [run](activity) to [weekly]{"entity": "category", "role": "new"} list
-    - I want to enter an action [swimmming](activity) to [daily]{"entity": "category", "role": "new"} list
-    - I want to add an action [play](activity) to [commitments]{"entity": "category", "role": "new"} list
-    - I want to enter an action [stand_up](activity) to [projects]{"entity": "category", "role": "new"} list
-    - I want to insert an action [jogging](activity) to [monthly]{"entity": "category", "role": "new"} list
-    - I want to put an action [shopping](activity) to [quickly]{"entity": "category", "role": "new"} list
-    - I want to add an action [run](activity) to [weekly]{"entity": "category", "role": "new"}
-    - I want to put an action [study](activity) to [daily]{"entity": "category", "role": "new"}
-    - I want to enter an action [payments](activity) to [commitments]{"entity": "category", "role": "new"}
-    - I want to add an action [stand_up](activity) to [projects]{"entity": "category", "role": "new"}
-    - I want to add an action [jogging](activity) to [monthly]{"entity": "category", "role": "new"}
-    - I want to put an action [shopping](activity) to [quickly]{"entity": "category", "role": "new"}
-    - I want to add an action to [weekly]{"entity": "category", "role": "new"} list
-    - I want to insert an action to [daily]{"entity": "category", "role": "new"} list
-    - I want to put an action to [commitments]{"entity": "category", "role": "new"} list
-    - I want to enter an action to [projects]{"entity": "category", "role": "new"} list
-    - I want to add an action to [monthly]{"entity": "category", "role": "new"} list
-    - I want to insert an action to [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to add an action to [weekly]{"entity": "category", "role": "new"} list
-    - hi, I want to put an action to [daily]{"entity": "category", "role": "new"} list
-    - hi, I want to insert an action to [commitments]{"entity": "category", "role": "new"} list
-    - hi, I want to enter an action to [projects]{"entity": "category", "role": "new"} list
-    - hello, I want to insert an action to [monthly]{"entity": "category", "role": "new"} list
-    - hello, I want to add an action to [quickly]{"entity": "category", "role": "new"} list
-    - hello I want to enter an action to my list
-    - hi I want to insert an action to my list
+    - I want to add an activity
+    - I want to insert an activity to a list
+    - I want to add an activity [run](activity) to [weekly]{"entity": "category", "role": "new"} list
+    - I want to enter an activity [swimmming](activity) to [daily]{"entity": "category", "role": "new"} list
+    - I want to add an activity [play](activity) to [commitments]{"entity": "category", "role": "new"} list
+    - I want to enter an activity [stand_up](activity) to [projects]{"entity": "category", "role": "new"} list
+    - I want to insert an activity [jogging](activity) to [monthly]{"entity": "category", "role": "new"} list
+    - I want to put an activity [shopping](activity) to [quickly]{"entity": "category", "role": "new"} list
+    - I want to add an activity [run](activity) to [weekly]{"entity": "category", "role": "new"}
+    - I want to put an activity [study](activity) to [daily]{"entity": "category", "role": "new"}
+    - I want to enter an activity [payments](activity) to [commitments]{"entity": "category", "role": "new"}
+    - I want to add an activity [stand_up](activity) to [projects]{"entity": "category", "role": "new"}
+    - I want to add an activity [jogging](activity) to [monthly]{"entity": "category", "role": "new"}
+    - I want to put an activity [shopping](activity) to [quickly]{"entity": "category", "role": "new"}
+    - I want to add an activity to [weekly]{"entity": "category", "role": "new"} list
+    - I want to insert an activity to [daily]{"entity": "category", "role": "new"} list
+    - I want to put an activity to [commitments]{"entity": "category", "role": "new"} list
+    - I want to enter an activity to [projects]{"entity": "category", "role": "new"} list
+    - I want to add an activity to [monthly]{"entity": "category", "role": "new"} list
+    - I want to insert an activity to [quickly]{"entity": "category", "role": "new"} list
+    - hi, I want to add an activity to [weekly]{"entity": "category", "role": "new"} list
+    - hi, I want to put an activity to [daily]{"entity": "category", "role": "new"} list
+    - hi, I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list
+    - hi, I want to enter an activity to [projects]{"entity": "category", "role": "new"} list
+    - hello, I want to insert an activity to [monthly]{"entity": "category", "role": "new"} list
+    - hello, I want to add an activity to [quickly]{"entity": "category", "role": "new"} list
+    - hello I want to enter an activity to my list
+    - hi I want to insert an activity to my list
     - insert [run](activity) at 11:00
     - enter [bed](activity) at 13:00
     - put [stand_up](activity) at 9:30
@@ -410,22 +410,22 @@ nlu:
     - put activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"} at 13:39
     - add activity [play](activity) in category [daily]{"entity": "category", "role": "new"} at 3:29
     - enter activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"} at 11:00
-    - I want to add an action at 11:00
-    - I want to insert an action to a list at 13:39
-    - I want to add an action to [weekly]{"entity": "category", "role": "new"} list at 21:10
-    - I want to insert an action to [daily]{"entity": "category", "role": "new"} list at 9:40
-    - I want to add an action to [commitments]{"entity": "category", "role": "new"} list at 19:00
-    - I want to enter an action to [projects]{"entity": "category", "role": "new"} list at 16:30
-    - I want to put an action to [monthly]{"entity": "category", "role": "new"} list at 7:00
-    - I want to add an action to [quickly]{"entity": "category", "role": "new"} list at 6:30
-    - hi, I want to add an action to [weekly]{"entity": "category", "role": "new"} list at 18:30
-    - hi, I want to enter an action to [daily]{"entity": "category", "role": "new"} list at 17:30
-    - hi, I want to put an action to [commitments]{"entity": "category", "role": "new"} list at 22:20
-    - hi, I want to insert an action to [projects]{"entity": "category", "role": "new"} list at 16:00
-    - hello, I want to enter an action to [monthly]{"entity": "category", "role": "new"} list at 14:50
-    - hello, I want to add an action to [quickly]{"entity": "category", "role": "new"} list at 3:29
-    - hello I want to insert an action to my list at 12:37
-    - hi I want to add an action to my list at 18:14
+    - I want to add an activity at 11:00
+    - I want to insert an activity to a list at 13:39
+    - I want to add an activity to [weekly]{"entity": "category", "role": "new"} list at 21:10
+    - I want to insert an activity to [daily]{"entity": "category", "role": "new"} list at 9:40
+    - I want to add an activity to [commitments]{"entity": "category", "role": "new"} list at 19:00
+    - I want to enter an activity to [projects]{"entity": "category", "role": "new"} list at 16:30
+    - I want to put an activity to [monthly]{"entity": "category", "role": "new"} list at 7:00
+    - I want to add an activity to [quickly]{"entity": "category", "role": "new"} list at 6:30
+    - hi, I want to add an activity to [weekly]{"entity": "category", "role": "new"} list at 18:30
+    - hi, I want to enter an activity to [daily]{"entity": "category", "role": "new"} list at 17:30
+    - hi, I want to put an activity to [commitments]{"entity": "category", "role": "new"} list at 22:20
+    - hi, I want to insert an activity to [projects]{"entity": "category", "role": "new"} list at 16:00
+    - hello, I want to enter an activity to [monthly]{"entity": "category", "role": "new"} list at 14:50
+    - hello, I want to add an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
+    - hello I want to insert an activity to my list at 12:37
+    - hi I want to add an activity to my list at 18:14
     - hi, i'm [mattia21](username) enter [run](activity)
     - hi, i'm [ferdinando1907](username) insert [bed](activity)
     - hi, i'm [nando](username) put [stand_up](activity)
@@ -456,34 +456,34 @@ nlu:
     - hi, i'm [ferdinando1907](username) add activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
     - hi, i'm [antonio68](username) put activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
     - hi, i'm [Giusy_5](username) insert activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - hello, i'm [ferdinando1907](username) and I want to add an action
-    - hello, i'm [antonio68](username) I want to enter an action to a list
-    - hello, i'm [Simone](username) and I want to insert an action [run](activity) to [weekly]{"entity": "category", "role": "new"} list
-    - hello, i'm [Giusy_5](username) I want to put an action [swimmming](activity) to [daily]{"entity": "category", "role": "new"} list
-    - hello, i'm [nando](username) I want to add an action [play](activity) to [commitments]{"entity": "category", "role": "new"} list
-    - hello, i'm [mattia21](username) I want to enter an action [stand_up](activity) to [projects]{"entity": "category", "role": "new"} list
-    - hello, i'm [Simone](username) I want to insert an action [jogging](activity) to [monthly]{"entity": "category", "role": "new"} list
-    - hello, i'm [ferdinando1907](username) and I want to put an action [shopping](activity) to [quickly]{"entity": "category", "role": "new"} list
-    - hello, i'm [mattia21](username) I want to add an action [run](activity) to [weekly]{"entity": "category", "role": "new"}
-    - hello, i'm [Giusy_5](username), I want to insert an action [study](activity) to [daily]{"entity": "category", "role": "new"}
-    - hello, i'm [antonio68](username), I want to insert an action [payments](activity) to [commitments]{"entity": "category", "role": "new"}
-    - hello, i'm [mattia21](username) and I want to enter an action [stand_up](activity) to [projects]{"entity": "category", "role": "new"}
-    - hello, i'm [alessia19_07](username), and I want to add an action [jogging](activity) to [monthly]{"entity": "category", "role": "new"}
-    - hello, i'm [Giusy_5](username) I want to enter an action [shopping](activity) to [quickly]{"entity": "category", "role": "new"}
-    - hello, i'm [ferdinando1907](username) I want to put an action to [weekly]{"entity": "category", "role": "new"} list
-    - hello, i'm [mattia21](username) I want to insert an action to [daily]{"entity": "category", "role": "new"} list
-    - hello, i'm [alessia19_07](username) and I want to insert an action to [commitments]{"entity": "category", "role": "new"} list
-    - hello, i'm [mattia21](username), I want to insert an action to [projects]{"entity": "category", "role": "new"} list
-    - hello, i'm [antonio68](username), I want to add an action to [monthly]{"entity": "category", "role": "new"} list
-    - hello, i'm [ferdinando1907](username) I want to add an action to [quickly]{"entity": "category", "role": "new"} list
-    - hello, i'm [Giusy_5](username) I want to enter an action to [weekly]{"entity": "category", "role": "new"} list
-    - i'm [Simone](username) I want to add an action to [daily]{"entity": "category", "role": "new"} list
-    - i'm [antonio68](username) I want to insert an action to [commitments]{"entity": "category", "role": "new"} list
-    - i'm [alessia19_07](username) and I want to put an action to [projects]{"entity": "category", "role": "new"} list
-    - i'm [ferdinando1907](username), I want to add an action to [monthly]{"entity": "category", "role": "new"} list
-    - i'm [antonio68](username), I want to enter an action to [quickly]{"entity": "category", "role": "new"} list
-    - i'm [ferdinando1907](username) and I want to insert an action to my list
-    - i'm [alessia19_07](username) I want to insert an action to my list
+    - hello, i'm [ferdinando1907](username) and I want to add an activity
+    - hello, i'm [antonio68](username) I want to enter an activity to a list
+    - hello, i'm [Simone](username) and I want to insert an activity [run](activity) to [weekly]{"entity": "category", "role": "new"} list
+    - hello, i'm [Giusy_5](username) I want to put an activity [swimmming](activity) to [daily]{"entity": "category", "role": "new"} list
+    - hello, i'm [nando](username) I want to add an activity [play](activity) to [commitments]{"entity": "category", "role": "new"} list
+    - hello, i'm [mattia21](username) I want to enter an activity [stand_up](activity) to [projects]{"entity": "category", "role": "new"} list
+    - hello, i'm [Simone](username) I want to insert an activity [jogging](activity) to [monthly]{"entity": "category", "role": "new"} list
+    - hello, i'm [ferdinando1907](username) and I want to put an activity [shopping](activity) to [quickly]{"entity": "category", "role": "new"} list
+    - hello, i'm [mattia21](username) I want to add an activity [run](activity) to [weekly]{"entity": "category", "role": "new"}
+    - hello, i'm [Giusy_5](username), I want to insert an activity [study](activity) to [daily]{"entity": "category", "role": "new"}
+    - hello, i'm [antonio68](username), I want to insert an activity [payments](activity) to [commitments]{"entity": "category", "role": "new"}
+    - hello, i'm [mattia21](username) and I want to enter an activity [stand_up](activity) to [projects]{"entity": "category", "role": "new"}
+    - hello, i'm [alessia19_07](username), and I want to add an activity [jogging](activity) to [monthly]{"entity": "category", "role": "new"}
+    - hello, i'm [Giusy_5](username) I want to enter an activity [shopping](activity) to [quickly]{"entity": "category", "role": "new"}
+    - hello, i'm [ferdinando1907](username) I want to put an activity to [weekly]{"entity": "category", "role": "new"} list
+    - hello, i'm [mattia21](username) I want to insert an activity to [daily]{"entity": "category", "role": "new"} list
+    - hello, i'm [alessia19_07](username) and I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list
+    - hello, i'm [mattia21](username), I want to insert an activity to [projects]{"entity": "category", "role": "new"} list
+    - hello, i'm [antonio68](username), I want to add an activity to [monthly]{"entity": "category", "role": "new"} list
+    - hello, i'm [ferdinando1907](username) I want to add an activity to [quickly]{"entity": "category", "role": "new"} list
+    - hello, i'm [Giusy_5](username) I want to enter an activity to [weekly]{"entity": "category", "role": "new"} list
+    - i'm [Simone](username) I want to add an activity to [daily]{"entity": "category", "role": "new"} list
+    - i'm [antonio68](username) I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list
+    - i'm [alessia19_07](username) and I want to put an activity to [projects]{"entity": "category", "role": "new"} list
+    - i'm [ferdinando1907](username), I want to add an activity to [monthly]{"entity": "category", "role": "new"} list
+    - i'm [antonio68](username), I want to enter an activity to [quickly]{"entity": "category", "role": "new"} list
+    - i'm [ferdinando1907](username) and I want to insert an activity to my list
+    - i'm [alessia19_07](username) I want to insert an activity to my list
     - i'm [mattia21](username) add [run](activity) at 11:00
     - i'm [ferdinando1907](username) add [bed](activity) at 13:00
     - i'm [alessia19_07](username), insert [stand_up](activity) at 9:30
@@ -514,22 +514,22 @@ nlu:
     - i am [mattia21](username) insert activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"} at 13:39
     - i am [camilla@2](username) put activity [play](activity) in category [daily]{"entity": "category", "role": "new"} at 3:29
     - i am [Simone](username) add activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"} at 11:00
-    - i am [ferdinando1907](username), I want to add an action at 11:00
-    - hi, i am [mattia21](username), I want to enter an action to a list at 13:39
-    - hi, i am [alessia19_07](username) I want to insert an action to [weekly]{"entity": "category", "role": "new"} list at 21:10
-    - hi, i am [Giusy_5](username) and I want to add an action to [daily]{"entity": "category", "role": "new"} list at 9:40
-    - hi, i am [camilla@2](username), I want to insert an action to [commitments]{"entity": "category", "role": "new"} list at 19:00
-    - hi, i am [antonio68](username) I want to enter an action to [projects]{"entity": "category", "role": "new"} list at 16:30
-    - hi, i am [mattia21](username) I want to put an action to [monthly]{"entity": "category", "role": "new"} list at 7:00
-    - hi, i am [ferdinando1907](username) and I want to add an action to [quickly]{"entity": "category", "role": "new"} list at 6:30
-    - hi, i am [mattia21](username) I want to add an action to [weekly]{"entity": "category", "role": "new"} list at 18:30
-    - hi, i am [alessia19_07](username), I want to add an action to [daily]{"entity": "category", "role": "new"} list at 17:30
-    - hi, i am [mattia21](username), and I want to insert an action to [commitments]{"entity": "category", "role": "new"} list at 22:20
-    - hi, i am [antonio68](username), I want to add an action to [projects]{"entity": "category", "role": "new"} list at 16:00
-    - hi, i am [camilla@2](username) I want to enter an action to [monthly]{"entity": "category", "role": "new"} list at 14:50
-    - hi, i am [Giusy_5](username) I want to insert an action to [quickly]{"entity": "category", "role": "new"} list at 3:29
-    - hi, i am [ferdinando1907](username) and I want to put an action to my list at 12:37
-    - hi, i am [alessia19_07](username) I want to insert an action to my list at 18:14
+    - i am [ferdinando1907](username), I want to add an activity at 11:00
+    - hi, i am [mattia21](username), I want to enter an activity to a list at 13:39
+    - hi, i am [alessia19_07](username) I want to insert an activity to [weekly]{"entity": "category", "role": "new"} list at 21:10
+    - hi, i am [Giusy_5](username) and I want to add an activity to [daily]{"entity": "category", "role": "new"} list at 9:40
+    - hi, i am [camilla@2](username), I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list at 19:00
+    - hi, i am [antonio68](username) I want to enter an activity to [projects]{"entity": "category", "role": "new"} list at 16:30
+    - hi, i am [mattia21](username) I want to put an activity to [monthly]{"entity": "category", "role": "new"} list at 7:00
+    - hi, i am [ferdinando1907](username) and I want to add an activity to [quickly]{"entity": "category", "role": "new"} list at 6:30
+    - hi, i am [mattia21](username) I want to add an activity to [weekly]{"entity": "category", "role": "new"} list at 18:30
+    - hi, i am [alessia19_07](username), I want to add an activity to [daily]{"entity": "category", "role": "new"} list at 17:30
+    - hi, i am [mattia21](username), and I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list at 22:20
+    - hi, i am [antonio68](username), I want to add an activity to [projects]{"entity": "category", "role": "new"} list at 16:00
+    - hi, i am [camilla@2](username) I want to enter an activity to [monthly]{"entity": "category", "role": "new"} list at 14:50
+    - hi, i am [Giusy_5](username) I want to insert an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
+    - hi, i am [ferdinando1907](username) and I want to put an activity to my list at 12:37
+    - hi, i am [alessia19_07](username) I want to insert an activity to my list at 18:14
 
 - intent: remove_item
   examples: |
@@ -563,22 +563,22 @@ nlu:
     - del activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
     - remove activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
     - del activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - I want to delete an action
-    - I want to remove an action to a list
-    - I want to del an action to [weekly]{"entity": "category", "role": "new"} list
-    - I want to delete an action to [daily]{"entity": "category", "role": "new"} list
-    - I want to remove an action to [commitments]{"entity": "category", "role": "new"} list
-    - I want to delete an action to [projects]{"entity": "category", "role": "new"} list
-    - I want to cancel an action to [monthly]{"entity": "category", "role": "new"} list
-    - I want to delete an action to [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to del an action to [weekly]{"entity": "category", "role": "new"} list
-    - hi, I want to remove an action to [daily]{"entity": "category", "role": "new"} list
-    - hi, I want to delete an action to [commitments]{"entity": "category", "role": "new"} list
-    - hi, I want to cancel an action to [projects]{"entity": "category", "role": "new"} list
-    - hello, I want to del an action to [monthly]{"entity": "category", "role": "new"} list
-    - hello, I want to delete an action to [quickly]{"entity": "category", "role": "new"} list
-    - hello I want to remove an action to my list
-    - hi I want to delete an action to my list
+    - I want to delete an activity
+    - I want to remove an activity to a list
+    - I want to del an activity to [weekly]{"entity": "category", "role": "new"} list
+    - I want to delete an activity to [daily]{"entity": "category", "role": "new"} list
+    - I want to remove an activity to [commitments]{"entity": "category", "role": "new"} list
+    - I want to delete an activity to [projects]{"entity": "category", "role": "new"} list
+    - I want to cancel an activity to [monthly]{"entity": "category", "role": "new"} list
+    - I want to delete an activity to [quickly]{"entity": "category", "role": "new"} list
+    - hi, I want to del an activity to [weekly]{"entity": "category", "role": "new"} list
+    - hi, I want to remove an activity to [daily]{"entity": "category", "role": "new"} list
+    - hi, I want to delete an activity to [commitments]{"entity": "category", "role": "new"} list
+    - hi, I want to cancel an activity to [projects]{"entity": "category", "role": "new"} list
+    - hello, I want to del an activity to [monthly]{"entity": "category", "role": "new"} list
+    - hello, I want to delete an activity to [quickly]{"entity": "category", "role": "new"} list
+    - hello I want to remove an activity to my list
+    - hi I want to delete an activity to my list
     - delete [run](activity) at 11:00
     - remove [bed](activity) at 13:00
     - delete [stand_up](activity) at 9:30
@@ -609,22 +609,22 @@ nlu:
     - delete activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"} at 13:39
     - remove activity [play](activity) in category [daily]{"entity": "category", "role": "new"} at 13:29
     - remove activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"} at 11:00
-    - I want to delete an action at 11:00
-    - I want to cancel an action to a list at 13:39
-    - I want to del an action to [weekly]{"entity": "category", "role": "new"} list at 21:10
-    - I want to delete an action to [daily]{"entity": "category", "role": "new"} list at 9:40
-    - I want to cancel an action to [commitments]{"entity": "category", "role": "new"} list at 19:00
-    - I want to remove an action to [projects]{"entity": "category", "role": "new"} list at 16:30
-    - I want to delete an action to [monthly]{"entity": "category", "role": "new"} list at 7:00
-    - I want to remove an action to [quickly]{"entity": "category", "role": "new"} list at 6:30
-    - hi, I want to del an action to [weekly]{"entity": "category", "role": "new"} list at 18:30
-    - hi, I want to remove an action to [daily]{"entity": "category", "role": "new"} list at 17:30
-    - hi, I want to delete an action to [commitments]{"entity": "category", "role": "new"} list at 22:20
-    - hi, I want to cancel an action to [projects]{"entity": "category", "role": "new"} list at 16:00
-    - hello, I want to del an action to [monthly]{"entity": "category", "role": "new"} list at 14:50
-    - hello, I want to delete an action to [quickly]{"entity": "category", "role": "new"} list at 3:29
-    - hello I want to remove an action to my list at 12:37
-    - hi I want to delete an action to my list at 18:14
+    - I want to delete an activity at 11:00
+    - I want to cancel an activity to a list at 13:39
+    - I want to del an activity to [weekly]{"entity": "category", "role": "new"} list at 21:10
+    - I want to delete an activity to [daily]{"entity": "category", "role": "new"} list at 9:40
+    - I want to cancel an activity to [commitments]{"entity": "category", "role": "new"} list at 19:00
+    - I want to remove an activity to [projects]{"entity": "category", "role": "new"} list at 16:30
+    - I want to delete an activity to [monthly]{"entity": "category", "role": "new"} list at 7:00
+    - I want to remove an activity to [quickly]{"entity": "category", "role": "new"} list at 6:30
+    - hi, I want to del an activity to [weekly]{"entity": "category", "role": "new"} list at 18:30
+    - hi, I want to remove an activity to [daily]{"entity": "category", "role": "new"} list at 17:30
+    - hi, I want to delete an activity to [commitments]{"entity": "category", "role": "new"} list at 22:20
+    - hi, I want to cancel an activity to [projects]{"entity": "category", "role": "new"} list at 16:00
+    - hello, I want to del an activity to [monthly]{"entity": "category", "role": "new"} list at 14:50
+    - hello, I want to delete an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
+    - hello I want to remove an activity to my list at 12:37
+    - hi I want to delete an activity to my list at 18:14
     - hello, I'm [mattia99](username), remove [run](activity)
     - hello, I'm [antonio68](username), delete [study](activity)
     - hello, I'm [ferdinando1907](username), del [stand_up](activity)
@@ -655,22 +655,22 @@ nlu:
     - I'm [Giusy_5](username), remove activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
     - I'm [ferdinando1907](username), delete activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
     - I'm [mattia99](username), remove activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - I'm [alessia19_07](username), I want to del an action
-    - I'm [camilla@2](username), I want to delete an action to a list
-    - I'm [ferdinando1907](username), I want to remove an action to [weekly]{"entity": "category", "role": "new"} list
-    - I'm [mattia99](username), I want to del an action to [daily]{"entity": "category", "role": "new"} list
-    - I'm [Giusy_5](username), I want to delete an action to [commitments]{"entity": "category", "role": "new"} list
-    - I am [camilla@2](username), I want to cancel an action to [projects]{"entity": "category", "role": "new"} list
-    - I am [alessia19_07](username), I want to delete an action to [monthly]{"entity": "category", "role": "new"} list
-    - I am [Giusy_5](username), I want to remove an action to [quickly]{"entity": "category", "role": "new"} list
-    - I am [mattia99](username), hi, I want to del an action to [weekly]{"entity": "category", "role": "new"} list
-    - I am [ferdinando1907](username), hi, I want to del an action to [daily]{"entity": "category", "role": "new"} list
-    - I am [alessia19_07](username), hi, I want to cancel an action to [commitments]{"entity": "category", "role": "new"} list
-    - I am [mattia99](username), hi, I want to delete an action to [projects]{"entity": "category", "role": "new"} list
-    - I am [Giusy_5](username), hello, I want to del an action to [monthly]{"entity": "category", "role": "new"} list
-    - I am [mattia99](username), hello, I want to remove an action to [quickly]{"entity": "category", "role": "new"} list
-    - I am [alessia19_07](username), hello I want to delete an action to my list
-    - I am [camilla@2](username), hi I want to remove an action to my list
+    - I'm [alessia19_07](username), I want to del an activity
+    - I'm [camilla@2](username), I want to delete an activity to a list
+    - I'm [ferdinando1907](username), I want to remove an activity to [weekly]{"entity": "category", "role": "new"} list
+    - I'm [mattia99](username), I want to del an activity to [daily]{"entity": "category", "role": "new"} list
+    - I'm [Giusy_5](username), I want to delete an activity to [commitments]{"entity": "category", "role": "new"} list
+    - I am [camilla@2](username), I want to cancel an activity to [projects]{"entity": "category", "role": "new"} list
+    - I am [alessia19_07](username), I want to delete an activity to [monthly]{"entity": "category", "role": "new"} list
+    - I am [Giusy_5](username), I want to remove an activity to [quickly]{"entity": "category", "role": "new"} list
+    - I am [mattia99](username), hi, I want to del an activity to [weekly]{"entity": "category", "role": "new"} list
+    - I am [ferdinando1907](username), hi, I want to del an activity to [daily]{"entity": "category", "role": "new"} list
+    - I am [alessia19_07](username), hi, I want to cancel an activity to [commitments]{"entity": "category", "role": "new"} list
+    - I am [mattia99](username), hi, I want to delete an activity to [projects]{"entity": "category", "role": "new"} list
+    - I am [Giusy_5](username), hello, I want to del an activity to [monthly]{"entity": "category", "role": "new"} list
+    - I am [mattia99](username), hello, I want to remove an activity to [quickly]{"entity": "category", "role": "new"} list
+    - I am [alessia19_07](username), hello I want to delete an activity to my list
+    - I am [camilla@2](username), hi I want to remove an activity to my list
     - I am [Giusy_5](username), cancel [run](activity) at 11:00
     - I am [ferdinando1907](username), delete [bed](activity) at 13:00
     - I am [alessia19_07](username), del [stand_up](activity) at 9:30
@@ -701,26 +701,26 @@ nlu:
     - hello, I'm [mattia99](username), cancel activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"} at 13:39
     - hello, I'm [alessia19_07](username), remove activity [play](activity) in category [daily]{"entity": "category", "role": "new"} at 13:29
     - hello, I'm [mattia99](username), remove activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"} at 11:00
-    - I'm [Giusy_5](username), I want to delete an action at 11:00
-    - I'm [camilla@2](username), I want to del an action to a list at 13:39
-    - I'm [ferdinando1907](username), I want to cancel an action to [weekly]{"entity": "category", "role": "new"} list at 21:10
-    - I'm [mattia99](username), I want to remove an action to [daily]{"entity": "category", "role": "new"} list at 9:40
-    - I am [mattia99](username) want to delete an action to [commitments]{"entity": "category", "role": "new"} list at 19:00
-    - I'm [alessia19_07](username) want to remove an action to [projects]{"entity": "category", "role": "new"} list at 16:30
-    - I'm [Giusy_5](username) want to del an action to [monthly]{"entity": "category", "role": "new"} list at 7:00
-    - I'm [alessia19_07](username) want to cancel an action to [quickly]{"entity": "category", "role": "new"} list at 6:30
-    - hi, I'm [mattia99](username) want to delete an action to [weekly]{"entity": "category", "role": "new"} list at 18:30
-    - hi, I'm [camilla@2](username) want to remove an action to [daily]{"entity": "category", "role": "new"} list at 17:30
-    - hi, I am [ferdinando1907](username) want to delete an action to [commitments]{"entity": "category", "role": "new"} list at 22:20
-    - hi, I'm [mattia99](username) want to cancel an action to [projects]{"entity": "category", "role": "new"} list at 16:00
-    - hello, I'm [mattia99](username) want to remove an action to [monthly]{"entity": "category", "role": "new"} list at 14:50
-    - I'm [mattia99](username) want to delete an action to [quickly]{"entity": "category", "role": "new"} list at 3:29
-    - hello I am [alessia19_07](username) want to del an action to my list at 12:37
-    - hi I'm [alessia19_07](username) want to delete an action to my list at 18:14
+    - I'm [Giusy_5](username), I want to delete an activity at 11:00
+    - I'm [camilla@2](username), I want to del an activity to a list at 13:39
+    - I'm [ferdinando1907](username), I want to cancel an activity to [weekly]{"entity": "category", "role": "new"} list at 21:10
+    - I'm [mattia99](username), I want to remove an activity to [daily]{"entity": "category", "role": "new"} list at 9:40
+    - I am [mattia99](username) want to delete an activity to [commitments]{"entity": "category", "role": "new"} list at 19:00
+    - I'm [alessia19_07](username) want to remove an activity to [projects]{"entity": "category", "role": "new"} list at 16:30
+    - I'm [Giusy_5](username) want to del an activity to [monthly]{"entity": "category", "role": "new"} list at 7:00
+    - I'm [alessia19_07](username) want to cancel an activity to [quickly]{"entity": "category", "role": "new"} list at 6:30
+    - hi, I'm [mattia99](username) want to delete an activity to [weekly]{"entity": "category", "role": "new"} list at 18:30
+    - hi, I'm [camilla@2](username) want to remove an activity to [daily]{"entity": "category", "role": "new"} list at 17:30
+    - hi, I am [ferdinando1907](username) want to delete an activity to [commitments]{"entity": "category", "role": "new"} list at 22:20
+    - hi, I'm [mattia99](username) want to cancel an activity to [projects]{"entity": "category", "role": "new"} list at 16:00
+    - hello, I'm [mattia99](username) want to remove an activity to [monthly]{"entity": "category", "role": "new"} list at 14:50
+    - I'm [mattia99](username) want to delete an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
+    - hello I am [alessia19_07](username) want to del an activity to my list at 12:37
+    - hi I'm [alessia19_07](username) want to delete an activity to my list at 18:14
 - intent: set_complete
   examples: |
-    - set action complete 
-    - Hi, set action complete
+    - set activity complete 
+    - Hi, set activity complete
     - set up complete [run](activity)
     - set done [bed](activity)
     - set complete [stand_up](activity)
@@ -751,23 +751,23 @@ nlu:
     - set completed activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
     - set complete activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
     - set completed activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - I want to set complete an action 
-    - I want to set done an action in a list 
-    - I want to set completed an action in [weekly]{"entity": "category", "role": "new"} list 
-    - I want to set complete an action in [daily]{"entity": "category", "role": "new"} list
-    - I want to set done an action in [commitments]{"entity": "category", "role": "new"} list 
-    - I want to set complete an action in [projects]{"entity": "category", "role": "new"} list 
-    - I want to set complete an action in [monthly]{"entity": "category", "role": "new"} list
-    - I want to set done an action in [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to set completed an action in [weekly]{"entity": "category", "role": "new"} list 
-    - hi, I want to set complete an action in [daily]{"entity": "category", "role": "new"} list 
-    - hi, I want to set done an action in [commitments]{"entity": "category", "role": "new"} list 
-    - hi, I want to set completed an action in [projects]{"entity": "category", "role": "new"} list 
-    - hello, I want to set done an action in [monthly]{"entity": "category", "role": "new"} list 
-    - hello, I want to set complete an action in [quickly]{"entity": "category", "role": "new"} list
-    - hello I want to set complete an action in my list 
-    - hi I want to set up complete an action in my list 
-    - Hi I want to set done all action in [monthly]{"entity": "category", "role": "new"} list
+    - I want to set complete an activity 
+    - I want to set done an activity in a list 
+    - I want to set completed an activity in [weekly]{"entity": "category", "role": "new"} list 
+    - I want to set complete an activity in [daily]{"entity": "category", "role": "new"} list
+    - I want to set done an activity in [commitments]{"entity": "category", "role": "new"} list 
+    - I want to set complete an activity in [projects]{"entity": "category", "role": "new"} list 
+    - I want to set complete an activity in [monthly]{"entity": "category", "role": "new"} list
+    - I want to set done an activity in [quickly]{"entity": "category", "role": "new"} list
+    - hi, I want to set completed an activity in [weekly]{"entity": "category", "role": "new"} list 
+    - hi, I want to set complete an activity in [daily]{"entity": "category", "role": "new"} list 
+    - hi, I want to set done an activity in [commitments]{"entity": "category", "role": "new"} list 
+    - hi, I want to set completed an activity in [projects]{"entity": "category", "role": "new"} list 
+    - hello, I want to set done an activity in [monthly]{"entity": "category", "role": "new"} list 
+    - hello, I want to set complete an activity in [quickly]{"entity": "category", "role": "new"} list
+    - hello I want to set complete an activity in my list 
+    - hi I want to set up complete an activity in my list 
+    - Hi I want to set done all activity in [monthly]{"entity": "category", "role": "new"} list
     - I have complete activity [swimming](activity) in category [gym]{"entity": "category", "role": "new"}
     - I have done activity [run](activity) in category [commitments]{"entity": "category", "role": "new"}
     - I have completed activity [play](activity) in category [projects]{"entity": "category", "role": "new"}
@@ -775,8 +775,8 @@ nlu:
     - I have done activity [jogging](activity) in category [gym]{"entity": "category", "role": "new"}
 - intent: set_uncomplete
   examples: |
-    - set action incomplete 
-    - Hi, set action incomplete
+    - set activity incomplete 
+    - Hi, set activity incomplete
     - set incomplete [run](activity)
     - set incomplete [bed](activity)
     - set undone [stand_up](activity)
@@ -807,23 +807,23 @@ nlu:
     - set incomplete activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
     - set undone activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
     - set incomplete activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - I want to set incomplete an action 
-    - I want to set incomplete an action in a list 
-    - I want to set incomplete an action in [weekly]{"entity": "category", "role": "new"} list 
-    - I want to set incomplete an action in [daily]{"entity": "category", "role": "new"} list
-    - I want to set undone an action in [study]{"entity": "category", "role": "new"} list 
-    - I want to set incomplete an action in [projects]{"entity": "category", "role": "new"} list 
-    - I want to set incomplete an action in [monthly]{"entity": "category", "role": "new"} list
-    - I want to set incomplete an action in [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to set incomplete an action in [weekly]{"entity": "category", "role": "new"} list 
-    - hi, I want to set undone an action in [daily]{"entity": "category", "role": "new"} list 
-    - hi, I want to set undone an action in [commitments]{"entity": "category", "role": "new"} list 
-    - hi, I want to set incomplete an action in [projects]{"entity": "category", "role": "new"} list 
-    - hello, I want to set incomplete an action in [monthly]{"entity": "category", "role": "new"} list 
-    - hello, I want to set incomplete an action in [quickly]{"entity": "category", "role": "new"} list
-    - hello I want to set incomplete an action in my list 
-    - hi I want to set incomplete an action in my list 
-    - Hi I want to set undone all action in [monthly]{"entity": "category", "role": "new"} list
+    - I want to set incomplete an activity 
+    - I want to set incomplete an activity in a list 
+    - I want to set incomplete an activity in [weekly]{"entity": "category", "role": "new"} list 
+    - I want to set incomplete an activity in [daily]{"entity": "category", "role": "new"} list
+    - I want to set undone an activity in [study]{"entity": "category", "role": "new"} list 
+    - I want to set incomplete an activity in [projects]{"entity": "category", "role": "new"} list 
+    - I want to set incomplete an activity in [monthly]{"entity": "category", "role": "new"} list
+    - I want to set incomplete an activity in [quickly]{"entity": "category", "role": "new"} list
+    - hi, I want to set incomplete an activity in [weekly]{"entity": "category", "role": "new"} list 
+    - hi, I want to set undone an activity in [daily]{"entity": "category", "role": "new"} list 
+    - hi, I want to set undone an activity in [commitments]{"entity": "category", "role": "new"} list 
+    - hi, I want to set incomplete an activity in [projects]{"entity": "category", "role": "new"} list 
+    - hello, I want to set incomplete an activity in [monthly]{"entity": "category", "role": "new"} list 
+    - hello, I want to set incomplete an activity in [quickly]{"entity": "category", "role": "new"} list
+    - hello I want to set incomplete an activity in my list 
+    - hi I want to set incomplete an activity in my list 
+    - Hi I want to set undone all activity in [monthly]{"entity": "category", "role": "new"} list
     - undo complete [run](activity)
     - undo complete [bed](activity)
     - undo complete [stand_up](activity)
