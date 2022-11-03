@@ -319,6 +319,8 @@ nlu:
     - [work](category)
     - [vacation](category)
     - [holiday](category)
+    - [13:00](time)
+    - 
 
 - intent: add_item
   examples: |
