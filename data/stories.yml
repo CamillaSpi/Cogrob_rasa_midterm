@@ -152,8 +152,9 @@ stories:
     - action: utter_confirm_choice
     - intent: affirm
     - action: action_modify_category
-       
-- story: Modify the activity without data
+
+     
+- story: Modify the activity
   steps:
     - intent: modify_activity
     - action: modify_activity_form
@@ -161,29 +162,6 @@ stories:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    - slot_was_set:
-      - or:
-        - activity: true
-        - category: true
-        - time: true
     - action: utter_confirm_choice
     - intent: affirm
-    - action: action_modify_category    
-
-
-- story: Modify the activity without data
-  steps:
-    - intent: modify_activity
-    - action: modify_activity_form
-    - active_loop: modify_activity_form
-    - active_loop: null
-    - slot_was_set:
-      - requested_slot: null
-    - slot_was_set:
-      - activity: false
-      - category: false
-      - time: false
-    - action: utter_modification_choice
-    - action: utter_confirm_choice
-    - intent: affirm
-    - action: action_modify_category
+    - action: action_modify_activity   
