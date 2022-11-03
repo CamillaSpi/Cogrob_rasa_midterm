@@ -14,7 +14,6 @@ class Database:
     conn.execute('''
         CREATE TABLE IF NOT EXISTS users (
             username VARCHAR(100) PRIMARY KEY,
-            name VARCHAR(100) NOT NULL
         );
     ''')
     conn.execute('''
@@ -42,8 +41,8 @@ class Database:
   def createUser(username, name):
     try:
       conn.execute('''
-        INSERT INTO users (username, name) VALUES (?, ?);
-      ''', (username, name))
+        INSERT INTO users (username) VALUES (?);
+      ''', (username,))
       conn.commit()
       return True
     except sqlite3.IntegrityError:
@@ -194,6 +193,16 @@ class Database:
       else:
         return False
 
+  @staticmethod
+  def doesUserExists(username):
+    
+    cur.execute('''
+      SELECT * FROM users WHERE username == ?
+    ''', (username, ))
+    if(len( cur.fetchall()) > 0 ):
+      return True
+    return False
+    
   @staticmethod
   def DataUpdate(facility_type,location):
       
