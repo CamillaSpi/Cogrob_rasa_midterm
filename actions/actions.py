@@ -51,6 +51,8 @@ class actionAddItem(Action):
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         time = tracker.get_slot("time")
+        if(len(time) == 2):
+            time = time['to']
 
         if(Database.doesUserExists(username)):
 
