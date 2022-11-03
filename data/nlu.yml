@@ -319,7 +319,6 @@ nlu:
     - [work]{"entity": "category", "role": "new"}
     - [vacation]{"entity": "category", "role": "new"}
     - [holiday]{"entity": "category", "role": "new"}
-    - [13:00](time)
 
 - intent: add_item
   examples: |

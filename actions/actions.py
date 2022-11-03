@@ -29,13 +29,11 @@ class actionCreateUser(Action):
         if(Database.doesUserExists(username) == False):
             returnedValue = Database.createUser(username)
             if(returnedValue):
-                dispatcher.utter_message(text=f"Congratulation {username} you account is correctly created:P") 
+                dispatcher.utter_message(text=f"Congratulation {username} your account has been correctly created:P") 
             else:
-                dispatcher.utter_message(text=f"Oh no {username} your account esisnte gia")
+                dispatcher.utter_message(text=f"Oh no {username} your account already exists")
         else:
             dispatcher.utter_message(text=f"Congratulation {username} you're logged in!!!") 
-
-            
         return []
 
 
@@ -51,18 +49,20 @@ class actionAddItem(Action):
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
         time = tracker.get_slot("time")
+        print(time)
         if(len(time) == 2):
             time = time['to']
 
         if(Database.doesUserExists(username)):
-
-            returnedValue= Database.insertItem(username,activity ,category,time)
-
-            if (returnedValue):  
-                dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {time}") 
+            if(Database.doesCategoryExists(username,category)):
+                returnedValue= Database.insertItem(username,activity ,category,time)
+                if (returnedValue):  
+                    dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {time}") 
+                else:
+                    dispatcher.utter_message(text=f"Ops! {username} something went wrong, you already inserted this activity :(") 
             else:
-                dispatcher.utter_message(text=f"Ops! {username} something went wrong, did you create this category? or maybe you already inserted this activity :(") 
-
+                dispatcher.utter_message(text=f"The category does not exists! You have to create it first") 
+                return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
