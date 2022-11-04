@@ -55,7 +55,7 @@ stories:
     - requested_slot: null
   - action: utter_ask_if_deadline
   - intent: deny
-  - action: action_add_item
+  - checkpoint: submit_generic_deadline
 
 - story: Submit new activity ask and with deadline
   steps:  
@@ -69,13 +69,28 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: action_add_item
+  - checkpoint: submit_generic_deadline
 
 - story: Submit new activity with deadline
   steps:  
   - checkpoint: Submit_generic
   - slot_was_set:
     - time: true
+  - checkpoint: submit_generic_deadline
+
+- story: Submit new activity maybe deadline with reminder
+  steps:
+  - checkpoint: submit_generic_deadline
+  - action: utter_ask_if_reminder
+  - intent: affirm
+  - action: action_set_reminder_slot
+  - action: action_add_item
+
+- story: Submit new activity maybe deadline with no reminder
+  steps:
+  - checkpoint: submit_generic_deadline
+  - action: utter_ask_if_reminder
+  - intent: deny
   - action: action_add_item
 
 - story: Remove generic activity
@@ -200,3 +215,18 @@ stories:
     - action: utter_confirm_choice
     - intent: affirm
     - action: action_modify_activity   
+
+- story: Clean Complete Activities confirmed 
+  steps:
+    - intent: clean_activities
+    - action: utter_confirm_choice
+    - intent: affirm
+    - action: action_clean_all_completed
+
+
+- story: Clean Complete Activities denied 
+  steps:
+    - intent: clean_activities
+    - action: utter_confirm_choice
+    - intent: deny
+    - action: utter_deny_choice

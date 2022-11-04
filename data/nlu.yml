@@ -982,102 +982,115 @@ nlu:
 
 - intent: modify_activity
   examples: |
-    - I want to change the activity [search]{"entity": "activity", "role": "old"} in the cateogry [volunteering]{"entity": "category", "role": "old"} to the category [times]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - I want to change the activity [search]{"entity": "activity", "role": "old"} in the cateogry [times]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - modify the activity [refuel]{"entity": "activity", "role": "old"} in the cateogry [leisure]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - modify the activity [refuel]{"entity": "activity", "role": "old"} in the cateogry [sport]{"entity": "category", "role": "old"} to the category [leisure]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the cateogry [household]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the cateogry [volunteering]{"entity": "category", "role": "old"} to the category [household]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [holiday]{"entity": "category", "role": "old"} to the category [research]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [research]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - I want to change the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [school]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - I want to change the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - modify the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} to the category [dailyweekly]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - modify the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [dailyweekly]{"entity": "category", "role": "old"} to the category [university]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - convert the activity [note]{"entity": "activity", "role": "old"} in the cateogry [calendary]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - convert the activity [note]{"entity": "activity", "role": "old"} in the cateogry [desires]{"entity": "category", "role": "old"} to the category [calendary]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [note]{"entity": "activity", "role": "old"} in the cateogry [commitments]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [note]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} to the category [commitments]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - I want to change the activity [study]{"entity": "activity", "role": "old"} in the cateogry [monthly]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - I want to change the activity [study]{"entity": "activity", "role": "old"} in the cateogry [volunteering]{"entity": "category", "role": "old"} to the category [monthly]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - modify the activity [study]{"entity": "activity", "role": "old"} in the cateogry [payments]{"entity": "category", "role": "old"} to the category [university]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - modify the activity [study]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} to the category [payments]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - convert the activity [jogging]{"entity": "activity", "role": "old"} in the cateogry [monthly]{"entity": "category", "role": "old"} to the category [diet]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - convert the activity [jogging]{"entity": "activity", "role": "old"} in the cateogry [diet]{"entity": "category", "role": "old"} to the category [monthly]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [cooking]{"entity": "activity", "role": "old"} in the cateogry [diet]{"entity": "category", "role": "old"} to the category [job]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [cooking]{"entity": "activity", "role": "old"} in the cateogry [job]{"entity": "category", "role": "old"} to the category [diet]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - I want to change the activity [runbed]{"entity": "activity", "role": "old"} in the cateogry [medications]{"entity": "category", "role": "old"} to the category [leisure]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - I want to change the activity [runbed]{"entity": "activity", "role": "old"} in the cateogry [leisure]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - modify the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [sport]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - modify the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [holiday]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - convert the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [vacation]{"entity": "category", "role": "old"} to the category [calendary]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - convert the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [calendary]{"entity": "category", "role": "old"} to the category [vacation]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [cards]{"entity": "activity", "role": "old"} in the cateogry [volunteering]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [cards]{"entity": "activity", "role": "old"} in the cateogry [school]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - I want to change the activity [reed]{"entity": "activity", "role": "old"} in the cateogry [school]{"entity": "category", "role": "old"} to the category [gym]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - I want to change the activity [reed]{"entity": "activity", "role": "old"} in the cateogry [gym]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - modify the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [dailyweekly]{"entity": "category", "role": "old"} to the category [finance]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - modify the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [finance]{"entity": "category", "role": "old"} to the category [dailyweekly]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - convert the activity [match]{"entity": "activity", "role": "old"} in the cateogry [exams]{"entity": "category", "role": "old"} to the category [bank]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - convert the activity [match]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} to the category [exams]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [draw]{"entity": "activity", "role": "old"} in the cateogry [school]{"entity": "category", "role": "old"} to the category [research]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [draw]{"entity": "activity", "role": "old"} in the cateogry [research]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - I want to change the activity [run]{"entity": "activity", "role": "old"} in the cateogry [monthly]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"}
-    - I want to change the activity [run]{"entity": "activity", "role": "old"} in the cateogry [quickly]{"entity": "category", "role": "old"} to the category [monthly]{"entity": "category", "role": "new"}
-    - modify the activity [shopping]{"entity": "activity", "role": "old"} in the cateogry [medications]{"entity": "category", "role": "old"} to the category [events]{"entity": "category", "role": "new"} 
-    - modify the activity [shopping]{"entity": "activity", "role": "old"} in the cateogry [events]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} 
-    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the cateogry [dailyweekly]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
-    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} to the category [dailyweekly]{"entity": "category", "role": "new"} 
-    - change the activity [sleep]{"entity": "activity", "role": "old"} in the cateogry [volunteering]{"entity": "category", "role": "old"} to the category [exams]{"entity": "category", "role": "new"} 
-    - change the activity [sleep]{"entity": "activity", "role": "old"} in the cateogry [exams]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} 
-    - I want to change the activity [playing]{"entity": "activity", "role": "old"} in the cateogry [desires]{"entity": "category", "role": "old"} to the category [subjects]{"entity": "category", "role": "new"}
-    - I want to change the activity [playing]{"entity": "activity", "role": "old"} in the cateogry [subjects]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"}
-    - modify the activity [cooking]{"entity": "activity", "role": "old"} in the cateogry [finance]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"} 
-    - modify the activity [cooking]{"entity": "activity", "role": "old"} in the cateogry [quickly]{"entity": "category", "role": "old"} to the category [finance]{"entity": "category", "role": "new"} 
-    - convert the activity [paint]{"entity": "activity", "role": "old"} in the cateogry [quickly]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} 
-    - convert the activity [paint]{"entity": "activity", "role": "old"} in the cateogry [medications]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"} 
-    - change the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [desires]{"entity": "category", "role": "old"} to the category [personal]{"entity": "category", "role": "new"} 
-    - change the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [personal]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} 
-    - I want to change the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [personal]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"}
-    - I want to change the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [school]{"entity": "category", "role": "old"} to the category [personal]{"entity": "category", "role": "new"}
-    - modify the activity [ring]{"entity": "activity", "role": "old"} in the cateogry [projects]{"entity": "category", "role": "old"} to the category [times]{"entity": "category", "role": "new"} 
-    - modify the activity [ring]{"entity": "activity", "role": "old"} in the cateogry [times]{"entity": "category", "role": "old"} to the category [projects]{"entity": "category", "role": "new"} 
-    - convert the activity [jogging]{"entity": "activity", "role": "old"} in the cateogry [personal]{"entity": "category", "role": "old"} to the category [trolley]{"entity": "category", "role": "new"} 
-    - convert the activity [jogging]{"entity": "activity", "role": "old"} in the cateogry [trolley]{"entity": "category", "role": "old"} to the category [personal]{"entity": "category", "role": "new"} 
-    - change the activity [sleep]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"} 
-    - change the activity [sleep]{"entity": "activity", "role": "old"} in the cateogry [quickly]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
-    - I want to change the activity [search]{"entity": "activity", "role": "old"} in the cateogry [commitments]{"entity": "category", "role": "old"} to the category [bank]{"entity": "category", "role": "new"}
-    - I want to change the activity [search]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} to the category [commitments]{"entity": "category", "role": "new"}
-    - modify the activity [cards]{"entity": "activity", "role": "old"} in the cateogry [exams]{"entity": "category", "role": "old"} to the category [commitments]{"entity": "category", "role": "new"} 
-    - modify the activity [cards]{"entity": "activity", "role": "old"} in the cateogry [commitments]{"entity": "category", "role": "old"} to the category [exams]{"entity": "category", "role": "new"} 
-    - convert the activity [play]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} 
-    - convert the activity [play]{"entity": "activity", "role": "old"} in the cateogry [holiday]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
-    - change the activity [refuel]{"entity": "activity", "role": "old"} in the cateogry [gym]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} 
-    - change the activity [refuel]{"entity": "activity", "role": "old"} in the cateogry [desires]{"entity": "category", "role": "old"} to the category [gym]{"entity": "category", "role": "new"} 
-    - I want to change the activity [ring]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} to the category [calendary]{"entity": "category", "role": "new"}
-    - I want to change the activity [ring]{"entity": "activity", "role": "old"} in the cateogry [calendary]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"}
-    - modify the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [exams]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} 
-    - modify the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [sport]{"entity": "category", "role": "old"} to the category [exams]{"entity": "category", "role": "new"} 
-    - convert the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} 
-    - convert the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [medications]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
-    - change the activity [search]{"entity": "activity", "role": "old"} in the cateogry [desires]{"entity": "category", "role": "old"} to the category [events]{"entity": "category", "role": "new"} 
-    - change the activity [search]{"entity": "activity", "role": "old"} in the cateogry [events]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} 
+    - I want to change the activity [search]{"entity": "activity", "role": "old"} in the category [volunteering]{"entity": "category", "role": "old"} to the category [times]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - I want to change the activity [search]{"entity": "activity", "role": "old"} in the category [times]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - modify the activity [refuel]{"entity": "activity", "role": "old"} in the category [leisure]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - modify the activity [refuel]{"entity": "activity", "role": "old"} in the category [sport]{"entity": "category", "role": "old"} to the category [leisure]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the category [household]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the category [volunteering]{"entity": "category", "role": "old"} to the category [household]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [sport]{"entity": "activity", "role": "old"} in the category [holiday]{"entity": "category", "role": "old"} to the category [research]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [sport]{"entity": "activity", "role": "old"} in the category [research]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - I want to change the activity [walk]{"entity": "activity", "role": "old"} in the category [school]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - I want to change the activity [walk]{"entity": "activity", "role": "old"} in the category [work]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - modify the activity [walk]{"entity": "activity", "role": "old"} in the category [university]{"entity": "category", "role": "old"} to the category [dailyweekly]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - modify the activity [walk]{"entity": "activity", "role": "old"} in the category [dailyweekly]{"entity": "category", "role": "old"} to the category [university]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - convert the activity [note]{"entity": "activity", "role": "old"} in the category [calendary]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - convert the activity [note]{"entity": "activity", "role": "old"} in the category [desires]{"entity": "category", "role": "old"} to the category [calendary]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [note]{"entity": "activity", "role": "old"} in the category [commitments]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [note]{"entity": "activity", "role": "old"} in the category [work]{"entity": "category", "role": "old"} to the category [commitments]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - I want to change the activity [study]{"entity": "activity", "role": "old"} in the category [monthly]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - I want to change the activity [study]{"entity": "activity", "role": "old"} in the category [volunteering]{"entity": "category", "role": "old"} to the category [monthly]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - modify the activity [study]{"entity": "activity", "role": "old"} in the category [payments]{"entity": "category", "role": "old"} to the category [university]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - modify the activity [study]{"entity": "activity", "role": "old"} in the category [university]{"entity": "category", "role": "old"} to the category [payments]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - convert the activity [jogging]{"entity": "activity", "role": "old"} in the category [monthly]{"entity": "category", "role": "old"} to the category [diet]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - convert the activity [jogging]{"entity": "activity", "role": "old"} in the category [diet]{"entity": "category", "role": "old"} to the category [monthly]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [cooking]{"entity": "activity", "role": "old"} in the category [diet]{"entity": "category", "role": "old"} to the category [job]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [cooking]{"entity": "activity", "role": "old"} in the category [job]{"entity": "category", "role": "old"} to the category [diet]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - I want to change the activity [runbed]{"entity": "activity", "role": "old"} in the category [medications]{"entity": "category", "role": "old"} to the category [leisure]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - I want to change the activity [runbed]{"entity": "activity", "role": "old"} in the category [leisure]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - modify the activity [sport]{"entity": "activity", "role": "old"} in the category [sport]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - modify the activity [sport]{"entity": "activity", "role": "old"} in the category [holiday]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - convert the activity [swimmming]{"entity": "activity", "role": "old"} in the category [vacation]{"entity": "category", "role": "old"} to the category [calendary]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - convert the activity [swimmming]{"entity": "activity", "role": "old"} in the category [calendary]{"entity": "category", "role": "old"} to the category [vacation]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [cards]{"entity": "activity", "role": "old"} in the category [volunteering]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [cards]{"entity": "activity", "role": "old"} in the category [school]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - I want to change the activity [reed]{"entity": "activity", "role": "old"} in the category [school]{"entity": "category", "role": "old"} to the category [gym]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - I want to change the activity [reed]{"entity": "activity", "role": "old"} in the category [gym]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
+    - modify the activity [walk]{"entity": "activity", "role": "old"} in the category [dailyweekly]{"entity": "category", "role": "old"} to the category [finance]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - modify the activity [walk]{"entity": "activity", "role": "old"} in the category [finance]{"entity": "category", "role": "old"} to the category [dailyweekly]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - convert the activity [match]{"entity": "activity", "role": "old"} in the category [exams]{"entity": "category", "role": "old"} to the category [bank]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - convert the activity [match]{"entity": "activity", "role": "old"} in the category [bank]{"entity": "category", "role": "old"} to the category [exams]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [draw]{"entity": "activity", "role": "old"} in the category [school]{"entity": "category", "role": "old"} to the category [research]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [draw]{"entity": "activity", "role": "old"} in the category [research]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - I want to change the activity [run]{"entity": "activity", "role": "old"} in the category [monthly]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"}
+    - I want to change the activity [run]{"entity": "activity", "role": "old"} in the category [quickly]{"entity": "category", "role": "old"} to the category [monthly]{"entity": "category", "role": "new"}
+    - modify the activity [shopping]{"entity": "activity", "role": "old"} in the category [medications]{"entity": "category", "role": "old"} to the category [events]{"entity": "category", "role": "new"} 
+    - modify the activity [shopping]{"entity": "activity", "role": "old"} in the category [events]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} 
+    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the category [dailyweekly]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
+    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the category [work]{"entity": "category", "role": "old"} to the category [dailyweekly]{"entity": "category", "role": "new"} 
+    - change the activity [sleep]{"entity": "activity", "role": "old"} in the category [volunteering]{"entity": "category", "role": "old"} to the category [exams]{"entity": "category", "role": "new"} 
+    - change the activity [sleep]{"entity": "activity", "role": "old"} in the category [exams]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} 
+    - I want to change the activity [playing]{"entity": "activity", "role": "old"} in the category [desires]{"entity": "category", "role": "old"} to the category [subjects]{"entity": "category", "role": "new"}
+    - I want to change the activity [playing]{"entity": "activity", "role": "old"} in the category [subjects]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"}
+    - modify the activity [cooking]{"entity": "activity", "role": "old"} in the category [finance]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"} 
+    - modify the activity [cooking]{"entity": "activity", "role": "old"} in the category [quickly]{"entity": "category", "role": "old"} to the category [finance]{"entity": "category", "role": "new"} 
+    - convert the activity [paint]{"entity": "activity", "role": "old"} in the category [quickly]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} 
+    - convert the activity [paint]{"entity": "activity", "role": "old"} in the category [medications]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"} 
+    - change the activity [swimmming]{"entity": "activity", "role": "old"} in the category [desires]{"entity": "category", "role": "old"} to the category [personal]{"entity": "category", "role": "new"} 
+    - change the activity [swimmming]{"entity": "activity", "role": "old"} in the category [personal]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} 
+    - I want to change the activity [travel]{"entity": "activity", "role": "old"} in the category [personal]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"}
+    - I want to change the activity [travel]{"entity": "activity", "role": "old"} in the category [school]{"entity": "category", "role": "old"} to the category [personal]{"entity": "category", "role": "new"}
+    - modify the activity [ring]{"entity": "activity", "role": "old"} in the category [projects]{"entity": "category", "role": "old"} to the category [times]{"entity": "category", "role": "new"} 
+    - modify the activity [ring]{"entity": "activity", "role": "old"} in the category [times]{"entity": "category", "role": "old"} to the category [projects]{"entity": "category", "role": "new"} 
+    - convert the activity [jogging]{"entity": "activity", "role": "old"} in the category [personal]{"entity": "category", "role": "old"} to the category [trolley]{"entity": "category", "role": "new"} 
+    - convert the activity [jogging]{"entity": "activity", "role": "old"} in the category [trolley]{"entity": "category", "role": "old"} to the category [personal]{"entity": "category", "role": "new"} 
+    - change the activity [sleep]{"entity": "activity", "role": "old"} in the category [work]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"} 
+    - change the activity [sleep]{"entity": "activity", "role": "old"} in the category [quickly]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
+    - I want to change the activity [search]{"entity": "activity", "role": "old"} in the category [commitments]{"entity": "category", "role": "old"} to the category [bank]{"entity": "category", "role": "new"}
+    - I want to change the activity [search]{"entity": "activity", "role": "old"} in the category [bank]{"entity": "category", "role": "old"} to the category [commitments]{"entity": "category", "role": "new"}
+    - modify the activity [cards]{"entity": "activity", "role": "old"} in the category [exams]{"entity": "category", "role": "old"} to the category [commitments]{"entity": "category", "role": "new"} 
+    - modify the activity [cards]{"entity": "activity", "role": "old"} in the category [commitments]{"entity": "category", "role": "old"} to the category [exams]{"entity": "category", "role": "new"} 
+    - convert the activity [play]{"entity": "activity", "role": "old"} in the category [work]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} 
+    - convert the activity [play]{"entity": "activity", "role": "old"} in the category [holiday]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
+    - change the activity [refuel]{"entity": "activity", "role": "old"} in the category [gym]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} 
+    - change the activity [refuel]{"entity": "activity", "role": "old"} in the category [desires]{"entity": "category", "role": "old"} to the category [gym]{"entity": "category", "role": "new"} 
+    - I want to change the activity [ring]{"entity": "activity", "role": "old"} in the category [work]{"entity": "category", "role": "old"} to the category [calendary]{"entity": "category", "role": "new"}
+    - I want to change the activity [ring]{"entity": "activity", "role": "old"} in the category [calendary]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"}
+    - modify the activity [swimmming]{"entity": "activity", "role": "old"} in the category [exams]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} 
+    - modify the activity [swimmming]{"entity": "activity", "role": "old"} in the category [sport]{"entity": "category", "role": "old"} to the category [exams]{"entity": "category", "role": "new"} 
+    - convert the activity [sport]{"entity": "activity", "role": "old"} in the category [work]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} 
+    - convert the activity [sport]{"entity": "activity", "role": "old"} in the category [medications]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
+    - change the activity [search]{"entity": "activity", "role": "old"} in the category [desires]{"entity": "category", "role": "old"} to the category [events]{"entity": "category", "role": "new"} 
+    - change the activity [search]{"entity": "activity", "role": "old"} in the category [events]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} 
 
 
 - intent: view_activities
   examples: |
     - I want to see all my activities
-    - Show my activities
-    - show my activities
+    - I want to see all my [uncompleted](activity_status) activities
+    - I want to see all my [completed](activity_status) activities
+    - Show my [undeveloped](activity_status) activities
+    - Show my [done](activity_status) activities
     - Which are my activities?
-    - which are my activities?
-    - what are my activities?
+    - which are [concluded](activity_status) my activities?
+    - what are my [uncompleted](activity_status) activities?
     - What are my activities?
+    - What are my [finished](activity_status) activities?
+    - What are my [unexecuted](activity_status) activities?
     - show activity in [gym]{"entity": "category", "role": "new"} category
-    - show activity in [monthly]{"entity": "category", "role": "new"} category
-    - show activity in [commitments]{"entity": "category", "role": "new"} category
-    - show activity in [work]{"entity": "category", "role": "new"} category
+    - show my [developed](activity_status) activity in [monthly]{"entity": "category", "role": "new"} category
+    - show my [undone](activity_status) activity in [commitments]{"entity": "category", "role": "new"} category
+    - show [executed](activity_status) activity in [work]{"entity": "category", "role": "new"} category
     - show activity in [projects]{"entity": "category", "role": "new"} category
+    - show [unfinished](activity_status) activity in [work]{"entity": "category", "role": "new"} category
+
+- intent: clean_activities
+  examples: |
+    - clean all my completed activities 
+    - remove all my completed activities 
+    - clean all completed activities
+    - remove all completed activities
+    
 
 - intent: view_categories
   examples: |
@@ -1101,7 +1114,19 @@ nlu:
     - take off
     - drop
     
-- synonym: complete
+- synonym: uncompleted
+  examples: |
+    - undone
+    - unfinished
+    - unexecuted
+    - undeveloped
+
+- synonym: completed
   examples: |
     - done
+    - finished
+    - executed
+    - developed
+    - concluded
+    
     

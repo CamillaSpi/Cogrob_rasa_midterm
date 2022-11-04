@@ -33,6 +33,7 @@ class Database:
             category VARCHAR(50) NOT NULL,
             deadline DATETIME,
             completed BOOLEAN NOT NULL,
+            reminder BOOLEAN NOT NULL,
             FOREIGN KEY (username, category) REFERENCES categories(username,category) ON DELETE CASCADE ON UPDATE CASCADE,
             PRIMARY KEY (id_activity) 
         );
@@ -52,7 +53,7 @@ class Database:
         return False
 
   @staticmethod
-  def insertItem(username, activity ,category, deadline=None):
+  def insertItem(username, activity ,category, reminder,deadline=None):
     try:
       m = hashlib.sha256()
       m.update(str(username).encode())
@@ -63,26 +64,37 @@ class Database:
       id_activity = m.hexdigest()
 
       conn.execute('''
-      INSERT INTO activities (id_activity,username, activity, category,deadline,completed) VALUES (?, ?, ?, ?,?,?);
-    ''', (id_activity,username, activity ,category,deadline,False))
+      INSERT INTO activities (id_activity,username, activity, category,deadline,completed,reminder) VALUES (?, ?, ?, ?,?,?,?);
+    ''', (id_activity,username, activity ,category,deadline,False,reminder))
       conn.commit()
       return True
     except sqlite3.IntegrityError as e :
       return False
 
   @staticmethod
-  def selectItems(username, category=None):
-    if category == None:
+  def selectItems(username, category=None, activity_status=None):
+    if(activity_status == "completed"):
+      completed = True
+    elif(activity_status == "uncompleted"):
+      completed = False
+    if (category != None and activity_status != None):
       cur.execute('''
-      SELECT activity,category,deadline FROM activities WHERE username == (?);
-      ''',(username,))
-    else:
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ? AND completed == ?;
+      ''',(username,category,completed))
+    elif category == None and activity_status != None:
       cur.execute('''
-      SELECT activity,category,deadline FROM activities WHERE username == ? AND category == ?;
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND completed == ?;
+      ''',(username,completed))
+    elif category != None and activity_status == None:
+      cur.execute('''
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ?;
       ''',(username,category))
+    else:  
+      cur.execute('''
+      SELECT activity,category,deadline,completed FROM activities WHERE username == (?);
+      ''',(username,))
 
     rows = cur.fetchall()
-
     return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
 
   @staticmethod

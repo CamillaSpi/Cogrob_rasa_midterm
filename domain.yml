@@ -21,12 +21,15 @@ intents:
   - help
   - modify_category
   - modify_activity
+  - clean_activities
+  - nlu_fallback
 
 entities:
   - activity
   - category
   - time
   - username
+  - activity_status
 
 actions:
   - utter_greet
@@ -44,6 +47,7 @@ actions:
   - utter_modification_choice
   - utter_ask_if_deadline
   - utter_choice_what_to_modify
+  - utter_ask_if_reminder
   - action_add_item
   - action_remove_item
   - action_set_complete
@@ -55,6 +59,8 @@ actions:
   - action_create_user
   - action_modify_category
   - action_modify_activity
+  - action_set_reminder_slot
+  - action_clean_all_completed
 
 
 slots:
@@ -79,6 +85,13 @@ slots:
   time_old:
     type: text
     influence_conversation: false
+  activity_status:
+    type: text
+    influence_conversation: false
+  reminder:
+    type: bool
+    influence_conversation: false
+    initial_value: False
 
 #sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity? No!
 forms:
@@ -254,6 +267,9 @@ responses:
   utter_ask_if_deadline:
   - text: "Do you want to set a deadline for the activity?"
 
+  utter_ask_if_reminder:
+  - text: "Do you want to set a reminder for the activity?"
+
   utter_ask_activity:
   - text: "Please insert the activity"
 
@@ -275,6 +291,10 @@ responses:
   - text: "What campo vuoi modiffare?"
   utter_confirmed:
   - text: " Changfed "
+
+  utter_default:
+  - text: I'm sorry, I can't help you. 
+
   
 
 
