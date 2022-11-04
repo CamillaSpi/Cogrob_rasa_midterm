@@ -20,6 +20,7 @@ intents:
   - help
   - modify_category
   - modify_activity
+  - clean_activities
   - nlu_fallback
 
 entities:
@@ -56,6 +57,7 @@ actions:
   - action_modify_category
   - action_modify_activity
   - action_set_reminder_slot
+  - action_clean_all_completed
 
 
 slots:

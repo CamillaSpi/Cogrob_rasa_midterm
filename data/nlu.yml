@@ -1077,6 +1077,14 @@ nlu:
     - show activity in [work]{"entity": "category", "role": "new"} category
     - show activity in [projects]{"entity": "category", "role": "new"} category
 
+- intent: clean_activities
+  examples: |
+    - clean all my completed activities 
+    - remove all my completed activities 
+    - clean all completed activities
+    - remove all completed activities
+    
+
 - synonym: add
   examples: |
     - insert

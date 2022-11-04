@@ -205,3 +205,18 @@ stories:
     - action: utter_confirm_choice
     - intent: affirm
     - action: action_modify_activity   
+
+- story: Clean Complete Activities confirmed 
+  steps:
+    - intent: clean_activities
+    - action: utter_confirm_choice
+    - intent: affirm
+    - action: action_clean_all_completed
+
+
+- story: Clean Complete Activities denied 
+  steps:
+    - intent: clean_activities
+    - action: utter_confirm_choice
+    - intent: deny
+    - action: utter_deny_choice

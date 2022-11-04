@@ -281,3 +281,14 @@ class actionSetReminderSlot(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         return[SlotSet("reminder",True)]
+
+
+class actionCleanCompletedActivities(Action):
+    def name(self) -> Text:
+        return "action_clean_all_completed"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text=f" I've the dinner ready, ill implement it later :P ") 
