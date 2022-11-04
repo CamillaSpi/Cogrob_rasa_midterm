@@ -225,6 +225,24 @@ class showActivities(Action):
 
         return [SlotSet("activity", None)]
 
+class showCategories(Action):
+    def name(self) -> Text:
+        return "action_view_categories"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        username = tracker.get_slot("username")
+
+        if(Database.doesUserExists(username)):
+            dispatcher.utter_message(text=f"These are all your categories:\n{Database.selectCategories(username)}") 
+        else:
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None)]
+
+        return [SlotSet("activity", None)]
+
 class actionModifyCategory(Action):
     def name(self) -> Text:
         return "action_modify_category"

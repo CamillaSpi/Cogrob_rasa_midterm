@@ -16,6 +16,7 @@ intents:
   - remove_category
   - inform
   - view_activities
+  - view_categories
   - presentation
   - help
   - modify_category
@@ -50,6 +51,7 @@ actions:
   - action_add_category
   - action_remove_category
   - action_view_activities
+  - action_view_categories
   - action_create_user
   - action_modify_category
   - action_modify_activity
@@ -174,6 +176,12 @@ forms:
           role: new
     
   view_activities_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+
+  view_categories_form:
     required_slots:
       username:
         - type: from_entity

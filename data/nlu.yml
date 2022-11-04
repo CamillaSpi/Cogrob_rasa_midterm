@@ -738,6 +738,7 @@ nlu:
     - I'm [mattia99](username) want to delete an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
     - hello I am [alessia19_07](username) want to del an activity to my list at 12:37
     - hi I'm [alessia19_07](username) want to delete an activity to my list at 18:14
+
 - intent: set_complete
   examples: |
     - set activity complete 
@@ -794,6 +795,7 @@ nlu:
     - I have completed activity [play](activity) in category [projects]{"entity": "category", "role": "new"}
     - I have complete activity [stand_up](activity) in category [daily]{"entity": "category", "role": "new"}
     - I have done activity [jogging](activity) in category [gym]{"entity": "category", "role": "new"}
+
 - intent: set_uncomplete
   examples: |
     - set activity incomplete 
@@ -1076,6 +1078,18 @@ nlu:
     - show activity in [commitments]{"entity": "category", "role": "new"} category
     - show activity in [work]{"entity": "category", "role": "new"} category
     - show activity in [projects]{"entity": "category", "role": "new"} category
+
+- intent: view_categories
+  examples: |
+    - I want to see all my categories
+    - Show my categories
+    - show my categories
+    - Show all my categories
+    - show all my categories
+    - Which are my categories?
+    - which are my categories?
+    - what are my categories?
+    - What are my categories?
 
 - synonym: add
   examples: |

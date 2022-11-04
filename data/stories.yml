@@ -111,6 +111,16 @@ stories:
     - requested_slot: null
   - action: action_view_activities
 
+- story: Show my Categories 
+  steps:
+  - intent: view_categories
+  - action: view_categories_form
+  - active_loop: view_categories_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_view_categories
+
 
 - story: Set Complete Activity
   steps:

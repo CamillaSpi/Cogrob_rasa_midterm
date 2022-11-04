@@ -117,11 +117,19 @@ class Database:
 
     cur.execute('''
     SELECT * FROM categories WHERE username == (?);
-    ''',username) 
+    ''',(username,)) 
 
     rows = cur.fetchall()
+    if len(rows) > 0:
+      categiories_list = ""
+      for category in rows:
+        if category is not None:
+          categiories_list +=  str(category[1]) + ", "
+      categiories_list = categiories_list[:-2]
+    else:
+      categiories_list = "No activity found"
 
-    return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
+    return categiories_list
 
   @staticmethod
   def deleteCategory(username, category):
