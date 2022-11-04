@@ -120,7 +120,7 @@ class Database:
     ''',username) 
 
     rows = cur.fetchall()
-modifyCategory
+
     return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
 
   @staticmethod
