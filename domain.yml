@@ -20,6 +20,7 @@ intents:
   - help
   - modify_category
   - modify_activity
+  - nlu_fallback
 
 entities:
   - activity
@@ -267,6 +268,10 @@ responses:
   - text: "What campo vuoi modiffare?"
   utter_confirmed:
   - text: " Changfed "
+
+  utter_default:
+  - text: I'm sorry, I can't help you. 
+
   
 
 
