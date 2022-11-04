@@ -90,13 +90,11 @@ class Database:
       SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ?;
       ''',(username,category))
     else:  
-      print("sono quiii")
       cur.execute('''
       SELECT activity,category,deadline,completed FROM activities WHERE username == (?);
       ''',(username,))
 
     rows = cur.fetchall()
-    print(rows, type(rows[0]))
     return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
 
   @staticmethod
