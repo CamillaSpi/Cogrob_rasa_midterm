@@ -71,18 +71,31 @@ class Database:
       return False
 
   @staticmethod
-  def selectItems(username, category=None):
-    if category == None:
+  def selectItems(username, category=None, activity_status=None):
+    if(activity_status == "completed"):
+      completed = True
+    elif(activity_status == "uncompleted"):
+      completed = False
+    if (category != None and activity_status != None):
       cur.execute('''
-      SELECT activity,category,deadline FROM activities WHERE username == (?);
-      ''',(username,))
-    else:
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ? AND completed == ?;
+      ''',(username,category,completed))
+    elif category == None and activity_status != None:
       cur.execute('''
-      SELECT activity,category,deadline FROM activities WHERE username == ? AND category == ?;
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND completed == ?;
+      ''',(username,completed))
+    elif category != None and activity_status == None:
+      cur.execute('''
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ?;
       ''',(username,category))
+    else:  
+      print("sono quiii")
+      cur.execute('''
+      SELECT activity,category,deadline,completed FROM activities WHERE username == (?);
+      ''',(username,))
 
     rows = cur.fetchall()
-
+    print(rows, type(rows[0]))
     return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
 
   @staticmethod
@@ -120,7 +133,6 @@ class Database:
     ''',username) 
 
     rows = cur.fetchall()
-modifyCategory
     return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
 
   @staticmethod

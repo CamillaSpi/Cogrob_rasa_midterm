@@ -26,6 +26,7 @@ entities:
   - category
   - time
   - username
+  - activity_status
 
 actions:
   - utter_greet
@@ -77,6 +78,11 @@ slots:
   time_old:
     type: text
     influence_conversation: false
+  activity_status:
+    type: text
+    influence_conversation: false
+
+  
 
 #sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity? No!
 forms:
