@@ -61,6 +61,7 @@ graph.png
 graph.html
 story_graph.html
 story_graph.dot
+data.db
 debug.md
 examples/moodbot/*.png
 examples/moodbot/errors.json
