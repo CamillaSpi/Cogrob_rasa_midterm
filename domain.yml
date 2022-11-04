@@ -20,6 +20,7 @@ intents:
   - help
   - modify_category
   - modify_activity
+  - nlu_fallback
 
 entities:
   - activity
@@ -206,6 +207,9 @@ forms:
           role: new
 
 responses:
+  utter_please_rephrase:
+  - text: Sorry i didn't understand that. Could you repeat?
+
   utter_greet:
   - text: "Hey! Who are you?"
 
