@@ -56,11 +56,14 @@ class actionAddItem(Action):
             if(Database.doesCategoryExists(username,category)):
                 returnedValue= Database.insertItem(username,activity ,category,time)
                 if (returnedValue):  
-                    dispatcher.utter_message(text=f"Congratulation {username}, {activity} added to {category}, complete before {time}") 
+                    text = f"Congratulation {username}, {activity} added to {category}" + (f", complete before {time[:10]} at {time[11:16]}" if time else ".")
+                    dispatcher.utter_message(text=text) 
                 else:
                     dispatcher.utter_message(text=f"Ops! {username} something went wrong, you already inserted this activity :(") 
             else:
-                dispatcher.utter_message(text=f"The category does not exists! You have to create it first") 
+                dispatcher.utter_message(text=f"The category does not exists! I'm creating it!") 
+                actionAddCategory.run(self, dispatcher,tracker,domain)
+                actionAddItem.run(self, dispatcher,tracker,domain)
                 return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
