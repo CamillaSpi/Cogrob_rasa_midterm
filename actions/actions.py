@@ -48,15 +48,16 @@ class actionAddItem(Action):
         username = tracker.get_slot("username")
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
+        reminder = tracker.get_slot("reminder")
         time = tracker.get_slot("time")
         if(time != None and len(time) == 2):
             time = time['to']
 
         if(Database.doesUserExists(username)):
             if(Database.doesCategoryExists(username,category)):
-                returnedValue= Database.insertItem(username,activity ,category,time)
+                returnedValue= Database.insertItem(username,activity ,category,reminder,time)
                 if (returnedValue):  
-                    text = f"Congratulation {username}, {activity} added to {category}" + (f", complete before {time[:10]} at {time[11:16]}" if time else ".")
+                    text = f"Congratulation {username}, {activity} added to {category}" + (f", complete before {time[:10]} at {time[11:16]}." if time else ".") + (" I will remind you, dont worry :P " if reminder else "") 
                     dispatcher.utter_message(text=text) 
                 else:
                     dispatcher.utter_message(text=f"Ops! {username} something went wrong, you already inserted this activity :(") 
@@ -64,12 +65,12 @@ class actionAddItem(Action):
                 dispatcher.utter_message(text=f"The category does not exists! I'm creating it!") 
                 actionAddCategory.run(self, dispatcher,tracker,domain)
                 actionAddItem.run(self, dispatcher,tracker,domain)
-                return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+                return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("reminder",False)]
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("reminder",False)]
 
 class actionRemoveItem(Action):
 
@@ -269,3 +270,14 @@ class actionModifyActivity(Action):
         category_new = tracker.get_slot("category")
         time = tracker.get_slot("time")
         print(activity_old, category_old, category_new, time)
+
+
+class actionSetReminderSlot(Action):
+    def name(self) -> Text:
+        return "action_set_reminder_slot"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        return[SlotSet("reminder",True)]
