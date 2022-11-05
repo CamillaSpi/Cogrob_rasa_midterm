@@ -93,9 +93,23 @@ class Database:
       cur.execute('''
       SELECT activity,category,deadline,completed FROM activities WHERE username == (?);
       ''',(username,))
-
+    
     rows = cur.fetchall()
-    return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
+    if(len(rows)>0):
+      category = ["Activities","Category","DeadLine","Completed"]
+      number = [i for i in range(1,len(rows)+1)]
+      row_format ="{:>20}" * (len(category) + 1)
+      toPrint = ""
+      toPrint += (row_format.format("", *category)) + "\n"
+      for team, row in zip(number, rows):
+          if (row[2]):
+            row = (row[0],row[1],row[2][:10]+ " "+row[2][11:16],row[3])
+          else:
+            row = (row[0],row[1],"None",row[3])
+          toPrint += (row_format.format(team, *row)) + "\n"
+
+
+    return toPrint if len(rows) > 0 else None
 
   @staticmethod
   def deleteItem(username, activity ,category,deadline):
@@ -238,3 +252,15 @@ class Database:
     if(len( cur.fetchall()) > 0 ):
       return True
     return False
+
+    cleanCompletedActivities
+
+  @staticmethod
+  def cleanCompletedActivities(username):
+    try:
+      conn.execute('''
+        DELETE FROM activities where username == ? and completed == 'True'
+      ''', (username,))
+      return True
+    except:
+      return False

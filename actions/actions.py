@@ -223,7 +223,8 @@ class showActivities(Action):
         activity_status = tracker.get_slot("activity_status")
 
         if(Database.doesUserExists(username)):
-                dispatcher.utter_message(text=f"This are the requested activity:\n{Database.selectItems(username,category, activity_status)}") 
+            list_of_activity = Database.selectItems(username,category, activity_status)
+            dispatcher.utter_message(text=(f"This are the requested activity:\n{list_of_activity}" if list_of_activity else "No activity found!")) 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None),SlotSet("category", None)]
@@ -310,4 +311,14 @@ class actionCleanCompletedActivities(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text=f" I've the dinner ready, ill implement it later :P ") 
+        username = tracker.get_slot("username")          
+        if(Database.doesUserExists(username)):
+            returnedValue = Database.cleanCompletedActivities(username)
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, I've removed all you completed activity !") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong! I dont know, check it !")
+        else:
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None)]
+        return []
