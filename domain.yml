@@ -59,6 +59,7 @@ actions:
   - action_modify_activity
   - action_set_reminder_slot
   - action_clean_all_completed
+  - action_reset_slot
 
 
 slots:
@@ -131,9 +132,6 @@ forms:
         - type: from_entity
           entity: category
           role: new
-      time:
-        - type: from_entity
-          entity: time
 
   set_status_activity_form:
     required_slots:
