@@ -90,7 +90,7 @@ class actionRemoveItem(Action):
             returnedValue = Database.deleteItem(username,activity ,category,time)
 
             if (returnedValue):  
-                dispatcher.utter_message(text=f"Congratulation {username}, {activity} remove from {category}") 
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} removed from {category}") 
             else:
                 dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
 
