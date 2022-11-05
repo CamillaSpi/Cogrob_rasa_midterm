@@ -169,7 +169,6 @@ class actionSetStatusActivity(Action):
 
         
         if(Database.doesUserExists(username)):
-            # fix the print with ?
             if activity_status == 'completed':
                 returnedValue = Database.setItemStatus(username,activity ,category,time,True)
             elif activity_status == 'uncompleted':
@@ -179,7 +178,7 @@ class actionSetStatusActivity(Action):
                 return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
             if (returnedValue):  
-                dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as completed !") 
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as {activity_status} !") 
             else:
                 dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
 
@@ -330,3 +329,21 @@ class actionCleanCompletedActivities(Action):
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None)]
         return []
+
+class actionResetSlot(Action):
+    def name(self) -> Text:
+        return "action_reset_slot"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        
+        return [SlotSet("activity_old",None),
+        SlotSet("activity",None),
+        SlotSet("category_old",None),
+        SlotSet("category",None),
+        SlotSet("time",None),
+        SlotSet("time_old",None),
+        SlotSet("activity_status",None)
+        ]

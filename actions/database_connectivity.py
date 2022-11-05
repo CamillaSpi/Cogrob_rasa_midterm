@@ -113,15 +113,22 @@ class Database:
 
   @staticmethod
   def deleteItem(username, activity ,category,deadline):
+    m = hashlib.sha256()
+    m.update(str(username).encode())
+    m.update(str(activity).encode())
+    m.update(str(category).encode())
+    m.update(str(deadline).encode())
+    m.digest()
+    id_activity = m.hexdigest()
     
     cur.execute('''
-      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-    ''', (username, activity ,category,deadline))
+      SELECT * FROM activities WHERE id_activity == ?
+    ''', (id_activity,))
 
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''
-        DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (username, activity ,category,deadline))
+        DELETE FROM activities WHERE id_activity == ?
+      ''', (id_activity,))
       conn.commit()
       return True
     else:

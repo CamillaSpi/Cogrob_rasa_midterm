@@ -101,22 +101,83 @@ stories:
   - action: remove_item_form
   - active_loop: remove_item_form
   - active_loop: null
+  - checkpoint: Remove_generic
+
+- story: Remove from my Activities without deadline and negation
+  steps:
+  - checkpoint: Remove_generic
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_if_deadline
+  - intent: deny
+  - action: utter_confirm_choice
+  - intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: Remove from my Activities with deadline with negation
+  steps:
+  - checkpoint: Remove_generic
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_if_deadline
+  - intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - active_loop: null
   - slot_was_set:
     - requested_slot: null
   - action: utter_confirm_choice
-  - checkpoint: Remove_generic
-
-- story: Remove from my Activities with negation
-  steps:
-  - checkpoint: Remove_generic
   - intent: deny
   - action: utter_deny_choice
+  - action: action_reset_slot
 
-- story: Remove from my Activities with confirmation
+- story: Remove from my Activities without deadline with confirmation
   steps:
   - checkpoint: Remove_generic
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_if_deadline
+  - intent: deny
+  - action: utter_confirm_choice
   - intent: affirm
   - action: action_remove_item
+
+- story: Remove from my Activities with deadline with confirmation
+  steps:
+  - checkpoint: Remove_generic
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_if_deadline
+  - intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_confirm_choice
+  - intent: affirm
+  - action: action_remove_item
+
+- story: Remove from my Activities already deadline with confirmation
+  steps:
+  - checkpoint: Remove_generic
+  - slot_was_set:
+    - time: true
+  - action: utter_confirm_choice
+  - intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: Remove from my Activities already deadline with confirmation
+  steps:
+  - checkpoint: Remove_generic
+  - slot_was_set:
+    - time: true
+  - action: utter_confirm_choice
+  - intent: affirm
+  - action: action_remove_item
+
 
 #################################### Show Stories ######################################
 - story: Show my Activities 
@@ -208,6 +269,7 @@ stories:
     - checkpoint: Remove_generic_Category
     - intent: deny
     - action: utter_deny_choice
+    - action: action_reset_slot
 
 - story: Remove new Category with affirm
   steps:
@@ -255,3 +317,4 @@ stories:
     - action: utter_confirm_choice
     - intent: deny
     - action: utter_deny_choice
+    - action: action_reset_slot
