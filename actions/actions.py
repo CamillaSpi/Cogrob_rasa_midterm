@@ -220,12 +220,31 @@ class showActivities(Action):
 
         username = tracker.get_slot("username")
         category = tracker.get_slot("category")
+        activity_status = tracker.get_slot("activity_status")
 
         if(Database.doesUserExists(username)):
-            dispatcher.utter_message(text=f"This are all your activities:\n{Database.selectItems(username,category)}") 
+                dispatcher.utter_message(text=f"This are the requested activity:\n{Database.selectItems(username,category, activity_status)}") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None)]
+            return [SlotSet("username",None),SlotSet("category", None)]
+
+        return [SlotSet("category", None),SlotSet("activity_status", None)]
+
+class showCategories(Action):
+    def name(self) -> Text:
+        return "action_view_categories"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        username = tracker.get_slot("username")
+
+        if(Database.doesUserExists(username)):
+            dispatcher.utter_message(text=f"These are all your categories:\n{Database.selectCategories(username)}") 
+        else:
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None)]
 
         return [SlotSet("activity", None)]
 

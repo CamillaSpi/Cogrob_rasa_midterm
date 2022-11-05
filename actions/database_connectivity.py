@@ -72,18 +72,29 @@ class Database:
       return False
 
   @staticmethod
-  def selectItems(username, category=None):
-    if category == None:
+  def selectItems(username, category=None, activity_status=None):
+    if(activity_status == "completed"):
+      completed = True
+    elif(activity_status == "uncompleted"):
+      completed = False
+    if (category != None and activity_status != None):
       cur.execute('''
-      SELECT activity,category,deadline FROM activities WHERE username == (?);
-      ''',(username,))
-    else:
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ? AND completed == ?;
+      ''',(username,category,completed))
+    elif category == None and activity_status != None:
       cur.execute('''
-      SELECT activity,category,deadline FROM activities WHERE username == ? AND category == ?;
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND completed == ?;
+      ''',(username,completed))
+    elif category != None and activity_status == None:
+      cur.execute('''
+      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ?;
       ''',(username,category))
+    else:  
+      cur.execute('''
+      SELECT activity,category,deadline,completed FROM activities WHERE username == (?);
+      ''',(username,))
 
     rows = cur.fetchall()
-
     return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
 
   @staticmethod
@@ -118,10 +129,19 @@ class Database:
 
     cur.execute('''
     SELECT * FROM categories WHERE username == (?);
-    ''',username) 
+    ''',(username,)) 
 
     rows = cur.fetchall()
-    return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
+    if len(rows) > 0:
+      categiories_list = ""
+      for category in rows:
+        if category is not None:
+          categiories_list +=  str(category[1]) + ", "
+      categiories_list = categiories_list[:-2]
+    else:
+      categiories_list = "No activity found"
+
+    return categiories_list
 
   @staticmethod
   def deleteCategory(username, category):

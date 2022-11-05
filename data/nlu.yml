@@ -738,6 +738,7 @@ nlu:
     - I'm [mattia99](username) want to delete an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
     - hello I am [alessia19_07](username) want to del an activity to my list at 12:37
     - hi I'm [alessia19_07](username) want to delete an activity to my list at 18:14
+
 - intent: set_complete
   examples: |
     - set activity complete 
@@ -794,6 +795,7 @@ nlu:
     - I have completed activity [play](activity) in category [projects]{"entity": "category", "role": "new"}
     - I have complete activity [stand_up](activity) in category [daily]{"entity": "category", "role": "new"}
     - I have done activity [jogging](activity) in category [gym]{"entity": "category", "role": "new"}
+
 - intent: set_uncomplete
   examples: |
     - set activity incomplete 
@@ -1065,17 +1067,22 @@ nlu:
 - intent: view_activities
   examples: |
     - I want to see all my activities
-    - Show my activities
-    - show my activities
+    - I want to see all my [uncompleted](activity_status) activities
+    - I want to see all my [completed](activity_status) activities
+    - Show my [undeveloped](activity_status) activities
+    - Show my [done](activity_status) activities
     - Which are my activities?
-    - which are my activities?
-    - what are my activities?
+    - which are [concluded](activity_status) my activities?
+    - what are my [uncompleted](activity_status) activities?
     - What are my activities?
+    - What are my [finished](activity_status) activities?
+    - What are my [unexecuted](activity_status) activities?
     - show activity in [gym]{"entity": "category", "role": "new"} category
-    - show activity in [monthly]{"entity": "category", "role": "new"} category
-    - show activity in [commitments]{"entity": "category", "role": "new"} category
-    - show activity in [work]{"entity": "category", "role": "new"} category
+    - show my [developed](activity_status) activity in [monthly]{"entity": "category", "role": "new"} category
+    - show my [undone](activity_status) activity in [commitments]{"entity": "category", "role": "new"} category
+    - show [executed](activity_status) activity in [work]{"entity": "category", "role": "new"} category
     - show activity in [projects]{"entity": "category", "role": "new"} category
+    - show [unfinished](activity_status) activity in [work]{"entity": "category", "role": "new"} category
 
 - intent: clean_activities
   examples: |
@@ -1084,6 +1091,18 @@ nlu:
     - clean all completed activities
     - remove all completed activities
     
+
+- intent: view_categories
+  examples: |
+    - I want to see all my categories
+    - Show my categories
+    - show my categories
+    - Show all my categories
+    - show all my categories
+    - Which are my categories?
+    - which are my categories?
+    - what are my categories?
+    - What are my categories?
 
 - synonym: add
   examples: |
@@ -1095,7 +1114,19 @@ nlu:
     - take off
     - drop
     
-- synonym: complete
+- synonym: uncompleted
+  examples: |
+    - undone
+    - unfinished
+    - unexecuted
+    - undeveloped
+
+- synonym: completed
   examples: |
     - done
+    - finished
+    - executed
+    - developed
+    - concluded
+    
     

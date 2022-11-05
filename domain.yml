@@ -16,6 +16,7 @@ intents:
   - remove_category
   - inform
   - view_activities
+  - view_categories
   - presentation
   - help
   - modify_category
@@ -28,6 +29,7 @@ entities:
   - category
   - time
   - username
+  - activity_status
 
 actions:
   - utter_greet
@@ -53,6 +55,7 @@ actions:
   - action_add_category
   - action_remove_category
   - action_view_activities
+  - action_view_categories
   - action_create_user
   - action_modify_category
   - action_modify_activity
@@ -80,6 +83,9 @@ slots:
     type: text
     influence_conversation: true
   time_old:
+    type: text
+    influence_conversation: false
+  activity_status:
     type: text
     influence_conversation: false
   reminder:
@@ -183,6 +189,12 @@ forms:
           role: new
     
   view_activities_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+
+  view_categories_form:
     required_slots:
       username:
         - type: from_entity
