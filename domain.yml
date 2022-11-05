@@ -10,8 +10,7 @@ intents:
   - bot_challenge
   - add_item
   - remove_item
-  - set_complete
-  - set_uncomplete
+  - set_status_activity
   - add_category
   - remove_category
   - inform
@@ -50,8 +49,7 @@ actions:
   - utter_ask_if_reminder
   - action_add_item
   - action_remove_item
-  - action_set_complete
-  - action_set_uncomplete
+  - action_set_status_activity
   - action_add_category
   - action_remove_category
   - action_view_activities
@@ -137,7 +135,7 @@ forms:
         - type: from_entity
           entity: time
 
-  set_complete_form:
+  set_status_activity_form:
     required_slots:
       username:
         - type: from_entity
@@ -149,18 +147,6 @@ forms:
         - type: from_entity
           entity: category
           role: new
-          
-  set_uncomplete_form:
-    required_slots:
-      username:
-        - type: from_entity
-          entity: username
-      activity:
-        - type: from_entity
-          entity: activity
-      category:
-        - type: from_entity
-          entity: category
 
   add_category_form:
     required_slots:

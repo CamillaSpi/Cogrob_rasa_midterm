@@ -739,131 +739,128 @@ nlu:
     - hello I am [alessia19_07](username) want to del an activity to my list at 12:37
     - hi I'm [alessia19_07](username) want to delete an activity to my list at 18:14
 
-- intent: set_complete
+- intent: set_status_activity
   examples: |
-    - set activity complete 
-    - Hi, set activity complete
-    - set up complete [run](activity)
+    - set activity [complete](activity_status) 
+    - Hi, set activity [complete](activity_status)
+    - set up [complete](activity_status) [run](activity)
     - set done [bed](activity)
-    - set complete [stand_up](activity)
-    - set up completed [swimmming](activity)
-    - set complete [play](activity)
+    - set [complete](activity_status) [stand_up](activity)
+    - set up [completed](activity_status) [swimmming](activity)
+    - set [complete](activity_status) [play](activity)
     - set done [jogging](activity)
-    - set complete [run](activity) in [daily]{"entity": "category", "role": "new"}
-    - set completed [bed](activity) in [projects]{"entity": "category", "role": "new"}
-    - set up complete [stand_up](activity) in [weekly]{"entity": "category", "role": "new"}
-    - set complete [swimmming](activity) in [monthly]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) [run](activity) in [daily]{"entity": "category", "role": "new"}
+    - set [completed](activity_status) [bed](activity) in [projects]{"entity": "category", "role": "new"}
+    - set up [complete](activity_status) [stand_up](activity) in [weekly]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) [swimmming](activity) in [monthly]{"entity": "category", "role": "new"}
     - set done [play](activity) in [commitments]{"entity": "category", "role": "new"}
-    - set complete [jogging](activity) in [quickly]{"entity": "category", "role": "new"}
-    - set completed activity [run](activity) in [weekly]{"entity": "category", "role": "new"}
-    - set complete activity [bed](activity) in [daily]{"entity": "category", "role": "new"}
-    - set completed activity [study](activity) in [commitments]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) [jogging](activity) in [quickly]{"entity": "category", "role": "new"}
+    - set [completed](activity_status) activity [run](activity) in [weekly]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) activity [bed](activity) in [daily]{"entity": "category", "role": "new"}
+    - set [completed](activity_status) activity [study](activity) in [commitments]{"entity": "category", "role": "new"}
     - set done activity [swimmming](activity) in [projects]{"entity": "category", "role": "new"}
-    - set complete activity [play](activity) in [monthly]{"entity": "category", "role": "new"}
-    - set completed activity [jogging](activity) in [quickly]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) activity [play](activity) in [monthly]{"entity": "category", "role": "new"}
+    - set [completed](activity_status) activity [jogging](activity) in [quickly]{"entity": "category", "role": "new"}
     - set done [run](activity) in category [commitments]{"entity": "category", "role": "new"}
-    - set complete [bed](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - set up completed [stand_up](activity) in category [daily]{"entity": "category", "role": "new"}
-    - set complete [swimmming](activity) in category [quickly]{"entity": "category", "role": "new"}
-    - set completed [play](activity) in category [projects]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) [bed](activity) in category [weekly]{"entity": "category", "role": "new"}
+    - set up [completed](activity_status) [stand_up](activity) in category [daily]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) [swimmming](activity) in category [quickly]{"entity": "category", "role": "new"}
+    - set [completed](activity_status) [play](activity) in category [projects]{"entity": "category", "role": "new"}
     - set done [jogging](activity) in category [monthly]{"entity": "category", "role": "new"}
-    - set complete activity [run](activity) in category [monthly]{"entity": "category", "role": "new"}
-    - set complete activity [bed](activity) in category [quickly]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) activity [run](activity) in category [monthly]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) activity [bed](activity) in category [quickly]{"entity": "category", "role": "new"}
     - set done activity [stand_up](activity) in category [projects]{"entity": "category", "role": "new"}
-    - set completed activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
-    - set complete activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
-    - set completed activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - I want to set complete an activity 
+    - set [completed](activity_status) activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
+    - set [complete](activity_status) activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
+    - set [completed](activity_status) activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
+    - I want to set [complete](activity_status) an activity 
     - I want to set done an activity in a list 
-    - I want to set completed an activity in [weekly]{"entity": "category", "role": "new"} list 
-    - I want to set complete an activity in [daily]{"entity": "category", "role": "new"} list
+    - I want to set [completed](activity_status) an activity in [weekly]{"entity": "category", "role": "new"} list 
+    - I want to set [complete](activity_status) an activity in [daily]{"entity": "category", "role": "new"} list
     - I want to set done an activity in [commitments]{"entity": "category", "role": "new"} list 
-    - I want to set complete an activity in [projects]{"entity": "category", "role": "new"} list 
-    - I want to set complete an activity in [monthly]{"entity": "category", "role": "new"} list
+    - I want to set [complete](activity_status) an activity in [projects]{"entity": "category", "role": "new"} list 
+    - I want to set [complete](activity_status) an activity in [monthly]{"entity": "category", "role": "new"} list
     - I want to set done an activity in [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to set completed an activity in [weekly]{"entity": "category", "role": "new"} list 
-    - hi, I want to set complete an activity in [daily]{"entity": "category", "role": "new"} list 
+    - hi, I want to set [completed](activity_status) an activity in [weekly]{"entity": "category", "role": "new"} list 
+    - hi, I want to set [complete](activity_status) an activity in [daily]{"entity": "category", "role": "new"} list 
     - hi, I want to set done an activity in [commitments]{"entity": "category", "role": "new"} list 
-    - hi, I want to set completed an activity in [projects]{"entity": "category", "role": "new"} list 
+    - hi, I want to set [completed](activity_status) an activity in [projects]{"entity": "category", "role": "new"} list 
     - hello, I want to set done an activity in [monthly]{"entity": "category", "role": "new"} list 
-    - hello, I want to set complete an activity in [quickly]{"entity": "category", "role": "new"} list
-    - hello I want to set complete an activity in my list 
-    - hi I want to set up complete an activity in my list 
+    - hello, I want to set [complete](activity_status) an activity in [quickly]{"entity": "category", "role": "new"} list
+    - hello I want to set [complete](activity_status) an activity in my list 
+    - hi I want to set up [complete](activity_status) an activity in my list 
     - Hi I want to set done all activity in [monthly]{"entity": "category", "role": "new"} list
-    - I have complete activity [swimming](activity) in category [gym]{"entity": "category", "role": "new"}
+    - I have [complete](activity_status) activity [swimming](activity) in category [gym]{"entity": "category", "role": "new"}
     - I have done activity [run](activity) in category [commitments]{"entity": "category", "role": "new"}
-    - I have completed activity [play](activity) in category [projects]{"entity": "category", "role": "new"}
-    - I have complete activity [stand_up](activity) in category [daily]{"entity": "category", "role": "new"}
+    - I have [completed](activity_status) activity [play](activity) in category [projects]{"entity": "category", "role": "new"}
+    - I have [complete](activity_status) activity [stand_up](activity) in category [daily]{"entity": "category", "role": "new"}
     - I have done activity [jogging](activity) in category [gym]{"entity": "category", "role": "new"}
-
-- intent: set_uncomplete
-  examples: |
-    - set activity incomplete 
-    - Hi, set activity incomplete
-    - set incomplete [run](activity)
-    - set incomplete [bed](activity)
+    - set activity [incomplete](activity_status) 
+    - Hi, set activity [incomplete](activity_status)
+    - set [incomplete](activity_status) [run](activity)
+    - set [incomplete](activity_status) [bed](activity)
     - set undone [stand_up](activity)
-    - set incomplete [swimmming](activity)
-    - set incomplete [play](activity)
+    - set [incomplete](activity_status) [swimmming](activity)
+    - set [incomplete](activity_status) [play](activity)
     - set undone [jogging](activity)
-    - set incomplete [run](activity) in [daily]{"entity": "category", "role": "new"}
-    - set incomplete [bed](activity) in [projects]{"entity": "category", "role": "new"}
-    - set incomplete [stand_up](activity) in [weekly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [run](activity) in [daily]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [bed](activity) in [projects]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [stand_up](activity) in [weekly]{"entity": "category", "role": "new"}
     - set undone [swimmming](activity) in [monthly]{"entity": "category", "role": "new"}
-    - set incomplete [play](activity) in [commitments]{"entity": "category", "role": "new"}
-    - set incomplete [jogging](activity) in [quickly]{"entity": "category", "role": "new"}
-    - set incomplete activity [run](activity) in [weekly]{"entity": "category", "role": "new"}
-    - set incomplete activity [study](activity) in [daily]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [play](activity) in [commitments]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [jogging](activity) in [quickly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [run](activity) in [weekly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [study](activity) in [daily]{"entity": "category", "role": "new"}
     - set undone activity [stand_up](activity) in [commitments]{"entity": "category", "role": "new"}
-    - set incomplete activity [swimmming](activity) in [projects]{"entity": "category", "role": "new"}
-    - set incomplete activity [play](activity) in [monthly]{"entity": "category", "role": "new"}
-    - set incomplete activity [jogging](activity) in [quickly]{"entity": "category", "role": "new"}
-    - set incomplete [run](activity) in category [commitments]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [swimmming](activity) in [projects]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [play](activity) in [monthly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [jogging](activity) in [quickly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [run](activity) in category [commitments]{"entity": "category", "role": "new"}
     - set undone [bed](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - set incomplete [stand_up](activity) in category [daily]{"entity": "category", "role": "new"}
-    - set incomplete [swimmming](activity) in category [quickly]{"entity": "category", "role": "new"}
-    - set incomplete [play](activity) in category [projects]{"entity": "category", "role": "new"}
-    - set incomplete [jogging](activity) in category [monthly]{"entity": "category", "role": "new"}
-    - set incomplete activity [run](activity) in category [monthly]{"entity": "category", "role": "new"}
-    - set incomplete activity [bed](activity) in category [quickly]{"entity": "category", "role": "new"}
-    - set incomplete activity [stand_up](activity) in category [projects]{"entity": "category", "role": "new"}
-    - set incomplete activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [stand_up](activity) in category [daily]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [swimmming](activity) in category [quickly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [play](activity) in category [projects]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [jogging](activity) in category [monthly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [run](activity) in category [monthly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [bed](activity) in category [quickly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [stand_up](activity) in category [projects]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) activity [swimmming](activity) in category [commitments]{"entity": "category", "role": "new"}
     - set undone activity [play](activity) in category [daily]{"entity": "category", "role": "new"}
-    - set incomplete activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
-    - I want to set incomplete an activity 
-    - I want to set incomplete an activity in a list 
-    - I want to set incomplete an activity in [weekly]{"entity": "category", "role": "new"} list 
-    - I want to set incomplete an activity in [daily]{"entity": "category", "role": "new"} list
+    - set [incomplete](activity_status) activity [jogging](activity) in category [weekly]{"entity": "category", "role": "new"}
+    - I want to set [incomplete](activity_status) an activity 
+    - I want to set [incomplete](activity_status) an activity in a list 
+    - I want to set [incomplete](activity_status) an activity in [weekly]{"entity": "category", "role": "new"} list 
+    - I want to set [incomplete](activity_status) an activity in [daily]{"entity": "category", "role": "new"} list
     - I want to set undone an activity in [study]{"entity": "category", "role": "new"} list 
-    - I want to set incomplete an activity in [projects]{"entity": "category", "role": "new"} list 
-    - I want to set incomplete an activity in [monthly]{"entity": "category", "role": "new"} list
-    - I want to set incomplete an activity in [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to set incomplete an activity in [weekly]{"entity": "category", "role": "new"} list 
+    - I want to set [incomplete](activity_status) an activity in [projects]{"entity": "category", "role": "new"} list 
+    - I want to set [incomplete](activity_status) an activity in [monthly]{"entity": "category", "role": "new"} list
+    - I want to set [incomplete](activity_status) an activity in [quickly]{"entity": "category", "role": "new"} list
+    - hi, I want to set [incomplete](activity_status) an activity in [weekly]{"entity": "category", "role": "new"} list 
     - hi, I want to set undone an activity in [daily]{"entity": "category", "role": "new"} list 
     - hi, I want to set undone an activity in [commitments]{"entity": "category", "role": "new"} list 
-    - hi, I want to set incomplete an activity in [projects]{"entity": "category", "role": "new"} list 
-    - hello, I want to set incomplete an activity in [monthly]{"entity": "category", "role": "new"} list 
-    - hello, I want to set incomplete an activity in [quickly]{"entity": "category", "role": "new"} list
-    - hello I want to set incomplete an activity in my list 
-    - hi I want to set incomplete an activity in my list 
+    - hi, I want to set [incomplete](activity_status) an activity in [projects]{"entity": "category", "role": "new"} list 
+    - hello, I want to set [incomplete](activity_status) an activity in [monthly]{"entity": "category", "role": "new"} list 
+    - hello, I want to set [incomplete](activity_status) an activity in [quickly]{"entity": "category", "role": "new"} list
+    - hello I want to set [incomplete](activity_status) an activity in my list 
+    - hi I want to set [incomplete](activity_status) an activity in my list 
     - Hi I want to set undone all activity in [monthly]{"entity": "category", "role": "new"} list
-    - undo complete [run](activity)
-    - undo complete [bed](activity)
-    - undo complete [stand_up](activity)
-    - undo complete [swimmming](activity)
-    - undo complete [play](activity)
-    - undo complete [jogging](activity)
-    - undo complete [run](activity) in [daily]{"entity": "category", "role": "new"}
-    - undo complete [bed](activity) in [projects]{"entity": "category", "role": "new"}
-    - undo complete [stand_up](activity) in [weekly]{"entity": "category", "role": "new"}
-    - undo complete [swimmming](activity) in [monthly]{"entity": "category", "role": "new"}
-    - undo complete [play](activity) in [commitments]{"entity": "category", "role": "new"}
-    - undo complete [study](activity) in [quickly]{"entity": "category", "role": "new"}
-    - undo complete activity [run](activity) in [weekly]{"entity": "category", "role": "new"}
-    - undo complete activity [bed](activity) in [daily]{"entity": "category", "role": "new"}
-    - undo complete activity [stand_up](activity) in [commitments]{"entity": "category", "role": "new"}
-    - undo complete activity [swimmming](activity) in [projects]{"entity": "category", "role": "new"}
-    - undo complete activity [play](activity) in [monthly]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) [run](activity)
+    - undo [complete](activity_status) [bed](activity)
+    - undo [complete](activity_status) [stand_up](activity)
+    - undo [complete](activity_status) [swimmming](activity)
+    - undo [complete](activity_status) [play](activity)
+    - undo [complete](activity_status) [jogging](activity)
+    - undo [complete](activity_status) [run](activity) in [daily]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) [bed](activity) in [projects]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) [stand_up](activity) in [weekly]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) [swimmming](activity) in [monthly]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) [play](activity) in [commitments]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) [study](activity) in [quickly]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) activity [run](activity) in [weekly]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) activity [bed](activity) in [daily]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) activity [stand_up](activity) in [commitments]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) activity [swimmming](activity) in [projects]{"entity": "category", "role": "new"}
+    - undo [complete](activity_status) activity [play](activity) in [monthly]{"entity": "category", "role": "new"}
     
 - intent: add_category
   examples: |
@@ -1068,7 +1065,7 @@ nlu:
   examples: |
     - I want to see all my activities
     - I want to see all my [uncompleted](activity_status) activities
-    - I want to see all my [completed](activity_status) activities
+    - I want to see all my [[completed](activity_status) activities
     - Show my [undeveloped](activity_status) activities
     - Show my [done](activity_status) activities
     - Which are my activities?

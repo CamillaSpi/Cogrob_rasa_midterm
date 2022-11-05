@@ -141,11 +141,11 @@ stories:
 
 #################################### Set Completed and unCompleted Stories ######################################
 #forse si può unificare il form?
-- story: Set Complete Activity with deadline
+- story: Set status Activity with deadline
   steps:
-    - intent: set_complete
-    - action: set_complete_form
-    - active_loop: set_complete_form
+    - intent: set_status_activity
+    - action: set_status_activity_form
+    - active_loop: set_status_activity_form
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
@@ -156,69 +156,29 @@ stories:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    - action: action_set_complete
+    - action: action_set_status_activity
 
-- story: Set Complete Activity without deadline
+- story: Set status Activity without deadline
   steps:
-    - intent: set_complete
-    - action: set_complete_form
-    - active_loop: set_complete_form
+    - intent: set_status_activity
+    - action: set_status_activity_form
+    - active_loop: set_status_activity_form
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
     - action: utter_ask_if_deadline
     - intent: deny
-    - action: action_set_complete
+    - action: action_set_status_activity
 
-- story: Set Complete Activity already inserted deadline
+- story: Set status Activity already inserted deadline
   steps:
-    - intent: set_complete
-    - action: set_complete_form
-    - active_loop: set_complete_form
+    - intent: set_status_activity
+    - action: set_status_activity_form
+    - active_loop: set_status_activity_form
     - active_loop: null
     - slot_was_set:
       - time: True
-    - action: action_set_complete
-
-
-- story: Set unComplete Activity with deadline
-  steps:
-    - intent: set_uncomplete
-    - action: set_uncomplete_form
-    - active_loop: set_uncomplete_form
-    - active_loop: null
-    - slot_was_set:
-      - requested_slot: null
-    - action: utter_ask_if_deadline
-    - intent: affirm
-    - action: add_deadline_form
-    - active_loop: add_deadline_form
-    - active_loop: null
-    - slot_was_set:
-      - requested_slot: null
-    - action: action_set_uncomplete
-
-- story: Set unComplete Activity without deadline
-  steps:
-    - intent: set_uncomplete
-    - action: set_uncomplete_form
-    - active_loop: set_uncomplete_form
-    - active_loop: null
-    - slot_was_set:
-      - requested_slot: null
-    - action: utter_ask_if_deadline
-    - intent: deny
-    - action: action_set_uncomplete
-
-- story: Set unComplete Activity already inserted deadline
-  steps:
-    - intent: set_uncomplete
-    - action: set_uncomplete_form
-    - active_loop: set_uncomplete_form
-    - active_loop: null
-    - slot_was_set:
-      - time: True
-    - action: action_set_uncomplete
+    - action: action_set_status_activity
 
 #################################### Submit new Category Stories ######################################
 - story: Add new Category
