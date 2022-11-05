@@ -171,15 +171,15 @@ class actionSetComplete(Action):
             returnedValue = Database.setItemStatus(username,activity ,category,time,True)
 
             if (returnedValue):  
-                dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} completed !") 
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as completed !") 
             else:
-                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity:(") 
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
 class actionSetInComplete(Action):
 
@@ -206,9 +206,9 @@ class actionSetInComplete(Action):
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
 class showActivities(Action):
     def name(self) -> Text:

@@ -149,9 +149,6 @@ forms:
         - type: from_entity
           entity: category
           role: new
-      time:
-        - type: from_entity
-          entity: time
           
   set_uncomplete_form:
     required_slots:
@@ -164,9 +161,6 @@ forms:
       category:
         - type: from_entity
           entity: category
-      time:
-        - type: from_entity
-          entity: time
 
   add_category_form:
     required_slots:

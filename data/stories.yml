@@ -40,6 +40,7 @@ stories:
     - requested_slot: null
   - action: action_create_user
 
+#################################### Submit new Activity Stories ######################################
 - story: Submit generic activity
   steps:  
   - intent: add_item
@@ -93,6 +94,7 @@ stories:
   - intent: deny
   - action: action_add_item
 
+#################################### Remove Activity Stories ######################################
 - story: Remove generic activity
   steps:
   - intent: remove_item
@@ -116,6 +118,7 @@ stories:
   - intent: affirm
   - action: action_remove_item
 
+#################################### Show Stories ######################################
 - story: Show my Activities 
   steps:
   - intent: view_activities
@@ -136,8 +139,9 @@ stories:
     - requested_slot: null
   - action: action_view_categories
 
-
-- story: Set Complete Activity
+#################################### Set Completed and unCompleted Stories ######################################
+#forse si può unificare il form?
+- story: Set Complete Activity with deadline
   steps:
     - intent: set_complete
     - action: set_complete_form
@@ -145,9 +149,39 @@ stories:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: affirm
+    - action: add_deadline_form
+    - active_loop: add_deadline_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
     - action: action_set_complete
 
-- story: Set unComplete Activity
+- story: Set Complete Activity without deadline
+  steps:
+    - intent: set_complete
+    - action: set_complete_form
+    - active_loop: set_complete_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: deny
+    - action: action_set_complete
+
+- story: Set Complete Activity already inserted deadline
+  steps:
+    - intent: set_complete
+    - action: set_complete_form
+    - active_loop: set_complete_form
+    - active_loop: null
+    - slot_was_set:
+      - time: True
+    - action: action_set_complete
+
+
+- story: Set unComplete Activity with deadline
   steps:
     - intent: set_uncomplete
     - action: set_uncomplete_form
@@ -155,9 +189,38 @@ stories:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: affirm
+    - action: add_deadline_form
+    - active_loop: add_deadline_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
     - action: action_set_uncomplete
 
+- story: Set unComplete Activity without deadline
+  steps:
+    - intent: set_uncomplete
+    - action: set_uncomplete_form
+    - active_loop: set_uncomplete_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: deny
+    - action: action_set_uncomplete
 
+- story: Set unComplete Activity already inserted deadline
+  steps:
+    - intent: set_uncomplete
+    - action: set_uncomplete_form
+    - active_loop: set_uncomplete_form
+    - active_loop: null
+    - slot_was_set:
+      - time: True
+    - action: action_set_uncomplete
+
+#################################### Submit new Category Stories ######################################
 - story: Add new Category
   steps:
     - intent: add_category
@@ -179,6 +242,7 @@ stories:
     - action: utter_confirm_choice
     - checkpoint: Remove_generic_Category
 
+#################################### Remove Category Stories ######################################
 - story: Remove new Category with deny
   steps:
     - checkpoint: Remove_generic_Category
@@ -191,6 +255,7 @@ stories:
     - intent: affirm
     - action: action_remove_category
     
+#################################### Modify Stories ######################################
 - story: Modify the category
   steps:
     - intent: modify_category
@@ -203,7 +268,6 @@ stories:
     - intent: affirm
     - action: action_modify_category
 
-     
 - story: Modify the activity
   steps:
     - intent: modify_activity
@@ -216,6 +280,7 @@ stories:
     - intent: affirm
     - action: action_modify_activity   
 
+#################################### Clean Stories ######################################
 - story: Clean Complete Activities confirmed 
   steps:
     - intent: clean_activities
