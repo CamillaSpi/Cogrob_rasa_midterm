@@ -152,10 +152,10 @@ class actionRemoveCategory(Action):
 
         return [SlotSet("category", None)]
 
-class actionSetComplete(Action):
+class actionSetStatusActivity(Action):
 
     def name(self) -> Text:
-        return "action_set_complete"
+        return "action_set_status_activity"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -164,11 +164,19 @@ class actionSetComplete(Action):
         username = tracker.get_slot("username")
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
+        activity_status = tracker.get_slot("activity_status")
         time = tracker.get_slot("time")
 
         
         if(Database.doesUserExists(username)):
-            returnedValue = Database.setItemStatus(username,activity ,category,time,True)
+            # fix the print with ?
+            if activity_status == 'completed':
+                returnedValue = Database.setItemStatus(username,activity ,category,time,True)
+            elif activity_status == 'uncompleted':
+                returnedValue = Database.setItemStatus(username,activity ,category,time,False)
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't understand what u want to do with this activity :(") 
+                return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
             if (returnedValue):  
                 dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as completed !") 
