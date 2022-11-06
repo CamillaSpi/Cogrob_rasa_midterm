@@ -2,90 +2,188 @@
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
 stories:
-- story: happy path 1
+- story: test1 for clean complete activities confirmed
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      clean completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+      [Luca90](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      yeah
+    intent: affirm
+  - action: action_clean_all_completed
 
-- story: happy path 2
+- story: test2 for clean complete activities confirmed
   steps:
   - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
+      I want to delete completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
   - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+      [Geronimo](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
   - user: |
       yes
     intent: affirm
-  - action: utter_happy
+  - action: action_clean_all_completed
 
-- story: sad path 2
+- story: test3 for clean complete activities confirmed
   steps:
   - user: |
-      hello
-    intent: greet
-  - action: utter_greet
+      delete all my completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
   - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+      [Vittoria](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
   - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
+      yep
+    intent: affirm
+  - action: action_clean_all_completed
 
-- story: sad path 3
+- story: test4 for clean complete activities confirmed
   steps:
   - user: |
-      hi
-    intent: greet
-  - action: utter_greet
+      remove my completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
   - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+      [Antonio29](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_clean_all_completed
+
+- story: test5 for clean complete activities confirmed
+  steps:
+  - user: |
+      delete the activities completed
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Silvietta2](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_clean_all_completed
+
+- story: test1 for clean complete activities denied
+  steps:
+  - user: |
+      clean completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Lucia](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
   - user: |
       no
     intent: deny
-  - action: utter_goodbye
+  - action: utter_deny_choice
+  - action: action_reset_slot
 
-- story: say goodbye
+- story: test2 for clean complete activities denied
   steps:
   - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+      I want to delete completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Valentina394](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      nope
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
 
-- story: bot challenge
+- story: test3 for clean complete activities denied
   steps:
   - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+      delete all my completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Paolino](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      no thanks
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test4 for clean complete activities denied
+  steps:
+  - user: |
+      remove my completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Francesca](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      no sorry
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test5 for clean complete activities denied
+  steps:
+  - user: |
+      delete the activities completed
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Vito2](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+

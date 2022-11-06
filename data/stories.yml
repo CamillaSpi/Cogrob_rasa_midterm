@@ -336,6 +336,11 @@ stories:
 - story: Clean Complete Activities confirmed 
   steps:
     - intent: clean_activities
+    - action: clean_activities_form
+    - active_loop: clean_activities_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
     - action: utter_confirm_choice
     - intent: affirm
     - action: action_clean_all_completed
@@ -344,6 +349,11 @@ stories:
 - story: Clean Complete Activities denied 
   steps:
     - intent: clean_activities
+    - action: clean_activities_form
+    - active_loop: clean_activities_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
     - action: utter_confirm_choice
     - intent: deny
     - action: utter_deny_choice
