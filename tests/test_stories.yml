@@ -1,7 +1,288 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-### To test use rasa test core --stories ./tests/test_stories.yml --out results
+
+
+### To test use rasa test core --stories ./tests/test_stories.yml --out results ####
 stories:
+
+#################################### Test Stories  Add Item Single Cases ######################################
+- story: later presentation and add activity (single) without deadline 1
+  steps:
+  - user: |
+      add an activity
+    intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item 
+
+- story: later presentation and add activity (single) with deadline 1
+  steps:
+  - user: |
+      add an activity
+    intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - user: |
+      im [fragola86](username)
+    intent: presentation
+  - action: add_item_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - user: |
+      [healthcare]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_ask_if_reminder
+  - user: |
+      yes
+    intent: affirm
+  - action: action_set_reminder_slot
+  - action: action_add_item
+    
+- story: presentation and add activity (single) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add an activity
+    intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item 
+
+- story: presentation and add activity (single) with deadline 1
+  steps:
+  - user: |
+      im [fragola86](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add an activity
+    intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - user: |
+      [healthcare]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_ask_if_reminder
+  - user: |
+      yes
+    intent: affirm
+  - action: action_set_reminder_slot
+  - action: action_add_item
+
+
+#################################### Test Stories  Add Item Double Cases ######################################
+- story: later presentation and add activity (double) without deadline 1
+  steps:
+  - user: |
+      add an activity
+    intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item 
+
+- story: later presentation and add activity (dobule) with deadline 1
+  steps:
+  - user: |
+      add an activity
+    intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - user: |
+      im [fragola86](username)
+    intent: presentation
+  - action: add_item_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [healthcare]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_ask_if_reminder
+  - user: |
+      yes
+    intent: affirm
+  - action: action_set_reminder_slot
+  - action: action_add_item
+    
+- story: presentation and add activity (dobule) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+    intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item 
+
+- story: presentation and add activity (dobule) with deadline 1
+  steps:
+  - user: |
+      im [fragola86](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add an activity
+    intent: add_item
+  - action: add_item_form
+  - active_loop: add_item_form
+  - user: |
+      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+    intent: add_item
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_ask_if_reminder
+  - user: |
+      yes
+    intent: affirm
+  - action: action_set_reminder_slot
+  - action: action_add_item
+
+
+
+#################################### Test Stories  Add Item Other ######################################
+- story: later presentation and add activity already deadline 1
+  steps:
+  - user: |
+      add [run]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"} at 22th december 2022
+    intent: add_item
+  - slot_was_set:
+    - time: "2022-12-22T00:00:00.000+01:00"
+  - action: add_item_form
+  - active_loop: add_item_form
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_reminder
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item 
 
 - story: presentation and add activity already deadline 1
   steps:
@@ -23,6 +304,7 @@ stories:
       no
     intent: deny
   - action: action_add_item 
+
 
 - story: presentation and add activity withouth deadline 1
   steps:
@@ -99,7 +381,7 @@ stories:
   - action: action_add_item
   
 
-- story: presentation and add activity withouth deadline 2
+- story: presentation and add activity with deadline 2
   steps:
   - user: |
       im [banana33](username)
@@ -133,7 +415,6 @@ stories:
   
 
 #################################### Test Stories  Clean completed activities with confirmation######################################
-stories:
 - story: test1 for clean complete activities confirmed
   steps:
   - user: |
