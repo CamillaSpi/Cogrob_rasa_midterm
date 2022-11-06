@@ -133,7 +133,6 @@ stories:
   
 
 #################################### Test Stories  Clean completed activities with confirmation######################################
-stories:
 - story: test1 for clean complete activities confirmed
   steps:
   - user: |
@@ -320,3 +319,76 @@ stories:
   - action: utter_deny_choice
   - action: action_reset_slot
 
+#################################### Test Stories Show activities######################################
+- story: test1 for show activities
+  steps:
+  - user: |
+      i want to see my activities
+    intent: view_activities
+  - action: view_activities_form
+  - active_loop: view_activities_form
+  - user: |
+      [Vito2](username)
+    intent: inform
+  - action: view_activities_form
+  - active_loop: null 
+  - action: action_view_activities
+
+- story: test2 for show activities
+  steps:
+  - user: |
+      hi my username is [Luchino19](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      let me see all my activities
+    intent: view_activities
+  - action: view_activities_form
+  - active_loop: null  
+  - action: action_view_activities
+
+- story: test3 for show activities
+  steps:
+  - user: |
+      let me see my done activities
+    intent: view_activities
+  - action: view_activities_form
+  - active_loop: view_activities_form
+  - user: |
+      [Lauretta](username)
+    intent: inform
+  - action: view_activities_form
+  - active_loop: null 
+  - action: action_view_activities
+
+- story: test4 for show activities
+  steps:
+  - user: |
+      hi my username is [Roberto](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      i want to see my undone activities
+    intent: view_activities
+  - action: view_activities_form
+  - active_loop: null  
+  - action: action_view_activities
+
+- story: test5 for show activities
+  steps:
+  - user: |
+      my username is [Pika11](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      i want to watch the uncompleted activities 
+    intent: view_activities
+  - action: view_activities_form
+  - active_loop: null  
+  - action: action_view_activities
