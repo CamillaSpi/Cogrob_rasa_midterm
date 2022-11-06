@@ -301,6 +301,7 @@ class actionModifyActivity(Action):
             timenew = time['to']
             timeold = time['from']
         else:
+            dispatcher.utter_message(text=f"If your intection was to change the deadline you have passed me only the last, insert togheter for the next request if your intent is to change that!!!")
             timenew = time
             timeold = time
 
