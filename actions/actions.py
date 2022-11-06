@@ -54,7 +54,7 @@ class actionAddItem(Action):
             time = time['to']
 
         if(Database.doesUserExists(username)):
-            if(Database.doesCategoryExists(username,category)):
+            if(Database.doesPossessionExists(username,category)):
                 returnedValue= Database.insertItem(username,activity ,category,reminder,time)
                 if (returnedValue):  
                     text = f"Congratulation {username}, {activity} added to {category}" + (f", complete before {time[:10]} at {time[11:16]}." if time else ".") + (" I will remind you, dont worry :P " if reminder else "") 
@@ -268,7 +268,8 @@ class actionModifyCategory(Action):
         category_new = tracker.get_slot("category")
         
         if(Database.doesUserExists(username)):
-            if (Database.doesCategoryExists(username,category_new) == False):
+            if (Database.doesPossessionExists(username,category_new) == False):
+
                 returnedValue = Database.modifyCategory(username, category_old, category_new)
                 if (returnedValue):  
                     dispatcher.utter_message(text=f"Congratulation {username}, {category_old} modified in {category_new} !") 
@@ -320,7 +321,7 @@ class actionModifyActivity(Action):
             cat_to_query = category_old
 
         if(Database.doesUserExists(username)):
-            if (Database.doesActivityExists(username,cat_to_query,act_to_query,timenew) == False):
+            if (Database.doesUnfoldingsExists(username,cat_to_query,act_to_query,timenew) == False):
                 returnedValue = Database.modifyActivity(username, category_old, activity_old, timeold, category_new, activity_new, timenew)
                 if (returnedValue):  
                     dispatcher.utter_message(text=f"Congratulation {username}, the activity {act_to_query} has been updated !") 
