@@ -249,7 +249,81 @@ forms:
         - type: from_entity
           entity: category
           role: old
-  
+
+  modify_activity_name_category_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+      activity_old:
+        - type: from_entity
+          entity: activity
+          role: old
+      category_old:
+        - type: from_entity
+          entity: category
+          role: old
+      category:
+        - type: from_entity
+          entity: activity
+          role: new
+      activity:
+        - type: from_entity
+          entity: activity
+          role: new
+
+  modify_activity_name_deadline_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+      activity_old:
+        - type: from_entity
+          entity: activity
+          role: old
+      category_old:
+        - type: from_entity
+          entity: category
+          role: old
+      time:
+        - type: from_entity
+          entity: activity
+          role: new
+      activity:
+        - type: from_entity
+          entity: activity
+          role: new
+
+  modify_activity_category_deadline_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+      activity_old:
+        - type: from_entity
+          entity: activity
+          role: old
+      category_old:
+        - type: from_entity
+          entity: category
+          role: old
+      time:
+        - type: from_entity
+          entity: activity
+          role: new
+      category:
+        - type: from_entity
+          entity: activity
+          role: new
+
+  clean_activities_form: 
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+
+
+
 
 responses:
   utter_greet:
