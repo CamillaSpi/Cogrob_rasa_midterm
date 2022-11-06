@@ -209,10 +209,24 @@ forms:
         - type: from_entity
           entity: activity
           role: new
-      category:
+
+  modify_deadline_form:
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+      time:
+        - type: from_entity
+          entity: time
+      activity_old:
+        - type: from_entity
+          entity: activity
+          role: old
+      category_old:
         - type: from_entity
           entity: category
-          role: new
+          role: old
+  
 
 responses:
   utter_greet:
