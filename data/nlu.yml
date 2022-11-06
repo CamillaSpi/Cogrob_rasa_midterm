@@ -1072,36 +1072,38 @@ nlu:
 
 - intent: modify_activity_deadline  
   examples: |
+    - I want to modify the deadline of an activity
+    - alter the deadline
+    - I want to change the deadline of the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [personal]{"entity": "category", "role": "old"} from 25 September to 27th september 1998
     - I want to change the deadline of the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [personal]{"entity": "category", "role": "old"} with 27th september 1998
-    - I want to change the deadline of the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [personal]{"entity": "category", "role": "old"} with 27th september 1998
+    - I want to modify the deadline of the activity [match]{"entity": "activity", "role": "old"} in the cateogry [payments]{"entity": "category", "role": "old"} to tomorrow at 18:00
     - I want to modify the deadline of the activity [match]{"entity": "activity", "role": "old"} in the cateogry [payments]{"entity": "category", "role": "old"} with tomorrow at 18:00
-    - I want to modify the deadline of the activity [match]{"entity": "activity", "role": "old"} in the cateogry [payments]{"entity": "category", "role": "old"} with tomorrow at 18:00
+    - modify the deadline of the activity [reed]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} form Friday to Sunday 
     - modify the deadline of the activity [reed]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} with Sunday 
-    - modify the deadline of the activity [reed]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} with Sunday 
-    - alter the deadline of the activity [exit]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} with Sunday 
+    - alter the deadline of the activity [exit]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} to Sunday 
     - alter the deadline of the activity [exit]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} with Sunday 
     - In the cateogry [subjects]{"entity": "category", "role": "old"} replace the deadline of the activity [draw]{"entity": "activity", "role": "old"} from 22th september to 25th september
-    - In the cateogry [subjects]{"entity": "category", "role": "old"} replace the deadline of the activity [draw]{"entity": "activity", "role": "old"} from 22th september to 25th september
+    - In the cateogry [subjects]{"entity": "category", "role": "old"} modify the deadline of the activity [draw]{"entity": "activity", "role": "old"} from 22th september to 25th september
     - Alter the deadline of the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} with Monday
-    - Alter the deadline of the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} with Monday
+    - Alter the deadline of the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [work]{"entity": "category", "role": "old"} to Monday
     - For the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} modify the deadline with 22th october 1922
-    - For the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} modify the deadline with 22th october 1922
+    - For the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} modify the deadline from 4 Novemner to 22th october 1922
     - For the activity [note]{"entity": "activity", "role": "old"} in the cateogry [school]{"entity": "category", "role": "old"} transform the deadline into Monday
     - For the activity [note]{"entity": "activity", "role": "old"} in the cateogry [school]{"entity": "category", "role": "old"} transform the deadline into Monday
     - I want to change the deadline of the activity [exit]{"entity": "activity", "role": "old"} in the cateogry [times]{"entity": "category", "role": "old"} with 27th september 1998
-    - I want to change the deadline of the activity [exit]{"entity": "activity", "role": "old"} in the cateogry [times]{"entity": "category", "role": "old"} with 27th september 1998
+    - I want to change the deadline of the activity [exit]{"entity": "activity", "role": "old"} in the cateogry [times]{"entity": "category", "role": "old"} to 27th september 1998
     - I want to modify the deadline of the activity [draw]{"entity": "activity", "role": "old"} in the cateogry [job]{"entity": "category", "role": "old"} with tomorrow at 18:00
-    - I want to modify the deadline of the activity [draw]{"entity": "activity", "role": "old"} in the cateogry [job]{"entity": "category", "role": "old"} with tomorrow at 18:00
+    - I want to modify the deadline of the activity [draw]{"entity": "activity", "role": "old"} in the cateogry [job]{"entity": "category", "role": "old"} in tomorrow at 18:00
     - modify the deadline of the activity [draw]{"entity": "activity", "role": "old"} in the cateogry [calendary]{"entity": "category", "role": "old"} with Sunday 
     - modify the deadline of the activity [draw]{"entity": "activity", "role": "old"} in the cateogry [calendary]{"entity": "category", "role": "old"} with Sunday 
-    - alter the deadline of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [household]{"entity": "category", "role": "old"} with Sunday 
+    - alter the deadline of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [household]{"entity": "category", "role": "old"} from 07/11/2022 to Sunday 
     - alter the deadline of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [household]{"entity": "category", "role": "old"} with Sunday 
     - In the cateogry [exams]{"entity": "category", "role": "old"} replace the deadline of the activity [cards]{"entity": "activity", "role": "old"} from 22th september to 25th september
     - In the cateogry [exams]{"entity": "category", "role": "old"} replace the deadline of the activity [cards]{"entity": "activity", "role": "old"} from 22th september to 25th september
-    - Alter the deadline of the activity [runbed]{"entity": "activity", "role": "old"} in the cateogry [monthly]{"entity": "category", "role": "old"} with Monday
+    - Alter the deadline of the activity [runbed]{"entity": "activity", "role": "old"} in the cateogry [monthly]{"entity": "category", "role": "old"} from Today to 24/12/2023
     - Alter the deadline of the activity [runbed]{"entity": "activity", "role": "old"} in the cateogry [monthly]{"entity": "category", "role": "old"} with Monday
     - For the activity [play]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} modify the deadline with 22th october 1922
-    - For the activity [play]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} modify the deadline with 22th october 1922
+    - For the activity [play]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} modify the deadline in the 22th october 1922
     - For the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [holiday]{"entity": "category", "role": "old"} transform the deadline into Monday
     - For the activity [stand_up]{"entity": "activity", "role": "old"} in the cateogry [holiday]{"entity": "category", "role": "old"} transform the deadline into Monday
 
