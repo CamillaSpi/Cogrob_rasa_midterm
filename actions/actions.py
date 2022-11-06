@@ -89,7 +89,7 @@ class actionRemoveItem(Action):
             returnedValue = Database.deleteItem(username,activity ,category,time)
 
             if (returnedValue):  
-                dispatcher.utter_message(text=f"Congratulation {username}, {activity} remove from {category}") 
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} removed from {category}") 
             else:
                 dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
 
@@ -151,10 +151,10 @@ class actionRemoveCategory(Action):
 
         return [SlotSet("category", None)]
 
-class actionSetComplete(Action):
+class actionSetStatusActivity(Action):
 
     def name(self) -> Text:
-        return "action_set_complete"
+        return "action_set_status_activity"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -163,22 +163,29 @@ class actionSetComplete(Action):
         username = tracker.get_slot("username")
         activity = tracker.get_slot("activity")
         category = tracker.get_slot("category")
+        activity_status = tracker.get_slot("activity_status")
         time = tracker.get_slot("time")
 
         
         if(Database.doesUserExists(username)):
-            returnedValue = Database.setItemStatus(username,activity ,category,time,True)
+            if activity_status == 'completed':
+                returnedValue = Database.setItemStatus(username,activity ,category,time,True)
+            elif activity_status == 'uncompleted':
+                returnedValue = Database.setItemStatus(username,activity ,category,time,False)
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't understand what u want to do with this activity :(") 
+                return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
             if (returnedValue):  
-                dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} completed !") 
+                dispatcher.utter_message(text=f"Congratulation {username}, {activity} in {category} set as {activity_status} !") 
             else:
-                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity:(") 
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
 class actionSetInComplete(Action):
 
@@ -205,9 +212,9 @@ class actionSetInComplete(Action):
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
-        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+        return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("activity_status",None)]
 
 class showActivities(Action):
     def name(self) -> Text:
@@ -222,7 +229,8 @@ class showActivities(Action):
         activity_status = tracker.get_slot("activity_status")
 
         if(Database.doesUserExists(username)):
-                dispatcher.utter_message(text=f"This are the requested activity:\n{Database.selectItems(username,category, activity_status)}") 
+            list_of_activity = Database.selectItems(username,category, activity_status)
+            dispatcher.utter_message(text=(f"This are the requested activity:\n{list_of_activity}" if list_of_activity else "No activity found!")) 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None),SlotSet("category", None),SlotSet("activity_status", None)]
@@ -287,6 +295,7 @@ class actionModifyActivity(Action):
         activity_old = tracker.get_slot("activity_old")
         activity_new = tracker.get_slot("activity")
         category_new = tracker.get_slot("category")
+        activity_new = tracker.get_slot("activity")
         time = tracker.get_slot("time")
 
         if(time != None and len(time) == 2):
@@ -330,4 +339,32 @@ class actionCleanCompletedActivities(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text=f" I've the dinner ready, ill implement it later :P ") 
+        username = tracker.get_slot("username")          
+        if(Database.doesUserExists(username)):
+            returnedValue = Database.cleanCompletedActivities(username)
+            if (returnedValue):  
+                dispatcher.utter_message(text=f"Congratulation {username}, I've removed all you completed activity !") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} something went wrong! I dont know, check it !")
+        else:
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None)]
+        return []
+
+class actionResetSlot(Action):
+    def name(self) -> Text:
+        return "action_reset_slot"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        
+        return [SlotSet("activity_old",None),
+        SlotSet("activity",None),
+        SlotSet("category_old",None),
+        SlotSet("category",None),
+        SlotSet("time",None),
+        SlotSet("time_old",None),
+        SlotSet("activity_status",None)
+        ]

@@ -111,21 +111,42 @@ class Database:
       cur.execute('''
       SELECT activity,category,deadline,completed FROM activities WHERE username == (?);
       ''',(username,))
-
+    
     rows = cur.fetchall()
-    return str(rows).strip('[]') if len(rows) > 0 else "No activity found"
+    if(len(rows)>0):
+      category = ["Activities","Category","DeadLine","Completed"]
+      number = [i for i in range(1,len(rows)+1)]
+      row_format ="{:>20}" * (len(category) + 1)
+      toPrint = ""
+      toPrint += (row_format.format("", *category)) + "\n"
+      for team, row in zip(number, rows):
+          if (row[2]):
+            row = (row[0],row[1],row[2][:10]+ " "+row[2][11:16],row[3])
+          else:
+            row = (row[0],row[1],"None",row[3])
+          toPrint += (row_format.format(team, *row)) + "\n"
+
+
+    return toPrint if len(rows) > 0 else None
 
   @staticmethod
   def deleteItem(username, activity ,category,deadline):
+    m = hashlib.sha256()
+    m.update(str(username).encode())
+    m.update(str(activity).encode())
+    m.update(str(category).encode())
+    m.update(str(deadline).encode())
+    m.digest()
+    id_activity = m.hexdigest()
     
     cur.execute('''
-      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-    ''', (username, activity ,category,deadline))
+      SELECT * FROM activities WHERE id_activity == ?
+    ''', (id_activity,))
 
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''
-        DELETE FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (username, activity ,category,deadline))
+        DELETE FROM activities WHERE id_activity == ?
+      ''', (id_activity,))
       conn.commit()
       return True
     else:
@@ -179,11 +200,17 @@ class Database:
 
   @staticmethod
   def setItemStatus(username, activity ,category,deadline,completed):
-    
+    m = hashlib.sha256()
+    m.update(str(username).encode())
+    m.update(str(activity).encode())
+    m.update(str(category).encode())
+    m.update(str(deadline).encode())
+    m.digest()
+    id_activity = m.hexdigest()
     cur.execute('''
-      SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-    ''', (username, activity ,category,deadline))
-    
+      SELECT * FROM activities WHERE id_activity == ? 
+    ''', (id_activity, ))
+
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''UPDATE activities SET completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
       ''', (completed, username, activity ,category,deadline))
