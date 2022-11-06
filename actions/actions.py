@@ -295,7 +295,6 @@ class actionModifyActivity(Action):
         activity_old = tracker.get_slot("activity_old")
         activity_new = tracker.get_slot("activity")
         category_new = tracker.get_slot("category")
-        activity_new = tracker.get_slot("activity")
         time = tracker.get_slot("time")
 
         if(time != None and len(time) == 2):
