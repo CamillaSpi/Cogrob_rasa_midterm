@@ -19,12 +19,14 @@ intents:
   - presentation
   - help
   - modify_category
-  - modify_activity
   - clean_activities
   - nlu_fallback
   - modify_activity_category
   - modify_activity_deadline
   - modify_activity_name
+  - modify_activity_name+modify_activity_deadline
+  - modify_activity_name+modify_activity_category
+  - modify_activity_category+modify_activity_deadline
 
 entities:
   - activity
