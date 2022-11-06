@@ -408,6 +408,25 @@ stories:
       - time: true
     - action: action_modify_activity
 
+
+#################################### Modify Miste Stories ######################################
+
+- story: Modify name category 
+  steps:
+    - intent: modify_activity_name+modify_activity_category 
+    - action: utter_greet
+
+- story: Modify name category 
+  steps:
+    - intent: modify_activity_name+modify_activity_deadline
+    - action: utter_greet
+
+- story: Modify name category 
+  steps:
+    - intent: modify_activity_category+modify_activity_deadline 
+    - action: utter_greet   
+
+
 #################################### Clean Stories ######################################
 - story: Clean Complete Activities confirmed 
   steps:

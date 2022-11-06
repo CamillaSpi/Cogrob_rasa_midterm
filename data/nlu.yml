@@ -1107,10 +1107,10 @@ nlu:
 
 - intent: modify_activity_name  
   examples: |
-    - I want to change the name of the activity [study]{"entity": "activity", "role": "old"} in the cateogry [sport]{"entity": "category", "role": "old"} with name [fuel]{"entity": "activity", "role": "new"}
+    - I want to change the name of the activity [study]{"entity": "activity", "role": "old"} in [sport]{"entity": "category", "role": "old"} with name [fuel]{"entity": "activity", "role": "new"}
     - I want to change the name of the activity [fuel]{"entity": "activity", "role": "old"} in the cateogry [sport]{"entity": "category", "role": "old"} with name [study]{"entity": "activity", "role": "new"}
     - I want to change the activity named [ring]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} with [exit]{"entity": "activity", "role": "new"}
-    - I want to change the activity named [exit]{"entity": "activity", "role": "old"} in the cateogry [bank]{"entity": "category", "role": "old"} with [ring]{"entity": "activity", "role": "new"}
+    - I want to change the activity named [exit]{"entity": "activity", "role": "old"} in [bank]{"entity": "category", "role": "old"} with [ring]{"entity": "activity", "role": "new"}
     - modify the name of the activity [study]{"entity": "activity", "role": "old"} in the cateogry [times]{"entity": "category", "role": "old"} with name [draw]{"entity": "activity", "role": "new"}
     - modify the name of the activity [draw]{"entity": "activity", "role": "old"} in the cateogry [times]{"entity": "category", "role": "old"} with name [study]{"entity": "activity", "role": "new"}
     - In the cateogry [university]{"entity": "category", "role": "old"} change the name of the activity [fuel]{"entity": "activity", "role": "old"}  with name [walk]{"entity": "activity", "role": "new"}
@@ -1137,19 +1137,19 @@ nlu:
     - Alter the name of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [research]{"entity": "category", "role": "old"} with name [refuel]{"entity": "activity", "role": "new"}
     - For the activity [refuel]{"entity": "activity", "role": "old"} in the cateogry [wishes]{"entity": "category", "role": "old"} modify the name with [swimmming]{"entity": "activity", "role": "new"}
     - For the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [wishes]{"entity": "category", "role": "old"} modify the name with [refuel]{"entity": "activity", "role": "new"}
-    - For the activity [reed]{"entity": "activity", "role": "old"} in the cateogry [vacation]{"entity": "category", "role": "old"} transform the name with [walk]{"entity": "activity", "role": "new"}
+    - For the activity [reed]{"entity": "activity", "role": "old"} in [vacation]{"entity": "category", "role": "old"} transform the name with [walk]{"entity": "activity", "role": "new"}
     - For the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [vacation]{"entity": "category", "role": "old"} transform the name with [reed]{"entity": "activity", "role": "new"}
 
 - intent: modify_activity_category+modify_activity_deadline
   examples: |
     - I want to change the activity [search]{"entity": "activity", "role": "old"} in the category [volunteering]{"entity": "category", "role": "old"} to the category [times]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
     - I want to change the activity [search]{"entity": "activity", "role": "old"} in the category [times]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th september 2022 to 25th september 2022 at 10:00
-    - modify the activity [refuel]{"entity": "activity", "role": "old"} in the category [leisure]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
+    - modify the activity [refuel]{"entity": "activity", "role": "old"} in [leisure]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
     - modify the activity [refuel]{"entity": "activity", "role": "old"} in the category [sport]{"entity": "category", "role": "old"} to the category [leisure]{"entity": "category", "role": "new"} and from 24th october 2022 to 25th october 2022 at 10:00
-    - convert the activity [shopping]{"entity": "activity", "role": "old"} in the category [household]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - convert the activity [shopping]{"entity": "activity", "role": "old"} in [household]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
     - convert the activity [shopping]{"entity": "activity", "role": "old"} in the category [volunteering]{"entity": "category", "role": "old"} to the category [household]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
     - change the activity [sport]{"entity": "activity", "role": "old"} in the category [holiday]{"entity": "category", "role": "old"} to the category [research]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
-    - change the activity [sport]{"entity": "activity", "role": "old"} in the category [research]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
+    - change the activity [sport]{"entity": "activity", "role": "old"} in [research]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} and from 24th december 2022 to 25th october 2022 at 10:00
 
 - intent: modify_activity_name+modify_activity_deadline
   examples: |

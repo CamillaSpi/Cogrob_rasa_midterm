@@ -242,15 +242,18 @@ class Database:
       ''', (id_activity,))
       if(len(cur.fetchall()) > 0 ):
         if newcategory != None:
+          returned = Database.doesCategoryExists(username,newcategory)
           if not Database.doesCategoryExists(username,newcategory):
+            #Andrebbe comunicato che è stata creata tale categoria
             Database.insertCategory(username, newcategory)
         paramList = list()
-        paramList.append(("category", newcategory))
         paramList.append(("activity", newactivity))
+        paramList.append(("category", newcategory))
         paramList.append(("deadline",newdeadline))
         queryParam=""
         tupleParam = ()
         p = hashlib.sha256()
+        p.update(str(username).encode())
         for param in paramList:
           if param[1] is not None:
             tupleParam += (param[1],)
@@ -258,6 +261,7 @@ class Database:
           else:
             param = (param[0],exec(param[0]))
           p.update(str(param[1]).encode())
+          print(param[1])
         p.digest()
         id_activity_new = p.hexdigest()
         queryParam += ", id_activity = ?"
