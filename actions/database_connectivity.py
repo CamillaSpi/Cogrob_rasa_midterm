@@ -51,9 +51,16 @@ class Database:
 
   @staticmethod
   def doesActivityExists(username,category,activity,deadline=None):
+    m = hashlib.sha256()
+    m.update(str(username).encode())
+    m.update(str(activity).encode())
+    m.update(str(category).encode())
+    m.update(str(deadline).encode())
+    m.digest()
+    id_activity = m.hexdigest()
     cur.execute('''
-      SELECT * FROM activities WHERE username == ? AND category == ? AND activity == ? AND deadline == ?
-    ''', (username, category, activity, deadline))
+      SELECT * FROM activities WHERE id_activity == ?
+    ''', (id_activity,))
     if(len( cur.fetchall()) > 0 ):
       return True
     return False
@@ -80,7 +87,6 @@ class Database:
       m.update(str(deadline).encode())
       m.digest()
       id_activity = m.hexdigest()
-
       conn.execute('''
       INSERT INTO activities (id_activity,username, activity, category,deadline,completed,reminder) VALUES (?, ?, ?, ?,?,?,?);
     ''', (id_activity,username, activity ,category,deadline,False,reminder))
