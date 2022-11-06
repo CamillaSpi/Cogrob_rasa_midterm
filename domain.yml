@@ -316,6 +316,13 @@ forms:
           entity: activity
           role: new
 
+  clean_activities_form: 
+    required_slots:
+      username:
+        - type: from_entity
+          entity: username
+
+
 
 
 responses:

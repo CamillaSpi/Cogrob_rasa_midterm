@@ -131,3 +131,192 @@ stories:
     intent: deny
   - action: action_add_item
   
+
+#################################### Test Stories  Clean completed activities with confirmation######################################
+stories:
+- story: test1 for clean complete activities confirmed
+  steps:
+  - user: |
+      clean completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Luca90](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      yeah
+    intent: affirm
+  - action: action_clean_all_completed
+
+- story: test2 for clean complete activities confirmed
+  steps:
+  - user: |
+      I want to delete completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Geronimo](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_clean_all_completed
+
+- story: test3 for clean complete activities confirmed
+  steps:
+  - user: |
+      delete all my completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Vittoria](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      yep
+    intent: affirm
+  - action: action_clean_all_completed
+
+- story: test4 for clean complete activities confirmed
+  steps:
+  - user: |
+      remove my completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Antonio29](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_clean_all_completed
+
+- story: test5 for clean complete activities confirmed
+  steps:
+  - user: |
+      delete the activities completed
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Silvietta2](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_clean_all_completed
+
+#################################### Test Stories Clean completed activities with negation######################################
+- story: test1 for clean complete activities denied
+  steps:
+  - user: |
+      clean completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Lucia](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test2 for clean complete activities denied
+  steps:
+  - user: |
+      I want to delete completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Valentina394](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      nope
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test3 for clean complete activities denied
+  steps:
+  - user: |
+      delete all my completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Paolino](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      no thanks
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test4 for clean complete activities denied
+  steps:
+  - user: |
+      remove my completed activities
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Francesca](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      no sorry
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test5 for clean complete activities denied
+  steps:
+  - user: |
+      delete the activities completed
+    intent: clean_activities
+  - action: clean_activities_form
+  - active_loop: clean_activities_form
+  - user: |
+      [Vito2](username)
+    intent: inform
+  - action: clean_activities_form
+  - active_loop: null 
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+

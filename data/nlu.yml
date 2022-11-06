@@ -39,7 +39,8 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - yeah
+    
 - intent: deny
   examples: |
     - no
@@ -49,6 +50,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nope
 
 - intent: mood_great
   examples: |
@@ -1098,7 +1100,7 @@ nlu:
     - alter the deadline of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [household]{"entity": "category", "role": "old"} from 07/11/2022 to Sunday 
     - alter the deadline of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [household]{"entity": "category", "role": "old"} with Sunday 
     - In the cateogry [exams]{"entity": "category", "role": "old"} replace the deadline of the activity [cards]{"entity": "activity", "role": "old"} from 22th september to 25th september
-    - In the cateogry [exams]{"entity": "category", "role": "old"} replace the deadline of the activity [cards]{"entity": "activity", "role": "old"} from 22th september to 25th september
+    - In the cateogry [exams]{"entity": "category", "role": "old"} replace the deadline of the activity [cards]{"entity": "activity", "role": "old"} from 22/12/2022 to 23/12/2022
     - Alter the deadline of the activity [runbed]{"entity": "activity", "role": "old"} in the cateogry [monthly]{"entity": "category", "role": "old"} from Today to 24/12/2023
     - Alter the deadline of the activity [runbed]{"entity": "activity", "role": "old"} in the cateogry [monthly]{"entity": "category", "role": "old"} with Monday
     - For the activity [play]{"entity": "activity", "role": "old"} in the cateogry [university]{"entity": "category", "role": "old"} modify the deadline with 22th october 1922
