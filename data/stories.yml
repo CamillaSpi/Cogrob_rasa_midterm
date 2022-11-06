@@ -411,21 +411,32 @@ stories:
 
 #################################### Modify Miste Stories ######################################
 
-- story: Modify name category 
+#################################### Modify Stories name + category  ######################################
+- story: Modify name + category Generic
   steps:
     - intent: modify_activity_name+modify_activity_category 
-    - action: utter_greet
+    - action: utter_happy
+    - action: modify_activity_name_category_form
+    - active_loop: modify_activity_name_category_form
+    - active_loop: null
+    - checkpoint: modify_activity_name_generic
 
-- story: Modify name category 
+#################################### Modify Stories name + deadline  ######################################
+- story: Modify name + deadline Generic
   steps:
-    - intent: modify_activity_name+modify_activity_deadline
-    - action: utter_greet
-
-- story: Modify name category 
+    - intent: modify_activity_name+modify_activity_deadline 
+    - action: modify_activity_name_deadline_form
+    - active_loop: modify_activity_name_deadline_form
+    - active_loop: null
+    - checkpoint: modify_activity_name_generic
+#################################### Modify Stories deadline + category  ######################################
+- story: Modify category + deadline Generic
   steps:
     - intent: modify_activity_category+modify_activity_deadline 
-    - action: utter_greet   
-
+    - action: modify_activity_category_deadline_form
+    - active_loop: modify_activity_category_deadline_form
+    - active_loop: null
+    - checkpoint: modify_activity_name_generic
 
 #################################### Clean Stories ######################################
 - story: Clean Complete Activities confirmed 
