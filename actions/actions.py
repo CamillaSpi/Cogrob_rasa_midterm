@@ -305,7 +305,7 @@ class actionModifyActivity(Action):
             timenew = time
             timeold = time
         if possibleDeadlineErrorFlag is True and activity_new is None and category_new is None:
-            dispatcher.utter_message(text=f"you have passed me only the one date, please insert last and new deadline in the next request to allow me to chage the deadline of a tawk!!")
+            dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
             return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None)]
 
         if(Database.doesUserExists(username)):
