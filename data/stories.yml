@@ -56,7 +56,7 @@ stories:
     - requested_slot: null
   - action: utter_ask_if_deadline
   - intent: deny
-  - checkpoint: submit_generic_deadline
+  - action: action_add_item
 
 - story: Submit new activity ask and with deadline
   steps:  
