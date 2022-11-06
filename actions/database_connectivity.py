@@ -78,9 +78,16 @@ class Database:
 
   @staticmethod
   def doesUnfoldingsExists(username,category,activity,deadline=None):
+    m = hashlib.sha256()
+    m.update(str(username).encode())
+    m.update(str(activity).encode())
+    m.update(str(category).encode())
+    m.update(str(deadline).encode())
+    m.digest()
+    id_unfolding = m.hexdigest()
     cur.execute('''
-      SELECT * FROM unfoldings WHERE username == ? AND category == ? AND activity == ? AND deadline == ?
-    ''', (username, category, activity, deadline))
+      SELECT * FROM unfoldings WHERE id_unfolding == ?
+    ''', (id_unfolding,))
     if(len( cur.fetchall()) > 0 ):
       return True
     return False

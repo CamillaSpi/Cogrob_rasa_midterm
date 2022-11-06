@@ -321,7 +321,7 @@ class actionModifyActivity(Action):
             cat_to_query = category_old
 
         if(Database.doesUserExists(username)):
-            if (Database.doesUnfoldingsExists(username,category_new,activity_old,time) == False):
+            if (Database.doesUnfoldingsExists(username,cat_to_query,act_to_query,timenew) == False):
                 returnedValue = Database.modifyActivity(username, category_old, activity_old, timeold, category_new, activity_new, timenew)
                 if (returnedValue):  
                     dispatcher.utter_message(text=f"Congratulation {username}, the activity {act_to_query} has been updated !") 
