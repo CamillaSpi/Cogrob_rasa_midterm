@@ -65,10 +65,9 @@ class actionAddItem(Action):
                 dispatcher.utter_message(text=f"The category does not exists! I'm creating it!") 
                 actionAddCategory.run(self, dispatcher,tracker,domain)
                 actionAddItem.run(self, dispatcher,tracker,domain)
-                return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("reminder",False)]
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None), SlotSet("reminder",False), SlotSet("time",None)]
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None),SlotSet("reminder",False)]
 
@@ -96,7 +95,7 @@ class actionRemoveItem(Action):
 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("category", None),SlotSet("time",None)]
+            return [SlotSet("username",None),SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
 
         return [SlotSet("activity", None),SlotSet("category", None),SlotSet("time",None)]
             
@@ -234,7 +233,7 @@ class showActivities(Action):
             dispatcher.utter_message(text=(f"This are the requested activity:\n{list_of_activity}" if list_of_activity else "No activity found!")) 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("category", None)]
+            return [SlotSet("username",None),SlotSet("category", None),SlotSet("activity_status", None)]
 
         return [SlotSet("category", None),SlotSet("activity_status", None)]
 
@@ -252,7 +251,7 @@ class showCategories(Action):
             dispatcher.utter_message(text=f"These are all your categories:\n{Database.selectCategories(username)}") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None)]
+            return [SlotSet("username",None), SlotSet("activity", None)]
 
         return [SlotSet("activity", None)]
 
@@ -294,10 +293,30 @@ class actionModifyActivity(Action):
         username = tracker.get_slot("username")
         category_old = tracker.get_slot("category_old")
         activity_old = tracker.get_slot("activity_old")
-        category_new = tracker.get_slot("category")
         activity_new = tracker.get_slot("activity")
+        category_new = tracker.get_slot("category")
         time = tracker.get_slot("time")
-        
+
+        if(time != None and len(time) == 2):
+            timenew = time['to']
+            timeold = time['from']
+        else:
+            timenew = time
+            timeold = time
+
+        if(Database.doesUserExists(username)):
+            if (Database.doesActivityExists(username,category_new,activity_old,time) == False):
+                returnedValue = Database.modifyActivity(username, category_old, activity_old, timeold, category_new, activity_new, timenew)
+                if (returnedValue):  
+                    dispatcher.utter_message(text=f"Congratulation {username}, the activity {activity_old} has been updated !") 
+                else:
+                    dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
+            else:
+                dispatcher.utter_message(text=f"Ops! {username} the {activity_old} already exists, it makes no sense to update that!") 
+        else:
+            dispatcher.utter_message(text=f"This username does not exists!") 
+            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None),SlotSet("activity", None)]
+        return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None),SlotSet("activity", None)]
 
 
 class actionSetReminderSlot(Action):
