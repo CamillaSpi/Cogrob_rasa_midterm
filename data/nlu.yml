@@ -1080,46 +1080,46 @@ nlu:
     - convert the activity [sport]{"entity": "activity", "role": "old"} in the category [medications]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} 
     - change the activity [search]{"entity": "activity", "role": "old"} in the category [desires]{"entity": "category", "role": "old"} to the category [events]{"entity": "category", "role": "new"} 
     - change the activity [search]{"entity": "activity", "role": "old"} in the category [events]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} 
-    - I want to change the activity name [run]{"entity": "activity", "role": "old"} into [shopping]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"}
-    - I want to change the activity name [run]{"entity": "activity", "role": "old"} into [cooking]{"entity": "activity", "role": "new"} in the category [monthly]{"entity": "category", "role": "new"}
-    - modify the activity name [shopping]{"entity": "activity", "role": "old"} into [run]{"entity": "activity", "role": "new"} in the category [events]{"entity": "category", "role": "new"} 
-    - modify the activity name [shopping]{"entity": "activity", "role": "old"} into [sleep]{"entity": "activity", "role": "new"} in the category [medications]{"entity": "category", "role": "new"} 
-    - convert the activity name [shopping]{"entity": "activity", "role": "old"} into [walk]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"} 
-    - convert the activity name [shopping]{"entity": "activity", "role": "old"} into [breakfast]{"entity": "activity", "role": "new"} in the category [dailyweekly]{"entity": "category", "role": "new"} 
-    - change the activity name [sleep]{"entity": "activity", "role": "old"} into [shower]{"entity": "activity", "role": "new"} in the category [exams]{"entity": "category", "role": "new"} 
-    - change the activity name [sleep]{"entity": "activity", "role": "old"} into [bath]{"entity": "activity", "role": "new"} in the category [volunteering]{"entity": "category", "role": "new"} 
-    - I want to change the activity name [playing]{"entity": "activity", "role": "old"} into [concert]{"entity": "activity", "role": "new"} in the category [subjects]{"entity": "category", "role": "new"}
-    - I want to change the activity name [playing]{"entity": "activity", "role": "old"} into [match]{"entity": "activity", "role": "new"} in the category [desires]{"entity": "category", "role": "new"}
-    - modify the activity name [cooking]{"entity": "activity", "role": "old"} into [pool]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"}
-    - modify the activity name [cooking]{"entity": "activity", "role": "old"} into [pub]{"entity": "activity", "role": "new"} in the category [finance]{"entity": "category", "role": "new"} 
-    - convert the activity name [paint]{"entity": "activity", "role": "old"} into [test]{"entity": "activity", "role": "new"} in the category [medications]{"entity": "category", "role": "new"} 
-    - convert the activity name [paint]{"entity": "activity", "role": "old"} into [conference]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"} 
-    - change the activity name [swimmming]{"entity": "activity", "role": "old"} into [call]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"} 
-    - change the activity name [swimmming]{"entity": "activity", "role": "old"} into [meeting]{"entity": "activity", "role": "new"} in the category [desires]{"entity": "category", "role": "new"} 
-    - I want to change the activity name [travel]{"entity": "activity", "role": "old"} into [cook]{"entity": "activity", "role": "new"} in the category [school]{"entity": "category", "role": "new"}
-    - I want to change the activity name [travel]{"entity": "activity", "role": "old"} into [football]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"}
-    - modify the activity name [ring]{"entity": "activity", "role": "old"} into [project]{"entity": "activity", "role": "new"} in the category [times]{"entity": "category", "role": "new"} 
-    - modify the activity name [ring]{"entity": "activity", "role": "old"} into [delivery]{"entity": "activity", "role": "new"} in the category [projects]{"entity": "category", "role": "new"} 
-    - convert the activity name [jogging]{"entity": "activity", "role": "old"} into [birthday]{"entity": "activity", "role": "new"} in the category [trolley]{"entity": "category", "role": "new"} 
-    - convert the activity name [jogging]{"entity": "activity", "role": "old"} into [padel]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"} 
-    - change the activity name [sleep]{"entity": "activity", "role": "old"} into [homework]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"} 
-    - change the activity name [sleep]{"entity": "activity", "role": "old"} into [payment]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"} 
-    - I want to change the activity name [search]{"entity": "activity", "role": "old"} into [subscription]{"entity": "activity", "role": "new"} in the category [bank]{"entity": "category", "role": "new"}
-    - I want to change the activity name [search]{"entity": "activity", "role": "old"} into [expiry]{"entity": "activity", "role": "new"} in the category [commitments]{"entity": "category", "role": "new"}
-    - modify the activity name [cards]{"entity": "activity", "role": "old"} into [expiration]{"entity": "activity", "role": "new"} in the category [commitments]{"entity": "category", "role": "new"} 
-    - modify the activity name [cards]{"entity": "activity", "role": "old"} into [refuel]{"entity": "activity", "role": "new"} in the category [exams]{"entity": "category", "role": "new"} 
-    - convert the activity name [play]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"} in the category [holiday]{"entity": "category", "role": "new"} 
-    - convert the activity name [play]{"entity": "activity", "role": "old"} into [yoga]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"} 
-    - change the activity name [refuel]{"entity": "activity", "role": "old"} into [drink]{"entity": "activity", "role": "new"} in the category [desires]{"entity": "category", "role": "new"} 
-    - change the activity name [refuel]{"entity": "activity", "role": "old"} into [dinner]{"entity": "activity", "role": "new"} in the category [gym]{"entity": "category", "role": "new"} 
-    - I want to change the activity name [ring]{"entity": "activity", "role": "old"} into [launch]{"entity": "activity", "role": "new"} in the category [calendary]{"entity": "category", "role": "new"}
-    - I want to change the activity name [ring]{"entity": "activity", "role": "old"} into [party]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"}
-    - modify the activity name [swimmming]{"entity": "activity", "role": "old"} into [feast]{"entity": "activity", "role": "new"} in the category [sport]{"entity": "category", "role": "new"} 
-    - modify the activity name [swimmming]{"entity": "activity", "role": "old"} into [write]{"entity": "activity", "role": "new"} in the category [exams]{"entity": "category", "role": "new"} 
-    - convert the activity name [sport]{"entity": "activity", "role": "old"} into [verify]{"entity": "activity", "role": "new"} in the category [medications]{"entity": "category", "role": "new"} 
-    - convert the activity name [sport]{"entity": "activity", "role": "old"} into [medicines]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"} 
-    - change the activity name [search]{"entity": "activity", "role": "old"} into [nameday]{"entity": "activity", "role": "new"} in the category [events]{"entity": "category", "role": "new"} 
-    - change the activity name [search]{"entity": "activity", "role": "old"} into [eat]{"entity": "activity", "role": "new"} in the category [desires]{"entity": "category", "role": "new"} 
+    - I want to change the activity named [run]{"entity": "activity", "role": "old"} into [shopping]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"}
+    - I want to change the activity named [run]{"entity": "activity", "role": "old"} into [cooking]{"entity": "activity", "role": "new"} in the category [monthly]{"entity": "category", "role": "new"}
+    - modify the activity named [shopping]{"entity": "activity", "role": "old"} into [run]{"entity": "activity", "role": "new"} in the category [events]{"entity": "category", "role": "new"} 
+    - modify the activity named [shopping]{"entity": "activity", "role": "old"} into [sleep]{"entity": "activity", "role": "new"} in the category [medications]{"entity": "category", "role": "new"} 
+    - convert the activity named [shopping]{"entity": "activity", "role": "old"} into [walk]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"} 
+    - convert the activity named [shopping]{"entity": "activity", "role": "old"} into [breakfast]{"entity": "activity", "role": "new"} in the category [dailyweekly]{"entity": "category", "role": "new"} 
+    - change the activity named [sleep]{"entity": "activity", "role": "old"} into [shower]{"entity": "activity", "role": "new"} in the category [exams]{"entity": "category", "role": "new"} 
+    - change the activity named [sleep]{"entity": "activity", "role": "old"} into [bath]{"entity": "activity", "role": "new"} in the category [volunteering]{"entity": "category", "role": "new"} 
+    - I want to change the activity named [playing]{"entity": "activity", "role": "old"} into [concert]{"entity": "activity", "role": "new"} in the category [subjects]{"entity": "category", "role": "new"}
+    - I want to change the activity named [playing]{"entity": "activity", "role": "old"} into [match]{"entity": "activity", "role": "new"} in the category [desires]{"entity": "category", "role": "new"}
+    - modify the activity named [cooking]{"entity": "activity", "role": "old"} into [pool]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"}
+    - modify the activity named [cooking]{"entity": "activity", "role": "old"} into [pub]{"entity": "activity", "role": "new"} in the category [finance]{"entity": "category", "role": "new"} 
+    - convert the activity named [paint]{"entity": "activity", "role": "old"} into [test]{"entity": "activity", "role": "new"} in the category [medications]{"entity": "category", "role": "new"} 
+    - convert the activity named [paint]{"entity": "activity", "role": "old"} into [conference]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"} 
+    - change the activity named [swimmming]{"entity": "activity", "role": "old"} into [call]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"} 
+    - change the activity named [swimmming]{"entity": "activity", "role": "old"} into [meeting]{"entity": "activity", "role": "new"} in the category [desires]{"entity": "category", "role": "new"} 
+    - I want to change the activity named [travel]{"entity": "activity", "role": "old"} into [cook]{"entity": "activity", "role": "new"} in the category [school]{"entity": "category", "role": "new"}
+    - I want to change the activity named [travel]{"entity": "activity", "role": "old"} into [football]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"}
+    - modify the activity named [ring]{"entity": "activity", "role": "old"} into [project]{"entity": "activity", "role": "new"} in the category [times]{"entity": "category", "role": "new"} 
+    - modify the activity named [ring]{"entity": "activity", "role": "old"} into [delivery]{"entity": "activity", "role": "new"} in the category [projects]{"entity": "category", "role": "new"} 
+    - convert the activity named [jogging]{"entity": "activity", "role": "old"} into [birthday]{"entity": "activity", "role": "new"} in the category [trolley]{"entity": "category", "role": "new"} 
+    - convert the activity named [jogging]{"entity": "activity", "role": "old"} into [padel]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"} 
+    - change the activity named [sleep]{"entity": "activity", "role": "old"} into [homework]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"} 
+    - change the activity named [sleep]{"entity": "activity", "role": "old"} into [payment]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"} 
+    - I want to change the activity named [search]{"entity": "activity", "role": "old"} into [subscription]{"entity": "activity", "role": "new"} in the category [bank]{"entity": "category", "role": "new"}
+    - I want to change the activity named [search]{"entity": "activity", "role": "old"} into [expiry]{"entity": "activity", "role": "new"} in the category [commitments]{"entity": "category", "role": "new"}
+    - modify the activity named [cards]{"entity": "activity", "role": "old"} into [expiration]{"entity": "activity", "role": "new"} in the category [commitments]{"entity": "category", "role": "new"} 
+    - modify the activity named [cards]{"entity": "activity", "role": "old"} into [refuel]{"entity": "activity", "role": "new"} in the category [exams]{"entity": "category", "role": "new"} 
+    - convert the activity named [play]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"} in the category [holiday]{"entity": "category", "role": "new"} 
+    - convert the activity named [play]{"entity": "activity", "role": "old"} into [yoga]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"} 
+    - change the activity named [refuel]{"entity": "activity", "role": "old"} into [drink]{"entity": "activity", "role": "new"} in the category [desires]{"entity": "category", "role": "new"} 
+    - change the activity named [refuel]{"entity": "activity", "role": "old"} into [dinner]{"entity": "activity", "role": "new"} in the category [gym]{"entity": "category", "role": "new"} 
+    - I want to change the activity named [ring]{"entity": "activity", "role": "old"} into [launch]{"entity": "activity", "role": "new"} in the category [calendary]{"entity": "category", "role": "new"}
+    - I want to change the activity named [ring]{"entity": "activity", "role": "old"} into [party]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"}
+    - modify the activity named [swimmming]{"entity": "activity", "role": "old"} into [feast]{"entity": "activity", "role": "new"} in the category [sport]{"entity": "category", "role": "new"} 
+    - modify the activity named [swimmming]{"entity": "activity", "role": "old"} into [write]{"entity": "activity", "role": "new"} in the category [exams]{"entity": "category", "role": "new"} 
+    - convert the activity named [sport]{"entity": "activity", "role": "old"} into [verify]{"entity": "activity", "role": "new"} in the category [medications]{"entity": "category", "role": "new"} 
+    - convert the activity named [sport]{"entity": "activity", "role": "old"} into [medicines]{"entity": "activity", "role": "new"} in the category [work]{"entity": "category", "role": "new"} 
+    - change the activity named [search]{"entity": "activity", "role": "old"} into [nameday]{"entity": "activity", "role": "new"} in the category [events]{"entity": "category", "role": "new"} 
+    - change the activity named [search]{"entity": "activity", "role": "old"} into [eat]{"entity": "activity", "role": "new"} in the category [desires]{"entity": "category", "role": "new"} 
 
 
 
