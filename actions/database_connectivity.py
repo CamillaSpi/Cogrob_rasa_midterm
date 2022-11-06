@@ -77,22 +77,16 @@ class Database:
       completed = True
     elif(activity_status == "uncompleted"):
       completed = False
-    if (category != None and activity_status != None):
-      cur.execute('''
-      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ? AND completed == ?;
-      ''',(username,category,completed))
-    elif category == None and activity_status != None:
-      cur.execute('''
-      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND completed == ?;
-      ''',(username,completed))
-    elif category != None and activity_status == None:
-      cur.execute('''
-      SELECT activity,category,deadline,completed FROM activities WHERE username == ? AND category == ?;
-      ''',(username,category))
-    else:  
-      cur.execute('''
-      SELECT activity,category,deadline,completed FROM activities WHERE username == (?);
-      ''',(username,))
+    base_query = "SELECT activity,category,deadline,completed FROM activities WHERE username == ?"
+    base_list = [username,]
+    if(category != None):
+      base_query = base_query + " AND category == ?"
+      base_list.append(category)
+    if(activity_status != None):
+      base_query = base_query + " AND completed == ?"
+      base_list.append(completed)
+    base_query = base_query + ";"
+    cur.execute(base_query,base_list)
     
     rows = cur.fetchall()
     if(len(rows)>0):
