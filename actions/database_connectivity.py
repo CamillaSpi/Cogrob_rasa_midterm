@@ -236,13 +236,11 @@ class Database:
       m.update(str(category).encode())
       m.update(str(deadline).encode())
       m.digest()
-      print(str(username)+str(activity)+str(category)+str(deadline))
       id_activity = m.hexdigest()
       cur.execute('''
         SELECT * FROM activities WHERE id_activity == ?
       ''', (id_activity,))
       if(len(cur.fetchall()) > 0 ):
-        
         if newcategory != None:
           if not Database.doesCategoryExists(username,newcategory):
             Database.insertCategory(username, newcategory)
@@ -260,14 +258,11 @@ class Database:
           else:
             param = (param[0],exec(param[0]))
           p.update(str(param[1]).encode())
-          print(str(param[1]))
         p.digest()
         id_activity_new = p.hexdigest()
         queryParam += ", id_activity = ?"
         tupleParam += (id_activity_new, id_activity,)
         query = "UPDATE activities SET" + queryParam[1:] + " WHERE id_activity == ?"
-        print(query)
-        print(tupleParam)
         conn.execute(query, tupleParam)
         conn.commit()
         return True

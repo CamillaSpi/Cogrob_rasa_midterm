@@ -315,8 +315,8 @@ class actionModifyActivity(Action):
                 dispatcher.utter_message(text=f"Ops! {username} the {activity_old} already exists, it makes no sense to update that!") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None)]
-        return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None)]
+            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None),SlotSet("activity", None)]
+        return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None),SlotSet("activity", None)]
 
 
 class actionSetReminderSlot(Action):
