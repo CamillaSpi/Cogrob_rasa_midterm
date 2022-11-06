@@ -290,7 +290,7 @@ stories:
     - intent: affirm
     - action: action_modify_category
 
-- story: Modify the activity
+- story: Modify the activity without deadline with confirmation
   steps:
     - intent: modify_activity
     - action: modify_activity_form
@@ -298,10 +298,40 @@ stories:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: affirm
+    - action: add_deadline_form
+    - active_loop: add_deadline_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
     - action: utter_confirm_choice
     - intent: affirm
-    - action: action_modify_activity   
+    - action: action_modify_activity
 
+- story: Modify the activity without deadline with negation
+  steps:
+    - intent: modify_activity
+    - action: modify_activity_form
+    - active_loop: modify_activity_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: deny
+    - action: action_modify_activity
+
+- story: Modify the activity with deadline
+  steps:
+    - intent: modify_activity
+    - action: modify_activity_form
+    - active_loop: modify_activity_form
+    - active_loop: null
+    - slot_was_set:
+      - time: true 
+    - action: utter_confirm_choice
+    - intent: affirm
+    - action: action_modify_activity
 #################################### Clean Stories ######################################
 - story: Clean Complete Activities confirmed 
   steps:

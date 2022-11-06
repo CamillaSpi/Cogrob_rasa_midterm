@@ -1137,7 +1137,7 @@ nlu:
     - What are my [finished](activity_status) activities?
     - What are my [unexecuted](activity_status) activities?
     - show activity in [gym]{"entity": "category", "role": "new"} category
-    - show my [developed](activity_status) activity in [monthly]{"entity": "category", "role": "new"} category
+    - show all my [developed](activity_status) activity in [monthly]{"entity": "category", "role": "new"} category
     - show my [undone](activity_status) activity in [commitments]{"entity": "category", "role": "new"} category
     - show [executed](activity_status) activity in [work]{"entity": "category", "role": "new"} category
     - show activity in [projects]{"entity": "category", "role": "new"} category
@@ -1179,6 +1179,7 @@ nlu:
     - unfinished
     - unexecuted
     - undeveloped
+    - uncomplete
 
 - synonym: completed
   examples: |
@@ -1187,5 +1188,6 @@ nlu:
     - executed
     - developed
     - concluded
+    - complete
     
     
