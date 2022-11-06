@@ -1,5 +1,136 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+### To test use rasa test core --stories ./tests/test_stories.yml --out results
+stories:
+
+- story: presentation and add activity already deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add [run]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"} at 22th december 2022
+    intent: add_item
+  - slot_was_set:
+    - time: "2022-12-22T00:00:00.000+01:00"
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_reminder
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item 
+
+- story: presentation and add activity withouth deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add [run]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"}
+    intent: add_item
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item
+  
+
+- story: presentation and add activity with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_create_user
+  - user: |
+      add [painting]{"entity": "activity", "role": "new"} into [weekly]{"entity": "category", "role": "new"}
+    intent: add_item
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yep
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      27th september 2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_ask_if_reminder
+  - user: |
+      yes
+    intent: affirm
+  - action: action_set_reminder_slot
+  - action: action_add_item
+
+- story: presentation and add activity withouth deadline 2
+  steps:
+  - user: |
+      my username is [albericoDocce00](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add [rob]{"entity": "activity", "role": "new"} into [weekly]{"entity": "category", "role": "new"}
+    intent: add_item
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item
+  
+
+- story: presentation and add activity withouth deadline 2
+  steps:
+  - user: |
+      im [banana33](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add [chat]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"}
+    intent: add_item
+  - action: add_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yep
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      17th september 1999
+    intent: inform
+  - slot_was_set:
+    - time: "19999-09-17T00:00:00.000+01:00"
+  - action: add_deadline_form
+  - active_loop: null
+  - action: utter_ask_if_reminder
+  - user: |
+      no
+    intent: deny
+  - action: action_add_item
+  
 
 #################################### Test Stories  Clean completed activities with confirmation######################################
 stories:

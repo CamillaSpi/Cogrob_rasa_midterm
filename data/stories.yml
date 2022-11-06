@@ -69,7 +69,7 @@ stories:
   - active_loop: add_deadline_form
   - active_loop: null
   - slot_was_set:
-    - requested_slot: null
+    - time: true
   - checkpoint: submit_generic_deadline
 
 - story: Submit new activity with deadline
