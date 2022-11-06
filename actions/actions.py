@@ -296,10 +296,13 @@ class actionModifyActivity(Action):
         activity_new = tracker.get_slot("activity")
         category_new = tracker.get_slot("category")
         time = tracker.get_slot("time")
-
+        print(time)
         if(time != None and len(time) == 2):
             timenew = time['to']
             timeold = time['from']
+        elif(Database.doesActivityExists(username,category_old,activity_old)): 
+            timenew = time
+            timeold = None
         else:
             possibleDeadlineErrorFlag=True
             timenew = time
@@ -307,14 +310,23 @@ class actionModifyActivity(Action):
         if possibleDeadlineErrorFlag is True and activity_new is None and category_new is None:
             dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
             return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None)]
+        
+        if(activity_new!=None):
+            act_to_query = activity_new
+        else:
+            act_to_query = activity_old
+        if(category_new!=None):
+            cat_to_query = category_new
+        else:
+            cat_to_query = category_old
 
         if(Database.doesUserExists(username)):
             if (Database.doesUnfoldingsExists(username,category_new,activity_old,time) == False):
                 returnedValue = Database.modifyActivity(username, category_old, activity_old, timeold, category_new, activity_new, timenew)
                 if (returnedValue):  
-                    dispatcher.utter_message(text=f"Congratulation {username}, the activity {activity_old} has been updated !") 
+                    dispatcher.utter_message(text=f"Congratulation {username}, the activity {act_to_query} has been updated !") 
                 else:
-                    dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find this activity :(") 
+                    dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find the activity to be updated :(") 
             else:
                 dispatcher.utter_message(text=f"Ops! {username} the {activity_old} already exists, it makes no sense to update that!") 
         else:
