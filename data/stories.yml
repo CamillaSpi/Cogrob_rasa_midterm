@@ -290,12 +290,18 @@ stories:
     - intent: affirm
     - action: action_modify_category
 
-- story: Modify the activity without deadline with confirmation
+#################################### Modify Activity Category ######################################
+- story: Modify the activity category generic
   steps:
-    - intent: modify_activity
-    - action: modify_activity_form
-    - active_loop: modify_activity_form
+    - intent: modify_activity_category
+    - action: modify_activity_category_form
+    - active_loop: modify_activity_category_form
     - active_loop: null
+    - checkpoint: modify_activity_category_generic
+
+- story: Modify the activity category with Deadline
+  steps:
+    - checkpoint: modify_activity_category_generic
     - slot_was_set:
       - requested_slot: null
     - action: utter_ask_if_deadline
@@ -305,33 +311,133 @@ stories:
     - active_loop: null
     - slot_was_set:
       - requested_slot: null
-    - action: utter_confirm_choice
-    - intent: affirm
     - action: action_modify_activity
 
-- story: Modify the activity without deadline with negation
+- story: Modify the activity category without Deadline
   steps:
-    - intent: modify_activity
-    - action: modify_activity_form
-    - active_loop: modify_activity_form
-    - active_loop: null
+    - checkpoint: modify_activity_category_generic
     - slot_was_set:
       - requested_slot: null
     - action: utter_ask_if_deadline
     - intent: deny
     - action: action_modify_activity
 
-- story: Modify the activity with deadline
+- story: Modify the activity category already Deadline
   steps:
-    - intent: modify_activity
-    - action: modify_activity_form
-    - active_loop: modify_activity_form
+    - checkpoint: modify_activity_category_generic
+    - slot_was_set:
+      - time: true
+    - action: action_modify_activity
+
+
+#################################### Modify Activity Deadline ######################################
+- story: Modify the activity category generic
+  steps:
+    - intent: modify_activity_deadline
+    - action: modify_activity_deadline_form
+    - active_loop: modify_activity_deadline_form
+    - active_loop: null
+    - checkpoint: modify_activity_deadline_generic
+
+- story: Modify the activity category with Deadline
+  steps:
+    - checkpoint: modify_activity_deadline_generic
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: affirm
+    - action: add_deadline_form
+    - active_loop: add_deadline_form
     - active_loop: null
     - slot_was_set:
-      - time: true 
-    - action: utter_confirm_choice
-    - intent: affirm
+      - requested_slot: null
     - action: action_modify_activity
+
+- story: Modify the activity category without Deadline
+  steps:
+    - checkpoint: modify_activity_deadline_generic
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: deny
+    - action: action_modify_activity
+
+- story: Modify the activity category already Deadline
+  steps:
+    - checkpoint: modify_activity_deadline_generic
+    - slot_was_set:
+      - time: true
+    - action: action_modify_activity
+
+#################################### Modify Activity name ######################################
+- story: Modify the activity category generic
+  steps:
+    - intent: modify_activity_name
+    - action: modify_activity_name_form
+    - active_loop: modify_activity_name_form
+    - active_loop: null
+    - checkpoint: modify_activity_name_generic
+
+- story: Modify the activity category with Deadline
+  steps:
+    - checkpoint: modify_activity_name_generic
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: affirm
+    - action: add_deadline_form
+    - active_loop: add_deadline_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_modify_activity
+
+- story: Modify the activity category without Deadline
+  steps:
+    - checkpoint: modify_activity_name_generic
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_ask_if_deadline
+    - intent: deny
+    - action: action_modify_activity
+
+- story: Modify the activity category already Deadline
+  steps:
+    - checkpoint: modify_activity_name_generic
+    - slot_was_set:
+      - time: true
+    - action: action_modify_activity
+
+
+#################################### Modify Miste Stories ######################################
+
+#################################### Modify Stories name + category  ######################################
+- story: Modify name + category Generic
+  steps:
+    - intent: modify_activity_name+modify_activity_category 
+    - action: utter_happy
+    - action: modify_activity_name_category_form
+    - active_loop: modify_activity_name_category_form
+    - active_loop: null
+    - checkpoint: modify_activity_name_generic
+
+#################################### Modify Stories name + deadline  ######################################
+- story: Modify name + deadline Generic
+  steps:
+    - intent: modify_activity_name+modify_activity_deadline 
+    - action: modify_activity_name_deadline_form
+    - active_loop: modify_activity_name_deadline_form
+    - active_loop: null
+    - checkpoint: modify_activity_name_generic
+#################################### Modify Stories deadline + category  ######################################
+- story: Modify category + deadline Generic
+  steps:
+    - intent: modify_activity_category+modify_activity_deadline 
+    - action: modify_activity_category_deadline_form
+    - active_loop: modify_activity_category_deadline_form
+    - active_loop: null
+    - checkpoint: modify_activity_name_generic
+
 #################################### Clean Stories ######################################
 - story: Clean Complete Activities confirmed 
   steps:
