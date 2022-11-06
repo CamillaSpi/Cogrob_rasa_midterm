@@ -1,6 +1,7 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
+#################################### Test Stories  Clean completed activities with confirmation######################################
 stories:
 - story: test1 for clean complete activities confirmed
   steps:
@@ -92,6 +93,7 @@ stories:
     intent: affirm
   - action: action_clean_all_completed
 
+#################################### Test Stories Clean completed activities with negation######################################
 - story: test1 for clean complete activities denied
   steps:
   - user: |
