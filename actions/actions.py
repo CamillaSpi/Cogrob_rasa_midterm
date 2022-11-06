@@ -295,8 +295,9 @@ class actionModifyActivity(Action):
         category_old = tracker.get_slot("category_old")
         activity_old = tracker.get_slot("activity_old")
         category_new = tracker.get_slot("category")
+        activity_new = tracker.get_slot("activity")
         time = tracker.get_slot("time")
-        print(activity_old, category_old, category_new, time)
+        
 
 
 class actionSetReminderSlot(Action):
