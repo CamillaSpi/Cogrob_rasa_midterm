@@ -289,7 +289,7 @@ class actionModifyActivity(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
+        possibleDeadlineErrorFlag=False
         username = tracker.get_slot("username")
         category_old = tracker.get_slot("category_old")
         activity_old = tracker.get_slot("activity_old")
@@ -301,8 +301,12 @@ class actionModifyActivity(Action):
             timenew = time['to']
             timeold = time['from']
         else:
+            possibleDeadlineErrorFlag=True
             timenew = time
             timeold = time
+        if possibleDeadlineErrorFlag is True and activity_new is None and category_new is None:
+            dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
+            return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None)]
 
         if(Database.doesUserExists(username)):
             if (Database.doesActivityExists(username,category_new,activity_old,time) == False):
