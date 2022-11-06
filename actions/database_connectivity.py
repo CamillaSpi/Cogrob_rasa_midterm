@@ -41,6 +41,24 @@ class Database:
     conn.commit()
 
   @staticmethod
+  def doesCategoryExists(username,category):
+    cur.execute('''
+      SELECT * FROM categories WHERE username == ? AND category == ?
+    ''', (username, category))
+    if(len( cur.fetchall()) > 0 ):
+      return True
+    return False
+
+  @staticmethod
+  def doesActivityExists(username,category,activity,deadline=None):
+    cur.execute('''
+      SELECT * FROM activities WHERE username == ? AND category == ? AND activity == ? AND deadline == ?
+    ''', (username, category, activity, deadline))
+    if(len( cur.fetchall()) > 0 ):
+      return True
+    return False
+
+  @staticmethod
   def createUser(username):
     try:
       conn.execute('''
@@ -189,35 +207,53 @@ class Database:
       return False
 
   @staticmethod
-  def modifyActivity(username, category, activity, deadline, newdeadline = None, newcategory = None, newactivity = None):
+  def modifyActivity(username, category, activity, deadline, newcategory = None, newactivity = None, newdeadline = None):
     try:
-      conn.execute('''
-        SELECT * FROM activities WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-      ''', (username, activity , category, deadline))
+      m = hashlib.sha256()
+      m.update(str(username).encode())
+      m.update(str(activity).encode())
+      m.update(str(category).encode())
+      m.update(str(deadline).encode())
+      m.digest()
+      print(str(username)+str(activity)+str(category)+str(deadline))
+      id_activity = m.hexdigest()
+      cur.execute('''
+        SELECT * FROM activities WHERE id_activity == ?
+      ''', (id_activity,))
       if(len(cur.fetchall()) > 0 ):
-        if (newdeadline == None and newcategory != None and newactivity == None):
-          conn.execute('''UPDATE activities SET category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-          ''', (newcategory, username, activity , category, deadline))
-        elif (newdeadline != None and newcategory == None and newactivity == None):
-          conn.execute('''UPDATE activities SET deadline = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-          ''', (newdeadline, username, activity , category, deadline))
-        elif (newdeadline == None and newcategory == None and newactivity != None):
-          conn.execute('''UPDATE activities SET activity = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-          ''', (newactivity, username, activity , category, deadline))
-        elif (newdeadline == None and newcategory != None and newactivity != None):
-          conn.execute('''UPDATE activities SET activity = ?, category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-          ''', (newactivity, newcategory, username, activity , category, deadline))
-        elif (newdeadline != None and newcategory == None and newactivity != None):
-          conn.execute('''UPDATE activities SET activity = ?, deadline = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-          ''', (newactivity, newdeadline, username, activity , category, deadline))
-        elif (newdeadline != None and newcategory != None and newactivity == None):
-          conn.execute('''UPDATE activities SET deadline = ?, category = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
-          ''', (newdeadline, newcategory, username, activity , category, deadline))
+        
+        if newcategory != None:
+          if not Database.doesCategoryExists(username,newcategory):
+            Database.insertCategory(username, newcategory)
+        paramList = list()
+        paramList.append(("category", newcategory))
+        paramList.append(("activity", newactivity))
+        paramList.append(("deadline",newdeadline))
+        queryParam=""
+        tupleParam = ()
+        p = hashlib.sha256()
+        for param in paramList:
+          if param[1] is not None:
+            tupleParam += (param[1],)
+            queryParam += ", " + str(param[0]) + " = ?"
+          else:
+            param = (param[0],exec(param[0]))
+          p.update(str(param[1]).encode())
+          print(str(param[1]))
+        p.digest()
+        id_activity_new = p.hexdigest()
+        queryParam += ", id_activity = ?"
+        tupleParam += (id_activity_new, id_activity,)
+        query = "UPDATE activities SET" + queryParam[1:] + " WHERE id_activity == ?"
+        print(query)
+        print(tupleParam)
+        conn.execute(query, tupleParam)
         conn.commit()
         return True
       else:
         return False
-    except sqlite3.IntegrityError:
+    except sqlite3.IntegrityError as e:
+      print(e)
       return False
 
 
@@ -230,11 +266,3 @@ class Database:
       return True
     return False
 
-  @staticmethod
-  def doesCategoryExists(username,category):
-    cur.execute('''
-      SELECT * FROM categories WHERE username == ? AND category == ?
-    ''', (username, category))
-    if(len( cur.fetchall()) > 0 ):
-      return True
-    return False
