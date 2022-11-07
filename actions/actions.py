@@ -295,18 +295,25 @@ class actionModifyActivity(Action):
         activity_new = tracker.get_slot("activity")
         category_new = tracker.get_slot("category")
         time = tracker.get_slot("time")
-        print(time)
-        if(time != None and len(time) == 2):
+        if(time != None and len(time) == 2 and not isinstance(time, list)):
+            print("sono entrato nel primo if")
             timenew = time['to']
             timeold = time['from']
+        elif(isinstance(time, list)):
+            print("sono entrato nel primo elsif")
+            timeold = time[0]['from']
+            timenew = time[1]
         elif(Database.doesActivityExists(username,category_old,activity_old)): 
+            print("sono entrato nel secondo elsif")
             timenew = time
             timeold = None
         else:
+            print("sono entrato nell else", activity_new,category_new)
             possibleDeadlineErrorFlag=True
             timenew = time
             timeold = time
         if possibleDeadlineErrorFlag is True and activity_new is None and category_new is None:
+            print("sono nel possibleDead")
             dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
             return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None)]
         

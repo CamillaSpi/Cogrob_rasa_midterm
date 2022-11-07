@@ -267,7 +267,6 @@ class Database:
           else:
             param = (param[0],exec(param[0]))
           p.update(str(param[1]).encode())
-          print(param[1])
         p.digest()
         id_activity_new = p.hexdigest()
         queryParam += ", id_activity = ?"
