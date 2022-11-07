@@ -113,6 +113,39 @@ nlu:
     - i am [simone](username) 
     - i am [antonio1](username) 
     - i am [giorgio_](username) 
+    - let me create an account
+    - i want to signup
+    - i want to sign up
+    - hi my name is [Kevin](username)
+    - let me signup
+    - signup
+    - account
+    - create account
+    - create user
+    - set up an account
+    - make an account
+    - let me make an account
+    - i want to create an account
+    - new account
+    - let me set up a new account
+    - open an account
+    - open up an account
+    - i am a new user
+    - new user
+    - i want a new account
+    - user
+    - i don't have an account
+    - let me register
+    - registration
+    - i want to register
+    - let me be a user
+    - sign up a new user
+    - new registration 
+    - my name is [Ugo](username)
+    - hi bot, my name is [Gianluca](username)
+    - my name is [Xavier](username)
+    - hi, my name is [Simonetto56](username)
+    - my name [Dario](username)
 
 - intent: bot_challenge
   examples: |
