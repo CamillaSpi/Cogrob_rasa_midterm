@@ -674,3 +674,65 @@ stories:
   - action: view_activities_form
   - active_loop: null  
   - action: action_view_activities
+
+#################################### Test Stories Login-Signup######################################
+- story: test1 for login-signup
+  steps:
+  - user: |
+      hi my username is [Luke10](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+- story: test2 for login-signup
+  steps:
+  - user: |
+      i am [Carlo2](username) and i want to create an account
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+- story: test3 for login-signup
+  steps:
+  - user: |
+      let me create a new user
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - user: |
+      my username is [Giovanni](username)
+    intent: inform
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+- story: test4 for login-signup
+  steps:
+  - user: |
+      i am a new user
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - user: |
+      it is [Mario999](username)
+    intent: inform
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+- story: test5 for login-signup
+  steps:
+  - user: |
+      can i add a new account?
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - user: |
+      the username is [Zelda122](username)
+    intent: inform
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
