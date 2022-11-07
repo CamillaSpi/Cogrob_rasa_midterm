@@ -865,3 +865,56 @@ stories:
   - action: add_category_form
   - active_loop: null
   - action: action_add_category
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################################### Test Stories Modify Activity Deadline ######################################
+- story: test modify deadline of activity with deadline passing no date
+  steps:
+  - user: |
+      I want to modify the deadline of the activity [run]{"entity": "activity", "role": "new"} in the category [gym]{"entity": "category", "role": "new"}
+    intent: modify_activity_deadline 
+  - action: modify_activity_deadline_form 
+  - active_loop: modify_activity_deadline_form
+  - user: |
+      my name is (Cinzia)[username]
+    intent: presentation
+  - action: modify_activity_deadline_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - slot_was_set:
+    - time: "2022-12-12T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+
+- story: test modify deadline of activity without deadline passing only one date
+  steps:
+  - user: |
+      I want to modify the deadline of the activity [dinner]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"}
+    intent: modify_activity_deadline 
+  - slot_was_set:
+    - time: "2022-12-12T00:00:00.000+02:00"
+  - action: modify_activity_deadline_form 
+  - active_loop: modify_activity_deadline_form
+  - user: |
+      my name is (Cinzia)[username]
+    intent: presentation
+  - action: modify_activity_deadline_form
+  - active_loop: null
+  - action: action_modify_activity
+    
