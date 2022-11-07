@@ -12,55 +12,91 @@ class Database:
   def initDb():
     conn.execute('''PRAGMA foreign_keys = 1''')
     conn.commit()
+    #users table
     conn.execute('''
         CREATE TABLE IF NOT EXISTS users (
-            username VARCHAR(100) PRIMARY KEY
+            username VARCHAR(50) PRIMARY KEY
         );
     ''')
+    #categories table
     conn.execute('''
         CREATE TABLE IF NOT EXISTS categories (
-            username VARCHAR(100) NOT NULL,
-            category VARCHAR(50) NOT NULL,
-            FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
-            PRIMARY KEY (username,category)
+            name VARCHAR(50) PRIMARY KEY
         );
     ''')
+    #activities table
     conn.execute('''
         CREATE TABLE IF NOT EXISTS activities (
-            id_activity VARCHAR(256) NOT NULL,
-            username VARCHAR(100) NOT NULL,
-            activity VARCHAR(100) NOT NULL,
+            name VARCHAR(50) PRIMARY KEY
+        );
+    ''')
+    #unfoldings table relate users, activities, categories
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS unfoldings (
+            id_unfolding VARCHAR(256) NOT NULL,
+            username VARCHAR(50) NOT NULL,
+            activity VARCHAR(50) NOT NULL,
             category VARCHAR(50) NOT NULL,
             deadline DATETIME,
             completed BOOLEAN NOT NULL,
             reminder BOOLEAN NOT NULL,
-            FOREIGN KEY (username, category) REFERENCES categories(username,category) ON DELETE CASCADE ON UPDATE CASCADE,
-            PRIMARY KEY (id_activity) 
+            FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
+            FOREIGN KEY (activity) REFERENCES activities(name) ON DELETE CASCADE ON UPDATE CASCADE,
+            FOREIGN KEY (category) REFERENCES categories(name) ON DELETE CASCADE ON UPDATE CASCADE,
+            PRIMARY KEY (id_unfolding) 
+        );
+    ''')
+    #categories table relate users to possessions
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS possessions (
+            username VARCHAR(50) NOT NULL,
+            category VARCHAR(50) NOT NULL,
+            FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE,
+            FOREIGN KEY (category) REFERENCES categories(name) ON DELETE CASCADE ON UPDATE CASCADE,
+            PRIMARY KEY (username,category)
         );
     ''')
     conn.commit()
 
   @staticmethod
-  def doesCategoryExists(username,category):
+  def doesPossessionExists(username,category):
     cur.execute('''
-      SELECT * FROM categories WHERE username == ? AND category == ?
+      SELECT * FROM possessions WHERE username == ? AND category == ?
     ''', (username, category))
+    if(len( cur.fetchall()) > 0 ):
+      return True
+    return False
+    
+  @staticmethod
+  def doesCategoryExists(category):
+    cur.execute('''
+      SELECT * FROM categories WHERE name == ?
+    ''', (category,))
     if(len( cur.fetchall()) > 0 ):
       return True
     return False
 
   @staticmethod
-  def doesActivityExists(username,category,activity,deadline=None):
+  def doesUnfoldingsExists(username,category,activity,deadline=None):
     m = hashlib.sha256()
     m.update(str(username).encode())
     m.update(str(activity).encode())
     m.update(str(category).encode())
     m.update(str(deadline).encode())
     m.digest()
-    id_activity = m.hexdigest()
+    id_unfolding = m.hexdigest()
     cur.execute('''
-      SELECT * FROM activities WHERE id_activity == ?
-    ''', (id_activity,))
+      SELECT * FROM unfoldings WHERE id_unfolding == ?
+    ''', (id_unfolding,))
+    if(len( cur.fetchall()) > 0 ):
+      return True
+    return False
+
+  @staticmethod
+  def doesActivityExists(activity):
+    cur.execute('''
+      SELECT * FROM activities WHERE name == ?
+    ''', (activity,))
     if(len( cur.fetchall()) > 0 ):
       return True
     return False
@@ -86,10 +122,14 @@ class Database:
       m.update(str(category).encode())
       m.update(str(deadline).encode())
       m.digest()
-      id_activity = m.hexdigest()
+      id_unfolding = m.hexdigest()
+      if not Database.doesActivityExists(activity):
+        conn.execute('''
+        INSERT INTO activities (name) VALUES (?);
+        ''', (activity,))
       conn.execute('''
-      INSERT INTO activities (id_activity,username, activity, category,deadline,completed,reminder) VALUES (?, ?, ?, ?,?,?,?);
-    ''', (id_activity,username, activity ,category,deadline,False,reminder))
+        INSERT INTO unfoldings (id_unfolding, username, activity, category, deadline, completed, reminder) VALUES (?, ?, ?, ?, ?, ?, ?);
+      ''', (id_unfolding,username, activity ,category,deadline,False,reminder))
       conn.commit()
       return True
     except sqlite3.IntegrityError as e :
@@ -101,7 +141,7 @@ class Database:
       completed = True
     elif(activity_status == "uncompleted"):
       completed = False
-    base_query = "SELECT activity,category,deadline,completed FROM activities WHERE username == ?"
+    base_query = "SELECT activity,category,deadline,completed FROM unfoldings WHERE username == ?"
     base_list = [username,]
     if(category != None):
       base_query = base_query + " AND category == ?"
@@ -137,16 +177,16 @@ class Database:
     m.update(str(category).encode())
     m.update(str(deadline).encode())
     m.digest()
-    id_activity = m.hexdigest()
+    id_unfolding = m.hexdigest()
     
     cur.execute('''
-      SELECT * FROM activities WHERE id_activity == ?
-    ''', (id_activity,))
+      SELECT * FROM unfoldings WHERE id_unfolding == ?
+    ''', (id_unfolding,))
 
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''
-        DELETE FROM activities WHERE id_activity == ?
-      ''', (id_activity,))
+        DELETE FROM unfoldings WHERE id_unfolding == ?
+      ''', (id_unfolding,))
       conn.commit()
       return True
     else:
@@ -155,8 +195,12 @@ class Database:
   @staticmethod
   def insertCategory(username, category):
     try:
+      if( not Database.doesCategoryExists(category)):
+        conn.execute('''
+          INSERT INTO categories (name) VALUES (?);
+        ''', (category,))
       conn.execute('''
-        INSERT INTO categories (username, category) VALUES (?,?);
+        INSERT INTO possessions (username, category) VALUES (?,?);
       ''', (username,category))
       conn.commit()
       return True
@@ -164,10 +208,10 @@ class Database:
       return False
 
   @staticmethod
-  def selectCategories(username):
+  def selectpossessions(username):
 
     cur.execute('''
-    SELECT * FROM categories WHERE username == (?);
+    SELECT * FROM possessions WHERE username == (?);
     ''',(username,)) 
 
     rows = cur.fetchall()
@@ -186,12 +230,12 @@ class Database:
   def deleteCategory(username, category):
 
     cur.execute('''
-      SELECT * FROM categories WHERE username == ? AND category == ? 
+      SELECT * FROM possessions WHERE username == ? AND category == ? 
     ''', (username, category))
     
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''
-      DELETE FROM categories WHERE username == ? AND category == ? 
+      DELETE FROM possessions WHERE username == ? AND category == ? 
     ''', (username, category))
       conn.commit()
       return True
@@ -206,13 +250,13 @@ class Database:
     m.update(str(category).encode())
     m.update(str(deadline).encode())
     m.digest()
-    id_activity = m.hexdigest()
+    id_unfolding = m.hexdigest()
     cur.execute('''
-      SELECT * FROM activities WHERE id_activity == ? 
-    ''', (id_activity, ))
+      SELECT * FROM unfoldings WHERE id_unfolding == ? 
+    ''', (id_unfolding, ))
 
     if(len(cur.fetchall()) > 0 ):
-      conn.execute('''UPDATE activities SET completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
+      conn.execute('''UPDATE unfoldings SET completed = ? WHERE username == ? AND activity == ? AND category == ? AND deadline == ?
       ''', (completed, username, activity ,category,deadline))
       conn.commit()
       return True
@@ -222,11 +266,11 @@ class Database:
   @staticmethod
   def modifyCategory(username, category, category_new):
     cur.execute('''
-      SELECT * FROM categories WHERE username == ? AND category == ?
+      SELECT * FROM possessions WHERE username == ? AND category == ?
     ''', (username, category))
     if(len(cur.fetchall()) > 0 ):
       conn.execute('''
-        UPDATE categories SET category = ? WHERE username == ? AND category == ?;
+        UPDATE possessions SET category = ? WHERE username == ? AND category == ?;
       ''', (category_new,username,category))
       conn.commit()
       return True
@@ -242,14 +286,14 @@ class Database:
       m.update(str(category).encode())
       m.update(str(deadline).encode())
       m.digest()
-      id_activity = m.hexdigest()
+      id_unfolding = m.hexdigest()
       cur.execute('''
-        SELECT * FROM activities WHERE id_activity == ?
-      ''', (id_activity,))
+        SELECT * FROM unfoldings WHERE id_unfolding == ?
+      ''', (id_unfolding,))
       if(len(cur.fetchall()) > 0 ):
         if newcategory != None:
-          returned = Database.doesCategoryExists(username,newcategory)
-          if not Database.doesCategoryExists(username,newcategory):
+          returned = Database.doesPossessionExists(username,newcategory)
+          if not Database.doesPossessionExists(username,newcategory):
             #Andrebbe comunicato che è stata creata tale categoria
             Database.insertCategory(username, newcategory)
         paramList = list()
@@ -268,10 +312,10 @@ class Database:
             param = (param[0],exec(param[0]))
           p.update(str(param[1]).encode())
         p.digest()
-        id_activity_new = p.hexdigest()
-        queryParam += ", id_activity = ?"
-        tupleParam += (id_activity_new, id_activity,)
-        query = "UPDATE activities SET" + queryParam[1:] + " WHERE id_activity == ?"
+        id_unfolding_new = p.hexdigest()
+        queryParam += ", id_unfolding = ?"
+        tupleParam += (id_unfolding_new, id_unfolding,)
+        query = "UPDATE unfoldings SET" + queryParam[1:] + " WHERE id_unfolding == ?"
         conn.execute(query, tupleParam)
         conn.commit()
         return True
