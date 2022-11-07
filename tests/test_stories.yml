@@ -736,3 +736,132 @@ stories:
   - active_loop: null
   - action: action_create_user
 
+#################################### Test Stories Show categories######################################
+- story: test1 for show categories
+  steps:
+  - user: |
+      i want to see my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: view_categories_form
+  - user: |
+      [Gerry2](username)
+    intent: inform
+  - action: view_categories_form
+  - active_loop: null 
+  - action: action_view_categories
+
+- story: test2 for show categories
+  steps:
+  - user: |
+      hi my username is [Franco](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      let me see all my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: null  
+  - action: action_view_categories
+
+- story: test3 for show categories
+  steps:
+  - user: |
+      look my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: view_categories_form
+  - user: |
+      [Nadia](username)
+    intent: inform
+  - action: view_categories_form
+  - active_loop: null 
+  - action: action_view_categories
+
+- story: test4 for show categories
+  steps:
+  - user: |
+      hi my username is [Roberto](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      i want to look at my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: null  
+  - action: action_view_categories
+
+- story: test5 for show categories
+  steps:
+  - user: |
+      my username is [Pika11](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: null  
+  - action: action_view_categories
+
+#################################### Test Stories Add Category######################################
+- story: test1 for add category
+  steps:
+  - user: |
+      hi i am [Tonino](username) and i want to add a category [projects](category)
+    intent: add_category
+  - action: add_category_form
+  - active_loop: null
+  - action: action_add_category
+
+- story: test2 for add category
+  steps:
+  - user: |
+      hi i am [Tonino](username) let me add a category 
+    intent: add_category
+  - action: add_category_form
+  - active_loop: add_category_form
+  - user: |
+      the category is [school]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_category_form
+  - active_loop: null
+  - action: action_add_category
+
+- story: test3 for add category
+  steps: 
+  - user: |
+      let me add a new category
+    intent: add_category
+  - action: add_category_form
+  - active_loop: add_category_form
+  - user: |
+      username: [Sara](username)
+    intent: inform
+  - action: add_category_form
+  - user: |
+      category is [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_category_form
+  - active_loop: null
+  - action: action_add_category
+
+- story: test4 for add category
+  steps:
+  - user: |
+      create a new category [sport]{"entity": "category", "role": "new"}
+    intent: add_category
+  - action: add_category_form
+  - active_loop: add_category_form
+  - user: |
+      my name is [Javier](username)
+    intent: inform
+  - action: add_category_form
+  - active_loop: null
+  - action: action_add_category
