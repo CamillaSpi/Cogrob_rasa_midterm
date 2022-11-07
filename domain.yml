@@ -71,13 +71,13 @@ slots:
   activity_old:
     type: text
     influence_conversation: false
-  activity:
+  activity_new:
     type: text
     influence_conversation: false
   category_old:
     type: text
     influence_conversation: false
-  category:
+  category_new:
     type: text
     influence_conversation: false
   username:
@@ -86,9 +86,6 @@ slots:
   time:
     type: text
     influence_conversation: true
-  time_old:
-    type: text
-    influence_conversation: false
   activity_status:
     type: text
     influence_conversation: false
@@ -110,11 +107,11 @@ forms:
       username:
         - type: from_entity
           entity: username
-      activity:
+      activity_new:
         - type: from_entity
           entity: activity
           role: new
-      category:
+      category_new:
         - type: from_entity
           entity: category
           role: new
@@ -125,16 +122,18 @@ forms:
         - type: from_entity
           entity: time
 
+
           
   remove_item_form:
     required_slots:
       username:
         - type: from_entity
           entity: username
-      activity:
+      activity_new:
         - type: from_entity
           entity: activity
-      category:
+          role: new
+      category_new:
         - type: from_entity
           entity: category
           role: new
@@ -144,10 +143,11 @@ forms:
       username:
         - type: from_entity
           entity: username
-      activity:
+      activity_new:
         - type: from_entity
           entity: activity
-      category:
+          role: new
+      category_new:
         - type: from_entity
           entity: category
           role: new
@@ -157,7 +157,7 @@ forms:
       username:
         - type: from_entity
           entity: username
-      category:
+      category_new:
         - type: from_entity
           entity: category
           role: new
@@ -167,7 +167,7 @@ forms:
       username:
         - type: from_entity
           entity: username
-      category:
+      category_new:
         - type: from_entity
           entity: category
           role: new
@@ -193,7 +193,7 @@ forms:
         - type: from_entity
           entity: category
           role: old
-      category:
+      category_new:
         - type: from_entity
           entity: category
           role: new   
@@ -211,7 +211,7 @@ forms:
         - type: from_entity
           entity: category
           role: old
-      category:
+      category_new:
         - type: from_entity
           entity: category
           role: new
@@ -229,7 +229,7 @@ forms:
         - type: from_entity
           entity: category
           role: old
-      activity:
+      activity_new:
         - type: from_entity
           entity: activity
           role: new
@@ -264,11 +264,11 @@ forms:
         - type: from_entity
           entity: category
           role: old
-      category:
+      category_new:
         - type: from_entity
           entity: activity
           role: new
-      activity:
+      activity_new:
         - type: from_entity
           entity: activity
           role: new
@@ -290,7 +290,7 @@ forms:
         - type: from_entity
           entity: activity
           role: new
-      activity:
+      activity_new:
         - type: from_entity
           entity: activity
           role: new
@@ -312,7 +312,7 @@ forms:
         - type: from_entity
           entity: activity
           role: new
-      category:
+      category_new:
         - type: from_entity
           entity: activity
           role: new
