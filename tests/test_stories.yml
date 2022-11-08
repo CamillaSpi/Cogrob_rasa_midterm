@@ -178,7 +178,7 @@ stories:
     intent: presentation
   - action: add_item_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [healthcare]{"entity": "category", "role": "new"}
+      add[study]{"entity": "activity", "role": "new"} in [healthcare]{"entity": "category", "role": "new"}
     intent: inform
   - action: add_item_form
   - active_loop: null
@@ -260,6 +260,512 @@ stories:
     intent: affirm
   - action: action_set_reminder_slot
   - action: action_add_item
+
+
+#################################### Test Stories  Remove Item Single Cases without deadline ######################################
+- story: later presentation and fake remove activity (single) without deadline 1
+  steps:
+  - user: |
+      remove an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      im [alfredinoPaneEVino](username)
+    intent: presentation
+  - action: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: later presentation and real remove activity (single) without deadline 1
+  steps:
+  - user: |
+      remove an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      im [alfredinoPaneEVino](username)
+    intent: presentation
+  - action: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_remove_item
+
+- story: presentation and fake remove activity (single) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      remo an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: affirm
+  - action: action_remove_item
+
+- story: presentation and real remove activity (single) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      remo an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_remove_item
+
+#################################### Test Stories  Remove Item Double Cases without deadline ######################################
+- story: later presentation and fake remove activity (double) without deadline 1
+  steps:
+  - user: |
+      remove an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: later presentation and real remove activity (double) without deadline 1
+  steps:
+  - user: |
+      remove an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_remove_item
+
+    
+- story: presentation and fake remove activity (dobule) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: presentation and real remove activity (dobule) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      remove [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_remove_item
+
+
+#################################### Test Stories  Remove Item Single Cases with deadline ######################################
+- story: later presentation and fake remove activity (single) with deadline 1
+  steps:
+  - user: |
+      remove an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      im [alfredinoPaneEVino](username)
+    intent: presentation
+  - action: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: later presentation and real remove activity (single) with deadline 1
+  steps:
+  - user: |
+      remove an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      im [alfredinoPaneEVino](username)
+    intent: presentation
+  - action: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_remove_item
+
+- story: presentation and fake remove activity (single) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      remo an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: affirm
+  - action: action_remove_item
+
+- story: presentation and real remove activity (single) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      remo an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - user: |
+      [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_remove_item
+
+#################################### Test Stories  Remove Item Double Cases with deadline ######################################
+- story: later presentation and fake remove activity (double) with deadline 1
+  steps:
+  - user: |
+      remove an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: later presentation and real remove activity (double) direct deadline 1
+  steps:
+  - user: |
+      remove an activity
+    intent: remove_item
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: remove_item_form
+  - user: |
+      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at 22th december 2022
+    intent: inform
+  - slot_was_set:
+    - time: "2022-12-22T00:00:00.000+01:00"
+  - action: remove_item_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_remove_item
+
+    
+- story: presentation and fake remove activity (dobule) direct deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at at 22th december 2022
+    intent: remove_item
+  - slot_was_set:
+    - time: "2022-12-22T00:00:00.000+01:00"
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: presentation and real remove activity (dobule) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      remove [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at 27th september 2022
+    intent: remove_item
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - action: remove_item_form
+  - active_loop: remove_item_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      yes
+    intent: affirm
+  - action: action_remove_item
+
 
 
 
@@ -348,7 +854,7 @@ stories:
   - action: add_deadline_form
   - active_loop: add_deadline_form
   - user: |
-      27th september 2022
+      09/27/2022
     intent: inform
   - action: add_deadline_form
   - slot_was_set:
@@ -381,16 +887,18 @@ stories:
   - action: action_add_item
   
 
-- story: presentation and add activity with deadline 2
+- story: presentation and add activity with deadline 1
   steps:
   - user: |
-      im [banana33](username)
+      im [banaan33](username)
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
   - action: action_create_user
   - user: |
-      add [chat]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"}
+      add [painting]{"entity": "activity", "role": "new"} into [weekly]{"entity": "category", "role": "new"}
     intent: add_item
   - action: add_item_form
   - active_loop: null
@@ -401,11 +909,11 @@ stories:
   - action: add_deadline_form
   - active_loop: add_deadline_form
   - user: |
-      17th september 1999
+      09/27/2022
     intent: inform
-  - slot_was_set:
-    - time: "19999-09-17T00:00:00.000+01:00"
   - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
   - active_loop: null
   - action: utter_ask_if_reminder
   - user: |

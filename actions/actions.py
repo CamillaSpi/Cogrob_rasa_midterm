@@ -387,6 +387,5 @@ class actionResetSlot(Action):
         SlotSet("category_old",None),
         SlotSet("category",None),
         SlotSet("time",None),
-        SlotSet("time_old",None),
         SlotSet("activity_status",None)
         ]

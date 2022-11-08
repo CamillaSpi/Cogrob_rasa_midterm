@@ -139,6 +139,8 @@ stories:
     - requested_slot: null
   - action: utter_ask_if_deadline
   - intent: deny
+  - slot_was_set:
+    - requested_slot: null
   - action: utter_confirm_choice
   - intent: affirm
   - action: action_remove_item
