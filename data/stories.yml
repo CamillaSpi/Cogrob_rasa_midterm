@@ -145,7 +145,7 @@ stories:
   - intent: affirm
   - action: action_remove_item
 
-- story: Remove from my Activities with deadline with confirmation
+- story: Remove from my Activities with deadline with affirmation
   steps:
   - checkpoint: Remove_generic
   - slot_was_set:

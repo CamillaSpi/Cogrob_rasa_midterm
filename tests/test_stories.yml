@@ -768,6 +768,41 @@ stories:
 
 
 
+#################################### Test Stories  Set Status Completed Single ######################################
+- story: later presentation and set Complete (single) with deadline 1
+  steps:
+  - user: |
+      set completed
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - user: |
+      [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_set_status_activity
 
 #################################### Test Stories  Add Item Other ######################################
 - story: later presentation and add activity already deadline 1

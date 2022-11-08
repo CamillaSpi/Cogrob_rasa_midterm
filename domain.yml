@@ -145,6 +145,7 @@ forms:
       activity:
         - type: from_entity
           entity: activity
+          role: new
       category:
         - type: from_entity
           entity: category
