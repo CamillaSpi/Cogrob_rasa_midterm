@@ -887,7 +887,7 @@ stories:
   - action: modify_activity_deadline_form 
   - active_loop: modify_activity_deadline_form
   - user: |
-      my name is (Cinzia)[username]
+      my name is [Cinzia](username)
     intent: presentation
   - action: modify_activity_deadline_form
   - active_loop: null
@@ -912,9 +912,128 @@ stories:
   - action: modify_activity_deadline_form 
   - active_loop: modify_activity_deadline_form
   - user: |
-      my name is (Cinzia)[username]
+      my name is [Alessia](username)
     intent: presentation
   - action: modify_activity_deadline_form
   - active_loop: null
   - action: action_modify_activity
     
+
+#################################### Test Stories Modify Activity Name ######################################
+- story: test modify name of activity passing all but no deadline yes deadline
+  steps:
+  - user: |
+       my name is [Carola](username) and I want to modify the name of the activity [hairdresser]{"entity": "activity", "role": "old"} in the category [beauty]{"entity": "category", "role": "new"} with name [play]{"entity": "activity", "role": "new"}
+    intent: modify_activity_name 
+  - action: modify_activity_name_form 
+  - active_loop: modify_activity_name_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      05/05/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-05-05T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+
+
+- story: test modify name of activity passing all but no deadline no deadline
+  steps:
+  - user: |
+       my name is [Carola](username) and I want to modify the name of the activity [walk]{"entity": "activity", "role": "old"} in the category [sport]{"entity": "category", "role": "new"} with name [run]{"entity": "activity", "role": "new"}
+    intent: modify_activity_name 
+  - action: modify_activity_name_form 
+  - active_loop: modify_activity_name_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity
+
+
+- story: test modify name of activity passing step by step yes deadline
+  steps:
+  - user: |
+       I want to change the name of the activity [study]{"entity": "activity", "role": "old"}
+    intent: modify_activity_name 
+  - action: modify_activity_name_form 
+  - active_loop: modify_activity_name_form
+  - user: |
+      I'm [Luigi](username)
+  - intent: presentation
+  - active_loop: modify_activity_name_form
+  - user: |
+      [university]{"entity": "category", "role": "new"}
+  - intent: inform
+  - action: add_deadline_form
+  - active_loop: modify_activity_name_form
+  - user: |
+      with the name [read]{"entity": "activity", "role": "new"}
+  - intent: inform
+  - action: modify_activity_name_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      10/10/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-10-10T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+
+
+- story: test modify name of activity passing step by step no deadline
+  steps:
+  - user: |
+       I want to change the name of the activity [study]{"entity": "activity", "role": "old"}
+    intent: modify_activity_name 
+  - action: modify_activity_name_form 
+  - active_loop: modify_activity_name_form
+  - user: |
+      I'm [Luigi](username)
+  - intent: presentation
+  - active_loop: modify_activity_name_form
+  - user: |
+      [university]{"entity": "category", "role": "new"}
+  - intent: inform
+  - action: add_deadline_form
+  - active_loop: modify_activity_name_form
+  - user: |
+      with the name [read]{"entity": "activity", "role": "new"}
+  - intent: inform
+  - action: modify_activity_name_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity
+
+
+
+- story: test modify name of activity passing all also deadline
+  steps:
+  - user: |
+       my name is (Luca)[username] and I want to modify the name of the activity [hairdresser]{"entity": "activity", "role": "old"} in the category [beauty]{"entity": "category", "role": "new"} of 04/04/2022 with name [play]{"entity": "activity", "role": "new"}
+    intent: modify_activity_name
+  - slot_was_set:
+      - time: "2022-12-T00:00:00.000+02:00"
+  - action: modify_activity_name_form 
+  - active_loop: modify_activity_name_form
+  
+  - active_loop: null
+  - action: action_modify_activity
