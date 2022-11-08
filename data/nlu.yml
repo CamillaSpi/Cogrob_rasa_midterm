@@ -1309,7 +1309,7 @@ nlu:
     - help me to not forget the activity [study]{"entity": "activity", "role": "new"} in the category [university]{"entity": "category", "role": "new"} for Tomorrow
     - help me to remind my [birtday]{"entity": "activity", "role": "new"} on 12/18/2022
     - remind me the [exam]{"entity": "activity", "role": "new"} on tomorrow morning
-    - refresh my memory of [shopping]{"entity": "activity", "role": "new"} at 19:00
+    - don't forget of [shopping]{"entity": "activity", "role": "new"} at 19:00
     - I want to set a reminder 
     - I want you help me to remind
     - my username is [luigi](username), please remind me of [shopping]{"entity": "activity", "role": "new"} tomorrow evening
@@ -1317,7 +1317,6 @@ nlu:
     - I can't forget to do the activity [exam]{"entity": "activity", "role": "new"} of the category [university]{"entity": "category", "role": "new"} of next Monday
     - I want to set a reminder for the actvivity [hairdresser]{"entity": "activity", "role": "new"}
     - remind me the [dinner]{"entity": "activity", "role": "new"}
-    - refresh my memory of [competition]{"entity": "activity", "role": "new"} in the category[sport]{"entity": "category", "role": "new"}
 - synonym: add
   examples: |
     - insert
