@@ -1227,6 +1227,12 @@ nlu:
     - what are my categories?
     - What are my categories?
 
+- intent: remind_me_of
+  examples: |
+    - remind me to [shopping]{"entity": "activity", "role": "new"} into the category [household]]{"entity": "category", "role": "new"} at 8:30
+    - set a reminder for the activiy [call]{"entity": "activity", "role": "new"} into the category [relations]]{"entity": "category", "role": "new"}
+    - don't forget to [study]{"entity": "activity", "role": "new"} into the category [university]]{"entity": "category", "role": "new"}
+    - I want to set a reminder 
 - synonym: add
   examples: |
     - insert
