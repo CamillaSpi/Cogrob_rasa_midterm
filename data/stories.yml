@@ -139,11 +139,13 @@ stories:
     - requested_slot: null
   - action: utter_ask_if_deadline
   - intent: deny
+  - slot_was_set:
+    - requested_slot: null
   - action: utter_confirm_choice
   - intent: affirm
   - action: action_remove_item
 
-- story: Remove from my Activities with deadline with confirmation
+- story: Remove from my Activities with deadline with affirmation
   steps:
   - checkpoint: Remove_generic
   - slot_was_set:
@@ -202,12 +204,17 @@ stories:
 
 #################################### Set Completed and unCompleted Stories ######################################
 #forse si può unificare il form?
-- story: Set status Activity with deadline
+- story: Set status Activity Generic
   steps:
     - intent: set_status_activity
     - action: set_status_activity_form
     - active_loop: set_status_activity_form
     - active_loop: null
+    - checkpoint: set_status_generic
+
+- story: Set status Activity with Deadline
+  steps:
+    - checkpoint: set_status_generic
     - slot_was_set:
       - requested_slot: null
     - action: utter_ask_if_deadline
@@ -221,10 +228,7 @@ stories:
 
 - story: Set status Activity without deadline
   steps:
-    - intent: set_status_activity
-    - action: set_status_activity_form
-    - active_loop: set_status_activity_form
-    - active_loop: null
+    - checkpoint: set_status_generic
     - slot_was_set:
       - requested_slot: null
     - action: utter_ask_if_deadline
@@ -233,10 +237,7 @@ stories:
 
 - story: Set status Activity already inserted deadline
   steps:
-    - intent: set_status_activity
-    - action: set_status_activity_form
-    - active_loop: set_status_activity_form
-    - active_loop: null
+    - checkpoint: set_status_generic
     - slot_was_set:
       - time: True
     - action: action_set_status_activity
@@ -383,7 +384,7 @@ stories:
     - action: action_modify_activity
 
 #################################### Modify Activity name ######################################
-- story: Modify the activity category generic
+- story: Modify the activity name generic
   steps:
     - intent: modify_activity_name
     - action: modify_activity_name_form
@@ -391,7 +392,7 @@ stories:
     - active_loop: null
     - checkpoint: modify_activity_name_generic
 
-- story: Modify the activity category with Deadline
+- story: Modify the activity name with Deadline
   steps:
     - checkpoint: modify_activity_name_generic
     - slot_was_set:
@@ -405,7 +406,7 @@ stories:
       - requested_slot: null
     - action: action_modify_activity
 
-- story: Modify the activity category without Deadline
+- story: Modify the activity name without Deadline
   steps:
     - checkpoint: modify_activity_name_generic
     - slot_was_set:
@@ -414,7 +415,7 @@ stories:
     - intent: deny
     - action: action_modify_activity
 
-- story: Modify the activity category already Deadline
+- story: Modify the activity name already Deadline
   steps:
     - checkpoint: modify_activity_name_generic
     - slot_was_set:

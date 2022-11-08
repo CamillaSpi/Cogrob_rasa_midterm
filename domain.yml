@@ -86,9 +86,6 @@ slots:
   time:
     type: text
     influence_conversation: true
-  time_old:
-    type: text
-    influence_conversation: false
   activity_status:
     type: text
     influence_conversation: false
@@ -134,6 +131,7 @@ forms:
       activity:
         - type: from_entity
           entity: activity
+          role: new
       category:
         - type: from_entity
           entity: category
@@ -147,6 +145,7 @@ forms:
       activity:
         - type: from_entity
           entity: activity
+          role: new
       category:
         - type: from_entity
           entity: category
