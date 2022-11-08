@@ -2114,12 +2114,65 @@ stories:
 - story: test modify name of activity passing all also deadline
   steps:
   - user: |
-       my name is (Luca)[username] and I want to modify the name of the activity [hairdresser]{"entity": "activity", "role": "old"} in the category [beauty]{"entity": "category", "role": "new"} of 04/04/2022 with name [play]{"entity": "activity", "role": "new"}
+       my name is [Luca](username) and I want to modify the name of the activity [hairdresser]{"entity": "activity", "role": "old"} in the category [beauty]{"entity": "category", "role": "new"} of 04/04/2022 with name [play]{"entity": "activity", "role": "new"}
     intent: modify_activity_name
   - slot_was_set:
-      - time: "2022-12-T00:00:00.000+02:00"
+      - time: "2022-04-04T00:00:00.000+02:00"
   - action: modify_activity_name_form 
   - active_loop: modify_activity_name_form
-  
+  - active_loop: null
+  - action: action_modify_activity
+
+
+
+#################################### Test Stories Modify Activity Category ######################################
+- story: test modify category of activity passing all but no deadline yes deadline
+  steps:
+  - user: |
+       my name is [Alex](username) and I want to modify the category of the activity [shopping]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "old"} with category [households]{"entity": "category", "role": "new"}
+    intent: modify_activity_category
+  - action: modify_activity_category_form 
+  - active_loop: modify_activity_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      05/05/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-05-05T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+
+
+- story: test modify category of activity passing all but no deadline no deadline
+  steps:
+  - user: |
+       my name is [Ferdi](username) and I want to modify the category of the activity [walk]{"entity": "activity", "role": "new"} in the category [sport]{"entity": "category", "role": "old"} with category [gym]{"entity": "category", "role": "new"}
+    intent: modify_activity_category
+  - action: modify_activity_category_form 
+  - active_loop: modify_activity_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity
+
+
+- story: test modify category of activity passing all also deadline
+  steps:
+  - user: |
+       my name is [Lucia](username) and I want to modify the category of the activity [hairdresser]{"entity": "activity", "role": "old"} in the category [beauty]{"entity": "category", "role": "old"} of 04/04/2022 with name [personal]{"entity": "category", "role": "new"}
+    intent: modify_activity_category
+  - slot_was_set:
+      - time: "2022-04-04T00:00:00.000+02:00"
+  - action: modify_activity_category_form 
+  - active_loop: modify_activity_category_form
   - active_loop: null
   - action: action_modify_activity
