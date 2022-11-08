@@ -1542,7 +1542,7 @@ stories:
 - story: test modify name of activity passing all also deadline
   steps:
   - user: |
-       my name is (Luca)[username] and I want to modify the name of the activity [hairdresser]{"entity": "activity", "role": "old"} in the category [beauty]{"entity": "category", "role": "new"} of 04/04/2022 with name [play]{"entity": "activity", "role": "new"}
+       my name is [Luca](username) and I want to modify the name of the activity [hairdresser]{"entity": "activity", "role": "old"} in the category [beauty]{"entity": "category", "role": "new"} of 04/04/2022 with name [play]{"entity": "activity", "role": "new"}
     intent: modify_activity_name
   - slot_was_set:
       - time: "2022-12-T00:00:00.000+02:00"
@@ -1551,3 +1551,7 @@ stories:
   
   - active_loop: null
   - action: action_modify_activity
+
+
+
+#################################### Test Stories Modify Activity Category ######################################
