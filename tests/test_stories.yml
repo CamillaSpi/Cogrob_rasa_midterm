@@ -1340,6 +1340,28 @@ stories:
   - active_loop: null
   - action: action_set_status_activity
 
+#################################### Test Stories  Set Status UnCompleted all ######################################
+- story: remind me of later presentation
+  steps:
+  - user: |
+     remind me to [shopping]{"entity": "activity", "role": "new"} into the category [household]]{"entity": "category", "role": "new"} on 18th november 2022
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+    intent: inform
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: action_set_status_activity
+
+
 
 #################################### Test Stories  Add Item Other ######################################
 - story: later presentation and add activity already deadline 1

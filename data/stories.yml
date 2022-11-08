@@ -497,6 +497,8 @@ stories:
   - action: add_deadline_form
   - active_loop: add_deadline_form
   - active_loop: null
+  - slot_was_set:
+     - requested_slot: null
   - action: action_reminder_item
 
 - story: Reminder activity with deadline
