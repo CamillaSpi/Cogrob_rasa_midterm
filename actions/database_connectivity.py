@@ -325,6 +325,24 @@ class Database:
       print(e)
       return False
 
+  @staticmethod
+  def updateReminder(username, category, activity, deadline,reminder):
+      m = hashlib.sha256()
+      m.update(str(username).encode())
+      m.update(str(activity).encode())
+      m.update(str(category).encode())
+      m.update(str(deadline).encode())
+      m.digest()
+      id_unfolding = m.hexdigest()
+      try: 
+        conn.execute('''
+        UPDATE unfoldings SET reminder = ? WHERE id_unfolding == ?
+        ''', (reminder,id_unfolding))
+        conn.commit()
+        return True
+      except sqlite3.IntegrityError:
+        return False
+
 
   @staticmethod
   def doesUserExists(username):
