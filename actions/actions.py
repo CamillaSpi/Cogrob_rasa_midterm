@@ -389,3 +389,29 @@ class actionResetSlot(Action):
         SlotSet("time",None),
         SlotSet("activity_status",None)
         ]
+
+
+
+class actionRemindItem(Action):
+    def name(self) -> Text:
+        return "action_reminder_item"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        username = tracker.get_slot("username")
+        activity = tracker.get_slot("activity")
+        category = tracker.get_slot("category")
+        reminder = tracker.get_slot("reminder")
+        time = tracker.get_slot("time")
+
+        # check if exist and then update
+        if (Database.doesUnfoldingsExists(username,category,activity,time)):
+            Database.updateReminder(username,category,activity,time,reminder)
+        else:
+            actionAddItem.run(dispatcher,tracker,domain)
+        #else call add item
+
+        
+        
