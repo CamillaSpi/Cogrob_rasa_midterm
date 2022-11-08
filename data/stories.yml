@@ -204,12 +204,17 @@ stories:
 
 #################################### Set Completed and unCompleted Stories ######################################
 #forse si può unificare il form?
-- story: Set status Activity with deadline
+- story: Set status Activity Generic
   steps:
     - intent: set_status_activity
     - action: set_status_activity_form
     - active_loop: set_status_activity_form
     - active_loop: null
+    - checkpoint: set_status_generic
+
+- story: Set status Activity with Deadline
+  steps:
+    - checkpoint: set_status_generic
     - slot_was_set:
       - requested_slot: null
     - action: utter_ask_if_deadline
@@ -223,10 +228,7 @@ stories:
 
 - story: Set status Activity without deadline
   steps:
-    - intent: set_status_activity
-    - action: set_status_activity_form
-    - active_loop: set_status_activity_form
-    - active_loop: null
+    - checkpoint: set_status_generic
     - slot_was_set:
       - requested_slot: null
     - action: utter_ask_if_deadline
@@ -235,10 +237,7 @@ stories:
 
 - story: Set status Activity already inserted deadline
   steps:
-    - intent: set_status_activity
-    - action: set_status_activity_form
-    - active_loop: set_status_activity_form
-    - active_loop: null
+    - checkpoint: set_status_generic
     - slot_was_set:
       - time: True
     - action: action_set_status_activity

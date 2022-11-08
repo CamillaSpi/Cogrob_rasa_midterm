@@ -772,7 +772,7 @@ stories:
 - story: later presentation and set Complete (single) with deadline 1
   steps:
   - user: |
-      set completed
+      set [completed](activity_status)
     intent: set_status_activity
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
@@ -803,6 +803,543 @@ stories:
     - time: "2022-09-27T00:00:00.000+02:00"
   - active_loop: null
   - action: action_set_status_activity
+
+- story: later presentation and set Complete (single) without deadline 1
+  steps:
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - user: |
+      [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_set_status_activity
+
+- story: presentation and set Complete (single) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - user: |
+      [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: presentation and set Complete (single) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - user: |
+      [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_set_status_activity
+
+#################################### Test Stories  Set Status Completed Double ######################################
+- story: later presentation and set Complete (double) with deadline 1
+  steps:
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: later presentation and set Complete (double) without deadline 1
+  steps:
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_set_status_activity
+
+- story: presentation and set Complete (double) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in  [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: presentation and set Complete (double) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in  [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_set_status_activity
+
+#################################### Test Stories  Set Status Completed all ######################################
+- story: later presentation and set Complete (all) with deadline 1
+  steps:
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+    intent: inform
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: presentation and set Complete (all) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [completed](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+    intent: inform
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: action_set_status_activity
+
+#################################### Test Stories  Set Status uncompleted Single ######################################
+- story: later presentation and set unCompleted (single) with deadline 1
+  steps:
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - user: |
+      [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: later presentation and set unCompleted (single) without deadline 1
+  steps:
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - user: |
+      [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_set_status_activity
+
+- story: presentation and set unCompleted (single) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - user: |
+      [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: presentation and set unCompleted (single) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - user: |
+      [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_set_status_activity
+
+#################################### Test Stories  Set Status UnCompleted Double ######################################
+- story: later presentation and set unCompleted (double) with deadline 1
+  steps:
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: later presentation and set unCompleted (double) without deadline 1
+  steps:
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_set_status_activity
+
+- story: presentation and set unCompleted (double) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in  [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: presentation and set unCompleted (double) without deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in  [personal]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_set_status_activity
+
+#################################### Test Stories  Set Status UnCompleted all ######################################
+- story: later presentation and set unCompleted (all) with deadline 1
+  steps:
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      im [marc3ll0](username)
+    intent: presentation
+  - action: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+    intent: inform
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: action_set_status_activity
+
+- story: presentation and set unCompleted (all) with deadline 1
+  steps:
+  - user: |
+      im [nandinoxD](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      set [uncompleted](activity_status)
+    intent: set_status_activity
+  - action: set_status_activity_form
+  - active_loop: set_status_activity_form
+  - user: |
+      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+    intent: inform
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - action: set_status_activity_form
+  - active_loop: null
+  - action: action_set_status_activity
+
 
 #################################### Test Stories  Add Item Other ######################################
 - story: later presentation and add activity already deadline 1
