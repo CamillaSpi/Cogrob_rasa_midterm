@@ -66,6 +66,7 @@ actions:
   - action_set_reminder_slot
   - action_clean_all_completed
   - action_reset_slot
+  - action_reminder_item
 
 
 slots:
