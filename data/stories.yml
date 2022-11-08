@@ -278,8 +278,8 @@ stories:
     - intent: affirm
     - action: action_remove_category
     
-#################################### Modify Stories ######################################
-- story: Modify the category
+#################################### Modify Category Stories ######################################
+- story: Modify the category confirmed
   steps:
     - intent: modify_category
     - action: modify_category_form
@@ -290,6 +290,19 @@ stories:
     - action: utter_confirm_choice
     - intent: affirm
     - action: action_modify_category
+
+- story: Modify the category denied
+  steps:
+    - intent: modify_category
+    - action: modify_category_form
+    - active_loop: modify_category_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_confirm_choice
+    - intent: deny
+    - action: utter_deny_choice
+    - action: action_reset_slot
 
 #################################### Modify Activity Category ######################################
 - story: Modify the activity category generic

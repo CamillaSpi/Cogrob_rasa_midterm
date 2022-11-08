@@ -354,6 +354,69 @@ nlu:
     - [work]{"entity": "category", "role": "new"}
     - [vacation]{"entity": "category", "role": "new"}
     - [holiday]{"entity": "category", "role": "new"}
+    - [daily]{"entity": "category", "role": "old"}
+    - [weekly]{"entity": "category", "role": "old"}
+    - [projects]{"entity": "category", "role": "old"}
+    - [monthly]{"entity": "category", "role": "old"}
+    - [commitments]{"entity": "category", "role": "old"}
+    - [quickly]{"entity": "category", "role": "old"}
+    - [calendary]{"entity": "category", "role": "old"}
+    - [wishes]{"entity": "category", "role": "old"}
+    - [desires]{"entity": "category", "role": "old"}
+    - [carriage]{"entity": "category", "role": "old"}
+    - [trolley]{"entity": "category", "role": "old"}
+    - [times]{"entity": "category", "role": "old"}
+    - [exams]{"entity": "category", "role": "old"}
+    - [subjects]{"entity": "category", "role": "old"}
+    - [diet]{"entity": "category", "role": "old"}
+    - [bank]{"entity": "category", "role": "old"}
+    - [leisure]{"entity": "category", "role": "old"}
+    - [medications]{"entity": "category", "role": "old"}
+    - [medical]{"entity": "category", "role": "old"}
+    - [research]{"entity": "category", "role": "old"}
+    - [volunteering]{"entity": "category", "role": "old"}
+    - [finance]{"entity": "category", "role": "old"}
+    - [payments]{"entity": "category", "role": "old"}
+    - [events]{"entity": "category", "role": "old"}
+    - [job]{"entity": "category", "role": "old"}
+    - [household]{"entity": "category", "role": "old"}
+    - [personal]{"entity": "category", "role": "old"}
+    - [university]{"entity": "category", "role": "old"}
+    - [school]{"entity": "category", "role": "old"}
+    - [sport]{"entity": "category", "role": "old"}
+    - [work]{"entity": "category", "role": "old"}
+    - [vacation]{"entity": "category", "role": "old"}
+    - [holiday]{"entity": "category", "role": "old"}
+    - new category is [daily]{"entity": "category", "role": "new"}
+    - new category is [weekly]{"entity": "category", "role": "new"}
+    - new category is [projects]{"entity": "category", "role": "new"}
+    - the new category is [monthly]{"entity": "category", "role": "new"}
+    - the new category is [commitments]{"entity": "category", "role": "new"}
+    - the new category is [quickly]{"entity": "category", "role": "new"}
+    - the new one is [calendary]{"entity": "category", "role": "new"}
+    - the new one is [wishes]{"entity": "category", "role": "new"}
+    - the new one is [desires]{"entity": "category", "role": "new"}
+    - category new name is [carriage]{"entity": "category", "role": "new"}
+    - category new name is [trolley]{"entity": "category", "role": "new"}
+    - category new name is [times]{"entity": "category", "role": "new"}
+    - the new is [exams]{"entity": "category", "role": "new"}
+    - the new is [subjects]{"entity": "category", "role": "new"}
+    - the new is [diet]{"entity": "category", "role": "new"}
+    - old category is [bank]{"entity": "category", "role": "old"}
+    - old category is [leisure]{"entity": "category", "role": "old"}
+    - old category is [medications]{"entity": "category", "role": "old"}
+    - the old category is [medical]{"entity": "category", "role": "old"}
+    - the old category is [research]{"entity": "category", "role": "old"}
+    - the old category is [volunteering]{"entity": "category", "role": "old"}
+    - the old one is [finance]{"entity": "category", "role": "old"}
+    - the old one is [payments]{"entity": "category", "role": "old"}
+    - the old one is [events]{"entity": "category", "role": "old"}
+    - category old name is [job]{"entity": "category", "role": "old"}
+    - category old name is [household]{"entity": "category", "role": "old"}
+    - category old name is [personal]{"entity": "category", "role": "old"}
+    - the old is [university]{"entity": "category", "role": "old"}
+    - the old is [volunteering]{"entity": "category", "role": "old"}
+    - the old is [projects]{"entity": "category", "role": "old"}
     - tomorrow morning
     - 14th september 2022
     - at 18:00
@@ -1030,6 +1093,18 @@ nlu:
     - replace the category [exams]{"entity": "category", "role": "old"} in [calendary]{"entity": "category", "role": "new"}
     - change the category [calendary]{"entity": "category", "role": "old"} in [exams]{"entity": "category", "role": "new"}
     - I want to alter the category [medications]{"entity": "category", "role": "old"} in [events]{"entity": "category", "role": "new"}
+    - I want to convert a category
+    - convert a category
+    - convert one category
+    - transform a category
+    - let me change a category
+    - i want to modify a category
+    - alter a categoryù
+    - substitute a category
+    - vary one category
+    - vary a category
+    - i want to transform a category
+    - i want to change a category
 
 - intent: view_activities
   examples: |
