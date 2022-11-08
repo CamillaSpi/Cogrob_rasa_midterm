@@ -410,7 +410,7 @@ class actionRemindItem(Action):
         if (Database.doesUnfoldingsExists(username,category,activity,time)):
             Database.updateReminder(username,category,activity,time,reminder)
         else:
-            actionAddItem.run(dispatcher,tracker,domain)
+            actionAddItem.run(self,dispatcher,tracker,domain)
         #else call add item
 
         
