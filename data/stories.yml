@@ -372,7 +372,7 @@ stories:
     - action: action_modify_activity
 
 #################################### Modify Activity name ######################################
-- story: Modify the activity category generic
+- story: Modify the activity name generic
   steps:
     - intent: modify_activity_name
     - action: modify_activity_name_form
@@ -380,7 +380,7 @@ stories:
     - active_loop: null
     - checkpoint: modify_activity_name_generic
 
-- story: Modify the activity category with Deadline
+- story: Modify the activity name with Deadline
   steps:
     - checkpoint: modify_activity_name_generic
     - slot_was_set:
@@ -394,7 +394,7 @@ stories:
       - requested_slot: null
     - action: action_modify_activity
 
-- story: Modify the activity category without Deadline
+- story: Modify the activity name without Deadline
   steps:
     - checkpoint: modify_activity_name_generic
     - slot_was_set:
@@ -403,7 +403,7 @@ stories:
     - intent: deny
     - action: action_modify_activity
 
-- story: Modify the activity category already Deadline
+- story: Modify the activity name already Deadline
   steps:
     - checkpoint: modify_activity_name_generic
     - slot_was_set:
