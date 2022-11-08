@@ -1182,3 +1182,247 @@ stories:
   - action: view_activities_form
   - active_loop: null  
   - action: action_view_activities
+
+#################################### Test Stories Login-Signup######################################
+- story: test1 for login-signup
+  steps:
+  - user: |
+      hi my username is [Luke10](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+- story: test2 for login-signup
+  steps:
+  - user: |
+      i am [Carlo2](username) and i want to create an account
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+- story: test3 for login-signup
+  steps:
+  - user: |
+      let me create a new user
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - user: |
+      my username is [Giovanni](username)
+    intent: inform
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+- story: test4 for login-signup
+  steps:
+  - user: |
+      i am a new user
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - user: |
+      it is [Mario999](username)
+    intent: inform
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+- story: test5 for login-signup
+  steps:
+  - user: |
+      can i add a new account?
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - user: |
+      the username is [Zelda122](username)
+    intent: inform
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+
+#################################### Test Stories Show categories######################################
+- story: test1 for show categories
+  steps:
+  - user: |
+      i want to see my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: view_categories_form
+  - user: |
+      [Gerry2](username)
+    intent: inform
+  - action: view_categories_form
+  - active_loop: null 
+  - action: action_view_categories
+
+- story: test2 for show categories
+  steps:
+  - user: |
+      hi my username is [Franco](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      let me see all my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: null  
+  - action: action_view_categories
+
+- story: test3 for show categories
+  steps:
+  - user: |
+      look my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: view_categories_form
+  - user: |
+      [Nadia](username)
+    intent: inform
+  - action: view_categories_form
+  - active_loop: null 
+  - action: action_view_categories
+
+- story: test4 for show categories
+  steps:
+  - user: |
+      hi my username is [Roberto](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      i want to look at my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: null  
+  - action: action_view_categories
+
+- story: test5 for show categories
+  steps:
+  - user: |
+      my username is [Pika11](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_create_user
+  - user: |
+      my categories
+    intent: view_categories
+  - action: view_categories_form
+  - active_loop: null  
+  - action: action_view_categories
+
+#################################### Test Stories Add Category######################################
+- story: test1 for add category
+  steps:
+  - user: |
+      hi i am [Tonino](username) and i want to add a category [projects](category)
+    intent: add_category
+  - action: add_category_form
+  - active_loop: null
+  - action: action_add_category
+
+- story: test2 for add category
+  steps:
+  - user: |
+      hi i am [Tonino](username) let me add a category 
+    intent: add_category
+  - action: add_category_form
+  - active_loop: add_category_form
+  - user: |
+      the category is [school]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_category_form
+  - active_loop: null
+  - action: action_add_category
+
+- story: test3 for add category
+  steps: 
+  - user: |
+      let me add a new category
+    intent: add_category
+  - action: add_category_form
+  - active_loop: add_category_form
+  - user: |
+      username: [Sara](username)
+    intent: inform
+  - action: add_category_form
+  - user: |
+      category is [health]{"entity": "category", "role": "new"}
+    intent: inform
+  - action: add_category_form
+  - active_loop: null
+  - action: action_add_category
+
+- story: test4 for add category
+  steps:
+  - user: |
+      create a new category [sport]{"entity": "category", "role": "new"}
+    intent: add_category
+  - action: add_category_form
+  - active_loop: add_category_form
+  - user: |
+      my name is [Javier](username)
+    intent: inform
+  - action: add_category_form
+  - active_loop: null
+  - action: action_add_category
+
+
+
+
+
+
+
+
+
+
+
+
+
+#################################### Test Stories Modify Activity Deadline ######################################
+- story: test modify deadline of activity with deadline passing no date
+  steps:
+  - user: |
+      I want to modify the deadline of the activity [run]{"entity": "activity", "role": "new"} in the category [gym]{"entity": "category", "role": "new"}
+    intent: modify_activity_deadline 
+  - action: modify_activity_deadline_form 
+  - active_loop: modify_activity_deadline_form
+  - user: |
+      my name is (Cinzia)[username]
+    intent: presentation
+  - action: modify_activity_deadline_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - slot_was_set:
+    - time: "2022-12-12T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+
+- story: test modify deadline of activity without deadline passing only one date
+  steps:
+  - user: |
+      I want to modify the deadline of the activity [dinner]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"}
+    intent: modify_activity_deadline 
+  - slot_was_set:
+    - time: "2022-12-12T00:00:00.000+02:00"
+  - action: modify_activity_deadline_form 
+  - active_loop: modify_activity_deadline_form
+  - user: |
+      my name is (Cinzia)[username]
+    intent: presentation
+  - action: modify_activity_deadline_form
+  - active_loop: null
+  - action: action_modify_activity
+    

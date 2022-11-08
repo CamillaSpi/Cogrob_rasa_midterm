@@ -304,7 +304,7 @@ class actionModifyActivity(Action):
             print("sono entrato nel primo elsif")
             timeold = time[0]['from']
             timenew = time[1]
-        elif(Database.doesActivityExists(username,category_old,activity_old)): 
+        elif(Database.doesUnfoldingsExists(username,category_old,activity_old)): 
             print("sono entrato nel secondo elsif")
             timenew = time
             timeold = None
