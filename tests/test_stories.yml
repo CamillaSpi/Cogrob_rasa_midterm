@@ -479,7 +479,7 @@ stories:
   - active_loop: null
   - action: action_create_user
   - user: |
-      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      remove [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
     intent: remove_item
   - action: remove_item_form
   - active_loop: remove_item_form
@@ -753,7 +753,7 @@ stories:
   - active_loop: null
   - action: action_create_user
   - user: |
-      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at 27th september 2022
+      remove [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at 27th september 2022
     intent: remove_item
   - slot_was_set:
     - time: "2022-09-27T00:00:00.000+02:00"
@@ -1395,7 +1395,7 @@ stories:
   - action: modify_activity_deadline_form 
   - active_loop: modify_activity_deadline_form
   - user: |
-      my name is (Cinzia)[username]
+      my name is [Cinzia](username)
     intent: presentation
   - action: modify_activity_deadline_form
   - active_loop: null
@@ -1420,7 +1420,7 @@ stories:
   - action: modify_activity_deadline_form 
   - active_loop: modify_activity_deadline_form
   - user: |
-      my name is (Cinzia)[username]
+      my name is [Cinzia](username)
     intent: presentation
   - action: modify_activity_deadline_form
   - active_loop: null
