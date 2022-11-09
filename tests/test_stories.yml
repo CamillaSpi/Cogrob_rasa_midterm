@@ -2122,6 +2122,7 @@ stories:
   - action: modify_category_form
   - user: |
       the new one category name is [hobby]{"entity": "category", "role": "new"}
+    intent: inform
   - action: modify_category_form
   - active_loop: null
   - action: utter_confirm_choice
@@ -2360,3 +2361,153 @@ stories:
   - active_loop: modify_activity_category_form
   - active_loop: null
   - action: action_modify_activity
+
+#################################### Test Stories Remove Category confirmed######################################
+- story: test1 remove category confirmed
+  steps:
+  - user: |
+      remove a category
+    intent: remove_category
+  - action: remove_category_form 
+  - active_loop: remove_category_form
+  - user: |
+      my name is [Jonathan](username)
+    intent: inform
+  - action: remove_category_form
+  - user: |
+      the category is [wellness](category)
+    intent: inform
+  - action: remove_category_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      y
+    intent: affirm
+  - action: action_remove_category
+
+- story: test2 remove category confirmed
+  steps:
+  - user: |
+      cancel the category [projects](category)
+    intent: remove_category
+  - action: remove_category_form 
+  - active_loop: remove_category_form
+  - user: |
+      username is [Jonathan](username)
+    intent: inform
+  - action: remove_category_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      yeah
+    intent: affirm
+  - action: action_remove_category
+
+- story: test3 remove category confirmed
+  steps:
+  - user: |
+      i am [Federico](username) and i want to remove a category 
+    intent: remove_category
+  - action: remove_category_form 
+  - active_loop: remove_category_form
+  - user: |
+      the category is [friends](category)
+    intent: inform
+  - action: remove_category_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      yep
+    intent: affirm
+  - action: action_remove_category
+
+- story: test4 remove category confirmed
+  steps:
+  - user: |
+      i am [Federico](username) and i want to cancel the category [home](category) 
+    intent: remove_category
+  - action: remove_category_form 
+  - active_loop: remove_category_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      yes, thanks
+    intent: affirm
+  - action: action_remove_category
+
+#################################### Test Stories Remove Category denied######################################
+- story: test1 remove category denied
+  steps:
+  - user: |
+      remove category
+    intent: remove_category
+  - action: remove_category_form 
+  - active_loop: remove_category_form
+  - user: |
+      i am [Roberto1999](username)
+    intent: inform
+  - action: remove_category_form
+  - user: |
+      category [healthcare](category)
+    intent: inform
+  - action: remove_category_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test2 remove category denied
+  steps:
+  - user: |
+      cancel category [study](category)
+    intent: remove_category
+  - action: remove_category_form 
+  - active_loop: remove_category_form
+  - user: |
+      username [Carletto66](username)
+    intent: inform
+  - action: remove_category_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test3 remove category denied
+  steps:
+  - user: |
+      my username is [David00](username) and i need to remove a category 
+    intent: remove_category
+  - action: remove_category_form 
+  - active_loop: remove_category_form
+  - user: |
+      [sport](category)
+    intent: inform
+  - action: remove_category_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
+
+- story: test4 remove category denied
+  steps:
+  - user: |
+      hello, i am [vito999](username) and i want to delete the category [personal](category) 
+    intent: remove_category
+  - action: remove_category_form 
+  - active_loop: remove_category_form
+  - active_loop: null
+  - action: utter_confirm_choice
+  - user: |
+      no
+    intent: deny
+  - action: utter_deny_choice
+  - action: action_reset_slot
