@@ -413,13 +413,24 @@ class actionRemindItem(Action):
             actionAddItem.run(self,dispatcher,tracker,domain)
         #else call add item
 
-  
-class actionAskName(Action):
+
+class actionAskCategoryOld(Action):
     def name(self) -> Text:
-        return "action_ask_username"
+        return "action_ask_category_old"
     
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text=f"Test")
+        category_old = tracker.get_slot("category_old")
+        category = tracker.get_slot("category")
+        print("mi e arrivato ", category_old, category)
+        if(category_old == None):
+            if(category == None):
+                evt = FollowupAction(name = "action_say_goodbye")
+                dispatcher.utter_message(text=f"Please insert the category to be modified")
+            else:
+                print("ci sono entrat")
+                return[SlotSet("category_old",category),SlotSet("category",None)]    
+        return []
+
