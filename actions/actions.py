@@ -427,7 +427,6 @@ class actionAskCategoryOld(Action):
         print("mi e arrivato ", category_old, category)
         if(category_old == None):
             if(category == None):
-                evt = FollowupAction(name = "action_say_goodbye")
                 dispatcher.utter_message(text=f"Please insert the category to be modified")
             else:
                 print("ci sono entrat")

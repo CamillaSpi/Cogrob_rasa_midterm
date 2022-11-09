@@ -188,8 +188,7 @@ forms:
           entity: username
       category:
         - type: from_entity
-          entity: category
-          role: new   
+          entity: category   
       category_old:
         - type: from_entity
           entity: category
