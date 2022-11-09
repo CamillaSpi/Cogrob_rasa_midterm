@@ -126,7 +126,7 @@ stories:
   - active_loop: add_deadline_form
   - active_loop: null
   - slot_was_set:
-    - time: true
+    - requested_slot: null
   - action: utter_confirm_choice
   - intent: deny
   - action: utter_deny_choice
@@ -303,6 +303,23 @@ stories:
     - intent: deny
     - action: utter_deny_choice
     - action: action_reset_slot
+
+- story: Modify the category completed
+   - intent: modify_category
+    - slot_was_set:
+      - category: true
+      - activity: true
+      - category_new: true
+  - action: utter_happy
+
+- story: Modify the category completed
+   - intent: modify_category
+    - slot_was_set:
+      - category: true
+      - activity: true
+      - category_new: true
+  - action: utter_happy
+
 
 #################################### Modify Activity Category ######################################
 - story: Modify the activity category generic
