@@ -413,5 +413,13 @@ class actionRemindItem(Action):
             actionAddItem.run(self,dispatcher,tracker,domain)
         #else call add item
 
-        
-        
+  
+class actionAskName(Action):
+    def name(self) -> Text:
+        return "action_ask_username"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text=f"Test")

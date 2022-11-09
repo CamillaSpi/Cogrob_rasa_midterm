@@ -67,6 +67,7 @@ actions:
   - action_clean_all_completed
   - action_reset_slot
   - action_reminder_item
+  - action_ask_username
 
 
 slots:
@@ -362,8 +363,6 @@ responses:
   utter_ask_category:
   - text: "Please insert the category of the item"
  
-  utter_ask_username:
-  - text: "What is your username?"
 
   utter_confirm_choice:
   - text: "Are you sure!?"
