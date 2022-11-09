@@ -2511,3 +2511,109 @@ stories:
     intent: deny
   - action: utter_deny_choice
   - action: action_reset_slot
+
+  #################################### Test Stories reminder without deadline######################################
+- story: test1 reminder without deadline
+  steps:
+  - user: |
+      let me set a reminder
+    intent: remind_me_of
+  - action: action_set_reminder_slot
+  - action: add_item_form 
+  - active_loop: add_item_form
+  - user: |
+      username [Ciccio99](username)
+    intent: inform
+  - action: add_item_form
+  - user: |
+      [match](activity)
+    intent: inform
+  - action: add_item_form
+  - user: |
+      [gym](category)
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      07/12/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-12-07T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_reminder_item
+
+- story: test2 reminder without deadline
+  steps:
+  - user: |
+      my username is [Ivan99](username) i want to set a reminder
+    intent: remind_me_of
+  - action: action_set_reminder_slot
+  - action: add_item_form 
+  - active_loop: add_item_form
+  - user: |
+      the activity is [match](activity)
+    intent: inform
+  - action: add_item_form
+  - user: |
+      category [projects](category)
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      07/30/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-30-07T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_reminder_item
+
+- story: test3 reminder without deadline
+  steps:
+  - user: |
+      my username is [David00](username) and i want to set a reminder for [test](activity) 
+    intent: remind_me_of
+  - action: action_set_reminder_slot
+  - action: add_item_form 
+  - active_loop: add_item_form
+  - user: |
+      category [school](category)
+    intent: inform
+  - action: add_item_form
+  - active_loop: null
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      02/15/2023
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2023-15-02T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_reminder_item
+
+- story: test4 reminder without deadline
+  steps:
+  - user: |
+      the username is [Enrico12](username) and i want to set a reminder for [gym](activity) in [sport](category)
+    intent: remind_me_of
+  - action: action_set_reminder_slot
+  - action: add_item_form 
+  - active_loop: add_item_form
+  - active_loop: null
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      02/15/2023
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2023-15-02T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_reminder_item
+

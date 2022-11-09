@@ -345,7 +345,7 @@ stories:
 
 
 #################################### Modify Activity Deadline ######################################
-- story: Modify the activity category generic
+- story: Modify the activity deadline generic
   steps:
     - intent: modify_activity_deadline
     - action: modify_activity_deadline_form
@@ -353,7 +353,7 @@ stories:
     - active_loop: null
     - checkpoint: modify_activity_deadline_generic
 
-- story: Modify the activity category with Deadline
+- story: Modify the activity deadline with Deadline
   steps:
     - checkpoint: modify_activity_deadline_generic
     - slot_was_set:
@@ -367,7 +367,7 @@ stories:
       - requested_slot: null
     - action: action_modify_activity
 
-- story: Modify the activity category without Deadline
+- story: Modify the activity deadline denied
   steps:
     - checkpoint: modify_activity_deadline_generic
     - slot_was_set:
@@ -376,7 +376,7 @@ stories:
     - intent: deny
     - action: action_modify_activity
 
-- story: Modify the activity category already Deadline
+- story: Modify the activity deadline confirmed
   steps:
     - checkpoint: modify_activity_deadline_generic
     - slot_was_set:
