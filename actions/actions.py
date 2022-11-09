@@ -430,6 +430,7 @@ class actionAskCategoryOld(Action):
                 dispatcher.utter_message(text=f"Please insert the category to be modified")
             else:
                 print("ci sono entrat")
+                dispatcher.utter_message(text=f"Please insert the category")
                 return[SlotSet("category_old",category),SlotSet("category",None)]    
         return []
 
