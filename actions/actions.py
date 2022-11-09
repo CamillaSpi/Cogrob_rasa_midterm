@@ -313,7 +313,7 @@ class actionModifyActivity(Action):
             possibleDeadlineErrorFlag=True
             timenew = time
             timeold = time
-        if possibleDeadlineErrorFlag is True and activity_new is None and category_new is None:
+        if possibleDeadlineErrorFlag is True and activity_old is None and category_old is None:
             print("sono nel possibleDead")
             dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
             return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None)]
@@ -424,12 +424,23 @@ class actionAskCategoryOld(Action):
 
         category_old = tracker.get_slot("category_old")
         category = tracker.get_slot("category")
-        print("mi e arrivato ", category_old, category)
         if(category_old == None):
-            if(category == None):
-                dispatcher.utter_message(text=f"Please insert the category to be modified")
-            else:
-                print("ci sono entrat")
-                return[SlotSet("category_old",category),SlotSet("category",None)]    
+            dispatcher.utter_message(text=f"Please insert the category new ")
+            return[SlotSet("category_old",category),SlotSet("category",None)]    
         return []
 
+
+class actionAskActivityOld(Action):
+    def name(self) -> Text:
+        return "action_ask_activity_old"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        activity_old = tracker.get_slot("activity_old")
+        activity = tracker.get_slot("activity")
+        if(activity_old == None):
+            dispatcher.utter_message(text=f"Please insert the activity new")
+            return[SlotSet("activity_old",activity),SlotSet("activity",None)]    
+        return []

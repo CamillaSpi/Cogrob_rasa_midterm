@@ -68,6 +68,7 @@ actions:
   - action_reset_slot
   - action_reminder_item
   - action_ask_category_old
+  - action_ask_activity_old
 
 
 slots:
@@ -202,31 +203,29 @@ forms:
       activity:
         - type: from_entity
           entity: activity
+      category:
+        - type: from_entity
+          entity: category
       category_old:
         - type: from_entity
           entity: category
           role: old
-      category:
-        - type: from_entity
-          entity: category
-          role: new
 
   modify_activity_name_form:
     required_slots:
       username:
         - type: from_entity
           entity: username
-      activity_old:
-        - type: from_entity
-          entity: activity
-          role: old
       category:
         - type: from_entity
           entity: category
       activity:
         - type: from_entity
           entity: activity
-          role: new
+      activity_old:
+        - type: from_entity
+          entity: activity
+          role: old
 
   modify_activity_deadline_form:
     required_slots:
@@ -248,42 +247,39 @@ forms:
       username:
         - type: from_entity
           entity: username
+      activity:
+        - type: from_entity
+          entity: activity
       activity_old:
         - type: from_entity
           entity: activity
           role: old
+      category:
+        - type: from_entity
+          entity: category
       category_old:
         - type: from_entity
           entity: category
           role: old
-      category:
-        - type: from_entity
-          entity: activity
-          role: new
-      activity:
-        - type: from_entity
-          entity: activity
-          role: new
 
   modify_activity_name_deadline_form:
     required_slots:
       username:
         - type: from_entity
           entity: username
+      category:
+        - type: from_entity
+          entity: category
+      activity:
+        - type: from_entity
+          entity: activity
       activity_old:
         - type: from_entity
           entity: activity
           role: old
-      category:
-        - type: from_entity
-          entity: category
       time:
         - type: from_entity
           entity: time
-      activity:
-        - type: from_entity
-          entity: activity
-          role: new
 
   modify_activity_category_deadline_form:
     required_slots:
@@ -293,6 +289,9 @@ forms:
       activity:
         - type: from_entity
           entity: activity
+      category:
+        - type: from_entity
+          entity: activity
       category_old:
         - type: from_entity
           entity: category
@@ -300,10 +299,6 @@ forms:
       time:
         - type: from_entity
           entity: time
-      category:
-        - type: from_entity
-          entity: activity
-          role: new
 
   clean_activities_form: 
     required_slots:
@@ -343,7 +338,7 @@ responses:
   - text: "Please insert the time"
 
   utter_ask_if_deadline:
-  - text: "Do you want to set a deadline for the activity?"
+  - text: "Did this item have a deadline?"
 
   utter_ask_if_reminder:
   - text: "Do you want to set a reminder for the activity?"
@@ -352,12 +347,11 @@ responses:
   - text: "Please insert the activity"
 
   utter_ask_category:
-  - text: "Please insert the category of the item"
+  - text: "Please insert the category"
  
 
   utter_confirm_choice:
   - text: "Are you sure!?"
-
   utter_ask_username:
   - text: "PLease usernam"
   utter_deny_choice:
