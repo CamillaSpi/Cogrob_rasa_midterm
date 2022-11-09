@@ -67,7 +67,7 @@ actions:
   - action_clean_all_completed
   - action_reset_slot
   - action_reminder_item
-  - action_ask_username
+  - action_ask_category_old
 
 
 slots:
@@ -186,24 +186,23 @@ forms:
       username:
         - type: from_entity
           entity: username
-      category_old:
-        - type: from_entity
-          entity: category
-          role: old
       category:
         - type: from_entity
           entity: category
           role: new   
+      category_old:
+        - type: from_entity
+          entity: category
+          role: old
 
   modify_activity_category_form:
     required_slots:
       username:
         - type: from_entity
           entity: username
-      activity_old:
+      activity:
         - type: from_entity
           entity: activity
-          role: old
       category_old:
         - type: from_entity
           entity: category
@@ -222,10 +221,9 @@ forms:
         - type: from_entity
           entity: activity
           role: old
-      category_old:
+      category:
         - type: from_entity
           entity: category
-          role: old
       activity:
         - type: from_entity
           entity: activity
@@ -239,14 +237,12 @@ forms:
       time:
         - type: from_entity
           entity: time
-      activity_old:
+      activity:
         - type: from_entity
           entity: activity
-          role: old
-      category_old:
+      category:
         - type: from_entity
           entity: category
-          role: old
 
   modify_activity_name_category_form:
     required_slots:
@@ -279,14 +275,12 @@ forms:
         - type: from_entity
           entity: activity
           role: old
-      category_old:
+      category:
         - type: from_entity
           entity: category
-          role: old
       time:
         - type: from_entity
-          entity: activity
-          role: new
+          entity: time
       activity:
         - type: from_entity
           entity: activity
@@ -297,18 +291,16 @@ forms:
       username:
         - type: from_entity
           entity: username
-      activity_old:
+      activity:
         - type: from_entity
           entity: activity
-          role: old
       category_old:
         - type: from_entity
           entity: category
           role: old
       time:
         - type: from_entity
-          entity: activity
-          role: new
+          entity: time
       category:
         - type: from_entity
           entity: activity
@@ -367,6 +359,8 @@ responses:
   utter_confirm_choice:
   - text: "Are you sure!?"
 
+  utter_ask_username:
+  - text: "PLease usernam"
   utter_deny_choice:
   - text: "Ok cancelled"
 

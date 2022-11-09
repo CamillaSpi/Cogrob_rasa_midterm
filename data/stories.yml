@@ -279,52 +279,31 @@ stories:
     - action: action_remove_category
     
 #################################### Modify Category Stories ######################################
-# - story: Modify the category confirmed
-#   steps:
-#     - intent: modify_category
-#     - action: modify_category_form
-#     - active_loop: modify_category_form
-#     - active_loop: null
-#     - slot_was_set:
-#       - requested_slot: null
-#     - action: utter_confirm_choice
-#     - intent: affirm
-#     - action: action_modify_category
-
-# - story: Modify the category denied
-#   steps:
-#     - intent: modify_category
-#     - action: modify_category_form
-#     - active_loop: modify_category_form
-#     - active_loop: null
-#     - slot_was_set:
-#       - requested_slot: null
-#     - action: utter_confirm_choice
-#     - intent: deny
-#     - action: utter_deny_choice
-#     - action: action_reset_slot
-
-- story: Modify the category completed
+- story: Modify the category confirmed
   steps:
     - intent: modify_category
+    - action: modify_category_form
+    - active_loop: modify_category_form
+    - active_loop: null
     - slot_was_set:
-      - category: false
-      - category_old: false
-    - action: utter_greet
+      - requested_slot: null
+    - action: utter_confirm_choice
+    - intent: affirm
+    - action: action_modify_category
 
-- story: Modify the category completed
+- story: Modify the category denied
   steps:
     - intent: modify_category
+    - action: modify_category_form
+    - active_loop: modify_category_form
+    - active_loop: null
     - slot_was_set:
-      - category: true
-      - category_old: true
-    - action: utter_happy
-- story: Modify the category completed
-  steps:
-    - intent: modify_category
-    - slot_was_set:
-      - category: true
-    - action: utter_happy
+      - requested_slot: null
+    - action: utter_confirm_choice
+    - intent: deny
+    - action: utter_deny_choice
+    - action: action_reset_slot
+
 
 #################################### Modify Activity Category ######################################
 - story: Modify the activity category generic
