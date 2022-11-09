@@ -296,127 +296,128 @@ nlu:
     - [Giusy_5](username)
     - [cristina06](username)
     - [Giorgio00](username)
-    - [run]{"entity": "activity", "role": "new"}
-    - [bed]{"entity": "activity", "role": "new"}
-    - [stand_up]{"entity": "activity", "role": "new"}
-    - [swimmming]{"entity": "activity", "role": "new"}
-    - [play]{"entity": "activity", "role": "new"}
-    - [jogging]{"entity": "activity", "role": "new"}
-    - [study]{"entity": "activity", "role": "new"}
-    - [sleep]{"entity": "activity", "role": "new"}
-    - [walk]{"entity": "activity", "role": "new"}
-    - [exit]{"entity": "activity", "role": "new"}
-    - [cooking]{"entity": "activity", "role": "new"}
-    - [note]{"entity": "activity", "role": "new"}
-    - [reed]{"entity": "activity", "role": "new"}
-    - [shopping]{"entity": "activity", "role": "new"}
-    - [ring]{"entity": "activity", "role": "new"}
-    - [playing]{"entity": "activity", "role": "new"}
-    - [match]{"entity": "activity", "role": "new"}
-    - [cards]{"entity": "activity", "role": "new"}
-    - [paint]{"entity": "activity", "role": "new"}
-    - [draw]{"entity": "activity", "role": "new"}
-    - [travel]{"entity": "activity", "role": "new"}
-    - [fuel]{"entity": "activity", "role": "new"}
-    - [refuel]{"entity": "activity", "role": "new"}
-    - [search]{"entity": "activity", "role": "new"}
-    - [sport]{"entity": "activity", "role": "new"}
-    - [daily]{"entity": "category", "role": "new"}
-    - [weekly]{"entity": "category", "role": "new"}
-    - [projects]{"entity": "category", "role": "new"}
-    - [monthly]{"entity": "category", "role": "new"}
-    - [commitments]{"entity": "category", "role": "new"}
-    - [quickly]{"entity": "category", "role": "new"}
-    - [calendary]{"entity": "category", "role": "new"}
-    - [wishes]{"entity": "category", "role": "new"}
-    - [desires]{"entity": "category", "role": "new"}
-    - [carriage]{"entity": "category", "role": "new"}
-    - [trolley]{"entity": "category", "role": "new"}
-    - [times]{"entity": "category", "role": "new"}
-    - [exams]{"entity": "category", "role": "new"}
-    - [subjects]{"entity": "category", "role": "new"}
-    - [diet]{"entity": "category", "role": "new"}
-    - [bank]{"entity": "category", "role": "new"}
-    - [leisure]{"entity": "category", "role": "new"}
-    - [medications]{"entity": "category", "role": "new"}
-    - [medical]{"entity": "category", "role": "new"}
-    - [research]{"entity": "category", "role": "new"}
-    - [volunteering]{"entity": "category", "role": "new"}
-    - [finance]{"entity": "category", "role": "new"}
-    - [payments]{"entity": "category", "role": "new"}
-    - [events]{"entity": "category", "role": "new"}
-    - [job]{"entity": "category", "role": "new"}
-    - [household]{"entity": "category", "role": "new"}
-    - [personal]{"entity": "category", "role": "new"}
-    - [university]{"entity": "category", "role": "new"}
-    - [school]{"entity": "category", "role": "new"}
-    - [sport]{"entity": "category", "role": "new"}
-    - [work]{"entity": "category", "role": "new"}
-    - [vacation]{"entity": "category", "role": "new"}
-    - [holiday]{"entity": "category", "role": "new"}
-    - [daily]{"entity": "category", "role": "old"}
-    - [weekly]{"entity": "category", "role": "old"}
-    - [projects]{"entity": "category", "role": "old"}
-    - [monthly]{"entity": "category", "role": "old"}
-    - [commitments]{"entity": "category", "role": "old"}
-    - [quickly]{"entity": "category", "role": "old"}
-    - [calendary]{"entity": "category", "role": "old"}
-    - [wishes]{"entity": "category", "role": "old"}
-    - [desires]{"entity": "category", "role": "old"}
-    - [carriage]{"entity": "category", "role": "old"}
-    - [trolley]{"entity": "category", "role": "old"}
-    - [times]{"entity": "category", "role": "old"}
-    - [exams]{"entity": "category", "role": "old"}
-    - [subjects]{"entity": "category", "role": "old"}
-    - [diet]{"entity": "category", "role": "old"}
-    - [bank]{"entity": "category", "role": "old"}
-    - [leisure]{"entity": "category", "role": "old"}
-    - [medications]{"entity": "category", "role": "old"}
-    - [medical]{"entity": "category", "role": "old"}
-    - [research]{"entity": "category", "role": "old"}
-    - [volunteering]{"entity": "category", "role": "old"}
-    - [finance]{"entity": "category", "role": "old"}
-    - [payments]{"entity": "category", "role": "old"}
-    - [events]{"entity": "category", "role": "old"}
-    - [job]{"entity": "category", "role": "old"}
-    - [household]{"entity": "category", "role": "old"}
-    - [personal]{"entity": "category", "role": "old"}
-    - [university]{"entity": "category", "role": "old"}
-    - [school]{"entity": "category", "role": "old"}
-    - [sport]{"entity": "category", "role": "old"}
-    - [work]{"entity": "category", "role": "old"}
-    - [vacation]{"entity": "category", "role": "old"}
-    - [holiday]{"entity": "category", "role": "old"}
-    - new category is [daily]{"entity": "category", "role": "new"}
-    - new category is [weekly]{"entity": "category", "role": "new"}
-    - new category is [projects]{"entity": "category", "role": "new"}
-    - the new category is [monthly]{"entity": "category", "role": "new"}
-    - the new category is [commitments]{"entity": "category", "role": "new"}
-    - the new category is [quickly]{"entity": "category", "role": "new"}
-    - the new one is [calendary]{"entity": "category", "role": "new"}
-    - the new one is [wishes]{"entity": "category", "role": "new"}
-    - the new one is [desires]{"entity": "category", "role": "new"}
-    - category new name is [carriage]{"entity": "category", "role": "new"}
-    - category new name is [trolley]{"entity": "category", "role": "new"}
-    - category new name is [times]{"entity": "category", "role": "new"}
-    - the new is [exams]{"entity": "category", "role": "new"}
-    - the new is [subjects]{"entity": "category", "role": "new"}
-    - the new is [diet]{"entity": "category", "role": "new"}
-    - old category is [bank]{"entity": "category", "role": "old"}
-    - old category is [leisure]{"entity": "category", "role": "old"}
-    - old category is [medications]{"entity": "category", "role": "old"}
-    - the old category is [medical]{"entity": "category", "role": "old"}
-    - the old category is [research]{"entity": "category", "role": "old"}
-    - the old category is [volunteering]{"entity": "category", "role": "old"}
-    - the old one is [finance]{"entity": "category", "role": "old"}
-    - the old one is [payments]{"entity": "category", "role": "old"}
-    - the old one is [events]{"entity": "category", "role": "old"}
-    - category old name is [job]{"entity": "category", "role": "old"}
-    - category old name is [household]{"entity": "category", "role": "old"}
-    - category old name is [personal]{"entity": "category", "role": "old"}
-    - the old is [university]{"entity": "category", "role": "old"}
-    - the old is [volunteering]{"entity": "category", "role": "old"}
-    - the old is [projects]{"entity": "category", "role": "old"}
+    - [run](activity)
+    - [bed](activity)
+    - [stand_up](activity)
+    - [swimmming](activity)
+    - [play](activity)
+    - [jogging](activity)
+    - [study](activity)
+    - [sleep](activity)
+    - [walk](activity)
+    - [exit](activity)
+    - [cooking](activity)
+    - [note](activity)
+    - [reed](activity)
+    - [shopping](activity)
+    - [ring](activity)
+    - [playing](activity)
+    - [match](activity)
+    - [cards](activity)
+    - [paint](activity)
+    - [draw](activity)
+    - [travel](activity)
+    - [fuel](activity)
+    - [refuel](activity)
+    - [search](activity)
+    - [sport](activity)
+    - [daily](category)
+    - [health](category)
+    - [weekly](category)
+    - [projects](category)
+    - [monthly](category)
+    - [commitments](category)
+    - [quickly](category)
+    - [calendary](category)
+    - [wishes](category)
+    - [desires](category)
+    - [carriage](category)
+    - [trolley](category)
+    - [times](category)
+    - [exams](category)
+    - [subjects](category)
+    - [diet](category)
+    - [bank](category)
+    - [leisure](category)
+    - [medications](category)
+    - [medical](category)
+    - [research](category)
+    - [volunteering](category)
+    - [finance](category)
+    - [payments](category)
+    - [events](category)
+    - [job](category)
+    - [household](category)
+    - [personal](category)
+    - [university](category)
+    - [school](category)
+    - [sport](category)
+    - [work](category)
+    - [vacation](category)
+    - [holiday](category)
+    - [daily](category)
+    - [weekly](category)
+    - [projects](category)
+    - [monthly](category)
+    - [commitments](category)
+    - [quickly](category)
+    - [calendary](category)
+    - [wishes](category)
+    - [desires](category)
+    - [carriage](category)
+    - [trolley](category)
+    - [times](category)
+    - [exams](category)
+    - [subjects](category)
+    - [diet](category)
+    - [bank](category)
+    - [leisure](category)
+    - [medications](category)
+    - [medical](category)
+    - [research](category)
+    - [volunteering](category)
+    - [finance](category)
+    - [payments](category)
+    - [events](category)
+    - [job](category)
+    - [household](category)
+    - [personal](category)
+    - [university](category)
+    - [school](category)
+    - [sport](category)
+    - [work](category)
+    - [vacation](category)
+    - [holiday](category)
+    - new category is [daily](category)
+    - new category is [weekly](category)
+    - new category is [projects](category)
+    - the new category is [monthly](category)
+    - the new category is [commitments](category)
+    - the new category is [quickly](category)
+    - the new one is [calendary](category)
+    - the new one is [wishes](category)
+    - the new one is [desires](category)
+    - category new name is [carriage](category)
+    - category new name is [trolley](category)
+    - category new name is [times](category)
+    - the new is [exams](category)
+    - the new is [subjects](category)
+    - the new is [diet](category)
+    - old category is [bank]((category))
+    - old category is [leisure](category)
+    - old category is [medications](category)
+    - the old category is [medical](category)
+    - the old category is [research](category)
+    - the old category is [volunteering](category)
+    - the old one is [finance](category)
+    - the old one is [payments](category)
+    - the old one is [events](category)
+    - category old name is [job](category)
+    - category old name is [household](category)
+    - category old name is [personal](category)
+    - the old is [university](category)
+    - the old is [volunteering](category)
+    - the old is [projects](category)
     - tomorrow morning
     - 14th september 2022
     - at 18:00
@@ -441,230 +442,230 @@ nlu:
 
 - intent: add_item
   examples: |
-    - add [run]{"entity": "activity", "role": "new"}
-    - insert [bed]{"entity": "activity", "role": "new"}
-    - enter [stand_up]{"entity": "activity", "role": "new"}
-    - put [swimmming]{"entity": "activity", "role": "new"}
-    - add [beauty]{"entity": "activity", "role": "new"}
-    - put in the activity [swimming]{"entity": "activity", "role": "new"}
-    - insert [jogging]{"entity": "activity", "role": "new"}
-    - add [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - put [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - add [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - enter [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - add [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - put [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - put in the activity [wash]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - put in activity [study]{"entity": "activity", "role": "new"} in [school]{"entity": "category", "role": "new"}
-    - insert activity [run]{"entity": "activity", "role": "new"} in [beauty]{"entity": "category", "role": "new"}
-    - add activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - enter activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - add activity [study]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - put activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - put activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - create the activity [dinner]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
-    - add [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - insert [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
-    - add [stand_up]{"entity": "activity", "role": "new"} in the category [daily]{"entity": "category", "role": "new"}
-    - add [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - enter [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - put in [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - insert activity [run]{"entity": "activity", "role": "new"} in the category [monthly]{"entity": "category", "role": "new"}
-    - put activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - put in activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - add activity [swimmming]{"entity": "activity", "role": "new"} in the category [commitments]{"entity": "category", "role": "new"}
-    - enter activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - put activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
-    - in the category [university]{"entity": "category", "role": "new"} add the activity [exam]{"entity": "activity", "role": "new"}
-    - in the category [households]{"entity": "category", "role": "new"} insert the new activity [cleaning]{"entity": "activity", "role": "new"}
-    - in the category [sport]{"entity": "category", "role": "new"} insert an activity [climbing]{"entity": "activity", "role": "new"}
-    - in the category [sport]{"entity": "category", "role": "new"} create a new activity [walking]{"entity": "activity", "role": "new"}
+    - add [run](activity)
+    - insert [bed](activity)
+    - enter [stand_up](activity)
+    - put [swimmming](activity)
+    - add [beauty](activity)
+    - put in the activity [swimming](activity)
+    - insert [jogging](activity)
+    - add [run](activity) in [daily](category)
+    - put [bed](activity) in [projects](category)
+    - add [stand_up](activity) in [weekly](category)
+    - enter [swimmming](activity) in [monthly](category)
+    - add [play](activity) in [commitments](category)
+    - put [jogging](activity) in [quickly](category)
+    - put in the activity [wash](activity) in [quickly](category)
+    - put in activity [study](activity) in [school](category)
+    - insert activity [run](activity) in [beauty](category)
+    - add activity [bed](activity) in [daily](category)
+    - enter activity [stand_up](activity) in [commitments](category)
+    - add activity [study](activity) in [projects](category)
+    - put activity [play](activity) in [monthly](category)
+    - put activity [jogging](activity) in [quickly](category)
+    - create the activity [dinner](activity) in [personal](category)
+    - add [run](activity) in category [commitments](category)
+    - insert [bed](activity) in category [weekly](category)
+    - add [stand_up](activity) in the category [daily](category)
+    - add [swimmming](activity) in category [quickly](category)
+    - enter [play](activity) in category [projects](category)
+    - put in [jogging](activity) in category [monthly](category)
+    - insert activity [run](activity) in the category [monthly](category)
+    - put activity [bed](activity) in category [quickly](category)
+    - put in activity [stand_up](activity) in category [projects](category)
+    - add activity [swimmming](activity) in the category [commitments](category)
+    - enter activity [play](activity) in category [daily](category)
+    - put activity [jogging](activity) in category [weekly](category)
+    - in the category [university](category) add the activity [exam](activity)
+    - in the category [households](category) insert the new activity [cleaning](activity)
+    - in the category [sport](category) insert an activity [climbing](activity)
+    - in the category [sport](category) create a new activity [walking](activity)
     - I want to add an activity
     - I want to add a new activity
     - I want to insert an activity to a list
     - I want to create a new activity 
-    - I want to add an activity [run]{"entity": "activity", "role": "new"} to [weekly]{"entity": "category", "role": "new"} category
-    - I want to enter a new activity [swimmming]{"entity": "activity", "role": "new"} to [daily]{"entity": "category", "role": "new"} list
-    - I want to create the activity [play]{"entity": "activity", "role": "new"} to [commitments]{"entity": "category", "role": "new"} list
-    - I want to enter an activity [stand_up]{"entity": "activity", "role": "new"} to [projects]{"entity": "category", "role": "new"} list
-    - I want to insert the new activity [jogging]{"entity": "activity", "role": "new"} to [monthly]{"entity": "category", "role": "new"} category
-    - I want to put a new activity [shopping]{"entity": "activity", "role": "new"} to [quickly]{"entity": "category", "role": "new"} list
-    - I want to put in the activity [run]{"entity": "activity", "role": "new"} to [weekly]{"entity": "category", "role": "new"}
-    - I want to put an activity [study]{"entity": "activity", "role": "new"} to [daily]{"entity": "category", "role": "new"}
-    - I want to enter an activity [payments]{"entity": "activity", "role": "new"} to [commitments]{"entity": "category", "role": "new"}
-    - I want to add the new activity [stand_up]{"entity": "activity", "role": "new"} to [projects]{"entity": "category", "role": "new"}
-    - I want to add a new activity [jogging]{"entity": "activity", "role": "new"} to [monthly]{"entity": "category", "role": "new"}
-    - I want to put an activity [shopping]{"entity": "activity", "role": "new"} to [quickly]{"entity": "category", "role": "new"}
-    - I want to add an activity to [weekly]{"entity": "category", "role": "new"} list
-    - I want to insert an activity to [daily]{"entity": "category", "role": "new"} category
-    - I want to put the activity to [commitments]{"entity": "category", "role": "new"} list
-    - I want to enter an activity to [projects]{"entity": "category", "role": "new"} category
-    - I want to add an activity to [monthly]{"entity": "category", "role": "new"} list
-    - I want to insert an activity to [quickly]{"entity": "category", "role": "new"} category
-    - in the category [gym]{"entity": "category", "role": "new"}, i want to add the activity [climbing]{"entity": "activity", "role": "new"}
-    - in the category [utils]{"entity": "category", "role": "new"}, i want to insert an activity [shopping]{"entity": "activity", "role": "new"}
-    - hi, I want to create an activity to [weekly]{"entity": "category", "role": "new"} list
-    - hi, I want to put a new activity to [daily]{"entity": "category", "role": "new"} category
-    - hi, I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list
-    - hi, I want to enter an activity to [projects]{"entity": "category", "role": "new"} list
-    - hello, I want to put in an activity to [monthly]{"entity": "category", "role": "new"} list
-    - hello, in category [personal]{"entity": "category", "role": "new"} I want to put the activity[beauty] 
-    - hello, I want to add an activity to [quickly]{"entity": "category", "role": "new"} category
+    - I want to add an activity [run](activity) to [weekly](category) category
+    - I want to enter a new activity [swimmming](activity) to [daily](category) list
+    - I want to create the activity [play](activity) to [commitments](category) list
+    - I want to enter an activity [stand_up](activity) to [projects](category) list
+    - I want to insert the new activity [jogging](activity) to [monthly](category) category
+    - I want to put a new activity [shopping](activity) to [quickly](category) list
+    - I want to put in the activity [run](activity) to [weekly](category)
+    - I want to put an activity [study](activity) to [daily](category)
+    - I want to enter an activity [payments](activity) to [commitments](category)
+    - I want to add the new activity [stand_up](activity) to [projects](category)
+    - I want to add a new activity [jogging](activity) to [monthly](category)
+    - I want to put an activity [shopping](activity) to [quickly](category)
+    - I want to add an activity to [weekly](category) list
+    - I want to insert an activity to [daily](category) category
+    - I want to put the activity to [commitments](category) list
+    - I want to enter an activity to [projects](category) category
+    - I want to add an activity to [monthly](category) list
+    - I want to insert an activity to [quickly](category) category
+    - in the category [gym](category), i want to add the activity [climbing](activity)
+    - in the category [utils](category), i want to insert an activity [shopping](activity)
+    - hi, I want to create an activity to [weekly](category) list
+    - hi, I want to put a new activity to [daily](category) category
+    - hi, I want to insert an activity to [commitments](category) list
+    - hi, I want to enter an activity to [projects](category) list
+    - hello, I want to put in an activity to [monthly](category) list
+    - hello, in category [personal](category) I want to put the activity[beauty] 
+    - hello, I want to add an activity to [quickly](category) category
     - hello I want to enter an activity to my list
     - hi I want to insert an activity to my list
-    - insert [run]{"entity": "activity", "role": "new"} at 11:00
-    - enter [bed]{"entity": "activity", "role": "new"} at 13:00
-    - put [stand_up]{"entity": "activity", "role": "new"} at 9:30
-    - add [swimmming]{"entity": "activity", "role": "new"} at 01:45
-    - enter [play]{"entity": "activity", "role": "new"} at 00:00
-    - insert [jogging]{"entity": "activity", "role": "new"} at 3:00
-    - put in [jogging]{"entity": "activity", "role": "new"} at 3:00
-    - put [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} at 4:25
-    - add [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"} at 2:55
-    - enter [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"} at 16:00
-    - create [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"} at 20:00
-    - insert [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"} at 22:20
-    - put [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"} at 14:50
-    - add activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"} at 19:41
-    - enter activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} at 12:35
-    - insert activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"} at 17:30
-    - put activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"} at 18:30
-    - create activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"} at 9:40
-    - enter activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"} at 7:00
-    - put [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"} at 6:30
-    - add [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"} at 8:00
-    - insert [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"} at 10:25
-    - add [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"} at 16:30
-    - enter [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"} at 19:00
-    - in category [work]{"entity": "category", "role": "new"} put [meeting]{"entity": "activity", "role": "new"} at 20:30
-    - in category [personal]{"entity": "category", "role": "new"} add activity [hairdresser]{"entity": "activity", "role": "new"} at 21:10
-    - put in [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"} at 20:30
-    - add activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"} at 21:10
-    - put activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"} at 9:40
-    - insert activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"} at 5:12
-    - put activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"} at 13:39
-    - add activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"} at 3:29
-    - enter activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"} at 11:00
+    - insert [run](activity) at 11:00
+    - enter [bed](activity) at 13:00
+    - put [stand_up](activity) at 9:30
+    - add [swimmming](activity) at 01:45
+    - enter [play](activity) at 00:00
+    - insert [jogging](activity) at 3:00
+    - put in [jogging](activity) at 3:00
+    - put [run](activity) in [daily](category) at 4:25
+    - add [bed](activity) in [projects](category) at 2:55
+    - enter [stand_up](activity) in [weekly](category) at 16:00
+    - create [swimmming](activity) in [monthly](category) at 20:00
+    - insert [play](activity) in [commitments](category) at 22:20
+    - put [jogging](activity) in [quickly](category) at 14:50
+    - add activity [run](activity) in [weekly](category) at 19:41
+    - enter activity [bed](activity) in [daily](category) at 12:35
+    - insert activity [stand_up](activity) in [commitments](category) at 17:30
+    - put activity [swimmming](activity) in [projects](category) at 18:30
+    - create activity [play](activity) in [monthly](category) at 9:40
+    - enter activity [jogging](activity) in [quickly](category) at 7:00
+    - put [run](activity) in category [commitments](category) at 6:30
+    - add [bed](activity) in category [weekly](category) at 8:00
+    - insert [stand_up](activity) in category [daily](category) at 10:25
+    - add [swimmming](activity) in category [quickly](category) at 16:30
+    - enter [play](activity) in category [projects](category) at 19:00
+    - in category [work](category) put [meeting](activity) at 20:30
+    - in category [personal](category) add activity [hairdresser](activity) at 21:10
+    - put in [jogging](activity) in category [monthly](category) at 20:30
+    - add activity [run](activity) in category [monthly](category) at 21:10
+    - put activity [bed](activity) in category [quickly](category) at 9:40
+    - insert activity [stand_up](activity) in category [projects](category) at 5:12
+    - put activity [swimmming](activity) in category [commitments](category) at 13:39
+    - add activity [play](activity) in category [daily](category) at 3:29
+    - enter activity [jogging](activity) in category [weekly](category) at 11:00
     - I want to add an activity at 11:00
     - I want to insert a new activity to a category at 13:39
-    - I want to add an activity to [weekly]{"entity": "category", "role": "new"} list at 21:10
-    - I want to insert an activity to [daily]{"entity": "category", "role": "new"} list at 9:40
-    - I want to add an activity to [commitments]{"entity": "category", "role": "new"} list at 19:00
-    - I want to enter an activity to [projects]{"entity": "category", "role": "new"} category at 16:30
-    - I want to put an activity to [monthly]{"entity": "category", "role": "new"} list at 7:00
-    - I want to create an activity to [quickly]{"entity": "category", "role": "new"} category at 6:30
-    - hi, I want to add an activity to [weekly]{"entity": "category", "role": "new"} list at 18:30
-    - hi, I want to enter an activity to [daily]{"entity": "category", "role": "new"} list at 17:30
-    - hi, I want to put an activity to [commitments]{"entity": "category", "role": "new"} category at 22:20
-    - hi, I want to insert an activity to [projects]{"entity": "category", "role": "new"} list at 16:00
-    - hello, I want to enter an activity to [monthly]{"entity": "category", "role": "new"} category at 14:50
-    - hello, I want to add an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
+    - I want to add an activity to [weekly](category) list at 21:10
+    - I want to insert an activity to [daily](category) list at 9:40
+    - I want to add an activity to [commitments](category) list at 19:00
+    - I want to enter an activity to [projects](category) category at 16:30
+    - I want to put an activity to [monthly](category) list at 7:00
+    - I want to create an activity to [quickly](category) category at 6:30
+    - hi, I want to add an activity to [weekly](category) list at 18:30
+    - hi, I want to enter an activity to [daily](category) list at 17:30
+    - hi, I want to put an activity to [commitments](category) category at 22:20
+    - hi, I want to insert an activity to [projects](category) list at 16:00
+    - hello, I want to enter an activity to [monthly](category) category at 14:50
+    - hello, I want to add an activity to [quickly](category) list at 3:29
     - hello I want to insert an activity to my list at 12:37
     - hi I want to add an activity to my list at 18:14
-    - hi, i'm [mattia21](username) enter [run]{"entity": "activity", "role": "new"}
-    - hi, i'm [ferdinando1907](username) insert [bed]{"entity": "activity", "role": "new"}
-    - hi, i'm [nando](username) put [stand_up]{"entity": "activity", "role": "new"}
-    - hi, i'm [Simone](username) add [swimmming]{"entity": "activity", "role": "new"}
-    - hi, i'm [antonio68](username) put in [play]{"entity": "activity", "role": "new"}
-    - hi, i'm [Giusy_5](username) add new [jogging]{"entity": "activity", "role": "new"}
-    - hi, i'm [mattia21](username) enter [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - hi, i'm [mattia21](username) in [daily]{"entity": "category", "role": "new"} enter [run]{"entity": "activity", "role": "new"} 
-    - hi, i'm [mattia21](username)in [personal]{"entity": "category", "role": "new"} add [beautician]{"entity": "activity", "role": "new"} 
-    - hi, i'm [nando](username) put [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - hi, i'm [antonio68](username) insert [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - hi, i'm [Simone](username) add [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - hi, i'm [Giusy_5](username) enter [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - hi, i'm [ferdinando1907](username) put [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - hi, i'm [nando](username) insert activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - hi, i'm [mattia21](username) add activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - hi, i'm [Giusy_5](username) enter activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - hi, i'm [antonio68](username) add new activity [study]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - hi, i'm [ferdinando1907](username) insert the activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - hi, i'm [Simone](username) enter an activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - hi, i'm [Simone](username) put [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - hi, i'm [Giusy_5](username) add a [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
-    - hi, i'm [mattia21](username) insert [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - hi, i'm [nando](username) create [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - hi, i'm [antonio68](username) enter [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - hi, i'm [ferdinando1907](username) put [jogging]{"entity": "activity", "role": "new"} in the category [monthly]{"entity": "category", "role": "new"}
-    - hi, i'm [mattia21](username) add activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - hi, i'm [nando](username) insert activity [bed]{"entity": "activity", "role": "new"} in the category [quickly]{"entity": "category", "role": "new"}
-    - hi, i'm [Simone](username) enter activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - hi, i'm [ferdinando1907](username) add activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - hi, i'm [antonio68](username) put activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - hi, i'm [Giusy_5](username) insert activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
+    - hi, i'm [mattia21](username) enter [run](activity)
+    - hi, i'm [ferdinando1907](username) insert [bed](activity)
+    - hi, i'm [nando](username) put [stand_up](activity)
+    - hi, i'm [Simone](username) add [swimmming](activity)
+    - hi, i'm [antonio68](username) put in [play](activity)
+    - hi, i'm [Giusy_5](username) add new [jogging](activity)
+    - hi, i'm [mattia21](username) enter [run](activity) in [daily](category)
+    - hi, i'm [mattia21](username) in [daily](category) enter [run](activity) 
+    - hi, i'm [mattia21](username)in [personal](category) add [beautician](activity) 
+    - hi, i'm [nando](username) put [bed](activity) in [projects](category)
+    - hi, i'm [antonio68](username) insert [stand_up](activity) in [weekly](category)
+    - hi, i'm [Simone](username) add [swimmming](activity) in [monthly](category)
+    - hi, i'm [Giusy_5](username) enter [play](activity) in [commitments](category)
+    - hi, i'm [ferdinando1907](username) put [jogging](activity) in [quickly](category)
+    - hi, i'm [nando](username) insert activity [run](activity) in [weekly](category)
+    - hi, i'm [mattia21](username) add activity [bed](activity) in [daily](category)
+    - hi, i'm [Giusy_5](username) enter activity [stand_up](activity) in [commitments](category)
+    - hi, i'm [antonio68](username) add new activity [study](activity) in [projects](category)
+    - hi, i'm [ferdinando1907](username) insert the activity [play](activity) in [monthly](category)
+    - hi, i'm [Simone](username) enter an activity [jogging](activity) in [quickly](category)
+    - hi, i'm [Simone](username) put [run](activity) in category [commitments](category)
+    - hi, i'm [Giusy_5](username) add a [bed](activity) in category [weekly](category)
+    - hi, i'm [mattia21](username) insert [stand_up](activity) in category [daily](category)
+    - hi, i'm [nando](username) create [swimmming](activity) in category [quickly](category)
+    - hi, i'm [antonio68](username) enter [play](activity) in category [projects](category)
+    - hi, i'm [ferdinando1907](username) put [jogging](activity) in the category [monthly](category)
+    - hi, i'm [mattia21](username) add activity [run](activity) in category [monthly](category)
+    - hi, i'm [nando](username) insert activity [bed](activity) in the category [quickly](category)
+    - hi, i'm [Simone](username) enter activity [stand_up](activity) in category [projects](category)
+    - hi, i'm [ferdinando1907](username) add activity [swimmming](activity) in category [commitments](category)
+    - hi, i'm [antonio68](username) put activity [play](activity) in category [daily](category)
+    - hi, i'm [Giusy_5](username) insert activity [jogging](activity) in category [weekly](category)
     - hello, i'm [ferdinando1907](username) and I want to add an activity
     - hello, i'm [antonio68](username) I want to enter an activity to a list
-    - hello, i'm [Simone](username) and I want to insert an activity [run]{"entity": "activity", "role": "new"} to [weekly]{"entity": "category", "role": "new"} category
-    - hello, i'm [Giusy_5](username) I want to put a new activity [swimmming]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} list
-    - hello, i'm [nando](username) I want to add the activity [play]{"entity": "activity", "role": "new"} to [commitments]{"entity": "category", "role": "new"} list
-    - hello, i'm [mattia21](username) I want to enter a new activity [stand_up]{"entity": "activity", "role": "new"} to [projects]{"entity": "category", "role": "new"} category
-    - hello, i'm [Simone](username) I want to put in an activity [jogging]{"entity": "activity", "role": "new"} to [monthly]{"entity": "category", "role": "new"} list
-    - hello, i'm [ferdinando1907](username) and I want to create the activity [shopping]{"entity": "activity", "role": "new"} to [quickly]{"entity": "category", "role": "new"} list
-    - hello, i'm [mattia21](username) I want to add an activity [run]{"entity": "activity", "role": "new"} to [weekly]{"entity": "category", "role": "new"}
-    - hello, i'm [Giusy_5](username), I want to insert an activity [study]{"entity": "activity", "role": "new"} to [daily]{"entity": "category", "role": "new"}
-    - hello, i'm [antonio68](username), I want to insert an activity [payments]{"entity": "activity", "role": "new"} to [commitments]{"entity": "category", "role": "new"}
-    - hello, i'm [mattia21](username) and I want to enter an activity [stand_up]{"entity": "activity", "role": "new"} to [projects]{"entity": "category", "role": "new"}
-    - hello, i'm [alessia19_07](username), and I want to add an activity [jogging]{"entity": "activity", "role": "new"} to [monthly]{"entity": "category", "role": "new"}
-    - hello, i'm [Giusy_5](username) I want to enter an activity [shopping]{"entity": "activity", "role": "new"} to [quickly]{"entity": "category", "role": "new"}
-    - hello, i'm [ferdinando1907](username) I want to put an activity to [weekly]{"entity": "category", "role": "new"} list
-    - hello, i'm [mattia21](username) I want to insert an activity to [daily]{"entity": "category", "role": "new"} list
-    - hello, i'm [alessia19_07](username) and I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list
-    - hello, i'm [mattia21](username), I want to insert an activity to [projects]{"entity": "category", "role": "new"} list
-    - hello, i'm [antonio68](username), I want to add an activity to [monthly]{"entity": "category", "role": "new"} list
-    - hello, i'm [ferdinando1907](username) I want to add an activity to [quickly]{"entity": "category", "role": "new"} list
-    - hello, i'm [Giusy_5](username) I want to enter an activity to [weekly]{"entity": "category", "role": "new"} list
-    - i'm [Simone](username) I want to add an activity to [daily]{"entity": "category", "role": "new"} list
-    - i'm [antonio68](username) I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list
-    - i'm [alessia19_07](username) and I want to put a new activity to [projects]{"entity": "category", "role": "new"} list
-    - i'm [ferdinando1907](username), I want to add a activity to [monthly]{"entity": "category", "role": "new"} list
-    - i'm [antonio68](username), I want to enter an activity to [quickly]{"entity": "category", "role": "new"} list
+    - hello, i'm [Simone](username) and I want to insert an activity [run](activity) to [weekly](category) category
+    - hello, i'm [Giusy_5](username) I want to put a new activity [swimmming](activity) in [daily](category) list
+    - hello, i'm [nando](username) I want to add the activity [play](activity) to [commitments](category) list
+    - hello, i'm [mattia21](username) I want to enter a new activity [stand_up](activity) to [projects](category) category
+    - hello, i'm [Simone](username) I want to put in an activity [jogging](activity) to [monthly](category) list
+    - hello, i'm [ferdinando1907](username) and I want to create the activity [shopping](activity) to [quickly](category) list
+    - hello, i'm [mattia21](username) I want to add an activity [run](activity) to [weekly](category)
+    - hello, i'm [Giusy_5](username), I want to insert an activity [study](activity) to [daily](category)
+    - hello, i'm [antonio68](username), I want to insert an activity [payments](activity) to [commitments](category)
+    - hello, i'm [mattia21](username) and I want to enter an activity [stand_up](activity) to [projects](category)
+    - hello, i'm [alessia19_07](username), and I want to add an activity [jogging](activity) to [monthly](category)
+    - hello, i'm [Giusy_5](username) I want to enter an activity [shopping](activity) to [quickly](category)
+    - hello, i'm [ferdinando1907](username) I want to put an activity to [weekly](category) list
+    - hello, i'm [mattia21](username) I want to insert an activity to [daily](category) list
+    - hello, i'm [alessia19_07](username) and I want to insert an activity to [commitments](category) list
+    - hello, i'm [mattia21](username), I want to insert an activity to [projects](category) list
+    - hello, i'm [antonio68](username), I want to add an activity to [monthly](category) list
+    - hello, i'm [ferdinando1907](username) I want to add an activity to [quickly](category) list
+    - hello, i'm [Giusy_5](username) I want to enter an activity to [weekly](category) list
+    - i'm [Simone](username) I want to add an activity to [daily](category) list
+    - i'm [antonio68](username) I want to insert an activity to [commitments](category) list
+    - i'm [alessia19_07](username) and I want to put a new activity to [projects](category) list
+    - i'm [ferdinando1907](username), I want to add a activity to [monthly](category) list
+    - i'm [antonio68](username), I want to enter an activity to [quickly](category) list
     - i'm [ferdinando1907](username) and I want to insert an activity to my list
     - i'm [alessia19_07](username) I want to create an activity to my list
-    - i'm [mattia21](username) add [run]{"entity": "activity", "role": "new"} at 11:00
-    - i'm [ferdinando1907](username) add [bed]{"entity": "activity", "role": "new"} at 13:00
-    - i'm [alessia19_07](username), insert [stand_up]{"entity": "activity", "role": "new"} at 9:30
-    - i'm [Giusy_5](username) add [swimmming]{"entity": "activity", "role": "new"} at 01:45
-    - i'm [camilla@2](username), insert [play]{"entity": "activity", "role": "new"} at 00:00
-    - i'm [Giusy_5](username) enter [jogging]{"entity": "activity", "role": "new"} at 3:00
-    - i'm [mattia21](username) put [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} at 4:25
-    - i'm [ferdinando1907](username) put [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"} at 2:55
-    - i'm [alessia19_07](username), insert [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"} at 16:00
-    - i'm [Simone](username) add [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"} at 20:00
-    - i'm [ferdinando1907](username) enter [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"} at 22:20
-    - i'm [mattia21](username), put [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"} at 14:50
-    - i'm [alessia19_07](username), insert activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"} at 19:41
-    - i'm [Giusy_5](username) and add new activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} at 12:35
-    - i'm [camilla@2](username) enter the activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"} at 17:30
-    - i'm [ferdinando1907](username), put activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"} at 18:30
-    - i'm [antonio68](username) insert activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"} at 9:40
-    - i'm [mattia21](username) put activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"} at 7:00
-    - i'm [Giusy_5](username) add [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"} at 6:30
-    - i'm [Simone](username) insert [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"} at 8:00
-    - i'm [alessia19_07](username) enter [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"} at 10:25
-    - i am [Giusy_5](username) and put activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"} at 21:10
-    - i am [camilla@2](username), add [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"} at 16:30
-    - i am [mattia21](username), insert [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"} at 19:00
-    - i am [antonio68](username) enter [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"} at 20:30
-    - i am [ferdinando1907](username) put activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"} at 9:40
-    - i am [alessia19_07](username) add activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"} at 5:12
-    - i am [mattia21](username) insert activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"} at 13:39
-    - i am [camilla@2](username) put activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"} at 3:29
-    - i am [Simone](username) add activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"} at 11:00
+    - i'm [mattia21](username) add [run](activity) at 11:00
+    - i'm [ferdinando1907](username) add [bed](activity) at 13:00
+    - i'm [alessia19_07](username), insert [stand_up](activity) at 9:30
+    - i'm [Giusy_5](username) add [swimmming](activity) at 01:45
+    - i'm [camilla@2](username), insert [play](activity) at 00:00
+    - i'm [Giusy_5](username) enter [jogging](activity) at 3:00
+    - i'm [mattia21](username) put [run](activity) in [daily](category) at 4:25
+    - i'm [ferdinando1907](username) put [bed](activity) in [projects](category) at 2:55
+    - i'm [alessia19_07](username), insert [stand_up](activity) in [weekly](category) at 16:00
+    - i'm [Simone](username) add [swimmming](activity) in [monthly](category) at 20:00
+    - i'm [ferdinando1907](username) enter [play](activity) in [commitments](category) at 22:20
+    - i'm [mattia21](username), put [jogging](activity) in [quickly](category) at 14:50
+    - i'm [alessia19_07](username), insert activity [run](activity) in [weekly](category) at 19:41
+    - i'm [Giusy_5](username) and add new activity [bed](activity) in [daily](category) at 12:35
+    - i'm [camilla@2](username) enter the activity [stand_up](activity) in [commitments](category) at 17:30
+    - i'm [ferdinando1907](username), put activity [swimmming](activity) in [projects](category) at 18:30
+    - i'm [antonio68](username) insert activity [play](activity) in [monthly](category) at 9:40
+    - i'm [mattia21](username) put activity [jogging](activity) in [quickly](category) at 7:00
+    - i'm [Giusy_5](username) add [run](activity) in category [commitments](category) at 6:30
+    - i'm [Simone](username) insert [bed](activity) in category [weekly](category) at 8:00
+    - i'm [alessia19_07](username) enter [stand_up](activity) in category [daily](category) at 10:25
+    - i am [Giusy_5](username) and put activity [run](activity) in category [monthly](category) at 21:10
+    - i am [camilla@2](username), add [swimmming](activity) in category [quickly](category) at 16:30
+    - i am [mattia21](username), insert [play](activity) in category [projects](category) at 19:00
+    - i am [antonio68](username) enter [jogging](activity) in category [monthly](category) at 20:30
+    - i am [ferdinando1907](username) put activity [bed](activity) in category [quickly](category) at 9:40
+    - i am [alessia19_07](username) add activity [stand_up](activity) in category [projects](category) at 5:12
+    - i am [mattia21](username) insert activity [swimmming](activity) in category [commitments](category) at 13:39
+    - i am [camilla@2](username) put activity [play](activity) in category [daily](category) at 3:29
+    - i am [Simone](username) add activity [jogging](activity) in category [weekly](category) at 11:00
     - i am [ferdinando1907](username), I want to add an activity at 11:00
     - hi, i am [mattia21](username), I want to enter an activity to a list at 13:39
-    - hi, i am [alessia19_07](username) I want to insert an activity to [weekly]{"entity": "category", "role": "new"} list at 21:10
-    - hi, i am [Giusy_5](username) and I want to add a new activity to [daily]{"entity": "category", "role": "new"} list at 9:40
-    - hi, i am [camilla@2](username), I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list at 19:00
-    - hi, i am [antonio68](username) I want to enter the activity to [projects]{"entity": "category", "role": "new"} list at 16:30
-    - hi, i am [mattia21](username) I want to put an activity to [monthly]{"entity": "category", "role": "new"} list at 7:00
-    - hi, i am [ferdinando1907](username) and I want to add an activity to [quickly]{"entity": "category", "role": "new"} list at 6:30
-    - hi, i am [mattia21](username) I want to add an activity to [weekly]{"entity": "category", "role": "new"} list at 18:30
-    - hi, i am [alessia19_07](username), I want to create an activity to [daily]{"entity": "category", "role": "new"} list at 17:30
-    - hi, i am [mattia21](username), and I want to insert an activity to [commitments]{"entity": "category", "role": "new"} list at 22:20
-    - hi, i am [antonio68](username), I want to add an activity to [projects]{"entity": "category", "role": "new"} list at 16:00
-    - hi, i am [camilla@2](username) I want to enter an activity to [monthly]{"entity": "category", "role": "new"} list at 14:50
-    - hi, i am [Giusy_5](username) I want to insert an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
+    - hi, i am [alessia19_07](username) I want to insert an activity to [weekly](category) list at 21:10
+    - hi, i am [Giusy_5](username) and I want to add a new activity to [daily](category) list at 9:40
+    - hi, i am [camilla@2](username), I want to insert an activity to [commitments](category) list at 19:00
+    - hi, i am [antonio68](username) I want to enter the activity to [projects](category) list at 16:30
+    - hi, i am [mattia21](username) I want to put an activity to [monthly](category) list at 7:00
+    - hi, i am [ferdinando1907](username) and I want to add an activity to [quickly](category) list at 6:30
+    - hi, i am [mattia21](username) I want to add an activity to [weekly](category) list at 18:30
+    - hi, i am [alessia19_07](username), I want to create an activity to [daily](category) list at 17:30
+    - hi, i am [mattia21](username), and I want to insert an activity to [commitments](category) list at 22:20
+    - hi, i am [antonio68](username), I want to add an activity to [projects](category) list at 16:00
+    - hi, i am [camilla@2](username) I want to enter an activity to [monthly](category) list at 14:50
+    - hi, i am [Giusy_5](username) I want to insert an activity to [quickly](category) list at 3:29
     - hi, i am [ferdinando1907](username) and I want to put an activity to my list at 12:37
     - hi, i am [alessia19_07](username) I want to insert an activity to my list at 18:14
 
@@ -672,188 +673,188 @@ nlu:
 
 - intent: remove_item
   examples: |
-    - remove [run]{"entity": "activity", "role": "new"}
-    - delete [study]{"entity": "activity", "role": "new"}
-    - del [stand_up]{"entity": "activity", "role": "new"}
-    - remove [swimmming]{"entity": "activity", "role": "new"}
-    - delete [play]{"entity": "activity", "role": "new"}
-    - remove [jogging]{"entity": "activity", "role": "new"}
-    - del [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - delete [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - cancel [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - remove [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - delete [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - del [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - remove activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - delete activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - remove activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - del activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - delete activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - cancel activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - remove [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - del [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
-    - delete [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - cancel [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - remove [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - delete [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - remove activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - cancel activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - delete activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - del activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - remove activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - del activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
+    - remove [run](activity)
+    - delete [study](activity)
+    - del [stand_up](activity)
+    - remove [swimmming](activity)
+    - delete [play](activity)
+    - remove [jogging](activity)
+    - del [run](activity) in [daily](category)
+    - delete [bed](activity) in [projects](category)
+    - cancel [stand_up](activity) in [weekly](category)
+    - remove [swimmming](activity) in [monthly](category)
+    - delete [play](activity) in [commitments](category)
+    - del [jogging](activity) in [quickly](category)
+    - remove activity [run](activity) in [weekly](category)
+    - delete activity [bed](activity) in [daily](category)
+    - remove activity [stand_up](activity) in [commitments](category)
+    - del activity [swimmming](activity) in [projects](category)
+    - delete activity [play](activity) in [monthly](category)
+    - cancel activity [jogging](activity) in [quickly](category)
+    - remove [run](activity) in category [commitments](category)
+    - del [bed](activity) in category [weekly](category)
+    - delete [stand_up](activity) in category [daily](category)
+    - cancel [swimmming](activity) in category [quickly](category)
+    - remove [play](activity) in category [projects](category)
+    - delete [jogging](activity) in category [monthly](category)
+    - remove activity [run](activity) in category [monthly](category)
+    - cancel activity [bed](activity) in category [quickly](category)
+    - delete activity [stand_up](activity) in category [projects](category)
+    - del activity [swimmming](activity) in category [commitments](category)
+    - remove activity [play](activity) in category [daily](category)
+    - del activity [jogging](activity) in category [weekly](category)
     - I want to delete an activity
     - I want to remove an activity to a list
-    - I want to del an activity to [weekly]{"entity": "category", "role": "new"} list
-    - I want to delete an activity to [daily]{"entity": "category", "role": "new"} list
-    - I want to remove an activity to [commitments]{"entity": "category", "role": "new"} list
-    - I want to delete an activity to [projects]{"entity": "category", "role": "new"} list
-    - I want to cancel an activity to [monthly]{"entity": "category", "role": "new"} list
-    - I want to delete an activity to [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to del an activity to [weekly]{"entity": "category", "role": "new"} list
-    - hi, I want to remove an activity to [daily]{"entity": "category", "role": "new"} list
-    - hi, I want to delete an activity to [commitments]{"entity": "category", "role": "new"} list
-    - hi, I want to cancel an activity to [projects]{"entity": "category", "role": "new"} list
-    - hello, I want to del an activity to [monthly]{"entity": "category", "role": "new"} list
-    - hello, I want to delete an activity to [quickly]{"entity": "category", "role": "new"} list
+    - I want to del an activity to [weekly](category) list
+    - I want to delete an activity to [daily](category) list
+    - I want to remove an activity to [commitments](category) list
+    - I want to delete an activity to [projects](category) list
+    - I want to cancel an activity to [monthly](category) list
+    - I want to delete an activity to [quickly](category) list
+    - hi, I want to del an activity to [weekly](category) list
+    - hi, I want to remove an activity to [daily](category) list
+    - hi, I want to delete an activity to [commitments](category) list
+    - hi, I want to cancel an activity to [projects](category) list
+    - hello, I want to del an activity to [monthly](category) list
+    - hello, I want to delete an activity to [quickly](category) list
     - hello I want to remove an activity to my list
     - hi I want to delete an activity to my list
-    - delete [run]{"entity": "activity", "role": "new"} at 11:00
-    - remove [bed]{"entity": "activity", "role": "new"} at 13:00
-    - delete [stand_up]{"entity": "activity", "role": "new"} at 9:30
-    - cancel [swimmming]{"entity": "activity", "role": "new"} at 01:45
-    - del [play]{"entity": "activity", "role": "new"} at 00:00
-    - remove [jogging]{"entity": "activity", "role": "new"} at 3:00
-    - delete [study]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} at 4:25
-    - del [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"} at 2:55
-    - cancel [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"} at 16:00
-    - delete [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"} at 20:00
-    - remove [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"} at 22:20
-    - del [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"} at 14:50
-    - delete activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"} at 19:41
-    - del activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} at 12:35
-    - remove activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"} at 17:30
-    - delete activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"} at 18:30
-    - del activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"} at 9:40
-    - cancel activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"} at 7:00
-    - del [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"} at 6:30
-    - delete [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"} at 8:00
-    - remove [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"} at 10:25
-    - del [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"} at 16:30
-    - cancel [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"} at 19:00
-    - delete [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"} at 20:30
-    - del activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"} at 21:10
-    - remove activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"} at 9:40
-    - cancel activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"} at 5:12
-    - delete activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"} at 13:39
-    - remove activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"} at 13:29
-    - remove activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"} at 11:00
+    - delete [run](activity) at 11:00
+    - remove [bed](activity) at 13:00
+    - delete [stand_up](activity) at 9:30
+    - cancel [swimmming](activity) at 01:45
+    - del [play](activity) at 00:00
+    - remove [jogging](activity) at 3:00
+    - delete [study](activity) in [daily](category) at 4:25
+    - del [bed](activity) in [projects](category) at 2:55
+    - cancel [stand_up](activity) in [weekly](category) at 16:00
+    - delete [swimmming](activity) in [monthly](category) at 20:00
+    - remove [play](activity) in [commitments](category) at 22:20
+    - del [jogging](activity) in [quickly](category) at 14:50
+    - delete activity [run](activity) in [weekly](category) at 19:41
+    - del activity [bed](activity) in [daily](category) at 12:35
+    - remove activity [stand_up](activity) in [commitments](category) at 17:30
+    - delete activity [swimmming](activity) in [projects](category) at 18:30
+    - del activity [play](activity) in [monthly](category) at 9:40
+    - cancel activity [jogging](activity) in [quickly](category) at 7:00
+    - del [run](activity) in category [commitments](category) at 6:30
+    - delete [bed](activity) in category [weekly](category) at 8:00
+    - remove [stand_up](activity) in category [daily](category) at 10:25
+    - del [swimmming](activity) in category [quickly](category) at 16:30
+    - cancel [play](activity) in category [projects](category) at 19:00
+    - delete [jogging](activity) in category [monthly](category) at 20:30
+    - del activity [run](activity) in category [monthly](category) at 21:10
+    - remove activity [bed](activity) in category [quickly](category) at 9:40
+    - cancel activity [stand_up](activity) in category [projects](category) at 5:12
+    - delete activity [swimmming](activity) in category [commitments](category) at 13:39
+    - remove activity [play](activity) in category [daily](category) at 13:29
+    - remove activity [jogging](activity) in category [weekly](category) at 11:00
     - I want to delete an activity at 11:00
     - I want to cancel an activity to a list at 13:39
-    - I want to del an activity to [weekly]{"entity": "category", "role": "new"} list at 21:10
-    - I want to delete an activity to [daily]{"entity": "category", "role": "new"} list at 9:40
-    - I want to cancel an activity to [commitments]{"entity": "category", "role": "new"} list at 19:00
-    - I want to remove an activity to [projects]{"entity": "category", "role": "new"} list at 16:30
-    - I want to delete an activity to [monthly]{"entity": "category", "role": "new"} list at 7:00
-    - I want to remove an activity to [quickly]{"entity": "category", "role": "new"} list at 6:30
-    - hi, I want to del an activity to [weekly]{"entity": "category", "role": "new"} list at 18:30
-    - hi, I want to remove an activity to [daily]{"entity": "category", "role": "new"} list at 17:30
-    - hi, I want to delete an activity to [commitments]{"entity": "category", "role": "new"} list at 22:20
-    - hi, I want to cancel an activity to [projects]{"entity": "category", "role": "new"} list at 16:00
-    - hello, I want to del an activity to [monthly]{"entity": "category", "role": "new"} list at 14:50
-    - hello, I want to delete an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
+    - I want to del an activity to [weekly](category) list at 21:10
+    - I want to delete an activity to [daily](category) list at 9:40
+    - I want to cancel an activity to [commitments](category) list at 19:00
+    - I want to remove an activity to [projects](category) list at 16:30
+    - I want to delete an activity to [monthly](category) list at 7:00
+    - I want to remove an activity to [quickly](category) list at 6:30
+    - hi, I want to del an activity to [weekly](category) list at 18:30
+    - hi, I want to remove an activity to [daily](category) list at 17:30
+    - hi, I want to delete an activity to [commitments](category) list at 22:20
+    - hi, I want to cancel an activity to [projects](category) list at 16:00
+    - hello, I want to del an activity to [monthly](category) list at 14:50
+    - hello, I want to delete an activity to [quickly](category) list at 3:29
     - hello I want to remove an activity to my list at 12:37
     - hi I want to delete an activity to my list at 18:14
-    - hello, I'm [mattia99](username), remove [run]{"entity": "activity", "role": "new"}
-    - hello, I'm [antonio68](username), delete [study]{"entity": "activity", "role": "new"}
-    - hello, I'm [ferdinando1907](username), del [stand_up]{"entity": "activity", "role": "new"}
-    - hello, I'm [alessia19_07](username), delete [swimmming]{"entity": "activity", "role": "new"}
-    - hello, I'm [camilla@2](username), delete [play]{"entity": "activity", "role": "new"}
-    - hello, I'm [Giusy_5](username), del [jogging]{"entity": "activity", "role": "new"}
-    - hello, I am [Simone](username), remove [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - hello, I am [mattia99](username), delete [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - hello, I am [ferdinando1907](username), cancel [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - hello, I am [camilla@2](username), del [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - hello, I am [alessia19_07](username), delete [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - hello, I am [mattia99](username), remove [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - hello, I am [ferdinando1907](username), del activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - hello, I am [mattia99](username), delete activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - hello, I am [Giusy_5](username), remove activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - hello, I am [alessia19_07](username), del activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - hello, I am [ferdinando1907](username), delete activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - hello, I am [Giusy_5](username), cancel activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - hello, I am [camilla@2](username), delete [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - hello, I am [ferdinando1907](username), remove [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
-    - hello, I am [alessia19_07](username), delete [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - hello, I am [Giusy_5](username), del [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - hello, I am [ferdinando1907](username), remove [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - hello, I'm [mattia99](username), delete [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - hello, I'm [alessia19_07](username), del activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - hello, I'm [camilla@2](username), delete activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - I'm [mattia99](username), del activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - I'm [Giusy_5](username), remove activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - I'm [ferdinando1907](username), delete activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - I'm [mattia99](username), remove activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
+    - hello, I'm [mattia99](username), remove [run](activity)
+    - hello, I'm [antonio68](username), delete [study](activity)
+    - hello, I'm [ferdinando1907](username), del [stand_up](activity)
+    - hello, I'm [alessia19_07](username), delete [swimmming](activity)
+    - hello, I'm [camilla@2](username), delete [play](activity)
+    - hello, I'm [Giusy_5](username), del [jogging](activity)
+    - hello, I am [Simone](username), remove [run](activity) in [daily](category)
+    - hello, I am [mattia99](username), delete [bed](activity) in [projects](category)
+    - hello, I am [ferdinando1907](username), cancel [stand_up](activity) in [weekly](category)
+    - hello, I am [camilla@2](username), del [swimmming](activity) in [monthly](category)
+    - hello, I am [alessia19_07](username), delete [play](activity) in [commitments](category)
+    - hello, I am [mattia99](username), remove [jogging](activity) in [quickly](category)
+    - hello, I am [ferdinando1907](username), del activity [run](activity) in [weekly](category)
+    - hello, I am [mattia99](username), delete activity [bed](activity) in [daily](category)
+    - hello, I am [Giusy_5](username), remove activity [stand_up](activity) in [commitments](category)
+    - hello, I am [alessia19_07](username), del activity [swimmming](activity) in [projects](category)
+    - hello, I am [ferdinando1907](username), delete activity [play](activity) in [monthly](category)
+    - hello, I am [Giusy_5](username), cancel activity [jogging](activity) in [quickly](category)
+    - hello, I am [camilla@2](username), delete [run](activity) in category [commitments](category)
+    - hello, I am [ferdinando1907](username), remove [bed](activity) in category [weekly](category)
+    - hello, I am [alessia19_07](username), delete [stand_up](activity) in category [daily](category)
+    - hello, I am [Giusy_5](username), del [swimmming](activity) in category [quickly](category)
+    - hello, I am [ferdinando1907](username), remove [play](activity) in category [projects](category)
+    - hello, I'm [mattia99](username), delete [jogging](activity) in category [monthly](category)
+    - hello, I'm [alessia19_07](username), del activity [run](activity) in category [monthly](category)
+    - hello, I'm [camilla@2](username), delete activity [bed](activity) in category [quickly](category)
+    - I'm [mattia99](username), del activity [stand_up](activity) in category [projects](category)
+    - I'm [Giusy_5](username), remove activity [swimmming](activity) in category [commitments](category)
+    - I'm [ferdinando1907](username), delete activity [play](activity) in category [daily](category)
+    - I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category)
     - I'm [alessia19_07](username), I want to del an activity
     - I'm [camilla@2](username), I want to delete an activity to a list
-    - I'm [ferdinando1907](username), I want to remove an activity to [weekly]{"entity": "category", "role": "new"} list
-    - I'm [mattia99](username), I want to del an activity to [daily]{"entity": "category", "role": "new"} list
-    - I'm [Giusy_5](username), I want to delete an activity to [commitments]{"entity": "category", "role": "new"} list
-    - I am [camilla@2](username), I want to cancel an activity to [projects]{"entity": "category", "role": "new"} list
-    - I am [alessia19_07](username), I want to delete an activity to [monthly]{"entity": "category", "role": "new"} list
-    - I am [Giusy_5](username), I want to remove an activity to [quickly]{"entity": "category", "role": "new"} list
-    - I am [mattia99](username), hi, I want to del an activity to [weekly]{"entity": "category", "role": "new"} list
-    - I am [ferdinando1907](username), hi, I want to del an activity to [daily]{"entity": "category", "role": "new"} list
-    - I am [alessia19_07](username), hi, I want to cancel an activity to [commitments]{"entity": "category", "role": "new"} list
-    - I am [mattia99](username), hi, I want to delete an activity to [projects]{"entity": "category", "role": "new"} list
-    - I am [Giusy_5](username), hello, I want to del an activity to [monthly]{"entity": "category", "role": "new"} list
-    - I am [mattia99](username), hello, I want to remove an activity to [quickly]{"entity": "category", "role": "new"} list
+    - I'm [ferdinando1907](username), I want to remove an activity to [weekly](category) list
+    - I'm [mattia99](username), I want to del an activity to [daily](category) list
+    - I'm [Giusy_5](username), I want to delete an activity to [commitments](category) list
+    - I am [camilla@2](username), I want to cancel an activity to [projects](category) list
+    - I am [alessia19_07](username), I want to delete an activity to [monthly](category) list
+    - I am [Giusy_5](username), I want to remove an activity to [quickly](category) list
+    - I am [mattia99](username), hi, I want to del an activity to [weekly](category) list
+    - I am [ferdinando1907](username), hi, I want to del an activity to [daily](category) list
+    - I am [alessia19_07](username), hi, I want to cancel an activity to [commitments](category) list
+    - I am [mattia99](username), hi, I want to delete an activity to [projects](category) list
+    - I am [Giusy_5](username), hello, I want to del an activity to [monthly](category) list
+    - I am [mattia99](username), hello, I want to remove an activity to [quickly](category) list
     - I am [alessia19_07](username), hello I want to delete an activity to my list
     - I am [camilla@2](username), hi I want to remove an activity to my list
-    - I am [Giusy_5](username), cancel [run]{"entity": "activity", "role": "new"} at 11:00
-    - I am [ferdinando1907](username), delete [bed]{"entity": "activity", "role": "new"} at 13:00
-    - I am [alessia19_07](username), del [stand_up]{"entity": "activity", "role": "new"} at 9:30
-    - I am [Giusy_5](username), remove [swimmming]{"entity": "activity", "role": "new"} at 01:45
-    - I'm [mattia99](username), delete [play]{"entity": "activity", "role": "new"} at 00:00
-    - hi, I'm [alessia19_07](username), del [jogging]{"entity": "activity", "role": "new"} at 3:00
-    - hi, I'm [ferdinando1907](username), delete [study]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} at 4:25
-    - hi, I'm [camilla@2](username), remove [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"} at 2:55
-    - hi, I'm [Giusy_5](username), cancel [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"} at 16:00
-    - hi, I am [alessia19_07](username), remove [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"} at 20:00
-    - hi, I'm [mattia99](username), remove [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"} at 22:20
-    - hi, I'm [mattia99](username), delete [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"} at 14:50
-    - hi, I'm [ferdinando1907](username), delete activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"} at 19:41
-    - hi, I'm [Giusy_5](username), del activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"} at 12:35
-    - hi, I'm [mattia99](username), cancel activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"} at 17:30
-    - hi, I'm [alessia19_07](username), del activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"} at 18:30
-    - hi, I am [mattia99](username), delete activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"} at 9:40
-    - hi, I'm [mattia99](username), del activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"} at 7:00
-    - hi, I'm [Giusy_5](username), remove [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"} at 6:30
-    - hi, I'm [alessia19_07](username), cancel [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"} at 8:00
-    - hi, I'm [ferdinando1907](username), delete [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"} at 10:25
-    - hi, I am [alessia19_07](username), remove [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"} at 16:30
-    - hi, I'm [mattia99](username), delete [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"} at 19:00
-    - hi, I'm [Giusy_5](username), remove [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"} at 20:30
-    - hi, I'm [ferdinando1907](username), delete activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"} at 21:10
-    - hi, I'm [Giusy_5](username), cancel activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"} at 9:40
-    - hi, I am [alessia19_07](username), del activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"} at 5:12
-    - hello, I'm [mattia99](username), cancel activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"} at 13:39
-    - hello, I'm [alessia19_07](username), remove activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"} at 13:29
-    - hello, I'm [mattia99](username), remove activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"} at 11:00
+    - I am [Giusy_5](username), cancel [run](activity) at 11:00
+    - I am [ferdinando1907](username), delete [bed](activity) at 13:00
+    - I am [alessia19_07](username), del [stand_up](activity) at 9:30
+    - I am [Giusy_5](username), remove [swimmming](activity) at 01:45
+    - I'm [mattia99](username), delete [play](activity) at 00:00
+    - hi, I'm [alessia19_07](username), del [jogging](activity) at 3:00
+    - hi, I'm [ferdinando1907](username), delete [study](activity) in [daily](category) at 4:25
+    - hi, I'm [camilla@2](username), remove [bed](activity) in [projects](category) at 2:55
+    - hi, I'm [Giusy_5](username), cancel [stand_up](activity) in [weekly](category) at 16:00
+    - hi, I am [alessia19_07](username), remove [swimmming](activity) in [monthly](category) at 20:00
+    - hi, I'm [mattia99](username), remove [play](activity) in [commitments](category) at 22:20
+    - hi, I'm [mattia99](username), delete [jogging](activity) in [quickly](category) at 14:50
+    - hi, I'm [ferdinando1907](username), delete activity [run](activity) in [weekly](category) at 19:41
+    - hi, I'm [Giusy_5](username), del activity [bed](activity) in [daily](category) at 12:35
+    - hi, I'm [mattia99](username), cancel activity [stand_up](activity) in [commitments](category) at 17:30
+    - hi, I'm [alessia19_07](username), del activity [swimmming](activity) in [projects](category) at 18:30
+    - hi, I am [mattia99](username), delete activity [play](activity) in [monthly](category) at 9:40
+    - hi, I'm [mattia99](username), del activity [jogging](activity) in [quickly](category) at 7:00
+    - hi, I'm [Giusy_5](username), remove [run](activity) in category [commitments](category) at 6:30
+    - hi, I'm [alessia19_07](username), cancel [bed](activity) in category [weekly](category) at 8:00
+    - hi, I'm [ferdinando1907](username), delete [stand_up](activity) in category [daily](category) at 10:25
+    - hi, I am [alessia19_07](username), remove [swimmming](activity) in category [quickly](category) at 16:30
+    - hi, I'm [mattia99](username), delete [play](activity) in category [projects](category) at 19:00
+    - hi, I'm [Giusy_5](username), remove [jogging](activity) in category [monthly](category) at 20:30
+    - hi, I'm [ferdinando1907](username), delete activity [run](activity) in category [monthly](category) at 21:10
+    - hi, I'm [Giusy_5](username), cancel activity [bed](activity) in category [quickly](category) at 9:40
+    - hi, I am [alessia19_07](username), del activity [stand_up](activity) in category [projects](category) at 5:12
+    - hello, I'm [mattia99](username), cancel activity [swimmming](activity) in category [commitments](category) at 13:39
+    - hello, I'm [alessia19_07](username), remove activity [play](activity) in category [daily](category) at 13:29
+    - hello, I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category) at 11:00
     - I'm [Giusy_5](username), I want to delete an activity at 11:00
     - I'm [camilla@2](username), I want to del an activity to a list at 13:39
-    - I'm [ferdinando1907](username), I want to cancel an activity to [weekly]{"entity": "category", "role": "new"} list at 21:10
-    - I'm [mattia99](username), I want to remove an activity to [daily]{"entity": "category", "role": "new"} list at 9:40
-    - I am [mattia99](username) want to delete an activity to [commitments]{"entity": "category", "role": "new"} list at 19:00
-    - I'm [alessia19_07](username) want to remove an activity to [projects]{"entity": "category", "role": "new"} list at 16:30
-    - I'm [Giusy_5](username) want to del an activity to [monthly]{"entity": "category", "role": "new"} list at 7:00
-    - I'm [alessia19_07](username) want to cancel an activity to [quickly]{"entity": "category", "role": "new"} list at 6:30
-    - hi, I'm [mattia99](username) want to delete an activity to [weekly]{"entity": "category", "role": "new"} list at 18:30
-    - hi, I'm [camilla@2](username) want to remove an activity to [daily]{"entity": "category", "role": "new"} list at 17:30
-    - hi, I am [ferdinando1907](username) want to delete an activity to [commitments]{"entity": "category", "role": "new"} list at 22:20
-    - hi, I'm [mattia99](username) want to cancel an activity to [projects]{"entity": "category", "role": "new"} list at 16:00
-    - hello, I'm [mattia99](username) want to remove an activity to [monthly]{"entity": "category", "role": "new"} list at 14:50
-    - I'm [mattia99](username) want to delete an activity to [quickly]{"entity": "category", "role": "new"} list at 3:29
+    - I'm [ferdinando1907](username), I want to cancel an activity to [weekly](category) list at 21:10
+    - I'm [mattia99](username), I want to remove an activity to [daily](category) list at 9:40
+    - I am [mattia99](username) want to delete an activity to [commitments](category) list at 19:00
+    - I'm [alessia19_07](username) want to remove an activity to [projects](category) list at 16:30
+    - I'm [Giusy_5](username) want to del an activity to [monthly](category) list at 7:00
+    - I'm [alessia19_07](username) want to cancel an activity to [quickly](category) list at 6:30
+    - hi, I'm [mattia99](username) want to delete an activity to [weekly](category) list at 18:30
+    - hi, I'm [camilla@2](username) want to remove an activity to [daily](category) list at 17:30
+    - hi, I am [ferdinando1907](username) want to delete an activity to [commitments](category) list at 22:20
+    - hi, I'm [mattia99](username) want to cancel an activity to [projects](category) list at 16:00
+    - hello, I'm [mattia99](username) want to remove an activity to [monthly](category) list at 14:50
+    - I'm [mattia99](username) want to delete an activity to [quickly](category) list at 3:29
     - hello I am [alessia19_07](username) want to del an activity to my list at 12:37
     - hi I'm [alessia19_07](username) want to delete an activity to my list at 18:14
 
@@ -861,194 +862,194 @@ nlu:
   examples: |
     - set activity [complete](activity_status) 
     - Hi, set activity [complete](activity_status)
-    - set up [complete](activity_status) [run]{"entity": "activity", "role": "new"}
-    - set done [bed]{"entity": "activity", "role": "new"}
-    - set [complete](activity_status) [stand_up]{"entity": "activity", "role": "new"}
-    - set up [completed](activity_status) [swimmming]{"entity": "activity", "role": "new"}
-    - set [complete](activity_status) [play]{"entity": "activity", "role": "new"}
-    - set done [jogging]{"entity": "activity", "role": "new"}
-    - set [complete](activity_status) [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - set [completed](activity_status) [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - set up [complete](activity_status) [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - set done [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - set [completed](activity_status) activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - set [completed](activity_status) activity [study]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - set done activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - set [completed](activity_status) activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - set done [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
-    - set up [completed](activity_status) [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - set [completed](activity_status) [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - set done [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - set done activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - set [completed](activity_status) activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - set [complete](activity_status) activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - set [completed](activity_status) activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
+    - set up [complete](activity_status) [run](activity)
+    - set done [bed](activity)
+    - set [complete](activity_status) [stand_up](activity)
+    - set up [completed](activity_status) [swimmming](activity)
+    - set [complete](activity_status) [play](activity)
+    - set done [jogging](activity)
+    - set [complete](activity_status) [run](activity) in [daily](category)
+    - set [completed](activity_status) [bed](activity) in [projects](category)
+    - set up [complete](activity_status) [stand_up](activity) in [weekly](category)
+    - set [complete](activity_status) [swimmming](activity) in [monthly](category)
+    - set done [play](activity) in [commitments](category)
+    - set [complete](activity_status) [jogging](activity) in [quickly](category)
+    - set [completed](activity_status) activity [run](activity) in [weekly](category)
+    - set [complete](activity_status) activity [bed](activity) in [daily](category)
+    - set [completed](activity_status) activity [study](activity) in [commitments](category)
+    - set done activity [swimmming](activity) in [projects](category)
+    - set [complete](activity_status) activity [play](activity) in [monthly](category)
+    - set [completed](activity_status) activity [jogging](activity) in [quickly](category)
+    - set done [run](activity) in category [commitments](category)
+    - set [complete](activity_status) [bed](activity) in category [weekly](category)
+    - set up [completed](activity_status) [stand_up](activity) in category [daily](category)
+    - set [complete](activity_status) [swimmming](activity) in category [quickly](category)
+    - set [completed](activity_status) [play](activity) in category [projects](category)
+    - set done [jogging](activity) in category [monthly](category)
+    - set [complete](activity_status) activity [run](activity) in category [monthly](category)
+    - set [complete](activity_status) activity [bed](activity) in category [quickly](category)
+    - set done activity [stand_up](activity) in category [projects](category)
+    - set [completed](activity_status) activity [swimmming](activity) in category [commitments](category)
+    - set [complete](activity_status) activity [play](activity) in category [daily](category)
+    - set [completed](activity_status) activity [jogging](activity) in category [weekly](category)
     - I want to set [complete](activity_status) an activity 
     - I want to set done an activity in a list 
-    - I want to set [completed](activity_status) an activity in [weekly]{"entity": "category", "role": "new"} list 
-    - I want to set [complete](activity_status) an activity in [daily]{"entity": "category", "role": "new"} list
-    - I want to set done an activity in [commitments]{"entity": "category", "role": "new"} list 
-    - I want to set [complete](activity_status) an activity in [projects]{"entity": "category", "role": "new"} list 
-    - I want to set [complete](activity_status) an activity in [monthly]{"entity": "category", "role": "new"} list
-    - I want to set done an activity in [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to set [completed](activity_status) an activity in [weekly]{"entity": "category", "role": "new"} list 
-    - hi, I want to set [complete](activity_status) an activity in [daily]{"entity": "category", "role": "new"} list 
-    - hi, I want to set done an activity in [commitments]{"entity": "category", "role": "new"} list 
-    - hi, I want to set [completed](activity_status) an activity in [projects]{"entity": "category", "role": "new"} list 
-    - hello, I want to set done an activity in [monthly]{"entity": "category", "role": "new"} list 
-    - hello, I want to set [complete](activity_status) an activity in [quickly]{"entity": "category", "role": "new"} list
+    - I want to set [completed](activity_status) an activity in [weekly](category) list 
+    - I want to set [complete](activity_status) an activity in [daily](category) list
+    - I want to set done an activity in [commitments](category) list 
+    - I want to set [complete](activity_status) an activity in [projects](category) list 
+    - I want to set [complete](activity_status) an activity in [monthly](category) list
+    - I want to set done an activity in [quickly](category) list
+    - hi, I want to set [completed](activity_status) an activity in [weekly](category) list 
+    - hi, I want to set [complete](activity_status) an activity in [daily](category) list 
+    - hi, I want to set done an activity in [commitments](category) list 
+    - hi, I want to set [completed](activity_status) an activity in [projects](category) list 
+    - hello, I want to set done an activity in [monthly](category) list 
+    - hello, I want to set [complete](activity_status) an activity in [quickly](category) list
     - hello I want to set [complete](activity_status) an activity in my list 
     - hi I want to set up [complete](activity_status) an activity in my list 
-    - Hi I want to set done all activity in [monthly]{"entity": "category", "role": "new"} list
-    - I have [complete](activity_status) activity [swimming]{"entity": "activity", "role": "new"} in category [gym]{"entity": "category", "role": "new"}
-    - I have done activity [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - I have [completed](activity_status) activity [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - I have [complete](activity_status) activity [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - I have done activity [jogging]{"entity": "activity", "role": "new"} in category [gym]{"entity": "category", "role": "new"}
+    - Hi I want to set done all activity in [monthly](category) list
+    - I have [complete](activity_status) activity [swimming](activity) in category [gym](category)
+    - I have done activity [run](activity) in category [commitments](category)
+    - I have [completed](activity_status) activity [play](activity) in category [projects](category)
+    - I have [complete](activity_status) activity [stand_up](activity) in category [daily](category)
+    - I have done activity [jogging](activity) in category [gym](category)
     - set activity [incomplete](activity_status) 
     - Hi, set activity [incomplete](activity_status)
-    - set [incomplete](activity_status) [run]{"entity": "activity", "role": "new"}
-    - set [incomplete](activity_status) [bed]{"entity": "activity", "role": "new"}
-    - set undone [stand_up]{"entity": "activity", "role": "new"}
-    - set [incomplete](activity_status) [swimmming]{"entity": "activity", "role": "new"}
-    - set [incomplete](activity_status) [play]{"entity": "activity", "role": "new"}
-    - set undone [jogging]{"entity": "activity", "role": "new"}
-    - set [incomplete](activity_status) [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - set undone [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [study]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - set undone activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [jogging]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [run]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - set undone [bed]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [stand_up]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [swimmming]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [play]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) [jogging]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [run]{"entity": "activity", "role": "new"} in category [monthly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [bed]{"entity": "activity", "role": "new"} in category [quickly]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [stand_up]{"entity": "activity", "role": "new"} in category [projects]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [swimmming]{"entity": "activity", "role": "new"} in category [commitments]{"entity": "category", "role": "new"}
-    - set undone activity [play]{"entity": "activity", "role": "new"} in category [daily]{"entity": "category", "role": "new"}
-    - set [incomplete](activity_status) activity [jogging]{"entity": "activity", "role": "new"} in category [weekly]{"entity": "category", "role": "new"}
+    - set [incomplete](activity_status) [run](activity)
+    - set [incomplete](activity_status) [bed](activity)
+    - set undone [stand_up](activity)
+    - set [incomplete](activity_status) [swimmming](activity)
+    - set [incomplete](activity_status) [play](activity)
+    - set undone [jogging](activity)
+    - set [incomplete](activity_status) [run](activity) in [daily](category)
+    - set [incomplete](activity_status) [bed](activity) in [projects](category)
+    - set [incomplete](activity_status) [stand_up](activity) in [weekly](category)
+    - set undone [swimmming](activity) in [monthly](category)
+    - set [incomplete](activity_status) [play](activity) in [commitments](category)
+    - set [incomplete](activity_status) [jogging](activity) in [quickly](category)
+    - set [incomplete](activity_status) activity [run](activity) in [weekly](category)
+    - set [incomplete](activity_status) activity [study](activity) in [daily](category)
+    - set undone activity [stand_up](activity) in [commitments](category)
+    - set [incomplete](activity_status) activity [swimmming](activity) in [projects](category)
+    - set [incomplete](activity_status) activity [play](activity) in [monthly](category)
+    - set [incomplete](activity_status) activity [jogging](activity) in [quickly](category)
+    - set [incomplete](activity_status) [run](activity) in category [commitments](category)
+    - set undone [bed](activity) in category [weekly](category)
+    - set [incomplete](activity_status) [stand_up](activity) in category [daily](category)
+    - set [incomplete](activity_status) [swimmming](activity) in category [quickly](category)
+    - set [incomplete](activity_status) [play](activity) in category [projects](category)
+    - set [incomplete](activity_status) [jogging](activity) in category [monthly](category)
+    - set [incomplete](activity_status) activity [run](activity) in category [monthly](category)
+    - set [incomplete](activity_status) activity [bed](activity) in category [quickly](category)
+    - set [incomplete](activity_status) activity [stand_up](activity) in category [projects](category)
+    - set [incomplete](activity_status) activity [swimmming](activity) in category [commitments](category)
+    - set undone activity [play](activity) in category [daily](category)
+    - set [incomplete](activity_status) activity [jogging](activity) in category [weekly](category)
     - I want to set [incomplete](activity_status) an activity 
     - I want to set [incomplete](activity_status) an activity in a list 
-    - I want to set [incomplete](activity_status) an activity in [weekly]{"entity": "category", "role": "new"} list 
-    - I want to set [incomplete](activity_status) an activity in [daily]{"entity": "category", "role": "new"} list
-    - I want to set undone an activity in [study]{"entity": "category", "role": "new"} list 
-    - I want to set [incomplete](activity_status) an activity in [projects]{"entity": "category", "role": "new"} list 
-    - I want to set [incomplete](activity_status) an activity in [monthly]{"entity": "category", "role": "new"} list
-    - I want to set [incomplete](activity_status) an activity in [quickly]{"entity": "category", "role": "new"} list
-    - hi, I want to set [incomplete](activity_status) an activity in [weekly]{"entity": "category", "role": "new"} list 
-    - hi, I want to set undone an activity in [daily]{"entity": "category", "role": "new"} list 
-    - hi, I want to set undone an activity in [commitments]{"entity": "category", "role": "new"} list 
-    - hi, I want to set [incomplete](activity_status) an activity in [projects]{"entity": "category", "role": "new"} list 
-    - hello, I want to set [incomplete](activity_status) an activity in [monthly]{"entity": "category", "role": "new"} list 
-    - hello, I want to set [incomplete](activity_status) an activity in [quickly]{"entity": "category", "role": "new"} list
+    - I want to set [incomplete](activity_status) an activity in [weekly](category) list 
+    - I want to set [incomplete](activity_status) an activity in [daily](category) list
+    - I want to set undone an activity in [study](category) list 
+    - I want to set [incomplete](activity_status) an activity in [projects](category) list 
+    - I want to set [incomplete](activity_status) an activity in [monthly](category) list
+    - I want to set [incomplete](activity_status) an activity in [quickly](category) list
+    - hi, I want to set [incomplete](activity_status) an activity in [weekly](category) list 
+    - hi, I want to set undone an activity in [daily](category) list 
+    - hi, I want to set undone an activity in [commitments](category) list 
+    - hi, I want to set [incomplete](activity_status) an activity in [projects](category) list 
+    - hello, I want to set [incomplete](activity_status) an activity in [monthly](category) list 
+    - hello, I want to set [incomplete](activity_status) an activity in [quickly](category) list
     - hello I want to set [incomplete](activity_status) an activity in my list 
     - hi I want to set [incomplete](activity_status) an activity in my list 
-    - Hi I want to set undone all activity in [monthly]{"entity": "category", "role": "new"} list
-    - undo [complete](activity_status) [run]{"entity": "activity", "role": "new"}
-    - undo [complete](activity_status) [bed]{"entity": "activity", "role": "new"}
-    - undo [complete](activity_status) [stand_up]{"entity": "activity", "role": "new"}
-    - undo [complete](activity_status) [swimmming]{"entity": "activity", "role": "new"}
-    - undo [complete](activity_status) [play]{"entity": "activity", "role": "new"}
-    - undo [complete](activity_status) [jogging]{"entity": "activity", "role": "new"}
-    - undo [complete](activity_status) [run]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) [bed]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) [stand_up]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) [swimmming]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) [play]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) [study]{"entity": "activity", "role": "new"} in [quickly]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) activity [run]{"entity": "activity", "role": "new"} in [weekly]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) activity [bed]{"entity": "activity", "role": "new"} in [daily]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) activity [stand_up]{"entity": "activity", "role": "new"} in [commitments]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) activity [swimmming]{"entity": "activity", "role": "new"} in [projects]{"entity": "category", "role": "new"}
-    - undo [complete](activity_status) activity [play]{"entity": "activity", "role": "new"} in [monthly]{"entity": "category", "role": "new"}
+    - Hi I want to set undone all activity in [monthly](category) list
+    - undo [complete](activity_status) [run](activity)
+    - undo [complete](activity_status) [bed](activity)
+    - undo [complete](activity_status) [stand_up](activity)
+    - undo [complete](activity_status) [swimmming](activity)
+    - undo [complete](activity_status) [play](activity)
+    - undo [complete](activity_status) [jogging](activity)
+    - undo [complete](activity_status) [run](activity) in [daily](category)
+    - undo [complete](activity_status) [bed](activity) in [projects](category)
+    - undo [complete](activity_status) [stand_up](activity) in [weekly](category)
+    - undo [complete](activity_status) [swimmming](activity) in [monthly](category)
+    - undo [complete](activity_status) [play](activity) in [commitments](category)
+    - undo [complete](activity_status) [study](activity) in [quickly](category)
+    - undo [complete](activity_status) activity [run](activity) in [weekly](category)
+    - undo [complete](activity_status) activity [bed](activity) in [daily](category)
+    - undo [complete](activity_status) activity [stand_up](activity) in [commitments](category)
+    - undo [complete](activity_status) activity [swimmming](activity) in [projects](category)
+    - undo [complete](activity_status) activity [play](activity) in [monthly](category)
     
 - intent: add_category
   examples: |
-    - add the category [study]{"entity": "category", "role": "new"}
-    - enter the category [medications]{"entity": "category", "role": "new"}
-    - put the category [engineering]{"entity": "category", "role": "new"}
-    - category: [school]{"entity": "category", "role": "new"}
-    - I want to add [university]{"entity": "category", "role": "new"} category
-    - I want to enter [profession]{"entity": "category", "role": "new"} category
-    - I want to put [vacation]{"entity": "category", "role": "new"} category
-    - add new [personal]{"entity": "category", "role": "new"} category
-    - add new [bank]{"entity": "category", "role": "new"} category
-    - enter new [diet]{"entity": "category", "role": "new"} category
-    - the category to put is [household]{"entity": "category", "role": "new"}
-    - the category to add is [university]{"entity": "category", "role": "new"}
-    - the category to enter is [volunteering]{"entity": "category", "role": "new"}
-    - new category: [job]{"entity": "category", "role": "new"}
-    - I want to use a new category [events]{"entity": "category", "role": "new"}
-    - I want to use a new category [medical]{"entity": "category", "role": "new"}
-    - I want to use a new category [sports]{"entity": "category", "role": "new"}
-    - new category: [volunteering]{"entity": "category", "role": "new"}
-    - category: [bills]{"entity": "category", "role": "new"}
+    - add the category [study](category)
+    - enter the category [medications](category)
+    - put the category [engineering](category)
+    - category: [school](category)
+    - I want to add [university](category) category
+    - I want to enter [profession](category) category
+    - I want to put [vacation](category) category
+    - add new [personal](category) category
+    - add new [bank](category) category
+    - enter new [diet](category) category
+    - the category to put is [household](category)
+    - the category to add is [university](category)
+    - the category to enter is [volunteering](category)
+    - new category: [job](category)
+    - I want to use a new category [events](category)
+    - I want to use a new category [medical](category)
+    - I want to use a new category [sports](category)
+    - new category: [volunteering](category)
+    - category: [bills](category)
     - I want to add a category
     - I want to insert a category
     - I want to use  a new category
-    - new category: [school]{"entity": "category", "role": "new"}
-    - I want to put a new category [vacation]{"entity": "category", "role": "new"}
-    - I want to add a new category [leisure]{"entity": "category", "role": "new"}
-    - hi, I want to enter a new category [research] {"entity": "category", "role": "new"}
-    - hi, I want to put a new category [events] {"entity": "category", "role": "new"}
-    - hi, I want to add a category [weekly]{"entity": "category", "role": "new"}
-    - hi, I want to insert the category [daily]{"entity": "category", "role": "new"}
-    - hi, I want to insert the category [projects]{"entity": "category", "role": "new"}
-    - new category to add: [projects]{"entity": "category", "role": "new"}
-    - new category to insert: [bills]{"entity": "category", "role": "new"}
-    - hi, please insert the following [medical]{"entity": "category", "role": "new"}
-    - hi, please put the following [finance]{"entity": "category", "role": "new"}
-    - hi, please enter the following [shopping]{"entity": "category", "role": "new"}
-    - category: [school]{"entity": "category", "role": "new"}
-    - category: [payments]{"entity": "category", "role": "new"}
-    - hello, I want to add the category [household]{"entity": "category", "role": "new"}
-    - I want to add a category [bank]{"entity": "category", "role": "new"}
-    - hi, please insert the following [diet]{"entity": "category", "role": "new"}
-    - I want to add  the category [commitments]{"entity": "category", "role": "new"} 
-    - hello, I want to add the category [work]{"entity": "category", "role": "new"}
-    - hello, I want to put the category [research]{"entity": "category", "role": "new"}
-    - I want to insert the category [sports]{"entity": "category", "role": "new"} 
+    - new category: [school](category)
+    - I want to put a new category [vacation](category)
+    - I want to add a new category [leisure](category)
+    - hi, I want to enter a new category [research] (category)
+    - hi, I want to put a new category [events] (category)
+    - hi, I want to add a category [weekly](category)
+    - hi, I want to insert the category [daily](category)
+    - hi, I want to insert the category [projects](category)
+    - new category to add: [projects](category)
+    - new category to insert: [bills](category)
+    - hi, please insert the following [medical](category)
+    - hi, please put the following [finance](category)
+    - hi, please enter the following [shopping](category)
+    - category: [school](category)
+    - category: [payments](category)
+    - hello, I want to add the category [household](category)
+    - I want to add a category [bank](category)
+    - hi, please insert the following [diet](category)
+    - I want to add  the category [commitments](category) 
+    - hello, I want to add the category [work](category)
+    - hello, I want to put the category [research](category)
+    - I want to insert the category [sports](category) 
 
 - intent: remove_category
   examples: |
     - I want to remove a category
-    - I want to cancel the category [weekly]{"entity": "category", "role": "new"} 
-    - I want to delete the category [daily]{"entity": "category", "role": "new"} 
-    - I want to remove the category [commitments]{"entity": "category", "role": "new"} 
-    - I want to del the category [projects]{"entity": "category", "role": "new"} 
-    - I want to cancel the category [monthly]{"entity": "category", "role": "new"} 
-    - I want to delete the category [quickly]{"entity": "category", "role": "new"} 
-    - hi, I want to del the category [weekly]{"entity": "category", "role": "new"} 
-    - hi, I want to remove the category [daily]{"entity": "category", "role": "new"} 
-    - hi, I want to delete the category [commitments]{"entity": "category", "role": "new"} 
-    - hi, I want to remove the category [projects]{"entity": "category", "role": "new"} 
-    - hello, I want to cancel the category [monthly]{"entity": "category", "role": "new"} 
-    - hello, I want to remove the category [quickly]{"entity": "category", "role": "new"} 
-    - I want to cancel the category [gym]{"entity": "category", "role": "new"} 
-    - I want to delete the category [sports]{"entity": "category", "role": "new"} 
-    - I want to del the category [study]{"entity": "category", "role": "new"} 
-    - I want to cancel the category [school]{"entity": "category", "role": "new"} 
-    - I want to remove the category [university]{"entity": "category", "role": "new"} 
-    - I want to delete the category [personal]{"entity": "category", "role": "new"} 
-    - hi, I want to cancel the category [work]{"entity": "category", "role": "new"} 
+    - I want to cancel the category [weekly](category) 
+    - I want to delete the category [daily](category) 
+    - I want to remove the category [commitments](category) 
+    - I want to del the category [projects](category) 
+    - I want to cancel the category [monthly](category) 
+    - I want to delete the category [quickly](category) 
+    - hi, I want to del the category [weekly](category) 
+    - hi, I want to remove the category [daily](category) 
+    - hi, I want to delete the category [commitments](category) 
+    - hi, I want to remove the category [projects](category) 
+    - hello, I want to cancel the category [monthly](category) 
+    - hello, I want to remove the category [quickly](category) 
+    - I want to cancel the category [gym](category) 
+    - I want to delete the category [sports](category) 
+    - I want to del the category [study](category) 
+    - I want to cancel the category [school](category) 
+    - I want to remove the category [university](category) 
+    - I want to delete the category [personal](category) 
+    - hi, I want to cancel the category [work](category) 
 
 - intent: modify_category
   examples: |
@@ -1119,12 +1120,12 @@ nlu:
     - What are my activities?
     - What are my [finished](activity_status) activities?
     - What are my [unexecuted](activity_status) activities?
-    - show activity in [gym]{"entity": "category", "role": "new"} category
-    - show all my [developed](activity_status) activity in [monthly]{"entity": "category", "role": "new"} category
-    - show my [undone](activity_status) activity in [commitments]{"entity": "category", "role": "new"} category
-    - show [executed](activity_status) activity in [work]{"entity": "category", "role": "new"} category
-    - show activity in [projects]{"entity": "category", "role": "new"} category
-    - show [unfinished](activity_status) activity in [work]{"entity": "category", "role": "new"} category
+    - show activity in [gym](category) category
+    - show all my [developed](activity_status) activity in [monthly](category) category
+    - show my [undone](activity_status) activity in [commitments](category) category
+    - show [executed](activity_status) activity in [work](category) category
+    - show activity in [projects](category) category
+    - show [unfinished](activity_status) activity in [work](category) category
 
 - intent: clean_activities
   examples: |

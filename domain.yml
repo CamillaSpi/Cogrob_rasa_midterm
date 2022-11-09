@@ -112,11 +112,9 @@ forms:
       activity:
         - type: from_entity
           entity: activity
-          role: new
       category:
         - type: from_entity
           entity: category
-          role: new
   
   add_deadline_form: 
     required_slots:
@@ -133,11 +131,9 @@ forms:
       activity:
         - type: from_entity
           entity: activity
-          role: new
       category:
         - type: from_entity
           entity: category
-          role: new
 
   set_status_activity_form:
     required_slots:
@@ -147,11 +143,9 @@ forms:
       activity:
         - type: from_entity
           entity: activity
-          role: new
       category:
         - type: from_entity
           entity: category
-          role: new
 
   add_category_form:
     required_slots:
@@ -161,7 +155,6 @@ forms:
       category:
         - type: from_entity
           entity: category
-          role: new
           
   remove_category_form:
     required_slots:
@@ -171,7 +164,6 @@ forms:
       category:
         - type: from_entity
           entity: category
-          role: new
     
   view_activities_form:
     required_slots:
@@ -184,6 +176,9 @@ forms:
       username:
         - type: from_entity
           entity: username
+      category:
+        - type: from_entity
+          entity: category
               
   modify_category_form:
     required_slots:
