@@ -79,7 +79,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add an activity
     intent: add_item
@@ -107,7 +107,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add an activity
     intent: add_item
@@ -210,7 +210,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
     intent: add_item
@@ -230,7 +230,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add an activity
     intent: add_item
@@ -331,7 +331,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       remo an activity
     intent: remove_item
@@ -363,7 +363,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       remo an activity
     intent: remove_item
@@ -451,7 +451,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
     intent: remove_item
@@ -477,7 +477,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       remove [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
     intent: remove_item
@@ -582,7 +582,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       remo an activity
     intent: remove_item
@@ -623,7 +623,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       remo an activity
     intent: remove_item
@@ -727,7 +727,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at at 22th december 2022
     intent: remove_item
@@ -751,7 +751,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       remove [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at 27th september 2022
     intent: remove_item
@@ -838,7 +838,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [completed](activity_status)
     intent: set_status_activity
@@ -876,7 +876,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [completed](activity_status)
     intent: set_status_activity
@@ -959,7 +959,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [completed](activity_status)
     intent: set_status_activity
@@ -993,7 +993,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [completed](activity_status)
     intent: set_status_activity
@@ -1039,7 +1039,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [completed](activity_status)
     intent: set_status_activity
@@ -1124,7 +1124,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [uncompleted](activity_status)
     intent: set_status_activity
@@ -1162,7 +1162,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [uncompleted](activity_status)
     intent: set_status_activity
@@ -1245,7 +1245,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [uncompleted](activity_status)
     intent: set_status_activity
@@ -1279,7 +1279,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [uncompleted](activity_status)
     intent: set_status_activity
@@ -1325,7 +1325,7 @@ stories:
   - action: add_new_user_form
   - active_loop: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       set [uncompleted](activity_status)
     intent: set_status_activity
@@ -1391,7 +1391,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add [run]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"} at 22th december 2022
     intent: add_item
@@ -1413,7 +1413,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add [run]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"}
     intent: add_item
@@ -1435,7 +1435,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add [painting]{"entity": "activity", "role": "new"} into [weekly]{"entity": "category", "role": "new"}
     intent: add_item
@@ -1468,7 +1468,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add [rob]{"entity": "activity", "role": "new"} into [weekly]{"entity": "category", "role": "new"}
     intent: add_item
@@ -1490,7 +1490,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       add [painting]{"entity": "activity", "role": "new"} into [weekly]{"entity": "category", "role": "new"}
     intent: add_item
@@ -1725,7 +1725,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       let me see all my activities
     intent: view_activities
@@ -1754,7 +1754,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       i want to see my undone activities
     intent: view_activities
@@ -1769,7 +1769,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       i want to watch the uncompleted activities 
     intent: view_activities
@@ -1785,7 +1785,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
 
 - story: test2 for login-signup
   steps:
@@ -1794,7 +1794,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
 
 - story: test3 for login-signup
   steps:
@@ -1808,7 +1808,7 @@ stories:
     intent: inform
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
 
 - story: test4 for login-signup
   steps:
@@ -1822,7 +1822,7 @@ stories:
     intent: inform
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
 
 - story: test5 for login-signup
   steps:
@@ -1836,7 +1836,7 @@ stories:
     intent: inform
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
 
 #################################### Test Stories Show categories######################################
 - story: test1 for show categories
@@ -1860,7 +1860,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       let me see all my categories
     intent: view_categories
@@ -1889,7 +1889,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       i want to look at my categories
     intent: view_categories
@@ -1904,7 +1904,7 @@ stories:
     intent: presentation
   - action: add_new_user_form
   - active_loop: null
-  - action: action_create_user
+  - action: action_recognize_user
   - user: |
       my categories
     intent: view_categories

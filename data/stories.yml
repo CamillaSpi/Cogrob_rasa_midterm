@@ -38,7 +38,7 @@ stories:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: action_create_user
+  - action: action_recognize_user
 
 #################################### Submit new Activity Stories ######################################
 - story: Submit generic activity

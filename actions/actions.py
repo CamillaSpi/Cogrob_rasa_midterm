@@ -19,7 +19,7 @@ from . import Database
 class actionCreateUser(Action):
 
     def name(self) -> Text:
-        return "action_create_user"
+        return "action_recognize_user"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,

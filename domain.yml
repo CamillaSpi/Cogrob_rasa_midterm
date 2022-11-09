@@ -46,7 +46,6 @@ actions:
   - utter_ask_time
   - utter_ask_category
   - utter_ask_activity
-  - utter_complete_insert_action
   - utter_confirm_choice
   - utter_deny_choice
   - utter_modification_choice
@@ -60,7 +59,7 @@ actions:
   - action_remove_category
   - action_view_activities
   - action_view_categories
-  - action_create_user
+  - action_recognize_user
   - action_modify_category
   - action_modify_activity
   - action_set_reminder_slot
@@ -338,7 +337,7 @@ responses:
   - text: "Please insert the time"
 
   utter_ask_if_deadline:
-  - text: "Did this item have a deadline?"
+  - text: "Does this item have a deadline?"
 
   utter_ask_if_reminder:
   - text: "Do you want to set a reminder for the activity?"
@@ -349,11 +348,10 @@ responses:
   utter_ask_category:
   - text: "Please insert the category"
  
-
   utter_confirm_choice:
   - text: "Are you sure!?"
   utter_ask_username:
-  - text: "PLease usernam"
+  - text: "Please insert the username"
   utter_deny_choice:
   - text: "Ok cancelled"
 
