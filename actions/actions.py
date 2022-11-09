@@ -425,12 +425,8 @@ class actionAskCategoryOld(Action):
         category_old = tracker.get_slot("category_old")
         category = tracker.get_slot("category")
         if(category_old == None):
-            if(category == None):
-                dispatcher.utter_message(text=f"Please insert the category to be modified")
-            else:
-                print("ci sono entrat")
-                dispatcher.utter_message(text=f"Please insert the category")
-                return[SlotSet("category_old",category),SlotSet("category",None)]    
+            dispatcher.utter_message(text=f"Please insert the category new ")
+            return[SlotSet("category_old",category),SlotSet("category",None)]    
         return []
 
 
