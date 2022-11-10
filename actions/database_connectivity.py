@@ -208,7 +208,7 @@ class Database:
       return False
 
   @staticmethod
-  def selectpossessions(username):
+  def selectPossessions(username):
 
     cur.execute('''
     SELECT * FROM possessions WHERE username == (?);

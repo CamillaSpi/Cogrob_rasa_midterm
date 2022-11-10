@@ -177,9 +177,6 @@ forms:
       username:
         - type: from_entity
           entity: username
-      category:
-        - type: from_entity
-          entity: category
               
   modify_category_form:
     required_slots:

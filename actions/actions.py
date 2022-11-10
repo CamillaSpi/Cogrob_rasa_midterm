@@ -248,7 +248,7 @@ class showCategories(Action):
         username = tracker.get_slot("username")
 
         if(Database.doesUserExists(username)):
-            dispatcher.utter_message(text=f"These are all your categories:\n{Database.selectCategories(username)}") 
+            dispatcher.utter_message(text=f"These are all your categories:\n{Database.selectPossessions(username)}") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None), SlotSet("activity", None)]
