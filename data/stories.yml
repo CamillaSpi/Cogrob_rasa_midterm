@@ -468,4 +468,5 @@ stories:
   - checkpoint: reminder_generic
   - slot_was_set:
     - time: true
+    - username: true
   - action: action_reminder_item
