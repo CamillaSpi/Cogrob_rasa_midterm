@@ -2146,7 +2146,7 @@ stories:
 - story: test modify deadline of activity with deadline passing no date
   steps:
   - user: |
-      I want to modify the deadline of the activity [run]{"entity": "activity", "role": "new"} in the category [gym]{"entity": "category", "role": "new"}
+      I want to modify the deadline of the activity [run](activity) in the category [gym](category)
     intent: modify_activity_deadline 
   - action: modify_activity_deadline_form 
   - active_loop: modify_activity_deadline_form
@@ -2154,29 +2154,18 @@ stories:
       my name is [Cinzia](username)
     intent: presentation
   - action: modify_activity_deadline_form
-  - active_loop: null
-  - action: utter_ask_if_deadline
   - user: |
-      yes
-    intent: affirm
-  - action: add_deadline_form
-  - active_loop: add_deadline_form
-  - user: |
-      12/12/2022
+      from 11/11/2022 to 12/12/2022
     intent: inform
-  - action: add_deadline_form
-  - slot_was_set:
-    - time: "2022-12-12T00:00:00.000+02:00"
+  - action: modify_activity_deadline_form
   - active_loop: null
   - action: action_modify_activity
 
-- story: test modify deadline of activity without deadline passing only one date
+- story: test modify deadline of activity passing all
   steps:
   - user: |
-      I want to modify the deadline of the activity [dinner]{"entity": "activity", "role": "new"} in the category [personal]{"entity": "category", "role": "new"} of 12/12/2022
+      I want to modify the deadline of the activity [dinner](activity) in the category [personal](catgory) from 09/15/2022 to 10/06/2022
     intent: modify_activity_deadline 
-  - slot_was_set:
-    - time: "2022-12-12T00:00:00.000+02:00"
   - action: modify_activity_deadline_form 
   - active_loop: modify_activity_deadline_form
   - user: |
@@ -2225,75 +2214,6 @@ stories:
       no
     intent: deny
   - action: action_modify_activity
-
-
-
-#Le due storie che seguono sono commentate per la questione già scritta su trello
-# - story: test modify name of activity passing step by step yes deadline
-#   steps:
-#   - user: |
-#        I want to modify the name of an activity [study]{"entity": "activity", "role": "old"}
-#     intent: modify_activity_name 
-#   - action: modify_activity_name_form 
-#   - active_loop: modify_activity_name_form
-#   - user: |
-#       I'm [Camilla](username)
-#   - intent: presentation
-#   - active_loop: modify_activity_name_form
-#   - user: |
-#       [university]{"entity": "category", "role": "new"}
-#   - intent: inform
-#   - action: add_deadline_form
-#   - active_loop: modify_activity_name_form
-#   - user: |
-#       with the name [read]{"entity": "activity", "role": "new"}
-#   - intent: inform
-#   - action: modify_activity_name_form
-#   - active_loop: null
-#   - action: utter_ask_if_deadline
-#   - user: |
-#       yes
-#     intent: affirm
-#   - action: add_deadline_form
-#   - active_loop: add_deadline_form
-#   - user: |
-#       10/10/2022
-#     intent: inform
-#   - action: add_deadline_form
-#   - slot_was_set:
-#     - time: "2022-10-10T00:00:00.000+02:00"
-#   - active_loop: null
-#   - action: action_modify_activity
-
-
-# - story: test modify name of activity passing step by step no deadline
-#   steps:
-#   - user: |
-#        I want to change the name of the activity [study]{"entity": "activity", "role": "old"}
-#     intent: modify_activity_name 
-#   - action: modify_activity_name_form 
-#   - active_loop: modify_activity_name_form
-#   - user: |
-#       I'm [Camilla](username)
-#   - intent: presentation
-#   - active_loop: modify_activity_name_form
-#   - user: |
-#       [university]{"entity": "category", "role": "new"}
-#   - intent: inform
-#   - action: add_deadline_form
-#   - active_loop: modify_activity_name_form
-#   - user: |
-#       with the name [read]{"entity": "activity", "role": "new"}
-#   - intent: inform
-#   - action: modify_activity_name_form
-#   - active_loop: null
-#   - action: utter_ask_if_deadline
-#   - user: |
-#       no
-#     intent: deny
-#   - action: action_modify_activity
-
-
 
 - story: test modify name of activity passing all also deadline
   steps:
