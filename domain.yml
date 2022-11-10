@@ -69,6 +69,7 @@ actions:
   - action_ask_category_old
   - action_ask_activity_old
   - my_action_fallback
+  - validate_modify_category_form
 
 
 slots:

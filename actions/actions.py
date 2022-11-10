@@ -13,6 +13,8 @@ from unicodedata import category
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+from rasa_sdk.forms import FormValidationAction
+from rasa_sdk.types import DomainDict
 from datetime import datetime, timedelta
 
 from . import Database
@@ -471,3 +473,27 @@ class actionDefaultFallBack(Action):
         SlotSet("category",None),
         SlotSet("time",None),
         SlotSet("activity_status",None)]
+
+class ValidateModifyCategoryForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_modify_category_form"
+
+    def validate_category_old(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+
+        dispatcher.utter_message(text=f"Alfredo")
+
+    def validate_category(
+        self,
+        value: Text,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+
+        dispatcher.utter_message(text=f"Mario")
