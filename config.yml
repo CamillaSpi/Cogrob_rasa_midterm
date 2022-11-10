@@ -33,7 +33,7 @@ pipeline:
     # url of the running duckling server
     url: "http://localhost:8000"
     # dimensions to extract
-    timezone: "Europe/Rome"
+    timezone: "Europe/Berlin"
     dimensions: ["time"]
     timeout : 3
 
