@@ -47,7 +47,7 @@ stories:
   - active_loop: add_new_user_form
   - active_loop: null
   - slot_was_set:
-    - username: true
+    - username: group12
   - action: action_recognize_user
 
 #################################### Submit new Activity Stories ######################################
@@ -79,7 +79,7 @@ stories:
   - active_loop: add_deadline_form
   - active_loop: null
   - slot_was_set:
-    - time: true
+    - time: '2022-09-27T00:00:00.000+02:00'
   - checkpoint: submit_generic_deadline
 
 - story: Submit new activity with deadline
@@ -191,29 +191,8 @@ stories:
   - action: action_remove_item
 
 
-#################################### Show Stories ######################################
-- story: Show my Activities 
-  steps:
-  - intent: view_activities
-  - action: view_activities_form
-  - active_loop: view_activities_form
-  - active_loop: null
-  - slot_was_set:
-    - username: true
-  - action: action_view_activities
-
-- story: Show my Categories 
-  steps:
-  - intent: view_categories
-  - action: view_categories_form
-  - active_loop: view_categories_form
-  - active_loop: null
-  - slot_was_set:
-    - username: true
-  - action: action_view_categories
-
 #################################### Set Completed and unCompleted Stories ######################################
-#forse si può unificare il form?
+
 - story: Set status Activity Generic
   steps:
     - intent: set_status_activity
