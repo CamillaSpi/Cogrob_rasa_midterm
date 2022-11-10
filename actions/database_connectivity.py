@@ -193,7 +193,16 @@ class Database:
       return False
 
   @staticmethod
-  def insertCategory(username, category):
+  def insertCategory(category):
+    cur.execute('''
+      INSERT INTO categories (name) VALUES (?);
+    ''', (category,))
+    if(len( cur.fetchall()) > 0 ):
+      return True
+    return False
+
+  @staticmethod
+  def insertCategoryAndPossession(username, category):
     try:
       if( not Database.doesCategoryExists(category)):
         conn.execute('''
@@ -269,8 +278,15 @@ class Database:
       SELECT * FROM possessions WHERE username == ? AND category == ?
     ''', (username, category))
     if(len(cur.fetchall()) > 0 ):
+      if category_new != None:
+        if not Database.doesCategoryExists(category_new):
+          #Andrebbe comunicato che è stata creata tale categoria
+          Database.insertCategory(category_new)
       conn.execute('''
         UPDATE possessions SET category = ? WHERE username == ? AND category == ?;
+      ''', (category_new,username,category))
+      conn.execute('''
+        UPDATE unfoldings SET category = ? WHERE username == ? AND category == ?;
       ''', (category_new,username,category))
       conn.commit()
       return True
@@ -292,10 +308,9 @@ class Database:
       ''', (id_unfolding,))
       if(len(cur.fetchall()) > 0 ):
         if newcategory != None:
-          returned = Database.doesPossessionExists(username,newcategory)
           if not Database.doesPossessionExists(username,newcategory):
             #Andrebbe comunicato che è stata creata tale categoria
-            Database.insertCategory(username, newcategory)
+            Database.insertCategoryAndPossession(username, newcategory)
         paramList = list()
         paramList.append(("activity", newactivity))
         paramList.append(("category", newcategory))

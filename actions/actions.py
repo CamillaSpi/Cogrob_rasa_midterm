@@ -113,7 +113,7 @@ class actionAddCategory(Action):
         category = tracker.get_slot("category")
 
         if(Database.doesUserExists(username)):
-            returnedValue = Database.insertCategory(username,category)
+            returnedValue = Database.insertCategoryAndPossession(username,category)
             if (returnedValue):  
                 dispatcher.utter_message(text=f"Congratulation {username}, {category} added as a new Category") 
             else:
