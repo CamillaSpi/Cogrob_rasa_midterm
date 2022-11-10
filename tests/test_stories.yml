@@ -1361,6 +1361,102 @@ stories:
   - active_loop: null
   - action: action_set_status_activity
 
+#################################### Test Stories Modify Activity and Category  ######################################
+- story: later presentation and modify activity and category without deadline
+  steps:
+  - user: |
+      I want to change the category [courses]{"entity": "category", "role": "old"} of the activity [study](activity) in [university]{"entity": "category", "role": "new"}
+    intent: modify_activity_category
+  - action: modify_activity_category_form
+  - active_loop: modify_activity_category_form
+  - user: |
+      im [floricenta1](username)
+    intent: presentation
+  - action: modify_activity_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity 
+
+- story: later presentation and modify activity and category with deadline
+  steps:
+  - user: |
+      I want to change the category [courses]{"entity": "category", "role": "old"} of the activity [study](activity) in [university]{"entity": "category", "role": "new"}
+    intent: modify_activity_category
+  - action: modify_activity_category_form
+  - active_loop: modify_activity_category_form
+  - user: |
+      im [misterJack](username)
+    intent: presentation
+  - action: modify_activity_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+    
+- story: presentation and modify activity and category without deadline
+  steps:
+  - user: |
+      im [armadillo1999](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_recognize_user
+  - user: |
+       I want to change the category [courses]{"entity": "category", "role": "old"} of the activity [study](activity) in [university]{"entity": "category", "role": "new"}
+    intent: modify_activity_category
+  - action: modify_activity_category_form
+  - active_loop: modify_activity_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity 
+
+- story: presentation and modify activity and category with deadline
+  steps:
+  - user: |
+      im [napoliUnicoAmore1926](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_recognize_user
+  - user: |
+       I want to change the category [courses]{"entity": "category", "role": "old"} of the activity [study](activity) in [university]{"entity": "category", "role": "new"}
+    intent: modify_activity_category
+  - action: modify_activity_category_form
+  - active_loop: modify_activity_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
 
 
 #################################### Test Stories  Add Item Other ######################################
