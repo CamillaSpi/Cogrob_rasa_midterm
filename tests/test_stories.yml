@@ -18,11 +18,11 @@ stories:
     intent: presentation
   - action: add_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: add_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: add_item_form
   - active_loop: null
@@ -44,11 +44,11 @@ stories:
     intent: presentation
   - action: add_item_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: add_item_form
   - user: |
-      [healthcare]{"entity": "category", "role": "new"}
+      [healthcare](category)
     intent: inform
   - action: add_item_form
   - active_loop: null
@@ -86,11 +86,11 @@ stories:
   - action: add_item_form
   - active_loop: add_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: add_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: add_item_form
   - active_loop: null
@@ -114,11 +114,11 @@ stories:
   - action: add_item_form
   - active_loop: add_item_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: add_item_form
   - user: |
-      [healthcare]{"entity": "category", "role": "new"}
+      [healthcare](category)
     intent: inform
   - action: add_item_form
   - active_loop: null
@@ -156,7 +156,7 @@ stories:
     intent: presentation
   - action: add_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      [walk](activity) in [health](category)
     intent: inform
   - action: add_item_form
   - active_loop: null
@@ -178,7 +178,7 @@ stories:
     intent: presentation
   - action: add_item_form
   - user: |
-      add[study]{"entity": "activity", "role": "new"} in [healthcare]{"entity": "category", "role": "new"}
+      add[study](activity) in [healthcare](category)
     intent: inform
   - action: add_item_form
   - active_loop: null
@@ -212,7 +212,7 @@ stories:
   - active_loop: null
   - action: action_recognize_user
   - user: |
-      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      add [walk](activity) in [health](category)
     intent: add_item
   - action: add_item_form
   - active_loop: add_item_form
@@ -237,7 +237,7 @@ stories:
   - action: add_item_form
   - active_loop: add_item_form
   - user: |
-      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      add [walk](activity) in [health](category)
     intent: add_item
   - action: add_item_form
   - active_loop: null
@@ -275,11 +275,11 @@ stories:
     intent: presentation
   - action: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: remove_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -306,11 +306,11 @@ stories:
     intent: presentation
   - action: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: remove_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -338,11 +338,11 @@ stories:
   - action: remove_item_form
   - active_loop: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: remove_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -370,11 +370,11 @@ stories:
   - action: remove_item_form
   - active_loop: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: remove_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -401,7 +401,7 @@ stories:
     intent: presentation
   - action: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      [walk](activity) in [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -428,7 +428,7 @@ stories:
     intent: presentation
   - action: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      [walk](activity) in [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -453,7 +453,7 @@ stories:
   - active_loop: null
   - action: action_recognize_user
   - user: |
-      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      add [walk](activity) in [health](category)
     intent: remove_item
   - action: remove_item_form
   - active_loop: remove_item_form
@@ -479,7 +479,7 @@ stories:
   - active_loop: null
   - action: action_recognize_user
   - user: |
-      remove [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      remove [walk](activity) in [health](category)
     intent: remove_item
   - action: remove_item_form
   - active_loop: remove_item_form
@@ -508,11 +508,11 @@ stories:
     intent: presentation
   - action: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: remove_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -548,11 +548,11 @@ stories:
     intent: presentation
   - action: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: remove_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -589,11 +589,11 @@ stories:
   - action: remove_item_form
   - active_loop: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: remove_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -630,11 +630,11 @@ stories:
   - action: remove_item_form
   - active_loop: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"}
+      [walk](activity)
     intent: inform
   - action: remove_item_form
   - user: |
-      [health]{"entity": "category", "role": "new"}
+      [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -670,7 +670,7 @@ stories:
     intent: presentation
   - action: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"}
+      [walk](activity) in [health](category)
     intent: inform
   - action: remove_item_form
   - active_loop: null
@@ -706,7 +706,7 @@ stories:
     intent: presentation
   - action: remove_item_form
   - user: |
-      [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at 22th december 2022
+      [walk](activity) in [health](category) at 22th december 2022
     intent: inform
   - slot_was_set:
     - time: "2022-12-22T00:00:00.000+01:00"
@@ -729,7 +729,7 @@ stories:
   - active_loop: null
   - action: action_recognize_user
   - user: |
-      add [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at at 22th december 2022
+      add [walk](activity) in [health](category) at at 22th december 2022
     intent: remove_item
   - slot_was_set:
     - time: "2022-12-22T00:00:00.000+01:00"
@@ -753,7 +753,7 @@ stories:
   - active_loop: null
   - action: action_recognize_user
   - user: |
-      remove [walk]{"entity": "activity", "role": "new"} in [health]{"entity": "category", "role": "new"} at 27th september 2022
+      remove [walk](activity) in [health](category) at 27th september 2022
     intent: remove_item
   - slot_was_set:
     - time: "2022-09-27T00:00:00.000+02:00"
@@ -781,11 +781,11 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: set_status_activity_form
   - user: |
-      [personal]{"entity": "category", "role": "new"}
+      [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -816,11 +816,11 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: set_status_activity_form
   - user: |
-      [personal]{"entity": "category", "role": "new"}
+      [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -845,11 +845,11 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: set_status_activity_form
   - user: |
-      [personal]{"entity": "category", "role": "new"}
+      [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -883,11 +883,11 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: set_status_activity_form
   - user: |
-      [personal]{"entity": "category", "role": "new"}
+      [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -910,7 +910,7 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
+      [study]{"entity": "activity", "role": "new"} in [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -941,7 +941,7 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
+      [study]{"entity": "activity", "role": "new"} in [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -966,7 +966,7 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in  [personal]{"entity": "category", "role": "new"}
+      [study]{"entity": "activity", "role": "new"} in  [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1000,7 +1000,7 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in  [personal]{"entity": "category", "role": "new"}
+      [study]{"entity": "activity", "role": "new"} in  [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1023,7 +1023,7 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+      [study]{"entity": "activity", "role": "new"} in [personal](category) on 09/27/2022
     intent: inform
   - slot_was_set:
     - time: "2022-09-27T00:00:00.000+02:00"
@@ -1046,7 +1046,7 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+      [study](activity) in [personal](category) on 09/27/2022
     intent: inform
   - slot_was_set:
     - time: "2022-09-27T00:00:00.000+02:00"
@@ -1067,11 +1067,11 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: set_status_activity_form
   - user: |
-      [personal]{"entity": "category", "role": "new"}
+      [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1102,11 +1102,11 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: set_status_activity_form
   - user: |
-      [personal]{"entity": "category", "role": "new"}
+      [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1131,11 +1131,11 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: set_status_activity_form
   - user: |
-      [personal]{"entity": "category", "role": "new"}
+      [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1169,11 +1169,11 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"}
+      [study](activity)
     intent: inform
   - action: set_status_activity_form
   - user: |
-      [personal]{"entity": "category", "role": "new"}
+      [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1196,7 +1196,7 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
+      [study](activity) in [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1227,7 +1227,7 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"}
+      [study]{"entity": "activity", "role": "new"} in [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1252,7 +1252,7 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in  [personal]{"entity": "category", "role": "new"}
+      [study](activity) in [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1286,7 +1286,7 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in  [personal]{"entity": "category", "role": "new"}
+      [study](activity) in  [personal](category)
     intent: inform
   - action: set_status_activity_form
   - active_loop: null
@@ -1309,7 +1309,7 @@ stories:
     intent: presentation
   - action: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+      [study](activity) in [personal](category) on 09/27/2022
     intent: inform
   - slot_was_set:
     - time: "2022-09-27T00:00:00.000+02:00"
@@ -1332,7 +1332,7 @@ stories:
   - action: set_status_activity_form
   - active_loop: set_status_activity_form
   - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
+      [study](activity) in [personal](category) on 09/27/2022
     intent: inform
   - slot_was_set:
     - time: "2022-09-27T00:00:00.000+02:00"
@@ -1344,22 +1344,19 @@ stories:
 - story: remind me of later presentation
   steps:
   - user: |
-     remind me to [shopping]{"entity": "activity", "role": "new"} into the category [household]]{"entity": "category", "role": "new"} on 18th november 2022
-    intent: set_status_activity
-  - action: set_status_activity_form
-  - active_loop: set_status_activity_form
+     remind me to [shopping](activity) into the category [household](category) on 18th november 2022
+    intent: remind_me_of
+  - slot_was_set:
+    - time: "2022-11-18T00:00:00.000+01:00"
+  - action: action_set_reminder_slot
+  - action: add_item_form
+  - active_loop: add_item_form
   - user: |
       im [marc3ll0](username)
     intent: presentation
-  - action: set_status_activity_form
-  - user: |
-      [study]{"entity": "activity", "role": "new"} in [personal]{"entity": "category", "role": "new"} on 09/27/2022
-    intent: inform
-  - slot_was_set:
-    - time: "2022-09-27T00:00:00.000+02:00"
-  - action: set_status_activity_form
+  - action: add_item_form
   - active_loop: null
-  - action: action_set_status_activity
+  - action: action_reminder_item
 
 #################################### Test Stories Modify the category of an activity  ######################################
 - story: later presentation and modify the category of an activity without deadline
@@ -1754,7 +1751,7 @@ stories:
 - story: later presentation and add activity already deadline 1
   steps:
   - user: |
-      add [run]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"} at 22th december 2022
+      add [run](activity) into [daily](category) on 22th december 2022
     intent: add_item
   - slot_was_set:
     - time: "2022-12-22T00:00:00.000+01:00"
@@ -1780,7 +1777,7 @@ stories:
   - active_loop: null
   - action: action_recognize_user
   - user: |
-      add [run]{"entity": "activity", "role": "new"} into [daily]{"entity": "category", "role": "new"} at 22th december 2022
+      add [run](activity) into [daily](category) on 22th december 2022
     intent: add_item
   - slot_was_set:
     - time: "2022-12-22T00:00:00.000+01:00"
@@ -2356,37 +2353,21 @@ stories:
   - action: action_add_category
 
 #################################### Test Stories Modify Category confirmed######################################
-- story: test1 for modify category confirmed
-  steps:
-  - user: |
-      hi i am [Tonino](username) and i want to modify the category [projects]{"entity": "category", "role": "old"}
-    intent: modify_category
-  - action: modify_category_form
-  - active_loop: modify_category_form
-  - user: |
-      the new category name is [personal]{"entity": "category", "role": "new"}
-    intent: inform
-  - action: modify_category_form
-  - active_loop: null
-  - action: utter_confirm_choice
-  - user: |
-      yeah
-    intent: affirm
-  - action: action_modify_category
-
 - story: test2 for modify category confirmed
   steps:
   - user: |
-      modify the category [gym]{"entity": "category", "role": "old"}
+      my name is [Elio](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: null
+  - action: action_recognize_user
+  - user: |
+      modify the category [gym](category)
     intent: modify_category
   - action: modify_category_form
   - active_loop: modify_category_form
   - user: |
-      my name is [Elio](username)
-    intent: inform
-  - action: modify_category_form
-  - user: |
-      its name is [cooking]{"entity": "category", "role": "new"}
+      its name is [cooking](category)
     intent: inform
   - action: modify_category_form
   - active_loop: null
@@ -2421,11 +2402,11 @@ stories:
     intent: inform
   - action: modify_category_form
   - user: |
-      the old category is [friends]{"entity": "category", "role": "old"}
+      the old category is [friends](category)
     intent: inform
   - action: modify_category_form
   - user: |
-      the new category name is [hobby]{"entity": "category", "role": "new"}
+      the new category name is [hobby](category)
     intent: inform
   - action: modify_category_form
   - active_loop: null
@@ -2659,7 +2640,7 @@ stories:
 - story: test modify category of activity passing all also deadline
   steps:
   - user: |
-       my name is [Lucia](username) and I want to modify the category of the activity [hairdresser]{"entity": "activity", "role": "old"} in the category [beauty]{"entity": "category", "role": "old"} of 04/04/2022 with name [personal]{"entity": "category", "role": "new"}
+       my name is [Lucia](username) and I want to modify the category of the activity [hairdresser](activity) in the category [beauty]{"entity": "category", "role": "old"} of 04/04/2022 with name [personal]{"entity": "category", "role": "new"}
     intent: modify_activity_category
   - slot_was_set:
       - time: "2022-04-04T00:00:00.000+02:00"

@@ -86,7 +86,7 @@ slots:
     influence_conversation: false
   username:
     type: text
-    influence_conversation: false
+    influence_conversation: true
   time:
     type: text
     influence_conversation: true
