@@ -296,6 +296,7 @@ class actionModifyActivity(Action):
         activity_new = tracker.get_slot("activity")
         category_new = tracker.get_slot("category")
         time = tracker.get_slot("time")
+        print("category_old:",category_old," activity_old:",activity_old," category:",category_new," activity:",activity_new)
         if(time != None and len(time) == 2 and not isinstance(time, list)):
             print("sono entrato nel primo if")
             timenew = time['to']
@@ -304,7 +305,7 @@ class actionModifyActivity(Action):
             print("sono entrato nel primo elsif")
             timeold = time[0]['from']
             timenew = time[1]
-        elif(Database.doesUnfoldingsExists(username,category_old,activity_old)): 
+        elif(Database.doesUnfoldingsExists(username,category_new,activity_new)): 
             print("sono entrato nel secondo elsif")
             timenew = time
             timeold = None
@@ -318,24 +319,25 @@ class actionModifyActivity(Action):
             dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
             return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None)]
         
-        if(activity_new!=None):
-            act_to_query = activity_new
+        if(activity_old!=None):
+            act_to_modify = activity_old
         else:
-            act_to_query = activity_old
-        if(category_new!=None):
-            cat_to_query = category_new
+            act_to_modify = activity_new
+        if(category_old!=None):
+            cat_to_modify = category_old
         else:
-            cat_to_query = category_old
+            cat_to_modify = category_new
+
 
         if(Database.doesUserExists(username)):
-            if (Database.doesUnfoldingsExists(username,cat_to_query,act_to_query,timenew) == False):
-                returnedValue = Database.modifyActivity(username, category_old, activity_old, timeold, category_new, activity_new, timenew)
+            if (Database.doesUnfoldingsExists(username,category_new,activity_new,timenew) == False):
+                returnedValue = Database.modifyActivity(username, cat_to_modify, act_to_modify, timeold, category_new, activity_new, timenew)
                 if (returnedValue):  
-                    dispatcher.utter_message(text=f"Congratulation {username}, the activity {act_to_query} has been updated !") 
+                    dispatcher.utter_message(text=f"Congratulation {username}, the activity {act_to_modify} has been updated !") 
                 else:
                     dispatcher.utter_message(text=f"Ops! {username} something went wrong, I didn't find the activity to be updated :(") 
             else:
-                dispatcher.utter_message(text=f"Ops! {username} the {activity_old} already exists, it makes no sense to update that!") 
+                dispatcher.utter_message(text=f"Ops! {username} the {act_to_modify} already exists, it makes no sense to update that!") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
             return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None),SlotSet("activity", None)]
