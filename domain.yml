@@ -352,7 +352,7 @@ responses:
   - text: "Please insert the new category"
  
   utter_confirm_choice:
-  - text: "Are you sure!?"
+  - text: "Are you sure to complete this action!?"
   utter_ask_username:
   - text: "Please insert the username"
   utter_deny_choice:

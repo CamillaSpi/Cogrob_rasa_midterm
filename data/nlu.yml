@@ -1099,6 +1099,8 @@ nlu:
     - show [executed](activity_status) activity in [work](category) category
     - show activity in [projects](category) category
     - show [unfinished](activity_status) activity in [work](category) category
+    - show [completed](activity_status) activities
+    - show [completed](activity_status) activity
 
 - intent: clean_activities
   examples: |
