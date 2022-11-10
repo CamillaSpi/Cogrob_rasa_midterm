@@ -352,7 +352,6 @@ stories:
     - action: modify_activity_deadline_form
     - active_loop: modify_activity_deadline_form
     - active_loop: null
-    - checkpoint: modify_activity_deadline_generic
     - action: action_modify_activity
 
 #################################### Modify Activity name ######################################
