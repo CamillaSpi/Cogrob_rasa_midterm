@@ -13,6 +13,7 @@ from unicodedata import category
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+from datetime import datetime, timedelta
 
 from . import Database
 
@@ -298,8 +299,8 @@ class actionModifyActivity(Action):
         time = tracker.get_slot("time")
         print("category_old:",category_old," activity_old:",activity_old," category:",category_new," activity:",activity_new)
         if(time != None and len(time) == 2 and not isinstance(time, list)):
-            print("sono entrato nel primo if")
-            timenew = time['to']
+            print("sono entrato nel primo ifs")
+            timenew = str(datetime.strptime(time['to'], "%Y-%m-%dT%H:%M:%S.%f%z") - timedelta(days=1))
             timeold = time['from']
         elif(isinstance(time, list)):
             print("sono entrato nel primo elsif")
