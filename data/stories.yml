@@ -401,7 +401,6 @@ stories:
 - story: Modify name + category Generic
   steps:
     - intent: modify_activity_name+modify_activity_category 
-    - action: utter_happy
     - action: modify_activity_name_category_form
     - active_loop: modify_activity_name_category_form
     - active_loop: null
