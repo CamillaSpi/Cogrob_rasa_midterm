@@ -77,7 +77,7 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -105,7 +105,7 @@ stories:
   - user: |
       im [fragola86](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -207,8 +207,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -228,7 +228,7 @@ stories:
   - user: |
       im [fragola86](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -329,7 +329,7 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -361,7 +361,7 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -448,8 +448,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -474,8 +474,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -580,7 +580,7 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -621,7 +621,7 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -724,8 +724,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -748,8 +748,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -835,8 +835,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -873,8 +873,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -956,8 +956,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -990,8 +990,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1036,8 +1036,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1121,8 +1121,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1159,8 +1159,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1242,8 +1242,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1276,8 +1276,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1322,8 +1322,8 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1409,8 +1409,8 @@ stories:
   - user: |
       im [armadillo1999](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1430,8 +1430,8 @@ stories:
   - user: |
       im [napoliUnicoAmore1926](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1506,8 +1506,8 @@ stories:
   - user: |
       im [armadillo1999](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1527,8 +1527,8 @@ stories:
   - user: |
       im [napoliUnicoAmore1926](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1603,8 +1603,8 @@ stories:
   - user: |
       im [armadillo1999](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1624,8 +1624,8 @@ stories:
   - user: |
       im [napoliUnicoAmore1926](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1701,8 +1701,8 @@ stories:
   - user: |
       im [armadillo1999](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1722,8 +1722,8 @@ stories:
   - user: |
       im [napoliUnicoAmore1926](username)
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1773,7 +1773,7 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1795,7 +1795,7 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1815,7 +1815,7 @@ stories:
   - user: |
       im [nandinoxD](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -1850,7 +1850,7 @@ stories:
   - user: |
       my username is [albericoDocce00](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -1870,7 +1870,7 @@ stories:
   - user: |
       im [banaan33](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
@@ -2107,7 +2107,7 @@ stories:
   - user: |
       hi my username is [Luchino19](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -2136,7 +2136,7 @@ stories:
   - user: |
       hi my username is [Roberto](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -2151,7 +2151,7 @@ stories:
   - user: |
       my username is [Pika11](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -2167,7 +2167,7 @@ stories:
   - user: |
       hi my username is [Luke10](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
 
@@ -2176,7 +2176,7 @@ stories:
   - user: |
       i am [Carlo2](username) and i want to create an account
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
 
@@ -2185,12 +2185,12 @@ stories:
   - user: |
       let me create a new user
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - user: |
       my username is [Giovanni](username)
     intent: inform
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
 
@@ -2199,12 +2199,12 @@ stories:
   - user: |
       i am a new user
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - user: |
       it is [Mario999](username)
     intent: inform
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
 
@@ -2213,12 +2213,12 @@ stories:
   - user: |
       can i add a new account?
     intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - user: |
       the username is [Zelda122](username)
     intent: inform
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
 
@@ -2242,7 +2242,7 @@ stories:
   - user: |
       hi my username is [Franco](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -2271,7 +2271,7 @@ stories:
   - user: |
       hi my username is [Roberto](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -2286,7 +2286,7 @@ stories:
   - user: |
       my username is [Pika11](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |
@@ -2358,7 +2358,7 @@ stories:
   - user: |
       my name is [Elio](username)
     intent: presentation
-  - action: add_new_user_form
+  - action: recognize_user_form
   - active_loop: null
   - action: action_recognize_user
   - user: |

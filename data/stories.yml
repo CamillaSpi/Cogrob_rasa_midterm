@@ -43,8 +43,8 @@ stories:
 - story: Login o SignUp
   steps:  
   - intent: presentation
-  - action: add_new_user_form
-  - active_loop: add_new_user_form
+  - action: recognize_user_form
+  - active_loop: recognize_user_form
   - active_loop: null
   - slot_was_set:
     - username: group12

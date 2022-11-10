@@ -100,7 +100,7 @@ slots:
 
 #sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity? No!
 forms:
-  add_new_user_form:
+  recognize_user_form:
     required_slots:
       username:
         - type: from_entity
