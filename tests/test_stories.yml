@@ -1361,8 +1361,8 @@ stories:
   - active_loop: null
   - action: action_set_status_activity
 
-#################################### Test Stories Modify Activity and Category  ######################################
-- story: later presentation and modify activity and category without deadline
+#################################### Test Stories Modify the category of an activity  ######################################
+- story: later presentation and modify the category of an activity without deadline
   steps:
   - user: |
       I want to change the category [courses]{"entity": "category", "role": "old"} of the activity [study](activity) in [university]{"entity": "category", "role": "new"}
@@ -1380,7 +1380,7 @@ stories:
     intent: deny
   - action: action_modify_activity 
 
-- story: later presentation and modify activity and category with deadline
+- story: later presentation and modify the category of an activity with deadline
   steps:
   - user: |
       I want to change the category [courses]{"entity": "category", "role": "old"} of the activity [study](activity) in [university]{"entity": "category", "role": "new"}
@@ -1407,7 +1407,7 @@ stories:
   - active_loop: null
   - action: action_modify_activity
     
-- story: presentation and modify activity and category without deadline
+- story: presentation and modify the category of an activity without deadline
   steps:
   - user: |
       im [armadillo1999](username)
@@ -1428,7 +1428,7 @@ stories:
     intent: deny
   - action: action_modify_activity 
 
-- story: presentation and modify activity and category with deadline
+- story: presentation and modify the category of an activity with deadline
   steps:
   - user: |
       im [napoliUnicoAmore1926](username)
@@ -1458,6 +1458,199 @@ stories:
   - active_loop: null
   - action: action_modify_activity
 
+#################################### Test Stories Modify the category name and activity name  ######################################
+- story: later presentation and modify the category name and activity name without deadline
+  steps:
+  - user: |
+      change the name and the category from [play]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"}  and [holiday]{"entity": "category", "role": "old"} into [personal]{"entity": "category", "role": "new"}
+    intent: modify_activity_name+modify_activity_category
+  - action: modify_activity_name_category_form
+  - active_loop: modify_activity_name_category_form
+  - user: |
+      im [floricenta1](username)
+    intent: presentation
+  - action: modify_activity_name_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity 
+
+- story: later presentation and modify the category name and activity name with deadline
+  steps:
+  - user: |
+      change the name and the category from [play]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"}  and [holiday]{"entity": "category", "role": "old"} into [personal]{"entity": "category", "role": "new"}
+    intent: modify_activity_name+modify_activity_category
+  - action: modify_activity_name_category_form
+  - active_loop: modify_activity_name_category_form
+  - user: |
+      im [misterJack](username)
+    intent: presentation
+  - action: modify_activity_name_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+    
+- story: presentation and modify the category name and activity name without deadline
+  steps:
+  - user: |
+      im [armadillo1999](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_recognize_user
+  - user: |
+       change the name and the category from [play]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"}  and [holiday]{"entity": "category", "role": "old"} into [personal]{"entity": "category", "role": "new"}
+    intent: modify_activity_name+modify_activity_category
+  - action: modify_activity_name_category_form
+  - active_loop: modify_activity_name_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity 
+
+- story: presentation and modify the category name and activity name with deadline
+  steps:
+  - user: |
+      im [napoliUnicoAmore1926](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_recognize_user
+  - user: |
+       change the name and the category from [play]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"}  and [holiday]{"entity": "category", "role": "old"} into [personal]{"entity": "category", "role": "new"}
+    intent: modify_activity_name+modify_activity_category
+  - action: modify_activity_name_category_form
+  - active_loop: modify_activity_name_category_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+
+#################################### Test Stories Modify the deadline and activity name  ######################################
+- story: later presentation and modify the deadline and the activity name without deadline
+  steps:
+  - user: |
+      convert the activity named [study]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"} in the category [holiday](category) and from 25th december 2022 to 15 august 2022 at 15:00
+    intent: modify_activity_name+modify_activity_deadline
+  - action: modify_activity_name_deadline_form
+  - active_loop: modify_activity_name_deadline_form
+  - user: |
+      im [floricenta1](username)
+    intent: presentation
+  - action: modify_activity_name_deadline_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity 
+
+- story: later presentation and modify the deadline and the activity name with deadline
+  steps:
+  - user: |
+      convert the activity named [walk]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"} in the category [daily](category) and from 25th december 2022 to 15 august 2022 at 15:00
+    intent: modify_activity_name+modify_activity_deadline
+  - action: modify_activity_name_deadline_form
+  - active_loop: modify_activity_name_deadline_form
+  - user: |
+      im [misterJack](username)
+    intent: presentation
+  - action: modify_activity_name_deadline_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
+    
+- story: presentation and modify the deadline and the activity name without deadline
+  steps:
+  - user: |
+      im [armadillo1999](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_recognize_user
+  - user: |
+       convert the activity named [eat]{"entity": "activity", "role": "old"} into [walk]{"entity": "activity", "role": "new"} in the category [weekly](category) and from 25th december 2022 to 15 august 2022 at 15:00
+    intent: modify_activity_name+modify_activity_deadline
+  - action: modify_activity_name_deadline_form
+  - active_loop: modify_activity_name_deadline_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      no
+    intent: deny
+  - action: action_modify_activity 
+
+- story: presentation and modify the deadline and the activity name with deadline
+  steps:
+  - user: |
+      im [napoliUnicoAmore1926](username)
+    intent: presentation
+  - action: add_new_user_form
+  - active_loop: add_new_user_form
+  - active_loop: null
+  - action: action_recognize_user
+  - user: |
+       convert the activity named [play]{"entity": "activity", "role": "old"} into [study]{"entity": "activity", "role": "new"} in the category [university](category) and from 25th december 2022 to 15 august 2022 at 15:00
+    intent: modify_activity_name+modify_activity_deadline
+  - action: modify_activity_name_deadline_form
+  - active_loop: modify_activity_name_deadline_form
+  - active_loop: null
+  - action: utter_ask_if_deadline
+  - user: |
+      yes
+    intent: affirm
+  - action: add_deadline_form
+  - active_loop: add_deadline_form
+  - user: |
+      09/27/2022
+    intent: inform
+  - action: add_deadline_form
+  - slot_was_set:
+    - time: "2022-09-27T00:00:00.000+02:00"
+  - active_loop: null
+  - action: action_modify_activity
 
 #################################### Test Stories  Add Item Other ######################################
 - story: later presentation and add activity already deadline 1
