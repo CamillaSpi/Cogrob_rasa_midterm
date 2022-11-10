@@ -446,3 +446,19 @@ class actionAskActivityOld(Action):
             dispatcher.utter_message(text=f"Please insert the activity new")
             return[SlotSet("activity_old",activity),SlotSet("activity",None)]    
         return []
+
+class actionDefaultFallBack(Action):
+    def name(self) -> Text:
+        return "my_action_fallback"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        dispatcher.utter_message(text=f"Rotto tutto!")    
+        return [SlotSet("activity_old",None),
+        SlotSet("activity",None),
+        SlotSet("category_old",None),
+        SlotSet("category",None),
+        SlotSet("time",None),
+        SlotSet("activity_status",None)]

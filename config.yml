@@ -46,7 +46,7 @@ policies:
   - name: MemoizationPolicy
   - name: RulePolicy
     core_fallback_threshold: 0.7
-    core_fallback_action_name: "action_default_fallback"
+    core_fallback_action_name: "my_action_fallback"
     enable_fallback_prediction: true
   - name: TEDPolicy
     max_history: 5
