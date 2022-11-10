@@ -300,7 +300,9 @@ class actionModifyActivity(Action):
         print("category_old:",category_old," activity_old:",activity_old," category:",category_new," activity:",activity_new)
         if(time != None and len(time) == 2 and not isinstance(time, list)):
             print("sono entrato nel primo ifs")
-            timenew = str(datetime.strptime(time['to'], "%Y-%m-%dT%H:%M:%S.%f%z") - timedelta(days=1))
+            tmp = str(datetime.strptime(time['to'], "%Y-%m-%dT%H:%M:%S.%f%z") - timedelta(days=1)).split(" ")
+            timenew = tmp[0] + "T" + (tmp[1])[:-6] + ".000" + (tmp[1])[-6:]
+            print(timenew)
             timeold = time['from']
         elif(isinstance(time, list)):
             print("sono entrato nel primo elsif")
