@@ -391,36 +391,6 @@ nlu:
     - [work](category)
     - [vacation](category)
     - [holiday](category)
-    - new category is [daily](category)
-    - new category is [weekly](category)
-    - new category is [projects](category)
-    - the new category is [monthly](category)
-    - the new category is [commitments](category)
-    - the new category is [quickly](category)
-    - the new one is [calendary](category)
-    - the new one is [wishes](category)
-    - the new one is [desires](category)
-    - category new name is [carriage](category)
-    - category new name is [trolley](category)
-    - category new name is [times](category)
-    - the new is [exams](category)
-    - the new is [subjects](category)
-    - the new is [diet](category)
-    - old category is [bank]((category))
-    - old category is [leisure](category)
-    - old category is [medications](category)
-    - the old category is [medical](category)
-    - the old category is [research](category)
-    - the old category is [volunteering](category)
-    - the old one is [finance](category)
-    - the old one is [payments](category)
-    - the old one is [events](category)
-    - category old name is [job](category)
-    - category old name is [household](category)
-    - category old name is [personal](category)
-    - the old is [university](category)
-    - the old is [volunteering](category)
-    - the old is [projects](category)
     - tomorrow morning
     - 14th september 2022
     - at 18:00
@@ -1138,6 +1108,8 @@ nlu:
     - show [executed](activity_status) activity in [work](category) category
     - show activity in [projects](category) category
     - show [unfinished](activity_status) activity in [work](category) category
+    - show [completed](activity_status) activities
+    - show [completed](activity_status) activity
 
 - intent: clean_activities
   examples: |

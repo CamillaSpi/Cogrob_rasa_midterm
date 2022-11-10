@@ -86,7 +86,7 @@ slots:
     influence_conversation: false
   username:
     type: text
-    influence_conversation: false
+    influence_conversation: true
   time:
     type: text
     influence_conversation: true
@@ -100,7 +100,7 @@ slots:
 
 #sono tutti uguali non possono essere raggruppati in uno slot che richede queste tre entity? No!
 forms:
-  add_new_user_form:
+  recognize_user_form:
     required_slots:
       username:
         - type: from_entity
@@ -352,7 +352,7 @@ responses:
   - text: "Please insert the new category"
  
   utter_confirm_choice:
-  - text: "Are you sure!?"
+  - text: "Are you sure to complete this action!?"
   utter_ask_username:
   - text: "Please insert the username"
   utter_deny_choice:

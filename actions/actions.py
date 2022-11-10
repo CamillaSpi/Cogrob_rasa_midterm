@@ -411,12 +411,18 @@ class actionRemindItem(Action):
         reminder = tracker.get_slot("reminder")
         time = tracker.get_slot("time")
 
-        # check if exist and then update
         if (Database.doesUnfoldingsExists(username,category,activity,time)):
-            Database.updateReminder(username,category,activity,time,reminder)
+            
+            returnedValue = Database.updateReminder(username,category,activity,time,reminder)
+            if (returnedValue):
+                dispatcher.utter_message(text=f"Activity Updated!")
+            else:
+                dispatcher.utter_message(text=f"Soome problem with the update occurred!")
         else:
             actionAddItem.run(self,dispatcher,tracker,domain)
-        #else call add item
+        
+        return [SlotSet("activity",None), SlotSet("time",None), SlotSet("category",None),SlotSet("reminder",False)]
+
 
 
 class actionAskCategoryOld(Action):
