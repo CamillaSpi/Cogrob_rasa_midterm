@@ -446,6 +446,15 @@ nlu:
 - intent: add_item
   examples: |
     - add [run](activity)
+    - add the activity [singing](activity)
+    - add [pilates](activity)
+    - add the activity [yoga](activity)
+    - insert the activity [football](activity)
+    - insert the activity [working](activity)
+    - insert activity [pharmacy](activity)
+    - add activity [painting](activity)
+    - enter new activity [gardening](activity)
+    - enter new activity [match](activity)
     - insert [bed](activity)
     - enter [stand_up](activity)
     - put [swimmming](activity)
@@ -673,7 +682,6 @@ nlu:
     - hi, i am [alessia19_07](username) I want to insert an activity to my list at 18:14
 
     
-
 - intent: remove_item
   examples: |
     - remove [run](activity)
@@ -987,6 +995,7 @@ nlu:
 - intent: add_category
   examples: |
     - add the category [study](category)
+    - add category [relations](category)
     - enter the category [medications](category)
     - put the category [engineering](category)
     - category: [school](category)
