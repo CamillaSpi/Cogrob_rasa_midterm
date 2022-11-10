@@ -344,9 +344,14 @@ responses:
 
   utter_ask_activity:
   - text: "Please insert the activity"
+  utter_ask_add_item_form_activity:
+  - text: "Please insert the new activity"
 
   utter_ask_category:
-  - text: "Please insert the category"
+    - text: "Please insert the category of the item"
+
+  utter_ask_add_category_form_category:
+  - text: "Please insert the new category"
  
   utter_confirm_choice:
   - text: "Are you sure!?"

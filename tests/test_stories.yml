@@ -1340,7 +1340,7 @@ stories:
   - active_loop: null
   - action: action_set_status_activity
 
-#################################### Test Stories  Set Status UnCompleted all ######################################
+#################################### Test Stories Remind me of all ######################################
 - story: remind me of later presentation
   steps:
   - user: |
