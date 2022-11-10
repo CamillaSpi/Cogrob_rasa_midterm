@@ -1230,7 +1230,11 @@ nlu:
     - In the cateogry [exams](category) replace the name of the activity [walk]{"entity": "activity", "role": "old"}  with name [fuel]{"entity": "activity", "role": "new"}
     - In the cateogry [exams](category) replace the name of the activity [fuel]{"entity": "activity", "role": "old"}  with name [walk]{"entity": "activity", "role": "new"}
     - Alter the name of the activity [jogging]{"entity": "activity", "role": "old"} in the cateogry [holiday](category) with name [travel]{"entity": "activity", "role": "new"}
-    - Alter the name of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [holiday](category) with name [jogging]{"entity": "activity", "role": "new"}
+    - Alte
+    *é°P_ç:Lk,mnhbv 
+  r the name of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [holiday](category) with name [
+      +312
+    ]{"entity": "activity", "role": "new"}
     - For the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [wishes](category) modify the name with [walk]{"entity": "activity", "role": "new"}
     - For the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [wishes](category) modify the name with [sport]{"entity": "activity", "role": "new"}
     - For the activity [shopping]{"entity": "activity", "role": "old"} in the cateogry [work](category) transform the name with [study]{"entity": "activity", "role": "new"}
