@@ -301,9 +301,7 @@ class actionModifyActivity(Action):
         category = tracker.get_slot("category")
         activity = tracker.get_slot("activity")
         time = tracker.get_slot("time")
-        print(time)
-
-        
+       
         if(activity_old!=None):
             act_to_modify = activity_old
         else:
@@ -317,7 +315,7 @@ class actionModifyActivity(Action):
             if(time['to'] != None):
                 tmp = str(datetime.strptime(time['to'], "%Y-%m-%dT%H:%M:%S.%f%z") - timedelta(days=1)).split(" ")
                 timenew = tmp[0] + "T" + (tmp[1])[:-6] + ".000" + (tmp[1])[-6:]
-                print(timenew)
+                
             else:
                 timenew = time['from'] 
             timeold = time['from']
@@ -325,18 +323,18 @@ class actionModifyActivity(Action):
             timeold = time[0]['from']
             timenew = time[1]
         elif(Database.doesUnfoldingsExists(username,category,activity) and category_new == None and activity_new == None):
-            print(username,cat_to_modify,act_to_modify,time)
+            
             timenew = time
             timeold = None
         else:
             possibleDeadlineErrorFlag=True
-            print(username,cat_to_modify,act_to_modify,time, category_new,activity_new)
+           
             timenew = time
             timeold = time
         if possibleDeadlineErrorFlag is True and activity_old is None and category_old is None:
             dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
             return [SlotSet("category", None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("category_new", None),SlotSet("activity_new", None),SlotSet("activity", None),SlotSet("time", None)]
-        print(time,timeold,timenew)
+    
 
         if(category_new == None):
             category_new = category

@@ -60,20 +60,22 @@ class Database:
 
   @staticmethod
   def doesPossessionExists(username,category):
-    cur.execute('''
-      SELECT * FROM possessions WHERE username == ? AND category == ?
-    ''', (username, category))
-    if(len( cur.fetchall()) > 0 ):
-      return True
+    if category != None and username != None:
+      cur.execute('''
+        SELECT * FROM possessions WHERE username == ? AND category == ?
+      ''', (username, category))
+      if(len( cur.fetchall()) > 0 ):
+        return True
     return False
     
   @staticmethod
   def doesCategoryExists(category):
-    cur.execute('''
-      SELECT * FROM categories WHERE name == ?
-    ''', (category,))
-    if(len( cur.fetchall()) > 0 ):
-      return True
+    if category != None:
+      cur.execute('''
+        SELECT * FROM categories WHERE name == ?
+      ''', (category,))
+      if(len( cur.fetchall()) > 0 ):
+        return True
     return False
 
   @staticmethod
@@ -94,11 +96,12 @@ class Database:
 
   @staticmethod
   def doesActivityExists(activity):
-    cur.execute('''
-      SELECT * FROM activities WHERE name == ?
-    ''', (activity,))
-    if(len( cur.fetchall()) > 0 ):
-      return True
+    if activity != None:
+      cur.execute('''
+        SELECT * FROM activities WHERE name == ?
+      ''', (activity,))
+      if(len( cur.fetchall()) > 0 ):
+        return True
     return False
 
   @staticmethod
@@ -137,6 +140,7 @@ class Database:
 
   @staticmethod
   def selectItems(username, category=None, activity_status=None):
+    if username == None: return None
     if(activity_status == "completed"):
       completed = True
     elif(activity_status == "uncompleted"):
@@ -194,71 +198,75 @@ class Database:
 
   @staticmethod
   def insertCategory(category):
-    cur.execute('''
-      INSERT INTO categories (name) VALUES (?);
-    ''', (category,))
-    if(len( cur.fetchall()) > 0 ):
-      return True
+    if category != None:
+      cur.execute('''
+        INSERT INTO categories (name) VALUES (?);
+      ''', (category,))
+      if(len( cur.fetchall()) > 0 ):
+        return True
     return False
 
   @staticmethod
   def insertActivity(activity):
-    cur.execute('''
-      INSERT INTO activities (name) VALUES (?);
-    ''', (activity,))
-    if(len( cur.fetchall()) > 0 ):
-      return True
+    if activity != None:
+      cur.execute('''
+        INSERT INTO activities (name) VALUES (?);
+      ''', (activity,))
+      if(len( cur.fetchall()) > 0 ):
+        return True
     return False
 
   @staticmethod
   def insertCategoryAndPossession(username, category):
-    try:
-      if( not Database.doesCategoryExists(category)):
+    if username != None and category != None:
+      try:
+        if(not Database.doesCategoryExists(category)):
+          conn.execute('''
+            INSERT INTO categories (name) VALUES (?);
+          ''', (category,))
         conn.execute('''
-          INSERT INTO categories (name) VALUES (?);
-        ''', (category,))
-      conn.execute('''
-        INSERT INTO possessions (username, category) VALUES (?,?);
-      ''', (username,category))
-      conn.commit()
-      return True
-    except sqlite3.IntegrityError:
-      return False
+          INSERT INTO possessions (username, category) VALUES (?,?);
+        ''', (username,category))
+        conn.commit()
+        return True
+      except sqlite3.IntegrityError:
+        pass
+    return False
 
   @staticmethod
   def selectPossessions(username):
+    if username != None:
+      cur.execute('''
+      SELECT * FROM possessions WHERE username == (?);
+      ''',(username,)) 
 
-    cur.execute('''
-    SELECT * FROM possessions WHERE username == (?);
-    ''',(username,)) 
-
-    rows = cur.fetchall()
-    if len(rows) > 0:
-      categiories_list = ""
-      for category in rows:
-        if category is not None:
-          categiories_list +=  str(category[1]) + ", "
-      categiories_list = categiories_list[:-2]
-    else:
-      categiories_list = "No activity found"
-
-    return categiories_list
+      rows = cur.fetchall()
+      if len(rows) > 0:
+        categories_list = ""
+        for category in rows:
+          if category is not None:
+            categories_list +=  str(category[1]) + ", "
+        categories_list = categories_list[:-2]
+      else:
+        categories_list = "No activity found"
+      
+      return categories_list
+    return "No activity found"
 
   @staticmethod
   def deleteCategory(username, category):
-
-    cur.execute('''
-      SELECT * FROM possessions WHERE username == ? AND category == ? 
-    ''', (username, category))
-    
-    if(len(cur.fetchall()) > 0 ):
-      conn.execute('''
-      DELETE FROM possessions WHERE username == ? AND category == ? 
-    ''', (username, category))
-      conn.commit()
-      return True
-    else:
-      return False
+    if username!= None and category != None:
+      cur.execute('''
+        SELECT * FROM possessions WHERE username == ? AND category == ? 
+      ''', (username, category))
+      
+      if(len(cur.fetchall()) > 0 ):
+        conn.execute('''
+        DELETE FROM possessions WHERE username == ? AND category == ? 
+      ''', (username, category))
+        conn.commit()
+        return True
+    return False
 
   @staticmethod
   def setItemStatus(username, activity ,category,deadline,completed):
@@ -373,10 +381,11 @@ class Database:
 
   @staticmethod
   def doesUserExists(username):
-    cur.execute('''
-      SELECT * FROM users WHERE username == ?
-    ''', (username, ))
-    if(len( cur.fetchall()) > 0 ):
-      return True
+    if username != None:
+      cur.execute('''
+        SELECT * FROM users WHERE username == ?
+      ''', (username, ))
+      if(len( cur.fetchall()) > 0 ):
+        return True
     return False
 
