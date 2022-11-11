@@ -746,6 +746,9 @@ nlu:
     - hello, I want to delete an activity to [quickly](category) list at 3:29
     - hello I want to remove an activity to my list at 12:37
     - hi I want to delete an activity to my list at 18:14
+    
+- intent: presentation+remove_item
+  examples: |
     - hello, I'm [mattia99](username), remove [run](activity)
     - hello, I'm [antonio68](username), delete [study](activity)
     - hello, I'm [ferdinando1907](username), del [stand_up](activity)
@@ -1264,7 +1267,7 @@ nlu:
     - I can't forget to do the activity [exam](activity) of the category [university](category) of next Monday
     - I want to set a reminder for the actvivity [hairdresser](activity)
     - remind me the [dinner](activity)
-    
+
 - synonym: add
   examples: |
     - insert

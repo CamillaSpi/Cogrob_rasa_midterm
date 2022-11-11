@@ -24,9 +24,7 @@ intents:
   - modify_activity_category
   - modify_activity_deadline
   - modify_activity_name
-  - modify_activity_name+modify_activity_deadline
-  - modify_activity_name+modify_activity_category
-  - modify_activity_category+modify_activity_deadline
+  - presentation+remove_item
   - remind_me_of
 
 entities:
