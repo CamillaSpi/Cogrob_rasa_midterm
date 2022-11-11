@@ -513,7 +513,7 @@ class actionDefaultFallBack(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        dispatcher.utter_message(text=f"Rotto tutto!")    
+        dispatcher.utter_message(text=f"Sorry, I lost my mind!")    
         return [SlotSet("activity_old",None),
         SlotSet("activity",None),
         SlotSet("category_old",None),
