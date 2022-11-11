@@ -69,7 +69,6 @@ actions:
   - action_ask_category_old
   - action_ask_activity_old
   - my_action_fallback
-  - validate_modify_category_form
 
 
 slots:
@@ -124,8 +123,7 @@ forms:
       time:
         - type: from_entity
           entity: time
-
-          
+     
   remove_item_form:
     required_slots:
       username:
@@ -239,64 +237,6 @@ forms:
       category:
         - type: from_entity
           entity: category
-
-  modify_activity_name_category_form:
-    required_slots:
-      username:
-        - type: from_entity
-          entity: username
-      activity:
-        - type: from_entity
-          entity: activity
-      activity_old:
-        - type: from_entity
-          entity: activity
-          role: old
-      category:
-        - type: from_entity
-          entity: category
-      category_old:
-        - type: from_entity
-          entity: category
-          role: old
-
-  modify_activity_name_deadline_form:
-    required_slots:
-      username:
-        - type: from_entity
-          entity: username
-      category:
-        - type: from_entity
-          entity: category
-      activity:
-        - type: from_entity
-          entity: activity
-      activity_old:
-        - type: from_entity
-          entity: activity
-          role: old
-      time:
-        - type: from_entity
-          entity: time
-
-  modify_activity_category_deadline_form:
-    required_slots:
-      username:
-        - type: from_entity
-          entity: username
-      activity:
-        - type: from_entity
-          entity: activity
-      category:
-        - type: from_entity
-          entity: activity
-      category_old:
-        - type: from_entity
-          entity: category
-          role: old
-      time:
-        - type: from_entity
-          entity: time
 
   clean_activities_form: 
     required_slots:

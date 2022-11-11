@@ -1,0 +1,1293 @@
+version: "2.0"
+nlu:
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - am I talking to a human?
+    - am I talking to a bot?
+- intent: clean_activities
+  examples: |
+    - clean all my completed activities
+    - remove all my completed activities
+    - clean all completed activities
+- intent: affirm
+  examples: |
+    - indeed
+    - yeah
+    - yes
+    - correct
+    - that sounds good
+    - y
+- intent: deny
+  examples: |
+    - no
+    - not really
+    - n
+    - I don't think so
+    - never
+    - don't like that
+- intent: help
+  examples: |
+    - I need help
+    - pls help
+    - please help
+    - I dont know what to do
+    - help
+    - I need assistance
+    - what you can do?
+- intent: view_categories
+  examples: |
+    - Which are my categories?
+    - I want to see all my categories
+    - show all my categories
+    - what are my categories?
+    - Show my categories
+    - Show all my categories
+    - which are my categories?
+- intent: goodbye
+  examples: |
+    - goodbye
+    - bye
+    - it was a pleasures
+    - cee you later
+    - bye bye
+    - have a nice day
+    - see you later
+    - cu
+    - good by
+- intent: greet
+  examples: |
+    - moin
+    - goodmorning
+    - goodevening
+    - let's go
+    - good afternoon
+    - good morning
+    - hey
+    - hey dude
+    - hello there
+    - hello
+    - good evening
+- intent: remind_me_of
+  examples: |
+    - help me to not forget the activity [study](activity) in the category [university](category) for Tomorrow
+    - I want you help me to remind
+    - help me to remind my [birtday](activity) on 12/18/2022
+    - set a reminder for the activiy [call](activity) into the category [relations](category) of next morning
+    - remind me the [dinner](activity)
+    - my username is [luigi](username), please remind me of [shopping](activity) tomorrow evening
+    - I want to set a reminder for the actvivity [hairdresser](activity)
+    - I want to set a reminder
+    - I'm [Salvo](username), please help me to don't forget the activity [project](activity) in the category [work](category) of next Friday
+    - I can't forget to do the activity [exam](activity) of the category [university](category) of next Monday
+- intent: mood_great
+  examples: |
+    - super stoked
+    - great
+    - I am feeling very good
+    - feeling like a king
+    - perfect
+    - extremely good
+    - wonderful
+    - I am going to save the world
+    - amazing
+    - I am great
+    - so so perfect
+- intent: mood_unhappy
+  examples: |
+    - sad
+    - so saad
+    - extremly sad
+    - very sad
+    - not very good
+    - my day was horrible
+    - I don't feel very well
+    - I'm so sad
+    - unhappy
+    - I am disappointed
+    - not good
+- intent: view_activities
+  examples: |
+    - show [executed](activity_status) activity in [work](category) category
+    - What are my activities?
+    - What are my [unexecuted](activity_status) activities?
+    - Show my [done](activity_status) activities
+    - show activity in [projects](category) category
+    - I want to see all my [[completed](activity_status) activities
+    - show my [undone](activity_status) activity in [commitments](category) category
+    - show [completed](activity_status) activities
+    - I want to see all my [uncompleted](activity_status) activities
+    - show all my [developed](activity_status) activity in [monthly](category) category
+    - what are my [uncompleted](activity_status) activities?
+    - I want to see all my activities
+    - which are [concluded](activity_status) my activities?
+    - show activity in [gym](category) category
+    - show [unfinished](activity_status) activity in [work](category) category
+    - Which are my activities?
+- intent: remove_category
+  examples: |
+    - I want to delete the category [quickly](category)
+    - I want to remove the category [university](category)
+    - I want to remove the category [commitments](category)
+    - I want to del the category [study](category)
+    - I want to cancel the category [monthly](category)
+    - I want to cancel the category [gym](category)
+    - I want to remove a category
+    - hi, I want to del the category [weekly](category)
+    - hello, I want to cancel the category [monthly](category)
+    - I want to cancel the category [school](category)
+    - hi, I want to cancel the category [work](category)
+    - hello, I want to remove the category [quickly](category)
+    - I want to delete the category [personal](category)
+    - hi, I want to remove the category [daily](category)
+    - hi, I want to delete the category [commitments](category)
+    - I want to del the category [projects](category)
+- intent: modify_activity_deadline
+  examples: |
+    - In the cateogry [subjects](category) modify the deadline of the activity [draw](activity) from 22th september to 25th september
+    - modify the deadline of the activity [draw](activity) in the cateogry [calendary](category) with Sunday
+    - I want to change the deadline of the activity [exit](activity) in the cateogry [times](category) to 27th september 1998
+    - I want to modify the deadline of an activity
+    - I want to change the deadline of the activity [exit](activity) in the cateogry [times](category) with 27th september 1998
+    - alter the deadline
+    - Alter the deadline of the activity [runbed](activity) in the cateogry [monthly](category) with Monday
+    - I want to modify the deadline of the activity [draw](activity) in the cateogry [job](category) with tomorrow at 18:00
+    - In the cateogry [exams](category) replace the deadline of the activity [cards](activity) from 10/12/2022 to 12/13/2022
+    - In the cateogry [subjects](category) replace the deadline of the activity [draw](activity) from 22th september to 25th september
+    - I want to modify the deadline of the activity [draw](activity) in the cateogry [job](category) in tomorrow at 18:00
+    - I want to change the deadline of the activity [stand_up](activity) in the cateogry [personal](category) with 27th september 1998
+    - Alter the deadline of the activity [runbed](activity) in the cateogry [monthly](category) from Today to 04/21/2023
+    - For the activity [stand_up](activity) in the cateogry [holiday](category) transform the deadline into Monday
+    - For the activity [stand_up](activity) in the cateogry [bank](category) modify the deadline from 4 Novemner to 22th october 1922
+    - modify the deadline of the activity [reed](activity) in the cateogry [university](category) form Friday to Sunday
+    - For the activity [stand_up](activity) in the cateogry [bank](category) modify the deadline with 22th october 1922
+    - alter the deadline of the activity [travel](activity) in the cateogry [household](category) from 07/11/2022 to Sunday
+    - Alter the deadline of the activity [stand_up](activity) in the cateogry [work](category) to Monday
+    - modify the deadline of the activity [reed](activity) in the cateogry [university](category) with Sunday
+    - For the activity [play](activity) in the cateogry [university](category) modify the deadline in the 22th october 1922
+    - I want to change the deadline of the activity [stand_up](activity) in the cateogry [personal](category) from 25 September to 27th september 1998
+    - alter the deadline of the activity [exit](activity) in the cateogry [bank](category) to Sunday
+    - alter the deadline of the activity [exit](activity) in the cateogry [bank](category) with Sunday
+- intent: modify_activity_name
+  examples: |
+    - I want to change the activity named [ring]{"entity": "activity", "role": "old"} in the cateogry [bank](category) with [exit]{"entity": "activity", "role": "new"}
+    - modify the name of the activity [study]{"entity": "activity", "role": "old"} in the cateogry [times](category) with name [draw]{"entity": "activity", "role": "new"}
+    - modify the name of the activity [note]{"entity": "activity", "role": "old"} in the cateogry [medical](category) with name [ring]{"entity": "activity", "role": "new"}
+    - For the activity [refuel]{"entity": "activity", "role": "old"} in the cateogry [wishes](category) modify the name with [swimmming]{"entity": "activity", "role": "new"}
+    - In the cateogry [events](category) change the name of the activity [jogging]{"entity": "activity", "role": "old"}  with name [fuel]{"entity": "activity", "role": "new"}
+    - For the activity [reed]{"entity": "activity", "role": "old"} in [vacation](category) transform the name with [walk]{"entity": "activity", "role": "new"}
+    - For the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [wishes](category) modify the name with [sport]{"entity": "activity", "role": "new"}
+    - In the cateogry [university](category) change the name of the activity [fuel]{"entity": "activity", "role": "old"}  with name [walk]{"entity": "activity", "role": "new"}
+    - I want to change the activity named [ring]{"entity": "activity", "role": "old"} in the cateogry [carriage](category) with [runbed]{"entity": "activity", "role": "new"}
+    - In the cateogry [university](category) change the name of the activity [walk]{"entity": "activity", "role": "old"}  with name [fuel]{"entity": "activity", "role": "new"}
+    - For the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [wishes](category) modify the name with [refuel]{"entity": "activity", "role": "new"}
+    - Alter the name of the activity [jogging]{"entity": "activity", "role": "old"} in the cateogry [holiday](category) with name [travel]{"entity": "activity", "role": "new"}
+    - For the activity [study]{"entity": "activity", "role": "old"} in the cateogry [work](category) transform the name with [shopping]{"entity": "activity", "role": "new"}
+    - I want to change the name of the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [exams](category) with name [swimmming]{"entity": "activity", "role": "new"}
+    - I want to change the activity named [exit]{"entity": "activity", "role": "old"} in [bank](category) with [ring]{"entity": "activity", "role": "new"}
+    - I want to change the name of the activity [swimmming]{"entity": "activity", "role": "old"} in the cateogry [exams](category) with name [sport]{"entity": "activity", "role": "new"}
+    - Alter the name of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [research](category) with name [refuel]{"entity": "activity", "role": "new"}
+    - For the activity [walk]{"entity": "activity", "role": "old"} in the cateogry [vacation](category) transform the name with [reed]{"entity": "activity", "role": "new"}
+    - In the cateogry [exams](category) replace the name of the activity [fuel]{"entity": "activity", "role": "old"}  with name [walk]{"entity": "activity", "role": "new"}
+    - I want to change the name of the activity [study]{"entity": "activity", "role": "old"} in [sport](category) with name [fuel]{"entity": "activity", "role": "new"}
+    - Alter the name of the activity [refuel]{"entity": "activity", "role": "old"} in the cateogry [research](category) with name [travel]{"entity": "activity", "role": "new"}
+    - For the activity [sport]{"entity": "activity", "role": "old"} in the cateogry [wishes](category) modify the name with [walk]{"entity": "activity", "role": "new"}
+    - modify the name of the activity [ring]{"entity": "activity", "role": "old"} in the cateogry [medical](category) with name [note]{"entity": "activity", "role": "new"}
+    - I want to change the name of the activity [fuel]{"entity": "activity", "role": "old"} in the cateogry [sport](category) with name [study]{"entity": "activity", "role": "new"}
+    - In the cateogry [exams](category) replace the name of the activity [stand_up]{"entity": "activity", "role": "old"}  with name [study]{"entity": "activity", "role": "new"}
+    - Alter the name of the activity [travel]{"entity": "activity", "role": "old"} in the cateogry [holiday](category) with name [run]{"entity": "activity", "role": "new"}
+- intent: modify_activity_category
+  examples: |
+    - replace the category [leisure]{"entity": "category", "role": "old"} of the activity [jogging](activity) into category [wishes]{"entity": "category", "role": "new"}
+    - modify the category [finance]{"entity": "category", "role": "old"} of [walk](activity) into [diet]{"entity": "category", "role": "new"}
+    - For the activity [study](activity) into the category [volunteering]{"entity": "category", "role": "old"} replace the category with [quickly]{"entity": "category", "role": "new"}
+    - For the activity [sleep](activity) set the category [sport]{"entity": "category", "role": "old"} in [exams]{"entity": "category", "role": "new"}
+    - For the activity [walk](activity) set the category [commitments]{"entity": "category", "role": "old"} in [carriage]{"entity": "category", "role": "new"}
+    - transform the category [projects]{"entity": "category", "role": "old"} of the activity [study](activity) into category [gym]{"entity": "category", "role": "new"}
+    - For the activity [cooking](activity) modify the category [exams]{"entity": "category", "role": "old"} in [diet]{"entity": "category", "role": "new"}
+    - I want to change the category [wishes]{"entity": "category", "role": "old"} of the activity [run](activity) in [holiday]{"entity": "category", "role": "new"}
+    - I want to change the category [holiday]{"entity": "category", "role": "old"} of the activity [run](activity) in [wishes]{"entity": "category", "role": "new"}
+    - transform the category [holiday]{"entity": "category", "role": "old"} of the activity [reed](activity) into category [carriage]{"entity": "category", "role": "new"}
+    - replace the category [wishes]{"entity": "category", "role": "old"} of the activity [jogging](activity) into category [leisure]{"entity": "category", "role": "new"}
+    - For the activity [draw](activity) into the category [wishes]{"entity": "category", "role": "old"} replace the category with [household]{"entity": "category", "role": "new"}
+    - For the activity [walk](activity) set the category [carriage]{"entity": "category", "role": "old"} in [commitments]{"entity": "category", "role": "new"}
+    - For the activity [study](activity) transform the category [bank]{"entity": "category", "role": "old"} in [household]{"entity": "category", "role": "new"}
+    - modify the category [commitments]{"entity": "category", "role": "old"} of [walk](activity) into [holiday]{"entity": "category", "role": "new"}
+    - For the activity [study](activity) into the category [quickly]{"entity": "category", "role": "old"} replace the category with [volunteering]{"entity": "category", "role": "new"}
+    - For the activity [cooking](activity) modify the category [diet]{"entity": "category", "role": "old"} in [exams]{"entity": "category", "role": "new"}
+    - For the activity [study](activity) update the category [quickly]{"entity": "category", "role": "old"} in [volunteering]{"entity": "category", "role": "new"}
+    - For the activity [cards](activity) transform the category [medical]{"entity": "category", "role": "old"} in [household]{"entity": "category", "role": "new"}
+    - For the activity [study](activity) transform the category [household]{"entity": "category", "role": "old"} in [bank]{"entity": "category", "role": "new"}
+    - convert the category [sport]{"entity": "category", "role": "old"} of the activity [cards](activity) with [dailyweekly]{"entity": "category", "role": "new"}
+    - For the activity [cards](activity) transform the category [household]{"entity": "category", "role": "old"} in [medical]{"entity": "category", "role": "new"}
+    - convert the category [household]{"entity": "category", "role": "old"} of the activity [sport](activity) with [medications]{"entity": "category", "role": "new"}
+    - replace the category [personal]{"entity": "category", "role": "old"} of the activity [stand_up](activity) into category [job]{"entity": "category", "role": "new"}
+    - modify the category [holiday]{"entity": "category", "role": "old"} of [walk](activity) into [commitments]{"entity": "category", "role": "new"}
+    - For the activity [refuel](activity) modify the category [gym]{"entity": "category", "role": "old"} in [diet]{"entity": "category", "role": "new"}
+    - transform the category [gym]{"entity": "category", "role": "old"} of the activity [study](activity) into category [projects]{"entity": "category", "role": "new"}
+    - For the activity [sleep](activity) set the category [exams]{"entity": "category", "role": "old"} in [sport]{"entity": "category", "role": "new"}
+    - convert the category [dailyweekly]{"entity": "category", "role": "old"} of the activity [cards](activity) with [sport]{"entity": "category", "role": "new"}
+    - modify the category [diet]{"entity": "category", "role": "old"} of [walk](activity) into [finance]{"entity": "category", "role": "new"}
+    - For the activity [stand_up](activity) update the category [sport]{"entity": "category", "role": "old"} in [commitments]{"entity": "category", "role": "new"}
+    - For the activity [stand_up](activity) update the category [commitments]{"entity": "category", "role": "old"} in [sport]{"entity": "category", "role": "new"}
+- intent: add_category
+  examples: |
+    - category: [school](category)
+    - the category to enter is [volunteering](category)
+    - category: [payments](category)
+    - add category [relations](category)
+    - I want to insert a category
+    - I want to add  the category [commitments](category)
+    - I want to use a new category [medical](category)
+    - add new [bank](category) category
+    - hi, I want to insert the category [projects](category)
+    - I want to add [university](category) category
+    - new category to add: [projects](category)
+    - hello, I want to add the category [work](category)
+    - hi, I want to put a new category [events] (category)
+    - hi, I want to enter a new category [research] (category)
+    - hello, I want to add the category [household](category)
+    - I want to insert the category [sports](category)
+    - new category: [volunteering](category)
+    - hi, I want to insert the category [daily](category)
+    - I want to add a category [bank](category)
+    - hi, please insert the following [diet](category)
+    - hi, please insert the following [medical](category)
+    - I want to add a category
+    - I want to put [vacation](category) category
+    - I want to use  a new category
+    - the category to put is [household](category)
+    - hi, please enter the following [shopping](category)
+    - enter the category [medications](category)
+    - new category: [job](category)
+    - hi, I want to add a category [weekly](category)
+    - I want to add a new category [leisure](category)
+    - add the category [study](category)
+    - category: [bills](category)
+    - hi, please put the following [finance](category)
+    - I want to use a new category [sports](category)
+    - add new [personal](category) category
+- intent: modify_category
+  examples: |
+    - substitute a category
+    - i want to transform a category
+    - convert the category [work]{"entity": "category", "role": "old"} in [household]{"entity": "category", "role": "new"}
+    - I want to convert the category [work]{"entity": "category", "role": "old"} in [carriage]{"entity": "category", "role": "new"}
+    - I want to convert a category
+    - I want to substitute the category [commitments]{"entity": "category", "role": "old"} with [work]{"entity": "category", "role": "new"}
+    - I want to modify the category [events]{"entity": "category", "role": "old"} in [medications]{"entity": "category", "role": "new"}
+    - modify the category [dailyweekly]{"entity": "category", "role": "old"} in [events]{"entity": "category", "role": "new"}
+    - I want to modify the category [times]{"entity": "category", "role": "old"} with [subjects]{"entity": "category", "role": "new"}
+    - I want to change the category [work]{"entity": "category", "role": "old"} with [commitments]{"entity": "category", "role": "new"}
+    - change the category [calendary]{"entity": "category", "role": "old"} in [exams]{"entity": "category", "role": "new"}
+    - please, I want to convert the category [times]{"entity": "category", "role": "old"} in [volunteering]{"entity": "category", "role": "new"}
+    - please, change the category [events]{"entity": "category", "role": "old"} in [school]{"entity": "category", "role": "new"}
+    - I want to replace the category [payments]{"entity": "category", "role": "old"} in [finance]{"entity": "category", "role": "new"}
+    - I want to substitute the category [subjects]{"entity": "category", "role": "old"} with [times]{"entity": "category", "role": "new"}
+    - let me change a category
+    - I want to alter the category [medications]{"entity": "category", "role": "old"} in [events]{"entity": "category", "role": "new"}
+    - transform the category [quickly]{"entity": "category", "role": "old"} with [projects]{"entity": "category", "role": "new"}
+    - I want to vary the category [projects]{"entity": "category", "role": "old"} to [finance]{"entity": "category", "role": "new"}
+    - convert a category
+    - convert one category
+    - substitute the category [carriage]{"entity": "category", "role": "old"} in [monthly]{"entity": "category", "role": "new"}
+    - vary the category [events]{"entity": "category", "role": "old"} with [dailyweekly]{"entity": "category", "role": "new"}
+    - vary the category [personal]{"entity": "category", "role": "old"} in [gym]{"entity": "category", "role": "new"}
+    - convert the category [carriage]{"entity": "category", "role": "old"} with [work]{"entity": "category", "role": "new"}
+    - substitute the category [monthly]{"entity": "category", "role": "old"} in [finance]{"entity": "category", "role": "new"}
+    - transform a category
+    - alter a categoryù
+    - modify the category [projects]{"entity": "category", "role": "old"} in [quickly]{"entity": "category", "role": "new"}
+    - alter the category [vacation]{"entity": "category", "role": "old"} in [volunteering]{"entity": "category", "role": "new"}
+    - please, I want to change the category [finance]{"entity": "category", "role": "old"} in [payments]{"entity": "category", "role": "new"}
+    - i want to alter the category [monthly]{"entity": "category", "role": "old"} to [carriage]{"entity": "category", "role": "new"}
+    - replace the category [exams]{"entity": "category", "role": "old"} in [calendary]{"entity": "category", "role": "new"}
+    - convert the category [gym]{"entity": "category", "role": "old"} in [personal]{"entity": "category", "role": "new"}
+    - change the category [subjects]{"entity": "category", "role": "old"} in [carriage]{"entity": "category", "role": "new"}
+    - please, vary the category [finance]{"entity": "category", "role": "old"} in [monthly]{"entity": "category", "role": "new"}
+    - modify the category [volunteering]{"entity": "category", "role": "old"} in [vacation]{"entity": "category", "role": "new"}
+    - please, vary the category [events]{"entity": "category", "role": "old"} in [school]{"entity": "category", "role": "new"}
+    - change the category [school]{"entity": "category", "role": "old"} in [events]{"entity": "category", "role": "new"}
+    - vary one category
+    - I want to transform the category [medications]{"entity": "category", "role": "old"} in [events]{"entity": "category", "role": "new"}
+    - alter the category [leisure]{"entity": "category", "role": "old"} with [gym]{"entity": "category", "role": "new"}
+    - I want to  transform the category [finance]{"entity": "category", "role": "old"} in [projects]{"entity": "category", "role": "new"}
+- intent: presentation
+  examples: |
+    - signup
+    - i want to sign up
+    - i am a new user
+    - let me register
+    - hi, i'm [ferdinando1907](username)
+    - let me signup
+    - i want to create an account
+    - my username is [mattia92](username)
+    - hello, i am [ferdinando1907](username)
+    - i'm [giorgio99](username)
+    - my name is [Ugo](username)
+    - my username is [alessia19_07](username)
+    - my name [Dario](username)
+    - i am [antonio1](username)
+    - hi, i am [mattia](username)
+    - hi, i'm [nando33](username)
+    - my username is [nando21](username)
+    - open up an account
+    - create account
+    - i am [giorgio](username)
+    - let me make an account
+    - hi, i am [nando33](username)
+    - hi my name is [Kevin](username)
+    - hi, i'm [mattia99](username)
+    - i want a new account
+    - let me be a user
+    - i want to signup
+    - hi, i'm [mattia](username)
+    - my name is [Xavier](username)
+    - hi bot, my name is [Gianluca](username)
+    - create user
+    - make an account
+    - i'm [carla](username)
+    - registration
+    - hi, i'm [camilla2](username)
+    - hi, my name is [Simonetto56](username)
+    - sign up a new user
+    - hello, i am [mattia99](username)
+    - hello, i am [marcoMars](username)
+    - i am [carla02](username)
+    - user
+    - i am [simone](username)
+    - i don't have an account
+    - hi, i'm [marcoMars](username)
+    - new user
+    - new account
+- intent: modify_activity_name+modify_activity_category
+  examples: |
+    - substitute name of the activity [shopping]{"entity": "activity", "role": "old"} in the activity [search]{"entity": "activity", "role": "new"} and the category from [finance]{"entity": "category", "role": "old"} to [sport]{"entity": "category", "role": "new"} of mondayof 01/11/2022
+    - I want to modify the name of the activity [study]{"entity": "activity", "role": "old"} to the activity [ring]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [diet]{"entity": "category", "role": "old"} to the category [university]{"entity": "category", "role": "new"} of 12/27/2022
+    - replace the name of the activity [exit]{"entity": "activity", "role": "old"} in the activity [swimmming]{"entity": "activity", "role": "new"} and i want to change category of this activity from the category [projects]{"entity": "category", "role": "old"} to [work]{"entity": "category", "role": "new"} of 28/04/2022
+    - I want to modify the name of the activity [match]{"entity": "activity", "role": "old"} in the activity [note]{"entity": "activity", "role": "new"} and category from [personal]{"entity": "category", "role": "old"} to [desires]{"entity": "category", "role": "new"} of mondayof 01/11/2022
+    - I want to modify the name of the activity [runbed]{"entity": "activity", "role": "old"} in the activity [swimmming]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [events]{"entity": "category", "role": "old"} to category [volunteering]{"entity": "category", "role": "new"} of December
+    - i would modify the name of the activity [draw]{"entity": "activity", "role": "old"} in the activity [play]{"entity": "activity", "role": "new"} and the category from [wishes]{"entity": "category", "role": "old"} to [work]{"entity": "category", "role": "new"} of tomorrow
+    - I want to modify the name of the activity [study]{"entity": "activity", "role": "old"} in the activity [draw]{"entity": "activity", "role": "new"} and category from [events]{"entity": "category", "role": "old"} to [times]{"entity": "category", "role": "new"} of 07/28/2022
+    - trasform the name of activity [walk]{"entity": "activity", "role": "old"} to the activity [reed]{"entity": "activity", "role": "new"} and I want to modify the category of this activity from the category [monthly]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} of 07/20/2022
+    - substitute name of the activity [travel]{"entity": "activity", "role": "old"} in the activity [note]{"entity": "activity", "role": "new"} and the category from [wishes]{"entity": "category", "role": "old"} to [calendary]{"entity": "category", "role": "new"} of 11/04/2022
+    - I want to modify the name of the activity [sport]{"entity": "activity", "role": "old"} to the activity [fuel]{"entity": "activity", "role": "new"} and the category from [school]{"entity": "category", "role": "old"} to [projects]{"entity": "category", "role": "new"} at 9:00
+    - i would substitute the name of the activity [run]{"entity": "activity", "role": "old"} in the activity [ring]{"entity": "activity", "role": "new"} and the category from [vacation]{"entity": "category", "role": "old"} to [bank]{"entity": "category", "role": "new"} of today
+    - substitute name of the activity [stand_up]{"entity": "activity", "role": "old"} in the activity [study]{"entity": "activity", "role": "new"} and the category from [school]{"entity": "category", "role": "old"} to [desires]{"entity": "category", "role": "new"} of 11/04/2022
+    - I want to modify the name of the activity [run]{"entity": "activity", "role": "old"} to the activity [draw]{"entity": "activity", "role": "new"} and the category from [carriage]{"entity": "category", "role": "old"} to [dailyweekly]{"entity": "category", "role": "new"} for tomorrow
+    - change the name of activity [playing]{"entity": "activity", "role": "old"} in the activity [play]{"entity": "activity", "role": "new"} and category from [medical]{"entity": "category", "role": "old"} to [wishes]{"entity": "category", "role": "new"} of 12/27/2022
+    - I want to modify the name of the activity [ring]{"entity": "activity", "role": "old"} to the activity [study]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [university]{"entity": "category", "role": "old"} to the category [diet]{"entity": "category", "role": "new"} of 12/27/2022
+    - replace the name of the activity [run]{"entity": "activity", "role": "old"} to the activity [sport]{"entity": "activity", "role": "new"} and I want to change category of this activity from the category [medications]{"entity": "category", "role": "old"} to the category [gym]{"entity": "category", "role": "new"} at 18:30
+    - I want to modify the name of the activity [swimmming]{"entity": "activity", "role": "old"} in the activity [runbed]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [volunteering]{"entity": "category", "role": "old"} to category [events]{"entity": "category", "role": "new"} of December
+    - I would change the name of [exit]{"entity": "activity", "role": "old"} to the activity [stand_up]{"entity": "activity", "role": "new"} and I want to trasform the category of this activity from the category [holiday]{"entity": "category", "role": "old"} to category [events]{"entity": "category", "role": "new"} of 07/28/2022
+    - I want to modify the name of the activity [travel]{"entity": "activity", "role": "old"} to the activity [note]{"entity": "activity", "role": "new"} and the category from [school]{"entity": "category", "role": "old"} to [dailyweekly]{"entity": "category", "role": "new"} at 15:30
+    - i would substitute the name of the activity [ring]{"entity": "activity", "role": "old"} in the activity [run]{"entity": "activity", "role": "new"} and the category from [bank]{"entity": "category", "role": "old"} to [vacation]{"entity": "category", "role": "new"} of today
+    - i would modify the name of the activity [jogging]{"entity": "activity", "role": "old"} in the activity [match]{"entity": "activity", "role": "new"} and the category from [subjects]{"entity": "category", "role": "old"} to [bank]{"entity": "category", "role": "new"} of 29th of June
+    - replace the name of the activity [swimmming]{"entity": "activity", "role": "old"} to the activity [playing]{"entity": "activity", "role": "new"} and I want to change category of this activity from the category [work]{"entity": "category", "role": "old"} to the category [volunteering]{"entity": "category", "role": "new"} of mondayof 01/11/2022
+    - replace the name of the activity [walk]{"entity": "activity", "role": "old"} to the activity [fuel]{"entity": "activity", "role": "new"} and I want to change category of this activity from the category [leisure]{"entity": "category", "role": "old"} to the category [times]{"entity": "category", "role": "new"} at 15:30
+    - trasform the name of activity [swimmming]{"entity": "activity", "role": "old"} in the activity [note]{"entity": "activity", "role": "new"} and i would substitute the category of this activity from the category [medical]{"entity": "category", "role": "old"} to the category [monthly]{"entity": "category", "role": "new"} of 6th of June
+    - change the name of activity [sleep]{"entity": "activity", "role": "old"} in the activity [refuel]{"entity": "activity", "role": "new"} and category from [household]{"entity": "category", "role": "old"} to [subjects]{"entity": "category", "role": "new"} of 6th of June
+    - substitute name of the activity [study]{"entity": "activity", "role": "old"} in the activity [stand_up]{"entity": "activity", "role": "new"} and the category from [desires]{"entity": "category", "role": "old"} to [school]{"entity": "category", "role": "new"} of 11/04/2022
+    - trasform the name of activity [sport]{"entity": "activity", "role": "old"} to the activity [ring]{"entity": "activity", "role": "new"} and I want to modify the category of this activity from the category [times]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} for todayof to 7th of June
+    - modify name of the activity [study]{"entity": "activity", "role": "old"} to the activity [reed]{"entity": "activity", "role": "new"} and the category from [school]{"entity": "category", "role": "old"} to [holiday]{"entity": "category", "role": "new"} of 6th of June
+    - modify name of the activity [match]{"entity": "activity", "role": "old"} to the activity [draw]{"entity": "activity", "role": "new"} and the category from [personal]{"entity": "category", "role": "old"} to [household]{"entity": "category", "role": "new"} for tomorrow
+    - I would change the name of [cooking]{"entity": "activity", "role": "old"} to the activity [sleep]{"entity": "activity", "role": "new"} and I want to trasform the category of this activity from the category [exams]{"entity": "category", "role": "old"} to category [times]{"entity": "category", "role": "new"} of 30th november at 15:30
+    - I want to modify the name of the activity [jogging]{"entity": "activity", "role": "old"} in the activity [travel]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [school]{"entity": "category", "role": "old"} to category [job]{"entity": "category", "role": "new"} of 30th november at 15:30
+    - replace the name of the activity [swimmming]{"entity": "activity", "role": "old"} in the activity [exit]{"entity": "activity", "role": "new"} and i want to change category of this activity from the category [work]{"entity": "category", "role": "old"} to [projects]{"entity": "category", "role": "new"} of 28/04/2022
+    - i would modify the name of the activity [match]{"entity": "activity", "role": "old"} in the activity [refuel]{"entity": "activity", "role": "new"} and the category from [medical]{"entity": "category", "role": "old"} to [research]{"entity": "category", "role": "new"} for todayof to 7th of June
+    - trasform the name of activity [playing]{"entity": "activity", "role": "old"} in the activity [cooking]{"entity": "activity", "role": "new"} and i would substitute the category of this activity from the category [wishes]{"entity": "category", "role": "old"} to the category [commitments]{"entity": "category", "role": "new"} of 13th September at 13:00
+    - change the name of activity [play]{"entity": "activity", "role": "old"} in the activity [playing]{"entity": "activity", "role": "new"} and category from [wishes]{"entity": "category", "role": "old"} to [medical]{"entity": "category", "role": "new"} of 12/27/2022
+    - I want to change the name of [sleep]{"entity": "activity", "role": "old"} in the activity [runbed]{"entity": "activity", "role": "new"} and i want to trasform the category of this activity from the category [gym]{"entity": "category", "role": "old"} to category [work]{"entity": "category", "role": "new"} for todayof to 7th of June
+    - I would change the name of [sleep]{"entity": "activity", "role": "old"} to the activity [cooking]{"entity": "activity", "role": "new"} and I want to trasform the category of this activity from the category [times]{"entity": "category", "role": "old"} to category [exams]{"entity": "category", "role": "new"} of 30th november at 15:30
+    - substitute name of the activity [note]{"entity": "activity", "role": "old"} in the activity [travel]{"entity": "activity", "role": "new"} and the category from [calendary]{"entity": "category", "role": "old"} to [wishes]{"entity": "category", "role": "new"} of 11/04/2022
+    - I want to modify the name of the activity [draw]{"entity": "activity", "role": "old"} to the activity [run]{"entity": "activity", "role": "new"} and the category from [dailyweekly]{"entity": "category", "role": "old"} to [carriage]{"entity": "category", "role": "new"} for tomorrow
+    - modify name of the activity [draw]{"entity": "activity", "role": "old"} to the activity [match]{"entity": "activity", "role": "new"} and the category from [household]{"entity": "category", "role": "old"} to [personal]{"entity": "category", "role": "new"} for tomorrow
+    - change the name of activity [refuel]{"entity": "activity", "role": "old"} in the activity [sleep]{"entity": "activity", "role": "new"} and category from [subjects]{"entity": "category", "role": "old"} to [household]{"entity": "category", "role": "new"} of 6th of June
+    - trasform the name of activity [reed]{"entity": "activity", "role": "old"} to the activity [walk]{"entity": "activity", "role": "new"} and I want to modify the category of this activity from the category [holiday]{"entity": "category", "role": "old"} to the category [monthly]{"entity": "category", "role": "new"} of 07/20/2022
+    - trasform the name of activity [ring]{"entity": "activity", "role": "old"} to the activity [sport]{"entity": "activity", "role": "new"} and I want to modify the category of this activity from the category [school]{"entity": "category", "role": "old"} to the category [times]{"entity": "category", "role": "new"} for todayof to 7th of June
+    - change the name of activity [refuel]{"entity": "activity", "role": "old"} in the activity [cards]{"entity": "activity", "role": "new"} and category from [diet]{"entity": "category", "role": "old"} to [vacation]{"entity": "category", "role": "new"} of mondayof 01/11/2022
+    - trasform the name of activity [cooking]{"entity": "activity", "role": "old"} in the activity [playing]{"entity": "activity", "role": "new"} and i would substitute the category of this activity from the category [commitments]{"entity": "category", "role": "old"} to the category [wishes]{"entity": "category", "role": "new"} of 13th September at 13:00
+    - i would substitute the name of the activity [walk]{"entity": "activity", "role": "old"} in the activity [sleep]{"entity": "activity", "role": "new"} and the category from [personal]{"entity": "category", "role": "old"} to [leisure]{"entity": "category", "role": "new"} of 11/04/2022
+    - substitute name of the activity [search]{"entity": "activity", "role": "old"} in the activity [shopping]{"entity": "activity", "role": "new"} and the category from [sport]{"entity": "category", "role": "old"} to [finance]{"entity": "category", "role": "new"} of mondayof 01/11/2022
+    - i would substitute the name of the activity [run]{"entity": "activity", "role": "old"} in the activity [exit]{"entity": "activity", "role": "new"} and the category from [work]{"entity": "category", "role": "old"} to [monthly]{"entity": "category", "role": "new"} at 20:00
+    - I want to change the name of [shopping]{"entity": "activity", "role": "old"} in the activity [refuel]{"entity": "activity", "role": "new"} and i want to trasform the category of this activity from the category [events]{"entity": "category", "role": "old"} to category [holiday]{"entity": "category", "role": "new"} at 15:30
+    - trasform the name of activity [draw]{"entity": "activity", "role": "old"} in the activity [cooking]{"entity": "activity", "role": "new"} and i would substitute the category of this activity from the category [gym]{"entity": "category", "role": "old"} to the category [subjects]{"entity": "category", "role": "new"} of tomorrow
+    - replace the name of the activity [sport]{"entity": "activity", "role": "old"} to the activity [run]{"entity": "activity", "role": "new"} and I want to change category of this activity from the category [gym]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} at 18:30
+    - I want to modify the name of the activity [play]{"entity": "activity", "role": "old"} in the activity [ring]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [volunteering]{"entity": "category", "role": "old"} to category [school]{"entity": "category", "role": "new"} of 13th September at 13:00
+    - change the name of activity [draw]{"entity": "activity", "role": "old"} in the activity [paint]{"entity": "activity", "role": "new"} and category from [dailyweekly]{"entity": "category", "role": "old"} to [leisure]{"entity": "category", "role": "new"} of tomorrow
+    - change the name of activity [paint]{"entity": "activity", "role": "old"} in the activity [draw]{"entity": "activity", "role": "new"} and category from [leisure]{"entity": "category", "role": "old"} to [dailyweekly]{"entity": "category", "role": "new"} of tomorrow
+    - I want to change the name of [note]{"entity": "activity", "role": "old"} in the activity [cards]{"entity": "activity", "role": "new"} and i want to trasform the category of this activity from the category [carriage]{"entity": "category", "role": "old"} to category [research]{"entity": "category", "role": "new"}
+    - modify name of the activity [reed]{"entity": "activity", "role": "old"} to the activity [study]{"entity": "activity", "role": "new"} and the category from [holiday]{"entity": "category", "role": "old"} to [school]{"entity": "category", "role": "new"} of 6th of June
+    - modify name of the activity [walk]{"entity": "activity", "role": "old"} to the activity [reed]{"entity": "activity", "role": "new"} and the category from [medical]{"entity": "category", "role": "old"} to [monthly]{"entity": "category", "role": "new"} of saturdayof 10/25/2022
+    - change the name of activity [shopping]{"entity": "activity", "role": "old"} in the activity [match]{"entity": "activity", "role": "new"} and category from [projects]{"entity": "category", "role": "old"} to [times]{"entity": "category", "role": "new"} of saturdayof 10/25/2022
+    - I want to modify the name of the activity [note]{"entity": "activity", "role": "old"} to the activity [stand_up]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [sport]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} now
+    - change the name of activity [note]{"entity": "activity", "role": "old"} in the activity [fuel]{"entity": "activity", "role": "new"} and category from [sport]{"entity": "category", "role": "old"} to [university]{"entity": "category", "role": "new"} of 29th of June
+    - I want to modify the name of the activity [stand_up]{"entity": "activity", "role": "old"} to the activity [note]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [school]{"entity": "category", "role": "old"} to the category [sport]{"entity": "category", "role": "new"} now
+    - I would change the name of [stand_up]{"entity": "activity", "role": "old"} to the activity [exit]{"entity": "activity", "role": "new"} and I want to trasform the category of this activity from the category [events]{"entity": "category", "role": "old"} to category [holiday]{"entity": "category", "role": "new"} of 07/28/2022
+    - I want to modify the name of the activity [note]{"entity": "activity", "role": "old"} to the activity [travel]{"entity": "activity", "role": "new"} and the category from [dailyweekly]{"entity": "category", "role": "old"} to [school]{"entity": "category", "role": "new"} at 15:30
+    - I want to modify the name of the activity [study]{"entity": "activity", "role": "old"} to the activity [stand_up]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [carriage]{"entity": "category", "role": "old"} to the category [dailyweekly]{"entity": "category", "role": "new"} at 18:30
+    - I want to modify the name of the activity [draw]{"entity": "activity", "role": "old"} in the activity [study]{"entity": "activity", "role": "new"} and category from [times]{"entity": "category", "role": "old"} to [events]{"entity": "category", "role": "new"} of 07/28/2022
+    - I want to modify the name of the activity [sport]{"entity": "activity", "role": "old"} in the activity [walk]{"entity": "activity", "role": "new"} and category from [university]{"entity": "category", "role": "old"} to [work]{"entity": "category", "role": "new"} of 13th September at 13:00
+    - replace the name of the activity [fuel]{"entity": "activity", "role": "old"} in the activity [match]{"entity": "activity", "role": "new"} and i want to change category of this activity from the category [vacation]{"entity": "category", "role": "old"} to [quickly]{"entity": "category", "role": "new"} of 28/04/2022
+    - I want to modify the name of the activity [walk]{"entity": "activity", "role": "old"} in the activity [sport]{"entity": "activity", "role": "new"} and category from [work]{"entity": "category", "role": "old"} to [university]{"entity": "category", "role": "new"} of 13th September at 13:00
+    - I want to change the name of [runbed]{"entity": "activity", "role": "old"} in the activity [sleep]{"entity": "activity", "role": "new"} and i want to trasform the category of this activity from the category [work]{"entity": "category", "role": "old"} to category [gym]{"entity": "category", "role": "new"} for todayof to 7th of June
+    - replace the name of the activity [jogging]{"entity": "activity", "role": "old"} in the activity [walk]{"entity": "activity", "role": "new"} and i want to change category of this activity from the category [payments]{"entity": "category", "role": "old"} to [projects]{"entity": "category", "role": "new"} of 11/04/2022
+    - i would modify the name of the activity [play]{"entity": "activity", "role": "old"} in the activity [draw]{"entity": "activity", "role": "new"} and the category from [work]{"entity": "category", "role": "old"} to [wishes]{"entity": "category", "role": "new"} of tomorrow
+    - I want to modify the name of the activity [fuel]{"entity": "activity", "role": "old"} to the activity [sport]{"entity": "activity", "role": "new"} and the category from [projects]{"entity": "category", "role": "old"} to [school]{"entity": "category", "role": "new"} at 9:00
+    - replace the name of the activity [match]{"entity": "activity", "role": "old"} in the activity [fuel]{"entity": "activity", "role": "new"} and i want to change category of this activity from the category [quickly]{"entity": "category", "role": "old"} to [vacation]{"entity": "category", "role": "new"} of 28/04/2022
+    - trasform the name of activity [travel]{"entity": "activity", "role": "old"} to the activity [walk]{"entity": "activity", "role": "new"} and I want to modify the category of this activity from the category [events]{"entity": "category", "role": "old"} to the category [projects]{"entity": "category", "role": "new"} of 28/04/2022
+    - trasform the name of activity [walk]{"entity": "activity", "role": "old"} to the activity [travel]{"entity": "activity", "role": "new"} and I want to modify the category of this activity from the category [projects]{"entity": "category", "role": "old"} to the category [events]{"entity": "category", "role": "new"} of 28/04/2022
+    - I want to modify the name of the activity [ring]{"entity": "activity", "role": "old"} in the activity [play]{"entity": "activity", "role": "new"} and I want to modify category of this activity from the category [school]{"entity": "category", "role": "old"} to category [volunteering]{"entity": "category", "role": "new"} of 13th September at 13:00
+    - replace the name of the activity [walk]{"entity": "activity", "role": "old"} in the activity [jogging]{"entity": "activity", "role": "new"} and i want to change category of this activity from the category [projects]{"entity": "category", "role": "old"} to [payments]{"entity": "category", "role": "new"} of 11/04/2022
+- intent: set_status_activity
+  examples: |
+    - I have done activity [run](activity) in category [commitments](category)
+    - set [incomplete](activity_status) activity [stand_up](activity) in category [projects](category)
+    - Hi I want to set done all activity in [monthly](category) list
+    - set [incomplete](activity_status) [jogging](activity) in [quickly](category)
+    - hi, I want to set [completed](activity_status) an activity in [projects](category) list
+    - undo [complete](activity_status) [swimmming](activity) in [monthly](category)
+    - undo [complete](activity_status) activity [stand_up](activity) in [commitments](category)
+    - hello I want to set [incomplete](activity_status) an activity in my list
+    - set [incomplete](activity_status) activity [study](activity) in [daily](category)
+    - set [complete](activity_status) [stand_up](activity)
+    - set [incomplete](activity_status) [jogging](activity) in category [monthly](category)
+    - set [complete](activity_status) activity [play](activity) in [monthly](category)
+    - set [incomplete](activity_status) [run](activity)
+    - undo [complete](activity_status) [bed](activity)
+    - I want to set [incomplete](activity_status) an activity in a list
+    - hi I want to set up [complete](activity_status) an activity in my list
+    - set [completed](activity_status) activity [jogging](activity) in category [weekly](category)
+    - set [incomplete](activity_status) [run](activity) in [daily](category)
+    - set [incomplete](activity_status) activity [play](activity) in [monthly](category)
+    - set [completed](activity_status) [bed](activity) in [projects](category)
+    - hi, I want to set [incomplete](activity_status) an activity in [weekly](category) list
+    - set [incomplete](activity_status) [play](activity)
+    - hi, I want to set undone an activity in [commitments](category) list
+    - set [incomplete](activity_status) [stand_up](activity) in [weekly](category)
+    - set [incomplete](activity_status) [bed](activity)
+    - undo [complete](activity_status) activity [bed](activity) in [daily](category)
+    - I have done activity [jogging](activity) in category [gym](category)
+    - I want to set [incomplete](activity_status) an activity
+    - set [complete](activity_status) [run](activity) in [daily](category)
+    - set done [play](activity) in [commitments](category)
+    - hello, I want to set [complete](activity_status) an activity in [quickly](category) list
+    - hi, I want to set undone an activity in [daily](category) list
+    - set [incomplete](activity_status) activity [bed](activity) in category [quickly](category)
+    - set [incomplete](activity_status) activity [run](activity) in [weekly](category)
+    - set [completed](activity_status) activity [swimmming](activity) in category [commitments](category)
+    - undo [complete](activity_status) [run](activity) in [daily](category)
+    - hi I want to set [incomplete](activity_status) an activity in my list
+    - set undone [jogging](activity)
+    - set up [complete](activity_status) [stand_up](activity) in [weekly](category)
+    - set done [bed](activity)
+    - undo [complete](activity_status) [jogging](activity)
+    - I want to set undone an activity in [study](category) list
+    - I want to set [complete](activity_status) an activity
+    - set [complete](activity_status) [play](activity)
+    - undo [complete](activity_status) [swimmming](activity)
+    - set up [completed](activity_status) [stand_up](activity) in category [daily](category)
+    - set [incomplete](activity_status) activity [jogging](activity) in [quickly](category)
+    - set [incomplete](activity_status) activity [swimmming](activity) in [projects](category)
+    - set [incomplete](activity_status) [bed](activity) in [projects](category)
+    - set [incomplete](activity_status) activity [jogging](activity) in category [weekly](category)
+    - hello, I want to set done an activity in [monthly](category) list
+    - undo [complete](activity_status) [play](activity)
+    - set done activity [stand_up](activity) in category [projects](category)
+    - I want to set [incomplete](activity_status) an activity in [projects](category) list
+    - undo [complete](activity_status) [stand_up](activity) in [weekly](category)
+    - I want to set done an activity in [commitments](category) list
+    - set [complete](activity_status) activity [play](activity) in category [daily](category)
+    - hi, I want to set [incomplete](activity_status) an activity in [projects](category) list
+    - undo [complete](activity_status) activity [run](activity) in [weekly](category)
+    - set [incomplete](activity_status) [swimmming](activity) in category [quickly](category)
+    - set activity [complete](activity_status)
+    - undo [complete](activity_status) activity [swimmming](activity) in [projects](category)
+    - set [incomplete](activity_status) [play](activity) in category [projects](category)
+    - I want to set [incomplete](activity_status) an activity in [quickly](category) list
+    - undo [complete](activity_status) [play](activity) in [commitments](category)
+    - set undone activity [play](activity) in category [daily](category)
+    - set undone activity [stand_up](activity) in [commitments](category)
+    - undo [complete](activity_status) [bed](activity) in [projects](category)
+    - set activity [incomplete](activity_status)
+    - I want to set [incomplete](activity_status) an activity in [daily](category) list
+    - set done activity [swimmming](activity) in [projects](category)
+    - set [complete](activity_status) [bed](activity) in category [weekly](category)
+    - set [incomplete](activity_status) [run](activity) in category [commitments](category)
+    - hi, I want to set [completed](activity_status) an activity in [weekly](category) list
+    - set done [jogging](activity)
+    - hello, I want to set [incomplete](activity_status) an activity in [monthly](category) list
+    - set [incomplete](activity_status) [stand_up](activity) in category [daily](category)
+    - set [incomplete](activity_status) [play](activity) in [commitments](category)
+    - I want to set [complete](activity_status) an activity in [daily](category) list
+    - set up [complete](activity_status) [run](activity)
+    - undo [complete](activity_status) [run](activity)
+    - set [incomplete](activity_status) activity [run](activity) in category [monthly](category)
+    - I want to set done an activity in [quickly](category) list
+    - hi, I want to set [complete](activity_status) an activity in [daily](category) list
+    - undo [complete](activity_status) [study](activity) in [quickly](category)
+    - set [completed](activity_status) activity [jogging](activity) in [quickly](category)
+    - undo [complete](activity_status) [stand_up](activity)
+    - I want to set done an activity in a list
+    - set done [jogging](activity) in category [monthly](category)
+    - set [complete](activity_status) activity [run](activity) in category [monthly](category)
+    - set [completed](activity_status) activity [run](activity) in [weekly](category)
+    - I want to set [complete](activity_status) an activity in [projects](category) list
+    - set [complete](activity_status) [swimmming](activity) in [monthly](category)
+    - set [completed](activity_status) [play](activity) in category [projects](category)
+    - Hi, set activity [complete](activity_status)
+    - set [complete](activity_status) [swimmming](activity) in category [quickly](category)
+- intent: modify_activity_name+modify_activity_deadline
+  examples: |
+    - I want to convert the name of activity [run]{"entity": "activity", "role": "old"} in the category [work](category) with name [ring]{"entity": "activity", "role": "new"} and trasform the deadline from today to next saturdayfrom yesterday to tomorrow
+    - convert the activity named [walk]{"entity": "activity", "role": "old"} into [cooking]{"entity": "activity", "role": "new"} in the category [volunteering](category) and from 6th of June to 12/07/2022
+    - I would change the name of the activity [run]{"entity": "activity", "role": "old"} in the category [bank](category) with [travel]{"entity": "activity", "role": "new"} and change the deadline from today to next mondayfrom today to yesterday
+    - trasform the activity [sleep]{"entity": "activity", "role": "old"} in category [work](category) with name [exit]{"entity": "activity", "role": "new"} and from now to 9th of December
+    - modify the activity named [runbed]{"entity": "activity", "role": "old"} into [draw]{"entity": "activity", "role": "new"} in category [projects](category) and from now to 9th of December
+    - I want to change the activity named [search]{"entity": "activity", "role": "old"} into [reed]{"entity": "activity", "role": "new"} in the category [finance](category) from 9th of march to now
+    - convert [sleep]{"entity": "activity", "role": "old"} in the category [monthly](category) with the name [playing]{"entity": "activity", "role": "new"} and trasform the deadline from 9th of march to now
+    - I want to convert the name of activity [ring]{"entity": "activity", "role": "old"} in the category [work](category) with name [swimmming]{"entity": "activity", "role": "new"} and trasform the deadline from 18:30 to 18:00
+    - substitute [cooking]{"entity": "activity", "role": "old"} in category [job](category) with name [reed]{"entity": "activity", "role": "new"} and trasform the deadline from 6th of June to 12/07/2022
+    - modify activity [walk]{"entity": "activity", "role": "old"} in [gym](category) with [jogging]{"entity": "activity", "role": "new"} and from 17:45 to 9:00
+    - modify activity [exit]{"entity": "activity", "role": "old"} in [sport](category) with [runbed]{"entity": "activity", "role": "new"} and from 30th September at 15:30 to 13th October at 13:50
+    - change the name of [paint]{"entity": "activity", "role": "old"} in the category [research](category) with [cooking]{"entity": "activity", "role": "new"} and from today to next saturdayfrom yesterday to tomorrow
+    - I want to modify the name of activity [cards]{"entity": "activity", "role": "old"} in the category [carriage](category) with name [walk]{"entity": "activity", "role": "new"} and trasform the deadline from 18:00 to 18:30
+    - substitute the name of the activity [play]{"entity": "activity", "role": "old"} in [events](category) with name [search]{"entity": "activity", "role": "new"} and trasform the deadline from next saturday to todayfrom 05/11/2023 to 7th of June
+    - modify activity [runbed]{"entity": "activity", "role": "old"} in [sport](category) with [exit]{"entity": "activity", "role": "new"} and from 30th September at 15:30 to 13th October at 13:50
+    - I want to convert the name of activity [ring]{"entity": "activity", "role": "old"} in the category [work](category) with name [run]{"entity": "activity", "role": "new"} and trasform the deadline from today to next saturdayfrom yesterday to tomorrow
+    - modify name of the activity [sleep]{"entity": "activity", "role": "old"} in category [leisure](category) with the name [reed]{"entity": "activity", "role": "new"} and from  to 17:45
+    - convert activity named [draw]{"entity": "activity", "role": "old"} into [cards]{"entity": "activity", "role": "new"} in the category [trolley](category) and from 11th September at 11:00 to 13th September at 13:00
+    - trasform the activity [ring]{"entity": "activity", "role": "old"} in category [events](category) with name [fuel]{"entity": "activity", "role": "new"} and from 06/26/2022 to today
+    - I want to modify the name of activity [walk]{"entity": "activity", "role": "old"} in the category [carriage](category) with name [cards]{"entity": "activity", "role": "new"} and trasform the deadline from 18:00 to 18:30
+    - modify name of the activity [play]{"entity": "activity", "role": "old"} in category [quickly](category) with the name [walk]{"entity": "activity", "role": "new"} and from 04/07/2022 to tomorrow
+    - modify name of the activity [match]{"entity": "activity", "role": "old"} in category [medications](category) with the name [draw]{"entity": "activity", "role": "new"} and from next monday to today
+    - I want to convert the name of activity [exit]{"entity": "activity", "role": "old"} in the category [job](category) with name [cooking]{"entity": "activity", "role": "new"} and trasform the deadline from 11th September at 11:00 to 13th September at 13:00
+    - substitute activity named [refuel]{"entity": "activity", "role": "old"} into activity [search]{"entity": "activity", "role": "new"} in category [monthly](category) and also from 4th of August to now
+    - convert activity named [study]{"entity": "activity", "role": "old"} into [jogging]{"entity": "activity", "role": "new"} in the category [research](category) and from today to next saturdayfrom yesterday to tomorrow
+    - trasform the activity [fuel]{"entity": "activity", "role": "old"} in category [events](category) with name [ring]{"entity": "activity", "role": "new"} and from 06/26/2022 to today
+    - change name of [swimmming]{"entity": "activity", "role": "old"} in category [work](category) with the name [note]{"entity": "activity", "role": "new"} and change the deadline from today to next saturdayfrom yesterday to tomorrow
+    - convert the activity named [draw]{"entity": "activity", "role": "old"} into [walk]{"entity": "activity", "role": "new"} in the category [school](category) and from tomorrow to 03/04/2022
+    - change activity named [ring]{"entity": "activity", "role": "old"} into [study]{"entity": "activity", "role": "new"} in category [commitments](category) and from 12/07/2022 to 6th of June
+    - trasform the activity [refuel]{"entity": "activity", "role": "old"} in category [events](category) with name [travel]{"entity": "activity", "role": "new"} and from 07/28/2022 to 29th of June
+    - change name of [reed]{"entity": "activity", "role": "old"} in category [commitments](category) with the name [runbed]{"entity": "activity", "role": "new"} and change the deadline from tomorrow to 03/04/2022
+    - change activity named [walk]{"entity": "activity", "role": "old"} into [exit]{"entity": "activity", "role": "new"} in category [carriage](category) and from 07/28/2022 to 29th of June
+    - modify the activity named [stand_up]{"entity": "activity", "role": "old"} into [walk]{"entity": "activity", "role": "new"} in category [diet](category) and from 30th September at 15:30 to 13th October at 13:50
+    - change the activity named [exit]{"entity": "activity", "role": "old"} into [fuel]{"entity": "activity", "role": "new"} in the category [dailyweekly](category) and from 29th of June to 07/28/2022
+    - I want to change the activity named [reed]{"entity": "activity", "role": "old"} into [search]{"entity": "activity", "role": "new"} in the category [finance](category) from 9th of march to now
+    - change name of [note]{"entity": "activity", "role": "old"} in category [work](category) with the name [swimmming]{"entity": "activity", "role": "new"} and change the deadline from today to next saturdayfrom yesterday to tomorrow
+    - change name of [runbed]{"entity": "activity", "role": "old"} in category [commitments](category) with the name [reed]{"entity": "activity", "role": "new"} and change the deadline from tomorrow to 03/04/2022
+    - convert [cooking]{"entity": "activity", "role": "old"} in the category [leisure](category) with the name [study]{"entity": "activity", "role": "new"} and trasform the deadline from today to next saturdayfrom yesterday to tomorrow
+    - trasform the activity named [play]{"entity": "activity", "role": "old"} into [paint]{"entity": "activity", "role": "new"} in category [diet](category) and from now to 4th of August
+    - replace activity named [study]{"entity": "activity", "role": "old"} into [ring]{"entity": "activity", "role": "new"} in [work](category) and also from 4th of August to now
+    - convert the activity named [jogging]{"entity": "activity", "role": "old"} into [playing]{"entity": "activity", "role": "new"} in the category [personal](category) and from Today to tomorrow
+    - modify name of the activity [walk]{"entity": "activity", "role": "old"} in category [quickly](category) with the name [play]{"entity": "activity", "role": "new"} and from 04/07/2022 to tomorrow
+    - change the activity named [paint]{"entity": "activity", "role": "old"} into [travel]{"entity": "activity", "role": "new"} in the category [events](category) and from tomorrow to 03/04/2022
+    - convert activity named [jogging]{"entity": "activity", "role": "old"} into [study]{"entity": "activity", "role": "new"} in the category [research](category) and from today to next saturdayfrom yesterday to tomorrow
+    - I want to change the activity named [runbed]{"entity": "activity", "role": "old"} into [cooking]{"entity": "activity", "role": "new"} in the category [payments](category) from 4th of August to now
+    - replace name of [jogging]{"entity": "activity", "role": "old"} in category [payments](category) with the name [travel]{"entity": "activity", "role": "new"} and change the deadline from today to next mondayfrom today to yesterday
+    - trasform the activity [travel]{"entity": "activity", "role": "old"} in category [events](category) with name [refuel]{"entity": "activity", "role": "new"} and from 07/28/2022 to 29th of June
+    - change activity named [play]{"entity": "activity", "role": "old"} into [cooking]{"entity": "activity", "role": "new"} in category [diet](category) and from today to next mondayfrom today to yesterday
+    - replace activity named [runbed]{"entity": "activity", "role": "old"} into [draw]{"entity": "activity", "role": "new"} in [bank](category) and also from 18:00 to 18:30
+    - substitute [study]{"entity": "activity", "role": "old"} in category [commitments](category) with name [match]{"entity": "activity", "role": "new"} and trasform the deadline from 04/07/2022 to tomorrow
+    - I want to convert the name of activity [cooking]{"entity": "activity", "role": "old"} in the category [job](category) with name [exit]{"entity": "activity", "role": "new"} and trasform the deadline from 11th September at 11:00 to 13th September at 13:00
+    - change the activity named [travel]{"entity": "activity", "role": "old"} into [paint]{"entity": "activity", "role": "new"} in the category [events](category) and from tomorrow to 03/04/2022
+    - I would change the name of the activity [travel]{"entity": "activity", "role": "old"} in the category [projects](category) with [match]{"entity": "activity", "role": "new"} and change the deadline from next saturday to todayfrom 05/11/2023 to 7th of June
+    - change activity named [study]{"entity": "activity", "role": "old"} into [ring]{"entity": "activity", "role": "new"} in category [commitments](category) and from 12/07/2022 to 6th of June
+    - modify the activity named [match]{"entity": "activity", "role": "old"} into [exit]{"entity": "activity", "role": "new"} in category [personal](category) and from 18:00 to 18:30
+    - trasform the activity [exit]{"entity": "activity", "role": "old"} in category [work](category) with name [sleep]{"entity": "activity", "role": "new"} and from now to 9th of December
+    - convert [study]{"entity": "activity", "role": "old"} in the category [leisure](category) with the name [cooking]{"entity": "activity", "role": "new"} and trasform the deadline from today to next saturdayfrom yesterday to tomorrow
+    - modify the activity named [walk]{"entity": "activity", "role": "old"} into [stand_up]{"entity": "activity", "role": "new"} in category [diet](category) and from 30th September at 15:30 to 13th October at 13:50
+    - replace activity named [ring]{"entity": "activity", "role": "old"} into [study]{"entity": "activity", "role": "new"} in [work](category) and also from 4th of August to now
+    - I would change the name of the activity [ring]{"entity": "activity", "role": "old"} in the category [work](category) with [draw]{"entity": "activity", "role": "new"} and change the deadline from tomorrow to 04/07/2022
+    - I want to change the activity named [travel]{"entity": "activity", "role": "old"} into [ring]{"entity": "activity", "role": "new"} in the category [vacation](category) from now to 9th of December
+    - replace activity named [ring]{"entity": "activity", "role": "old"} into [match]{"entity": "activity", "role": "new"} in [personal](category) and also from 4th of August to now
+    - change the name of [cooking]{"entity": "activity", "role": "old"} in the category [research](category) with [paint]{"entity": "activity", "role": "new"} and from today to next saturdayfrom yesterday to tomorrow
+    - replace activity named [playing]{"entity": "activity", "role": "old"} into [runbed]{"entity": "activity", "role": "new"} in [times](category) and also from 11th September at 11:00 to 13th September at 13:00
+    - convert activity named [cards]{"entity": "activity", "role": "old"} into [draw]{"entity": "activity", "role": "new"} in the category [trolley](category) and from 11th September at 11:00 to 13th September at 13:00
+    - replace activity named [ring]{"entity": "activity", "role": "old"} into [swimmming]{"entity": "activity", "role": "new"} in [university](category) and also from 1st february at 20:00 to 2nd february at 23:00
+    - I want to modify the name of activity [run]{"entity": "activity", "role": "old"} in the category [work](category) with name [stand_up]{"entity": "activity", "role": "new"} and trasform the deadline from 4th of August to now
+    - convert activity named [search]{"entity": "activity", "role": "old"} into [exit]{"entity": "activity", "role": "new"} in the category [volunteering](category) and from 18:00 to 18:30
+    - replace activity named [match]{"entity": "activity", "role": "old"} into [ring]{"entity": "activity", "role": "new"} in [personal](category) and also from 4th of August to now
+    - replace name of [shopping]{"entity": "activity", "role": "old"} in category [projects](category) with the name [draw]{"entity": "activity", "role": "new"} and change the deadline from 11th September at 11:00 to 13th September at 13:00
+    - change activity named [cooking]{"entity": "activity", "role": "old"} into [play]{"entity": "activity", "role": "new"} in category [diet](category) and from today to next mondayfrom today to yesterday
+    - convert activity named [exit]{"entity": "activity", "role": "old"} into [search]{"entity": "activity", "role": "new"} in the category [volunteering](category) and from 18:00 to 18:30
+    - change the activity named [fuel]{"entity": "activity", "role": "old"} into [exit]{"entity": "activity", "role": "new"} in the category [dailyweekly](category) and from 29th of June to 07/28/2022
+    - trasform the activity named [paint]{"entity": "activity", "role": "old"} into [play]{"entity": "activity", "role": "new"} in category [diet](category) and from now to 4th of August
+    - I would change the name of the activity [travel]{"entity": "activity", "role": "old"} in the category [bank](category) with [run]{"entity": "activity", "role": "new"} and change the deadline from today to next mondayfrom today to yesterday
+    - substitute [reed]{"entity": "activity", "role": "old"} in category [job](category) with name [cooking]{"entity": "activity", "role": "new"} and trasform the deadline from 6th of June to 12/07/2022
+    - modify name of the activity [draw]{"entity": "activity", "role": "old"} in category [medications](category) with the name [match]{"entity": "activity", "role": "new"} and from next monday to today
+    - replace name of [runbed]{"entity": "activity", "role": "old"} in category [calendary](category) with the name [ring]{"entity": "activity", "role": "new"} and change the deadline from  to 17:45
+    - I want to convert the name of activity [swimmming]{"entity": "activity", "role": "old"} in the category [work](category) with name [ring]{"entity": "activity", "role": "new"} and trasform the deadline from 18:30 to 18:00
+    - trasform the activity named [shopping]{"entity": "activity", "role": "old"} into [search]{"entity": "activity", "role": "new"} in category [calendary](category) and from 18:00 to 18:30
+    - change name of [jogging]{"entity": "activity", "role": "old"} in category [leisure](category) with the name [cooking]{"entity": "activity", "role": "new"} and change the deadline from 13th october at 15:00 to 30th november at 15:30
+    - change the name of [run]{"entity": "activity", "role": "old"} in the category [medications](category) with [travel]{"entity": "activity", "role": "new"} and from 18:00 to 18:30
+    - I want to modify the name of activity [cards]{"entity": "activity", "role": "old"} in the category [monthly](category) with name [walk]{"entity": "activity", "role": "new"} and trasform the deadline from 18:30 to 18:00
+    - change activity named [exit]{"entity": "activity", "role": "old"} into [walk]{"entity": "activity", "role": "new"} in category [carriage](category) and from 07/28/2022 to 29th of June
+    - I want to change the activity named [cooking]{"entity": "activity", "role": "old"} into [runbed]{"entity": "activity", "role": "new"} in the category [payments](category) from 4th of August to now
+    - substitute [shopping]{"entity": "activity", "role": "old"} in category [sport](category) with name [ring]{"entity": "activity", "role": "new"} and trasform the deadline from 06/26/2022 to today
+    - convert [playing]{"entity": "activity", "role": "old"} in the category [monthly](category) with the name [sleep]{"entity": "activity", "role": "new"} and trasform the deadline from 9th of march to now
+    - change the activity named [match]{"entity": "activity", "role": "old"} into [runbed]{"entity": "activity", "role": "new"} in the category [finance](category) and from 30th September at 15:30 to 13th October at 13:50
+    - substitute activity named [exit]{"entity": "activity", "role": "old"} into activity [cards]{"entity": "activity", "role": "new"} in category [payments](category) and also from 17:45 to 9:00
+    - modify the activity named [draw]{"entity": "activity", "role": "old"} into [runbed]{"entity": "activity", "role": "new"} in category [projects](category) and from now to 9th of December
+    - convert [draw]{"entity": "activity", "role": "old"} in the category [medications](category) with the name [refuel]{"entity": "activity", "role": "new"} and trasform the deadline from now to 4th of August
+    - substitute the name of the activity [search]{"entity": "activity", "role": "old"} in [events](category) with name [play]{"entity": "activity", "role": "new"} and trasform the deadline from next saturday to todayfrom 05/11/2023 to 7th of June
+    - replace activity named [runbed]{"entity": "activity", "role": "old"} into [playing]{"entity": "activity", "role": "new"} in [times](category) and also from 11th September at 11:00 to 13th September at 13:00
+    - substitute activity named [search]{"entity": "activity", "role": "old"} into activity [reed]{"entity": "activity", "role": "new"} in category [volunteering](category) and also from 6th of June to 12/07/2022
+    - replace name of [draw]{"entity": "activity", "role": "old"} in category [projects](category) with the name [shopping]{"entity": "activity", "role": "new"} and change the deadline from 11th September at 11:00 to 13th September at 13:00
+    - modify activity [note]{"entity": "activity", "role": "old"} in [dailyweekly](category) with [cooking]{"entity": "activity", "role": "new"} and from now to 4th of August
+    - change the name of [travel]{"entity": "activity", "role": "old"} in the category [medications](category) with [run]{"entity": "activity", "role": "new"} and from 18:00 to 18:30
+    - substitute the name of the activity [play]{"entity": "activity", "role": "old"} in [volunteering](category) with name [run]{"entity": "activity", "role": "new"} and trasform the deadline from 04/07/2022 to tomorrow
+    - substitute [match]{"entity": "activity", "role": "old"} in category [commitments](category) with name [study]{"entity": "activity", "role": "new"} and trasform the deadline from 04/07/2022 to tomorrow
+    - replace activity named [shopping]{"entity": "activity", "role": "old"} into [study]{"entity": "activity", "role": "new"} in [sport](category) and also from 18:30 to 18:00
+    - substitute the name of the activity [note]{"entity": "activity", "role": "old"} in [sport](category) with name [exit]{"entity": "activity", "role": "new"} and trasform the deadline from next monday to today
+    - change the name of [sport]{"entity": "activity", "role": "old"} in the category [diet](category) with [shopping]{"entity": "activity", "role": "new"} and from Today to tomorrow
+    - change name of [cooking]{"entity": "activity", "role": "old"} in category [leisure](category) with the name [jogging]{"entity": "activity", "role": "new"} and change the deadline from 13th october at 15:00 to 30th november at 15:30
+    - I would change the name of the activity [draw]{"entity": "activity", "role": "old"} in the category [work](category) with [ring]{"entity": "activity", "role": "new"} and change the deadline from tomorrow to 04/07/2022
+    - substitute activity named [reed]{"entity": "activity", "role": "old"} into activity [search]{"entity": "activity", "role": "new"} in category [volunteering](category) and also from 6th of June to 12/07/2022
+- intent: modify_activity_category+modify_activity_deadline
+  examples: |
+    - convert category and the deadline of activity [study](activity) in the category [job]{"entity": "category", "role": "old"} with the category [calendary]{"entity": "category", "role": "new"} and also from 11th September at 11:00 to 13th September at 13:00
+    - I want to modify category and the deadline of the activity [play](activity) in category [medications]{"entity": "category", "role": "old"} with [wishes]{"entity": "category", "role": "new"} from 29th of June to 07/28/2022
+    - change activity [study](activity) in [school]{"entity": "category", "role": "old"} to category [sport]{"entity": "category", "role": "new"} and from 12/07/2022 to 6th of June
+    - want to change [reed](activity) in [quickly]{"entity": "category", "role": "old"} to [research]{"entity": "category", "role": "new"} and from 30th September at 15:30 to 13th October at 13:50
+    - substitute the activity [paint](activity) in the category [carriage]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} and also from tomorrow to 03/04/2022
+    - convert [reed](activity) in [sport]{"entity": "category", "role": "old"} to category [work]{"entity": "category", "role": "new"} and also from tomorrow to 03/04/2022
+    - I want to substitute the activity [note](activity) in category [carriage]{"entity": "category", "role": "old"} to category [events]{"entity": "category", "role": "new"} and from 06/26/2022 to today
+    - substitute activity [ring](activity) in the category [carriage]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} and from 07/28/2022 to 29th of June
+    - trasform [refuel](activity) in [times]{"entity": "category", "role": "old"} to category [work]{"entity": "category", "role": "new"} and from 07/28/2022 to 29th of June
+    - convert [swimmming](activity) in [bank]{"entity": "category", "role": "old"} to category [research]{"entity": "category", "role": "new"} and also from 13th october at 15:00 to 30th november at 15:30
+    - trasform the activity [travel](activity) in the category [job]{"entity": "category", "role": "old"} to the category [wishes]{"entity": "category", "role": "new"} and from 30th September at 15:30 to 13th October at 13:50
+    - change activity [play](activity) in [wishes]{"entity": "category", "role": "old"} to the category [household]{"entity": "category", "role": "new"} and from 29th of June to 07/28/2022
+    - I want to replace [sleep](activity) in [work]{"entity": "category", "role": "old"} to category [calendary]{"entity": "category", "role": "new"} and also from tomorrow to 04/07/2022
+    - trasform [refuel](activity) in [work]{"entity": "category", "role": "old"} to category [times]{"entity": "category", "role": "new"} and from 07/28/2022 to 29th of June
+    - convert category and the deadline of activity [study](activity) in the category [calendary]{"entity": "category", "role": "old"} with the category [job]{"entity": "category", "role": "new"} and also from 11th September at 11:00 to 13th September at 13:00
+    - I want to modify category and the deadline of the activity [reed](activity) in category [bank]{"entity": "category", "role": "old"} with [exams]{"entity": "category", "role": "new"} from 07/28/2022 to 29th of June
+    - I would replace the category and deadline of the activity [runbed](activity) in category [leisure]{"entity": "category", "role": "old"} with the category [carriage]{"entity": "category", "role": "new"} from 6th of June to 12/07/2022
+    - modify [jogging](activity) in [carriage]{"entity": "category", "role": "old"} to [holiday]{"entity": "category", "role": "new"} and also from 4th of August to now
+    - I want to replace [run](activity) in [vacation]{"entity": "category", "role": "old"} to category [trolley]{"entity": "category", "role": "new"} and also from 29th of June to 07/28/2022
+    - convert [reed](activity) in [work]{"entity": "category", "role": "old"} to category [sport]{"entity": "category", "role": "new"} and also from tomorrow to 03/04/2022
+    - trasform [playing](activity) in [calendary]{"entity": "category", "role": "old"} to category [times]{"entity": "category", "role": "new"} and from 29th of June to 07/28/2022
+    - change activity [walk](activity) in [household]{"entity": "category", "role": "old"} to category [commitments]{"entity": "category", "role": "new"} and from Today to tomorrow
+    - want to change [exit](activity) in [payments]{"entity": "category", "role": "old"} to [exams]{"entity": "category", "role": "new"} and from 4th of August to now
+    - trasform the activity [shopping](activity) in the category [medications]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} and from 4th of August to now
+    - modify the activity [playing](activity) in [household]{"entity": "category", "role": "old"} to category [medications]{"entity": "category", "role": "new"} and also from 29th of June to 07/28/2022
+    - change activity [study](activity) in [sport]{"entity": "category", "role": "old"} to category [school]{"entity": "category", "role": "new"} and from 12/07/2022 to 6th of June
+    - convert category and the deadline of activity [reed](activity) in the category [school]{"entity": "category", "role": "old"} with category [diet]{"entity": "category", "role": "new"} from 18:30 to 18:00
+    - i want to replace category and deadline of the activity [run](activity) in category [household]{"entity": "category", "role": "old"} with category [desires]{"entity": "category", "role": "new"} and from 17:45 to 9:00
+    - convert category and the deadline of activity [reed](activity) in the category [diet]{"entity": "category", "role": "old"} with category [school]{"entity": "category", "role": "new"} from 18:30 to 18:00
+    - change activity [walk](activity) in [commitments]{"entity": "category", "role": "old"} to category [household]{"entity": "category", "role": "new"} and from Today to tomorrow
+    - convert category and the deadline of activity [note](activity) in the category [personal]{"entity": "category", "role": "old"} with category [desires]{"entity": "category", "role": "new"} from Today to tomorrow
+    - want to change [reed](activity) in [research]{"entity": "category", "role": "old"} to [quickly]{"entity": "category", "role": "new"} and from 30th September at 15:30 to 13th October at 13:50
+    - convert category and the deadline of activity [reed](activity) in the category [household]{"entity": "category", "role": "old"} with the category [projects]{"entity": "category", "role": "new"} and also from 18:00 to 18:30
+    - change activity [reed](activity) in category [events]{"entity": "category", "role": "old"} to the category [research]{"entity": "category", "role": "new"} and from 1st february at 20:00 to 2nd february at 23:00
+    - I want to substitute the activity [walk](activity) in category [carriage]{"entity": "category", "role": "old"} to category [calendary]{"entity": "category", "role": "new"} and from now to 9th of December
+    - convert [ring](activity) in [medical]{"entity": "category", "role": "old"} to category [medications]{"entity": "category", "role": "new"} and also from 18:00 to 18:30
+    - modify the activity [walk](activity) in [medical]{"entity": "category", "role": "old"} to category [personal]{"entity": "category", "role": "new"} and also from 11th September at 11:00 to 13th September at 13:00
+    - convert the category and deadline of the activity [runbed](activity) in category [personal]{"entity": "category", "role": "old"} with the category [events]{"entity": "category", "role": "new"} from now to 9th of December
+    - I want to substitute the activity [cooking](activity) in category [work]{"entity": "category", "role": "old"} to category [university]{"entity": "category", "role": "new"} and from today to next mondayfrom today to yesterday
+    - i want to replace category and deadline of the activity [run](activity) in category [desires]{"entity": "category", "role": "old"} with category [household]{"entity": "category", "role": "new"} and from 17:45 to 9:00
+    - substitute the activity [note](activity) in the category [calendary]{"entity": "category", "role": "old"} to the category [leisure]{"entity": "category", "role": "new"} and also from 17:45 to 9:00
+    - I want to modify category and the deadline of the activity [walk](activity) in category [dailyweekly]{"entity": "category", "role": "old"} with [desires]{"entity": "category", "role": "new"} from next monday to today
+    - want to modify category and deadline of activity [search](activity) in the category [work]{"entity": "category", "role": "old"} with category [diet]{"entity": "category", "role": "new"} and from  to 17:45
+    - I want to change activity [sleep](activity) in the category [school]{"entity": "category", "role": "old"} to the category [wishes]{"entity": "category", "role": "new"} and from next saturday to todayfrom 05/11/2023 to 7th of June
+    - convert the category and deadline of the activity [refuel](activity) in category [personal]{"entity": "category", "role": "old"} with the category [finance]{"entity": "category", "role": "new"} from 29th of June to 07/28/2022
+    - convert the activity [sport](activity) in [school]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} and from 1st february at 20:00 to 2nd february at 23:00
+    - trasform the activity [playing](activity) in the category [quickly]{"entity": "category", "role": "old"} to the category [diet]{"entity": "category", "role": "new"} and from 12/07/2022 to 6th of June
+    - convert the category and deadline of the activity [note](activity) in category [exams]{"entity": "category", "role": "old"} with the category [diet]{"entity": "category", "role": "new"} from 6th of June to 12/07/2022
+    - convert [ring](activity) in [medications]{"entity": "category", "role": "old"} to category [medical]{"entity": "category", "role": "new"} and also from 18:00 to 18:30
+    - I want to change activity [shopping](activity) in the category [trolley]{"entity": "category", "role": "old"} to the category [holiday]{"entity": "category", "role": "new"} and from tomorrow to 04/07/2022
+    - substitute activity [walk](activity) in the category [trolley]{"entity": "category", "role": "old"} to the category [research]{"entity": "category", "role": "new"} and from 11th September at 11:00 to 13th September at 13:00
+    - convert category and the deadline of activity [cooking](activity) in the category [trolley]{"entity": "category", "role": "old"} with the category [subjects]{"entity": "category", "role": "new"} and also from 17:45 to 9:00
+    - trasform [playing](activity) in [times]{"entity": "category", "role": "old"} to category [calendary]{"entity": "category", "role": "new"} and from 29th of June to 07/28/2022
+    - change activity [jogging](activity) in category [university]{"entity": "category", "role": "old"} to the category [personal]{"entity": "category", "role": "new"} and from now to 4th of August
+    - change activity [jogging](activity) in category [personal]{"entity": "category", "role": "old"} to the category [university]{"entity": "category", "role": "new"} and from now to 4th of August
+    - convert the category and deadline of the activity [sleep](activity) in category [calendary]{"entity": "category", "role": "old"} with the category [commitments]{"entity": "category", "role": "new"} and from next saturday to todayfrom 05/11/2023 to 7th of June
+    - modify [play](activity) in [medical]{"entity": "category", "role": "old"} to [subjects]{"entity": "category", "role": "new"} and also from 07/28/2022 to 29th of June
+    - modify the activity [study](activity) in [payments]{"entity": "category", "role": "old"} to category [school]{"entity": "category", "role": "new"} and also from 11th September at 11:00 to 13th September at 13:00
+    - i want to replace category and deadline of the activity [cooking](activity) in category [volunteering]{"entity": "category", "role": "old"} with category [personal]{"entity": "category", "role": "new"} and from Today to tomorrow
+    - want to modify category and deadline of activity [search](activity) in the category [diet]{"entity": "category", "role": "old"} with category [work]{"entity": "category", "role": "new"} and from  to 17:45
+    - convert the activity [swimmming](activity) in [diet]{"entity": "category", "role": "old"} to the category [carriage]{"entity": "category", "role": "new"} and from 07/28/2022 to 29th of June
+    - want to change [paint](activity) in [work]{"entity": "category", "role": "old"} to [holiday]{"entity": "category", "role": "new"} and from next saturday to todayfrom 05/11/2023 to 7th of June
+    - change activity [swimmming](activity) in [events]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} and from 12/07/2022 to 6th of June
+    - I would replace the category and deadline of the activity [exit](activity) in category [subjects]{"entity": "category", "role": "old"} with the category [desires]{"entity": "category", "role": "new"} from now to 9th of December
+    - I want to change activity [sleep](activity) in the category [wishes]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from next saturday to todayfrom 05/11/2023 to 7th of June
+    - trasform [search](activity) in [volunteering]{"entity": "category", "role": "old"} to category [projects]{"entity": "category", "role": "new"} and from  to 17:45
+    - modify the activity [study](activity) in [school]{"entity": "category", "role": "old"} to category [payments]{"entity": "category", "role": "new"} and also from 11th September at 11:00 to 13th September at 13:00
+    - I want to replace [sleep](activity) in [calendary]{"entity": "category", "role": "old"} to category [work]{"entity": "category", "role": "new"} and also from tomorrow to 04/07/2022
+    - convert the category and deadline of the activity [note](activity) in category [diet]{"entity": "category", "role": "old"} with the category [exams]{"entity": "category", "role": "new"} from 6th of June to 12/07/2022
+    - trasform [search](activity) in [projects]{"entity": "category", "role": "old"} to category [volunteering]{"entity": "category", "role": "new"} and from  to 17:45
+    - I want to change activity [cooking](activity) in the category [job]{"entity": "category", "role": "old"} to the category [desires]{"entity": "category", "role": "new"} and from 07/28/2022 to 29th of June
+    - change activity [reed](activity) in category [research]{"entity": "category", "role": "old"} to the category [events]{"entity": "category", "role": "new"} and from 1st february at 20:00 to 2nd february at 23:00
+    - modify the activity [playing](activity) in [medications]{"entity": "category", "role": "old"} to category [household]{"entity": "category", "role": "new"} and also from 29th of June to 07/28/2022
+    - I want to substitute the activity [walk](activity) in category [calendary]{"entity": "category", "role": "old"} to category [carriage]{"entity": "category", "role": "new"} and from now to 9th of December
+    - convert the category and deadline of the activity [swimmming](activity) in category [volunteering]{"entity": "category", "role": "old"} with the category [medications]{"entity": "category", "role": "new"} and from 6th of June to 12/07/2022
+    - substitute the activity [paint](activity) in the category [holiday]{"entity": "category", "role": "old"} to the category [carriage]{"entity": "category", "role": "new"} and also from tomorrow to 03/04/2022
+    - convert category and the deadline of activity [note](activity) in the category [desires]{"entity": "category", "role": "old"} with category [personal]{"entity": "category", "role": "new"} from Today to tomorrow
+    - substitute activity [ring](activity) in the category [desires]{"entity": "category", "role": "old"} to the category [carriage]{"entity": "category", "role": "new"} and from 07/28/2022 to 29th of June
+    - substitute the activity [ring](activity) in the category [job]{"entity": "category", "role": "old"} to the category [gym]{"entity": "category", "role": "new"} and also from 17:45 to 9:00
+    - change activity [study](activity) in category [medical]{"entity": "category", "role": "old"} to the category [work]{"entity": "category", "role": "new"} and from 12/07/2022 to 6th of June
+    - change activity [fuel](activity) in [projects]{"entity": "category", "role": "old"} to category [wishes]{"entity": "category", "role": "new"} and from 13th october at 15:00 to 30th november at 15:30
+    - want to modify category and deadline of activity [run](activity) in the category [work]{"entity": "category", "role": "old"} with category [exams]{"entity": "category", "role": "new"} and from tomorrow to 04/07/2022
+    - convert the category and deadline of the activity [runbed](activity) in category [events]{"entity": "category", "role": "old"} with the category [personal]{"entity": "category", "role": "new"} from now to 9th of December
+    - convert the category and deadline of the activity [jogging](activity) in category [medications]{"entity": "category", "role": "old"} with the category [trolley]{"entity": "category", "role": "new"} and from 29th of June to 07/28/2022
+    - I want to replace [search](activity) in [leisure]{"entity": "category", "role": "old"} to category [calendary]{"entity": "category", "role": "new"} and also from 30th September at 15:30 to 13th October at 13:50
+    - trasform the activity [shopping](activity) in the category [desires]{"entity": "category", "role": "old"} to the category [medications]{"entity": "category", "role": "new"} and from 4th of August to now
+    - convert the activity [swimmming](activity) in [carriage]{"entity": "category", "role": "old"} to the category [diet]{"entity": "category", "role": "new"} and from 07/28/2022 to 29th of June
+    - change activity [play](activity) in [household]{"entity": "category", "role": "old"} to the category [wishes]{"entity": "category", "role": "new"} and from 29th of June to 07/28/2022
+    - convert the category and deadline of the activity [sleep](activity) in category [commitments]{"entity": "category", "role": "old"} with the category [calendary]{"entity": "category", "role": "new"} and from next saturday to todayfrom 05/11/2023 to 7th of June
+    - modify [refuel](activity) in [medications]{"entity": "category", "role": "old"} to [gym]{"entity": "category", "role": "new"} and also from tomorrow to 03/04/2022
+    - convert the category and deadline of the activity [refuel](activity) in category [finance]{"entity": "category", "role": "old"} with the category [personal]{"entity": "category", "role": "new"} from 29th of June to 07/28/2022
+    - substitute the activity [ring](activity) in the category [gym]{"entity": "category", "role": "old"} to the category [job]{"entity": "category", "role": "new"} and also from 17:45 to 9:00
+    - i want to replace category and deadline of the activity [cards](activity) in category [school]{"entity": "category", "role": "old"} with category [holiday]{"entity": "category", "role": "new"} and from 18:00 to 18:30
+    - substitute activity [walk](activity) in the category [research]{"entity": "category", "role": "old"} to the category [trolley]{"entity": "category", "role": "new"} and from 11th September at 11:00 to 13th September at 13:00
+    - I would replace the category and deadline of the activity [runbed](activity) in category [carriage]{"entity": "category", "role": "old"} with the category [leisure]{"entity": "category", "role": "new"} from 6th of June to 12/07/2022
+    - modify [stand_up](activity) in [exams]{"entity": "category", "role": "old"} to [volunteering]{"entity": "category", "role": "new"} and also from 07/28/2022 to 29th of June
+    - convert the activity [cooking](activity) in [work]{"entity": "category", "role": "old"} to the category [diet]{"entity": "category", "role": "new"} and from 06/26/2022 to today
+    - convert [swimmming](activity) in [research]{"entity": "category", "role": "old"} to category [bank]{"entity": "category", "role": "new"} and also from 13th october at 15:00 to 30th november at 15:30
+    - want to modify category and deadline of activity [note](activity) in the category [holiday]{"entity": "category", "role": "old"} with category [university]{"entity": "category", "role": "new"} and from 9th of march to now
+    - convert the activity [sport](activity) in [desires]{"entity": "category", "role": "old"} to the category [school]{"entity": "category", "role": "new"} and from 1st february at 20:00 to 2nd february at 23:00
+    - convert category and the deadline of activity [cooking](activity) in the category [subjects]{"entity": "category", "role": "old"} with the category [trolley]{"entity": "category", "role": "new"} and also from 17:45 to 9:00
+    - substitute activity [playing](activity) in the category [bank]{"entity": "category", "role": "old"} to the category [payments]{"entity": "category", "role": "new"} and from tomorrow to 04/07/2022
+    - convert category and the deadline of activity [study](activity) in the category [diet]{"entity": "category", "role": "old"} with category [school]{"entity": "category", "role": "new"} from 9th of march to now
+    - trasform the activity [playing](activity) in the category [diet]{"entity": "category", "role": "old"} to the category [quickly]{"entity": "category", "role": "new"} and from 12/07/2022 to 6th of June
+    - I want to change activity [shopping](activity) in the category [holiday]{"entity": "category", "role": "old"} to the category [trolley]{"entity": "category", "role": "new"} and from tomorrow to 04/07/2022
+    - want to change [paint](activity) in [holiday]{"entity": "category", "role": "old"} to [work]{"entity": "category", "role": "new"} and from next saturday to todayfrom 05/11/2023 to 7th of June
+    - I want to modify category and the deadline of the activity [reed](activity) in category [exams]{"entity": "category", "role": "old"} with [bank]{"entity": "category", "role": "new"} from 07/28/2022 to 29th of June
+    - I want to change activity [cooking](activity) in the category [desires]{"entity": "category", "role": "old"} to the category [job]{"entity": "category", "role": "new"} and from 07/28/2022 to 29th of June
+    - substitute activity [playing](activity) in the category [payments]{"entity": "category", "role": "old"} to the category [bank]{"entity": "category", "role": "new"} and from tomorrow to 04/07/2022
+    - convert category and the deadline of activity [reed](activity) in the category [projects]{"entity": "category", "role": "old"} with the category [household]{"entity": "category", "role": "new"} and also from 18:00 to 18:30
+    - change activity [study](activity) in category [work]{"entity": "category", "role": "old"} to the category [medical]{"entity": "category", "role": "new"} and from 12/07/2022 to 6th of June
+    - I want to replace [search](activity) in [calendary]{"entity": "category", "role": "old"} to category [leisure]{"entity": "category", "role": "new"} and also from 30th September at 15:30 to 13th October at 13:50
+    - modify [jogging](activity) in [holiday]{"entity": "category", "role": "old"} to [carriage]{"entity": "category", "role": "new"} and also from 4th of August to now
+    - substitute the activity [note](activity) in the category [leisure]{"entity": "category", "role": "old"} to the category [calendary]{"entity": "category", "role": "new"} and also from 17:45 to 9:00
+    - I want to substitute the activity [note](activity) in category [events]{"entity": "category", "role": "old"} to category [carriage]{"entity": "category", "role": "new"} and from 06/26/2022 to today
+    - i want to replace category and deadline of the activity [cards](activity) in category [holiday]{"entity": "category", "role": "old"} with category [school]{"entity": "category", "role": "new"} and from 18:00 to 18:30
+- intent: remove_item
+  examples: |
+    - del [bed](activity) in [projects](category) at 2:55
+    - I want to remove an activity to [commitments](category) list
+    - I'm [mattia99](username), delete [play](activity) at 00:00
+    - del [play](activity) at 00:00
+    - hi, I want to del an activity to [weekly](category) list
+    - remove activity [play](activity) in category [daily](category) at 13:29
+    - I am [alessia19_07](username), I want to delete an activity to [monthly](category) list
+    - hi, I want to cancel an activity to [projects](category) list at 16:00
+    - hello, I'm [mattia99](username), delete [jogging](activity) in category [monthly](category)
+    - delete [bed](activity) in [projects](category)
+    - hi, I'm [ferdinando1907](username), delete [study](activity) in [daily](category) at 4:25
+    - hi, I'm [alessia19_07](username), del [jogging](activity) at 3:00
+    - I'm [alessia19_07](username), I want to del an activity
+    - hello, I'm [alessia19_07](username), remove activity [play](activity) in category [daily](category) at 13:29
+    - del activity [jogging](activity) in category [weekly](category)
+    - I want to del an activity to [weekly](category) list
+    - hi, I want to cancel an activity to [projects](category) list
+    - hello, I am [ferdinando1907](username), delete activity [play](activity) in [monthly](category)
+    - remove [run](activity)
+    - remove activity [play](activity) in category [daily](category)
+    - hello, I'm [Giusy_5](username), del [jogging](activity)
+    - I'm [mattia99](username), del activity [stand_up](activity) in category [projects](category)
+    - delete [study](activity) in [daily](category) at 4:25
+    - I'm [alessia19_07](username) want to remove an activity to [projects](category) list at 16:30
+    - I want to delete an activity to [daily](category) list at 9:40
+    - I'm [Giusy_5](username) want to del an activity to [monthly](category) list at 7:00
+    - delete [jogging](activity) in category [monthly](category) at 20:30
+    - hi, I'm [mattia99](username), delete [play](activity) in category [projects](category) at 19:00
+    - I am [alessia19_07](username), hello I want to delete an activity to my list
+    - I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category)
+    - del [bed](activity) in category [weekly](category)
+    - remove activity [bed](activity) in category [quickly](category) at 9:40
+    - hello, I want to del an activity to [monthly](category) list
+    - hi I'm [alessia19_07](username) want to delete an activity to my list at 18:14
+    - hi, I'm [Giusy_5](username), remove [run](activity) in category [commitments](category) at 6:30
+    - hello, I am [alessia19_07](username), del activity [swimmming](activity) in [projects](category)
+    - remove [play](activity) in [commitments](category) at 22:20
+    - delete [play](activity) in [commitments](category)
+    - hello, I am [camilla@2](username), delete [run](activity) in category [commitments](category)
+    - hi, I am [ferdinando1907](username) want to delete an activity to [commitments](category) list at 22:20
+    - I want to remove an activity to a list
+    - delete activity [play](activity) in [monthly](category)
+    - delete [run](activity) at 11:00
+    - remove [jogging](activity) at 3:00
+    - remove activity [run](activity) in [weekly](category)
+    - hello, I'm [camilla@2](username), delete activity [bed](activity) in category [quickly](category)
+    - I want to delete an activity to [daily](category) list
+    - cancel [stand_up](activity) in [weekly](category)
+    - hello, I'm [mattia99](username) want to remove an activity to [monthly](category) list at 14:50
+    - del activity [swimmming](activity) in category [commitments](category)
+    - I'm [mattia99](username) want to delete an activity to [quickly](category) list at 3:29
+    - I'm [Giusy_5](username), I want to delete an activity at 11:00
+    - cancel activity [stand_up](activity) in category [projects](category) at 5:12
+    - hi, I am [alessia19_07](username), del activity [stand_up](activity) in category [projects](category) at 5:12
+    - I'm [camilla@2](username), I want to delete an activity to a list
+    - cancel activity [bed](activity) in category [quickly](category)
+    - hi, I am [alessia19_07](username), remove [swimmming](activity) in category [quickly](category) at 16:30
+    - remove [jogging](activity)
+    - hello, I am [Simone](username), remove [run](activity) in [daily](category)
+    - hi I want to delete an activity to my list at 18:14
+    - hi, I want to delete an activity to [commitments](category) list
+    - hello, I am [ferdinando1907](username), remove [play](activity) in category [projects](category)
+    - hello, I'm [alessia19_07](username), delete [swimmming](activity)
+    - hello I want to remove an activity to my list at 12:37
+    - I want to cancel an activity to a list at 13:39
+    - hello, I am [mattia99](username), delete [bed](activity) in [projects](category)
+    - hello, I am [camilla@2](username), del [swimmming](activity) in [monthly](category)
+    - remove activity [stand_up](activity) in [commitments](category) at 17:30
+    - I'm [alessia19_07](username) want to cancel an activity to [quickly](category) list at 6:30
+    - I am [alessia19_07](username), del [stand_up](activity) at 9:30
+    - hello, I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category) at 11:00
+    - delete activity [run](activity) in [weekly](category) at 19:41
+    - I am [Giusy_5](username), remove [swimmming](activity) at 01:45
+    - I want to remove an activity to [projects](category) list at 16:30
+    - hello, I want to delete an activity to [quickly](category) list at 3:29
+    - remove [swimmming](activity)
+    - del activity [swimmming](activity) in [projects](category)
+    - hi, I'm [alessia19_07](username), cancel [bed](activity) in category [weekly](category) at 8:00
+    - cancel [swimmming](activity) in category [quickly](category)
+    - I am [camilla@2](username), hi I want to remove an activity to my list
+    - I want to delete an activity at 11:00
+    - I am [mattia99](username), hello, I want to remove an activity to [quickly](category) list
+    - hi, I want to remove an activity to [daily](category) list
+    - hi, I want to delete an activity to [commitments](category) list at 22:20
+    - I'm [ferdinando1907](username), I want to cancel an activity to [weekly](category) list at 21:10
+    - cancel [play](activity) in category [projects](category) at 19:00
+    - hello, I'm [mattia99](username), cancel activity [swimmming](activity) in category [commitments](category) at 13:39
+    - hi, I'm [mattia99](username) want to cancel an activity to [projects](category) list at 16:00
+    - I want to delete an activity to [projects](category) list
+    - I'm [camilla@2](username), I want to del an activity to a list at 13:39
+    - delete [stand_up](activity) in category [daily](category)
+    - delete activity [bed](activity) in [daily](category)
+    - hello, I am [ferdinando1907](username), cancel [stand_up](activity) in [weekly](category)
+    - hello, I want to delete an activity to [quickly](category) list
+    - I am [ferdinando1907](username), hi, I want to del an activity to [daily](category) list
+    - del [swimmming](activity) in category [quickly](category) at 16:30
+    - I want to delete an activity to [monthly](category) list at 7:00
+    - del [jogging](activity) in [quickly](category) at 14:50
+    - remove [stand_up](activity) in category [daily](category) at 10:25
+    - hi, I'm [mattia99](username), del activity [jogging](activity) in [quickly](category) at 7:00
+    - I'm [Giusy_5](username), I want to delete an activity to [commitments](category) list
+    - cancel [swimmming](activity) at 01:45
+    - remove [run](activity) in category [commitments](category)
+    - I want to delete an activity
+    - hi, I'm [mattia99](username), cancel activity [stand_up](activity) in [commitments](category) at 17:30
+    - I want to del an activity to [weekly](category) list at 21:10
+    - hello, I'm [mattia99](username), remove [run](activity)
+    - I'm [ferdinando1907](username), delete activity [play](activity) in category [daily](category)
+    - hi, I want to del an activity to [weekly](category) list at 18:30
+    - hi, I'm [Giusy_5](username), cancel activity [bed](activity) in category [quickly](category) at 9:40
+    - remove [swimmming](activity) in [monthly](category)
+    - hi, I'm [camilla@2](username) want to remove an activity to [daily](category) list at 17:30
+    - hello, I'm [alessia19_07](username), del activity [run](activity) in category [monthly](category)
+    - del [stand_up](activity)
+    - hi, I'm [Giusy_5](username), cancel [stand_up](activity) in [weekly](category) at 16:00
+    - delete [jogging](activity) in category [monthly](category)
+    - hello I want to remove an activity to my list
+    - hi, I'm [mattia99](username), delete [jogging](activity) in [quickly](category) at 14:50
+    - hi, I'm [ferdinando1907](username), delete [stand_up](activity) in category [daily](category) at 10:25
+    - hi, I am [alessia19_07](username), remove [swimmming](activity) in [monthly](category) at 20:00
+    - remove [bed](activity) at 13:00
+    - hello, I am [ferdinando1907](username), remove [bed](activity) in category [weekly](category)
+    - hi, I'm [mattia99](username) want to delete an activity to [weekly](category) list at 18:30
+    - hello, I am [ferdinando1907](username), del activity [run](activity) in [weekly](category)
+    - cancel activity [jogging](activity) in [quickly](category)
+    - remove activity [jogging](activity) in category [weekly](category) at 11:00
+    - hi, I want to remove an activity to [daily](category) list at 17:30
+    - del [run](activity) in category [commitments](category) at 6:30
+    - hi, I am [mattia99](username), delete activity [play](activity) in [monthly](category) at 9:40
+    - I am [Giusy_5](username), hello, I want to del an activity to [monthly](category) list
+    - I want to cancel an activity to [monthly](category) list
+    - remove activity [stand_up](activity) in [commitments](category)
+    - I want to cancel an activity to [commitments](category) list at 19:00
+    - I want to delete an activity to [quickly](category) list
+    - del [jogging](activity) in [quickly](category)
+    - delete [study](activity)
+    - hello, I'm [antonio68](username), delete [study](activity)
+    - hello, I'm [ferdinando1907](username), del [stand_up](activity)
+    - hello, I am [mattia99](username), remove [jogging](activity) in [quickly](category)
+    - delete [bed](activity) in category [weekly](category) at 8:00
+    - I am [mattia99](username) want to delete an activity to [commitments](category) list at 19:00
+    - del activity [run](activity) in category [monthly](category) at 21:10
+    - delete [swimmming](activity) in [monthly](category) at 20:00
+    - hello I am [alessia19_07](username) want to del an activity to my list at 12:37
+    - delete [play](activity)
+    - hi, I'm [ferdinando1907](username), delete activity [run](activity) in category [monthly](category) at 21:10
+    - del activity [play](activity) in [monthly](category) at 9:40
+- intent: inform
+  examples: |
+    - [Lucilla](username)
+    - [ring](activity)
+    - [subjects](category)
+    - on friday
+    - on next monday
+    - [Quartilia](username)
+    - [peppe](username)
+    - [Speranza](username)
+    - [Monia](username)
+    - [Adelmaro](username)
+    - [Popola](username)
+    - [sleep](activity)
+    - today
+    - [note](activity)
+    - [exams](category)
+    - [health](category)
+    - [medical](category)
+    - 9:30
+    - [kikka](username)
+    - [Isolda](username)
+    - [Giusy_5](username)
+    - [simone!](username)
+    - [carriage](category)
+    - [giorgio](username)
+    - [weekly](category)
+    - [Filina](username)
+    - [travel](activity)
+    - [camilla2](username)
+    - [Lisio](username)
+    - [reed](activity)
+    - [trolley](category)
+    - [Olando](username)
+    - [diet](category)
+    - [shopping](activity)
+    - tomorrow morning
+    - [bed](activity)
+    - [Violeta](username)
+    - [Ferriero](username)
+    - [Astrea](username)
+    - [Amadeo](username)
+    - 14:00
+    - [lilly](username)
+    - [work](category)
+    - [play](activity)
+    - [personal](category)
+    - [run](activity)
+    - [nando33](username)
+    - [carla](username)
+    - [stand_up](activity)
+    - [ferdinando1907](username)
+    - [Piccarda](username)
+    - 12/10/2022 at 18:00
+    - [Cafiera](username)
+    - [exit](activity)
+    - on the next friday
+    - [Aliberto](username)
+    - [Mamante](username)
+    - [Paoluccio](username)
+    - [household](category)
+    - [Rossi](username)
+    - [antonio68](username)
+    - tomorrow
+    - [Semiramide](username)
+    - [Alderigo](username)
+    - [Fraulina](username)
+    - [medications](category)
+    - [swimmming](activity)
+    - [Edmonda](username)
+    - [Agide](username)
+    - [finance](category)
+    - [research](category)
+    - [mattia99](username)
+    - [wishes](category)
+    - 08/06/2025
+    - [Telesfora](username)
+    - [dario04](username)
+    - [marta02](username)
+    - 10:00
+    - [holiday](category)
+    - [Memo](username)
+    - [Ingenuino](username)
+    - [Silviero](username)
+    - [Anacleto](username)
+    - [Foca](username)
+    - [Favilla](username)
+    - [Chiaffredo](username)
+    - [Ottavino](username)
+    - [piero](username)
+    - 6:30
+    - [Gettulia](username)
+    - [Felsina](username)
+    - [Tiziano](username)
+    - [walk](activity)
+    - [match](activity)
+    - [monthly](category)
+    - [Galatea](username)
+    - [carla02](username)
+    - [jogging](activity)
+    - [Marzilio](username)
+    - 08/09/2025
+    - [daily](category)
+    - [Simone](username)
+    - [times](category)
+    - [Castorino](username)
+    - [refuel](activity)
+    - [Wilfredo](username)
+    - [cards](activity)
+    - [alberto3](username)
+    - next monday
+    - [Dilla](username)
+    - next sunday
+    - [giorgio_](username)
+    - [nando](username)
+    - [Armerina](username)
+    - [Ricciardetto](username)
+    - [sport](activity)
+    - [projects](category)
+    - [fuel](activity)
+    - [Lelmo](username)
+    - [Arceo](username)
+    - [Ladislao](username)
+    - [Osasco](username)
+    - [playing](activity)
+    - [Cuono](username)
+    - [Guendalina](username)
+    - [Boerio](username)
+    - [Gizio](username)
+    - [Olivetto](username)
+    - at 18:00
+    - [Flamiano](username)
+    - [paint](activity)
+    - [giorgio_99](username)
+    - [giorgio99](username)
+    - [antonio1](username)
+    - on monday
+    - [Genio](username)
+    - [Salverino](username)
+    - [Fiordalise](username)
+    - [leisure](category)
+    - [commitments](category)
+    - [Orfilia](username)
+    - [cristina06](username)
+    - [mattia15](username)
+    - [Venturino](username)
+    - [Valfrido](username)
+    - [camilla@2](username)
+    - [search](activity)
+    - [Rambo](username)
+    - [Mima](username)
+    - [Natascia](username)
+    - [sport](category)
+    - [payments](category)
+    - [calendary](category)
+    - [quickly](category)
+    - [Liberante](username)
+    - [mattia92](username)
+    - [Nordina](username)
+    - [Fabiano](username)
+    - [marcoMars](username)
+    - 14th september 2022
+    - [desires](category)
+    - [study](activity)
+    - [Niccolino](username)
+    - [Giosofatto](username)
+    - [Erode](username)
+- intent: add_item
+  examples: |
+    - put activity [swimmming](activity) in category [commitments](category) at 13:39
+    - I want to create a new activity
+    - i'm [mattia21](username) add [run](activity) at 11:00
+    - i'm [Simone](username) insert [bed](activity) in category [weekly](category) at 8:00
+    - add the activity [yoga](activity)
+    - create activity [play](activity) in [monthly](category) at 9:40
+    - insert activity [stand_up](activity) in category [projects](category) at 5:12
+    - hi, i am [Giusy_5](username) I want to insert an activity to [quickly](category) list at 3:29
+    - hi, i'm [antonio68](username) insert [stand_up](activity) in [weekly](category)
+    - in the category [households](category) insert the new activity [cleaning](activity)
+    - i'm [alessia19_07](username), insert activity [run](activity) in [weekly](category) at 19:41
+    - I want to add the new activity [stand_up](activity) to [projects](category)
+    - hi, i'm [antonio68](username) put activity [play](activity) in category [daily](category)
+    - hi, i'm [nando](username) put [stand_up](activity)
+    - hi, i'm [ferdinando1907](username) insert [bed](activity)
+    - insert [play](activity) in [commitments](category) at 22:20
+    - enter [play](activity) at 00:00
+    - put in [jogging](activity) at 3:00
+    - I want to add an activity to [commitments](category) list at 19:00
+    - hi, i'm [mattia21](username)in [personal](category) add [beautician](activity)
+    - I want to add a new activity
+    - hi, i'm [Simone](username) add [swimmming](activity) in [monthly](category)
+    - hi, i'm [mattia21](username) add activity [bed](activity) in [daily](category)
+    - hello, i'm [ferdinando1907](username) I want to add an activity to [quickly](category) list
+    - hi, I want to insert an activity to [commitments](category) list
+    - i am [Simone](username) add activity [jogging](activity) in category [weekly](category) at 11:00
+    - hi, i'm [mattia21](username) enter [run](activity) in [daily](category)
+    - add activity [study](activity) in [projects](category)
+    - insert [stand_up](activity) in category [daily](category) at 10:25
+    - i am [ferdinando1907](username), I want to add an activity at 11:00
+    - I want to enter an activity [stand_up](activity) to [projects](category) list
+    - i am [Giusy_5](username) and put activity [run](activity) in category [monthly](category) at 21:10
+    - i'm [alessia19_07](username) I want to create an activity to my list
+    - hi, I want to insert an activity to [projects](category) list at 16:00
+    - hi, I want to enter an activity to [daily](category) list at 17:30
+    - hi, I want to enter an activity to [projects](category) list
+    - hi, i'm [nando](username) put [bed](activity) in [projects](category)
+    - add activity [painting](activity)
+    - i'm [ferdinando1907](username) add [bed](activity) at 13:00
+    - put [run](activity) in category [commitments](category) at 6:30
+    - hello, I want to enter an activity to [monthly](category) category at 14:50
+    - hi, i'm [nando](username) insert activity [bed](activity) in the category [quickly](category)
+    - i'm [camilla@2](username), insert [play](activity) at 00:00
+    - I want to add a new activity [jogging](activity) to [monthly](category)
+    - I want to add an activity to [monthly](category) list
+    - hi, I want to put an activity to [commitments](category) category at 22:20
+    - in the category [utils](category), i want to insert an activity [shopping](activity)
+    - enter [play](activity) in category [projects](category)
+    - i am [mattia21](username) insert activity [swimmming](activity) in category [commitments](category) at 13:39
+    - i'm [alessia19_07](username), insert [stand_up](activity) at 9:30
+    - enter activity [jogging](activity) in category [weekly](category) at 11:00
+    - i'm [Giusy_5](username) and add new activity [bed](activity) in [daily](category) at 12:35
+    - hi I want to add an activity to my list at 18:14
+    - insert [bed](activity)
+    - put in activity [study](activity) in [school](category)
+    - I want to insert a new activity to a category at 13:39
+    - hello, i'm [Simone](username) and I want to insert an activity [run](activity) to [weekly](category) category
+    - hi, i'm [Giusy_5](username) add new [jogging](activity)
+    - hi, i'm [nando](username) insert activity [run](activity) in [weekly](category)
+    - insert activity [stand_up](activity) in [commitments](category) at 17:30
+    - I want to enter an activity [payments](activity) to [commitments](category)
+    - hi, i'm [antonio68](username) put in [play](activity)
+    - add [pilates](activity)
+    - hi, i'm [antonio68](username) add new activity [study](activity) in [projects](category)
+    - add [bed](activity) in [projects](category) at 2:55
+    - enter activity [play](activity) in category [daily](category)
+    - hi, i'm [Simone](username) enter activity [stand_up](activity) in category [projects](category)
+    - i'm [Simone](username) add [swimmming](activity) in [monthly](category) at 20:00
+    - put activity [jogging](activity) in category [weekly](category)
+    - add [swimmming](activity) in category [quickly](category) at 16:30
+    - add [swimmming](activity) in category [quickly](category)
+    - i'm [mattia21](username) put [run](activity) in [daily](category) at 4:25
+    - hello I want to enter an activity to my list
+    - hello, i'm [mattia21](username) I want to add an activity [run](activity) to [weekly](category)
+    - I want to insert an activity to a list
+    - add activity [run](activity) in [weekly](category) at 19:41
+    - i'm [camilla@2](username) enter the activity [stand_up](activity) in [commitments](category) at 17:30
+    - i'm [alessia19_07](username) enter [stand_up](activity) in category [daily](category) at 10:25
+    - put [jogging](activity) in [quickly](category)
+    - hello, I want to put in an activity to [monthly](category) list
+    - put activity [jogging](activity) in [quickly](category)
+    - hello, i'm [mattia21](username), I want to insert an activity to [projects](category) list
+    - hello, i'm [ferdinando1907](username) and I want to add an activity
+    - insert the activity [football](activity)
+    - hi, i am [alessia19_07](username) I want to insert an activity to my list at 18:14
+    - hello, I want to add an activity to [quickly](category) category
+    - add activity [play](activity) in category [daily](category) at 3:29
+    - I want to enter a new activity [swimmming](activity) to [daily](category) list
+    - hello, i'm [mattia21](username) I want to enter a new activity [stand_up](activity) to [projects](category) category
+    - hi, i'm [ferdinando1907](username) add activity [swimmming](activity) in category [commitments](category)
+    - hi, i'm [ferdinando1907](username) insert the activity [play](activity) in [monthly](category)
+    - i'm [antonio68](username), I want to enter an activity to [quickly](category) list
+    - in category [personal](category) add activity [hairdresser](activity) at 21:10
+    - I want to put an activity to [monthly](category) list at 7:00
+    - add [stand_up](activity) in [weekly](category)
+    - add [swimmming](activity) at 01:45
+    - I want to add an activity at 11:00
+    - enter new activity [gardening](activity)
+    - hi, i'm [ferdinando1907](username) put [jogging](activity) in the category [monthly](category)
+    - hi, i am [camilla@2](username) I want to enter an activity to [monthly](category) list at 14:50
+    - add activity [bed](activity) in [daily](category)
+    - i am [antonio68](username) enter [jogging](activity) in category [monthly](category) at 20:30
+    - hi, i'm [mattia21](username) enter [run](activity)
+    - hi I want to insert an activity to my list
+    - put activity [bed](activity) in category [quickly](category)
+    - i'm [ferdinando1907](username) and I want to insert an activity to my list
+    - insert [jogging](activity)
+    - hi, I want to add an activity to [weekly](category) list at 18:30
+    - hi, i am [mattia21](username), and I want to insert an activity to [commitments](category) list at 22:20
+    - hi, i am [antonio68](username) I want to enter the activity to [projects](category) list at 16:30
+    - insert the activity [working](activity)
+    - put [run](activity) in [daily](category) at 4:25
+    - put [swimmming](activity)
+    - enter [stand_up](activity) in [weekly](category) at 16:00
+    - enter [play](activity) in category [projects](category) at 19:00
+    - in category [work](category) put [meeting](activity) at 20:30
+    - hi, i am [ferdinando1907](username) and I want to add an activity to [quickly](category) list at 6:30
+    - add [run](activity)
+    - hello, i'm [mattia21](username) and I want to enter an activity [stand_up](activity) to [projects](category)
+    - put in [jogging](activity) in category [monthly](category) at 20:30
+    - hi, i'm [Simone](username) add [swimmming](activity)
+    - put [jogging](activity) in [quickly](category) at 14:50
+    - in the category [university](category) add the activity [exam](activity)
+    - hello, i'm [Simone](username) I want to put in an activity [jogging](activity) to [monthly](category) list
+    - I want to insert an activity to [quickly](category) category
+    - add activity [run](activity) in category [monthly](category) at 21:10
+    - hi, i am [antonio68](username), I want to add an activity to [projects](category) list at 16:00
+    - hello, i'm [antonio68](username) I want to enter an activity to a list
+    - add activity [swimmming](activity) in the category [commitments](category)
+    - I want to put an activity [shopping](activity) to [quickly](category)
+    - hi, i am [mattia21](username), I want to enter an activity to a list at 13:39
+    - enter [bed](activity) at 13:00
+    - add [run](activity) in category [commitments](category)
+    - I want to add an activity to [weekly](category) list
+    - i'm [ferdinando1907](username), put activity [swimmming](activity) in [projects](category) at 18:30
+    - i am [ferdinando1907](username) put activity [bed](activity) in category [quickly](category) at 9:40
+    - put in the activity [wash](activity) in [quickly](category)
+    - I want to put the activity to [commitments](category) list
+    - I want to add an activity [run](activity) to [weekly](category) category
+    - i am [camilla@2](username), add [swimmming](activity) in category [quickly](category) at 16:30
+    - i'm [ferdinando1907](username) enter [play](activity) in [commitments](category) at 22:20
+    - enter [stand_up](activity)
+    - i'm [Giusy_5](username) enter [jogging](activity) at 3:00
+    - put in [jogging](activity) in category [monthly](category)
+    - hello, I want to add an activity to [quickly](category) list at 3:29
+    - hi, i'm [Giusy_5](username) add a [bed](activity) in category [weekly](category)
+    - enter activity [jogging](activity) in [quickly](category) at 7:00
+    - hi, i'm [Simone](username) enter an activity [jogging](activity) in [quickly](category)
+    - put [stand_up](activity) at 9:30
+    - I want to create the activity [play](activity) to [commitments](category) list
+    - hi, I want to create an activity to [weekly](category) list
+    - i'm [mattia21](username) put activity [jogging](activity) in [quickly](category) at 7:00
+    - I want to add an activity to [weekly](category) list at 21:10
+    - i'm [antonio68](username) I want to insert an activity to [commitments](category) list
+    - add [play](activity) in [commitments](category)
+    - hi, i am [alessia19_07](username) I want to insert an activity to [weekly](category) list at 21:10
+    - enter activity [bed](activity) in [daily](category) at 12:35
+    - hello, i'm [ferdinando1907](username) and I want to create the activity [shopping](activity) to [quickly](category) list
+    - I want to insert an activity to [daily](category) list at 9:40
+    - put activity [bed](activity) in category [quickly](category) at 9:40
+    - put activity [play](activity) in [monthly](category)
+    - hi, i am [Giusy_5](username) and I want to add a new activity to [daily](category) list at 9:40
+    - hello, i'm [Giusy_5](username), I want to insert an activity [study](activity) to [daily](category)
+    - hi, i am [ferdinando1907](username) and I want to put an activity to my list at 12:37
+    - in the category [sport](category) insert an activity [climbing](activity)
+    - i'm [ferdinando1907](username) put [bed](activity) in [projects](category) at 2:55
+    - hello, i'm [Giusy_5](username) I want to enter an activity [shopping](activity) to [quickly](category)
+    - insert [jogging](activity) at 3:00
+    - hi, i'm [ferdinando1907](username) put [jogging](activity) in [quickly](category)
+    - hi, i am [camilla@2](username), I want to insert an activity to [commitments](category) list at 19:00
+    - hello, i'm [antonio68](username), I want to add an activity to [monthly](category) list
+    - i am [camilla@2](username) put activity [play](activity) in category [daily](category) at 3:29
+    - I want to insert an activity to [daily](category) category
+    - hello, i'm [Giusy_5](username) I want to put a new activity [swimmming](activity) in [daily](category) list
+    - hi, I want to put a new activity to [daily](category) category
+    - I want to create an activity to [quickly](category) category at 6:30
+    - hi, i'm [Giusy_5](username) enter activity [stand_up](activity) in [commitments](category)
+    - I want to put a new activity [shopping](activity) to [quickly](category) list
+    - add [stand_up](activity) in the category [daily](category)
+    - hello, in category [personal](category) I want to put the activity[beauty]
+    - I want to enter an activity to [projects](category) category
+    - put [bed](activity) in [projects](category)
+    - hello, i'm [antonio68](username), I want to insert an activity [payments](activity) to [commitments](category)
+    - put in the activity [swimming](activity)
+    - I want to put in the activity [run](activity) to [weekly](category)
+    - I want to insert the new activity [jogging](activity) to [monthly](category) category
+    - I want to enter an activity to [projects](category) category at 16:30
+    - i'm [antonio68](username) insert activity [play](activity) in [monthly](category) at 9:40
+- synonym: add
+  examples: |
+    - insert
+    - put
+- synonym: remove
+  examples: |
+    - take off
+    - drop
+- synonym: uncompleted
+  examples: |
+    - undone
+    - unfinished
+    - unexecuted
+    - undeveloped
+    - uncomplete
+- synonym: completed
+  examples: |
+    - done
+    - finished
+    - executed
+    - developed
+    - concluded
+    - complete
