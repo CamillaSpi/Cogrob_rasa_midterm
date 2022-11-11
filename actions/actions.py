@@ -296,31 +296,27 @@ class actionModifyActivity(Action):
         username = tracker.get_slot("username")
         category_old = tracker.get_slot("category_old")
         activity_old = tracker.get_slot("activity_old")
-        activity_new = tracker.get_slot("activity")
-        category_new = tracker.get_slot("category")
+        activity_new = tracker.get_slot("activity_new")
+        category_new = tracker.get_slot("category_new")
         time = tracker.get_slot("time")
-        print("category_old:",category_old," activity_old:",activity_old," category:",category_new," activity:",activity_new)
+        
         if(time != None and len(time) == 2 and not isinstance(time, list)):
-            print("sono entrato nel primo ifs")
+            
             tmp = str(datetime.strptime(time['to'], "%Y-%m-%dT%H:%M:%S.%f%z") - timedelta(days=1)).split(" ")
             timenew = tmp[0] + "T" + (tmp[1])[:-6] + ".000" + (tmp[1])[-6:]
             print(timenew)
             timeold = time['from']
         elif(isinstance(time, list)):
-            print("sono entrato nel primo elsif")
             timeold = time[0]['from']
             timenew = time[1]
-        elif(Database.doesUnfoldingsExists(username,category_new,activity_new)): 
-            print("sono entrato nel secondo elsif")
+        elif(Database.doesUnfoldingsExists(username,category_new,activity_new)):
             timenew = time
             timeold = None
         else:
-            print("sono entrato nell else", activity_new,category_new)
             possibleDeadlineErrorFlag=True
             timenew = time
             timeold = time
         if possibleDeadlineErrorFlag is True and activity_old is None and category_old is None:
-            print("sono nel possibleDead")
             dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
             return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None)]
         
@@ -345,8 +341,8 @@ class actionModifyActivity(Action):
                 dispatcher.utter_message(text=f"Ops! {username} the {act_to_modify} already exists, it makes no sense to update that!") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None),SlotSet("activity", None)]
-        return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category", None),SlotSet("activity", None)]
+            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category_new", None),SlotSet("activity_new", None)]
+        return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category_new", None),SlotSet("activity_new", None)]
 
 
 class actionSetReminderSlot(Action):
