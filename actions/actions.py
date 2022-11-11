@@ -282,8 +282,8 @@ class actionModifyCategory(Action):
                 dispatcher.utter_message(text=f"Ops! {username} the {category_new} already exists!") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("category_new", None)]
-        return [SlotSet("category_old", None),SlotSet("category_new", None)]
+            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("category_new", None),SlotSet("category", None)]
+        return [SlotSet("category_old", None),SlotSet("category_new", None),SlotSet("category", None)]
 
 class actionModifyActivity(Action):
     def name(self) -> Text:
@@ -298,38 +298,50 @@ class actionModifyActivity(Action):
         activity_old = tracker.get_slot("activity_old")
         activity_new = tracker.get_slot("activity_new")
         category_new = tracker.get_slot("category_new")
+        category = tracker.get_slot("category")
+        activity = tracker.get_slot("activity")
         time = tracker.get_slot("time")
-        
-        if(time != None and len(time) == 2 and not isinstance(time, list)):
-            
-            tmp = str(datetime.strptime(time['to'], "%Y-%m-%dT%H:%M:%S.%f%z") - timedelta(days=1)).split(" ")
-            timenew = tmp[0] + "T" + (tmp[1])[:-6] + ".000" + (tmp[1])[-6:]
-            print(timenew)
-            timeold = time['from']
-        elif(isinstance(time, list)):
-            timeold = time[0]['from']
-            timenew = time[1]
-        elif(Database.doesUnfoldingsExists(username,category_new,activity_new)):
-            timenew = time
-            timeold = None
-        else:
-            possibleDeadlineErrorFlag=True
-            timenew = time
-            timeold = time
-        if possibleDeadlineErrorFlag is True and activity_old is None and category_old is None:
-            dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
-            return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None)]
+        print(time)
+
         
         if(activity_old!=None):
             act_to_modify = activity_old
         else:
-            act_to_modify = activity_new
+            act_to_modify = activity
         if(category_old!=None):
             cat_to_modify = category_old
         else:
-            cat_to_modify = category_new
+            cat_to_modify = category
+        
+        if(time != None and len(time) == 2 and not isinstance(time, list)):
+            if(time['to'] != None):
+                tmp = str(datetime.strptime(time['to'], "%Y-%m-%dT%H:%M:%S.%f%z") - timedelta(days=1)).split(" ")
+                timenew = tmp[0] + "T" + (tmp[1])[:-6] + ".000" + (tmp[1])[-6:]
+                print(timenew)
+            else:
+                timenew = time['from'] 
+            timeold = time['from']
+        elif(isinstance(time, list)):
+            timeold = time[0]['from']
+            timenew = time[1]
+        elif(Database.doesUnfoldingsExists(username,category,activity) and category_new == None and activity_new == None):
+            print(username,cat_to_modify,act_to_modify,time)
+            timenew = time
+            timeold = None
+        else:
+            possibleDeadlineErrorFlag=True
+            print(username,cat_to_modify,act_to_modify,time, category_new,activity_new)
+            timenew = time
+            timeold = time
+        if possibleDeadlineErrorFlag is True and activity_old is None and category_old is None:
+            dispatcher.utter_message(text=f"please insert old and new deadline in the next request to allow me to change the deadline of the activity!!")
+            return [SlotSet("category", None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("category_new", None),SlotSet("activity_new", None),SlotSet("activity", None),SlotSet("time", None)]
+        print(time,timeold,timenew)
 
-
+        if(category_new == None):
+            category_new = category
+        if(activity_new == None):
+            activity_new = activity
         if(Database.doesUserExists(username)):
             if (Database.doesUnfoldingsExists(username,category_new,activity_new,timenew) == False):
                 returnedValue = Database.modifyActivity(username, cat_to_modify, act_to_modify, timeold, category_new, activity_new, timenew)
@@ -341,8 +353,8 @@ class actionModifyActivity(Action):
                 dispatcher.utter_message(text=f"Ops! {username} the {act_to_modify} already exists, it makes no sense to update that!") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category_new", None),SlotSet("activity_new", None)]
-        return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category_new", None),SlotSet("activity_new", None)]
+            return [SlotSet("username", None),SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category_new", None),SlotSet("activity_new", None),SlotSet("category", None),SlotSet("activity", None)]
+        return [SlotSet("category_old", None),SlotSet("activity_old", None),SlotSet("time", None),SlotSet("category_new", None),SlotSet("activity_new", None),SlotSet("category", None),SlotSet("activity", None)]
 
 
 class actionSetReminderSlot(Action):
@@ -509,7 +521,9 @@ class actionDefaultFallBack(Action):
         SlotSet("category_old",None),
         SlotSet("category",None),
         SlotSet("time",None),
-        SlotSet("activity_status",None)]
+        SlotSet("activity_status",None),
+        SlotSet("activity_new",None),
+        SlotSet("category_new",None)]
 
 # class ValidateModifyCategoryForm(FormValidationAction):
 #     def name(self) -> Text:

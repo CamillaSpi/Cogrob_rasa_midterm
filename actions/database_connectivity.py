@@ -202,6 +202,15 @@ class Database:
     return False
 
   @staticmethod
+  def insertActivity(activity):
+    cur.execute('''
+      INSERT INTO activities (name) VALUES (?);
+    ''', (activity,))
+    if(len( cur.fetchall()) > 0 ):
+      return True
+    return False
+
+  @staticmethod
   def insertCategoryAndPossession(username, category):
     try:
       if( not Database.doesCategoryExists(category)):
@@ -308,9 +317,12 @@ class Database:
       ''', (id_unfolding,))
       if(len(cur.fetchall()) > 0 ):
         if newcategory != None:
-          if not Database.doesPossessionExists(username,newcategory):
+          if newcategory!=None and not Database.doesPossessionExists(username,newcategory):
             #Andrebbe comunicato che è stata creata tale categoria
             Database.insertCategoryAndPossession(username, newcategory)
+          if newactivity!=None and not Database.doesActivityExists(newactivity):
+            #Andrebbe comunicato che è stata creata tale activity
+            Database.insertActivity(newactivity)
         paramList = list()
         paramList.append(("activity", newactivity))
         paramList.append(("category", newcategory))
