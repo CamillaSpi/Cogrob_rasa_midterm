@@ -484,8 +484,8 @@ nlu:
     - I want to enter an activity to [projects](category) category
     - I want to add an activity to [monthly](category) list
     - I want to insert an activity to [quickly](category) category
-    - in the category [gym](category), i want to add the activity [climbing](activity)
-    - in the category [utils](category), i want to insert an activity [shopping](activity)
+    - in the category [gym](category) , i want to add the activity [climbing](activity)
+    - in the category [utils](category) , i want to insert an activity [shopping](activity)
     - hi, I want to create an activity to [weekly](category) list
     - hi, I want to put a new activity to [daily](category) category
     - hi, I want to insert an activity to [commitments](category) list
@@ -544,112 +544,112 @@ nlu:
     - hello, I want to add an activity to [quickly](category) list at 3:29
     - hello I want to insert an activity to my list at 12:37
     - hi I want to add an activity to my list at 18:14
-    - hi, i'm [mattia21](username) enter [run](activity)
-    - hi, i'm [ferdinando1907](username) insert [bed](activity)
-    - hi, i'm [nando](username) put [stand_up](activity)
-    - hi, i'm [Simone](username) add [swimmming](activity)
-    - hi, i'm [antonio68](username) put in [play](activity)
-    - hi, i'm [Giusy_5](username) add new [jogging](activity)
-    - hi, i'm [mattia21](username) enter [run](activity) in [daily](category)
-    - hi, i'm [mattia21](username) in [daily](category) enter [run](activity) 
-    - hi, i'm [mattia21](username)in [personal](category) add [beautician](activity) 
-    - hi, i'm [nando](username) put [bed](activity) in [projects](category)
-    - hi, i'm [antonio68](username) insert [stand_up](activity) in [weekly](category)
-    - hi, i'm [Simone](username) add [swimmming](activity) in [monthly](category)
-    - hi, i'm [Giusy_5](username) enter [play](activity) in [commitments](category)
-    - hi, i'm [ferdinando1907](username) put [jogging](activity) in [quickly](category)
-    - hi, i'm [nando](username) insert activity [run](activity) in [weekly](category)
-    - hi, i'm [mattia21](username) add activity [bed](activity) in [daily](category)
-    - hi, i'm [Giusy_5](username) enter activity [stand_up](activity) in [commitments](category)
-    - hi, i'm [antonio68](username) add new activity [study](activity) in [projects](category)
-    - hi, i'm [ferdinando1907](username) insert the activity [play](activity) in [monthly](category)
-    - hi, i'm [Simone](username) enter an activity [jogging](activity) in [quickly](category)
-    - hi, i'm [Simone](username) put [run](activity) in category [commitments](category)
-    - hi, i'm [Giusy_5](username) add a [bed](activity) in category [weekly](category)
-    - hi, i'm [mattia21](username) insert [stand_up](activity) in category [daily](category)
-    - hi, i'm [nando](username) create [swimmming](activity) in category [quickly](category)
-    - hi, i'm [antonio68](username) enter [play](activity) in category [projects](category)
-    - hi, i'm [ferdinando1907](username) put [jogging](activity) in the category [monthly](category)
-    - hi, i'm [mattia21](username) add activity [run](activity) in category [monthly](category)
-    - hi, i'm [nando](username) insert activity [bed](activity) in the category [quickly](category)
-    - hi, i'm [Simone](username) enter activity [stand_up](activity) in category [projects](category)
-    - hi, i'm [ferdinando1907](username) add activity [swimmming](activity) in category [commitments](category)
-    - hi, i'm [antonio68](username) put activity [play](activity) in category [daily](category)
-    - hi, i'm [Giusy_5](username) insert activity [jogging](activity) in category [weekly](category)
-    - hello, i'm [ferdinando1907](username) and I want to add an activity
-    - hello, i'm [antonio68](username) I want to enter an activity to a list
-    - hello, i'm [Simone](username) and I want to insert an activity [run](activity) to [weekly](category) category
-    - hello, i'm [Giusy_5](username) I want to put a new activity [swimmming](activity) in [daily](category) list
-    - hello, i'm [nando](username) I want to add the activity [play](activity) to [commitments](category) list
-    - hello, i'm [mattia21](username) I want to enter a new activity [stand_up](activity) to [projects](category) category
-    - hello, i'm [Simone](username) I want to put in an activity [jogging](activity) to [monthly](category) list
-    - hello, i'm [ferdinando1907](username) and I want to create the activity [shopping](activity) to [quickly](category) list
-    - hello, i'm [mattia21](username) I want to add an activity [run](activity) to [weekly](category)
-    - hello, i'm [Giusy_5](username), I want to insert an activity [study](activity) to [daily](category)
-    - hello, i'm [antonio68](username), I want to insert an activity [payments](activity) to [commitments](category)
-    - hello, i'm [mattia21](username) and I want to enter an activity [stand_up](activity) to [projects](category)
-    - hello, i'm [alessia19_07](username), and I want to add an activity [jogging](activity) to [monthly](category)
-    - hello, i'm [Giusy_5](username) I want to enter an activity [shopping](activity) to [quickly](category)
-    - hello, i'm [ferdinando1907](username) I want to put an activity to [weekly](category) list
-    - hello, i'm [mattia21](username) I want to insert an activity to [daily](category) list
-    - hello, i'm [alessia19_07](username) and I want to insert an activity to [commitments](category) list
-    - hello, i'm [mattia21](username), I want to insert an activity to [projects](category) list
-    - hello, i'm [antonio68](username), I want to add an activity to [monthly](category) list
-    - hello, i'm [ferdinando1907](username) I want to add an activity to [quickly](category) list
-    - hello, i'm [Giusy_5](username) I want to enter an activity to [weekly](category) list
-    - i'm [Simone](username) I want to add an activity to [daily](category) list
-    - i'm [antonio68](username) I want to insert an activity to [commitments](category) list
-    - i'm [alessia19_07](username) and I want to put a new activity to [projects](category) list
-    - i'm [ferdinando1907](username), I want to add a activity to [monthly](category) list
-    - i'm [antonio68](username), I want to enter an activity to [quickly](category) list
-    - i'm [ferdinando1907](username) and I want to insert an activity to my list
-    - i'm [alessia19_07](username) I want to create an activity to my list
-    - i'm [mattia21](username) add [run](activity) at 11:00
-    - i'm [ferdinando1907](username) add [bed](activity) at 13:00
-    - i'm [alessia19_07](username), insert [stand_up](activity) at 9:30
-    - i'm [Giusy_5](username) add [swimmming](activity) at 01:45
-    - i'm [camilla@2](username), insert [play](activity) at 00:00
-    - i'm [Giusy_5](username) enter [jogging](activity) at 3:00
-    - i'm [mattia21](username) put [run](activity) in [daily](category) at 4:25
-    - i'm [ferdinando1907](username) put [bed](activity) in [projects](category) at 2:55
-    - i'm [alessia19_07](username), insert [stand_up](activity) in [weekly](category) at 16:00
-    - i'm [Simone](username) add [swimmming](activity) in [monthly](category) at 20:00
-    - i'm [ferdinando1907](username) enter [play](activity) in [commitments](category) at 22:20
-    - i'm [mattia21](username), put [jogging](activity) in [quickly](category) at 14:50
-    - i'm [alessia19_07](username), insert activity [run](activity) in [weekly](category) at 19:41
-    - i'm [Giusy_5](username) and add new activity [bed](activity) in [daily](category) at 12:35
-    - i'm [camilla@2](username) enter the activity [stand_up](activity) in [commitments](category) at 17:30
-    - i'm [ferdinando1907](username), put activity [swimmming](activity) in [projects](category) at 18:30
-    - i'm [antonio68](username) insert activity [play](activity) in [monthly](category) at 9:40
-    - i'm [mattia21](username) put activity [jogging](activity) in [quickly](category) at 7:00
-    - i'm [Giusy_5](username) add [run](activity) in category [commitments](category) at 6:30
-    - i'm [Simone](username) insert [bed](activity) in category [weekly](category) at 8:00
-    - i'm [alessia19_07](username) enter [stand_up](activity) in category [daily](category) at 10:25
-    - i am [Giusy_5](username) and put activity [run](activity) in category [monthly](category) at 21:10
-    - i am [camilla@2](username), add [swimmming](activity) in category [quickly](category) at 16:30
-    - i am [mattia21](username), insert [play](activity) in category [projects](category) at 19:00
-    - i am [antonio68](username) enter [jogging](activity) in category [monthly](category) at 20:30
-    - i am [ferdinando1907](username) put activity [bed](activity) in category [quickly](category) at 9:40
-    - i am [alessia19_07](username) add activity [stand_up](activity) in category [projects](category) at 5:12
-    - i am [mattia21](username) insert activity [swimmming](activity) in category [commitments](category) at 13:39
-    - i am [camilla@2](username) put activity [play](activity) in category [daily](category) at 3:29
-    - i am [Simone](username) add activity [jogging](activity) in category [weekly](category) at 11:00
-    - i am [ferdinando1907](username), I want to add an activity at 11:00
-    - hi, i am [mattia21](username), I want to enter an activity to a list at 13:39
-    - hi, i am [alessia19_07](username) I want to insert an activity to [weekly](category) list at 21:10
-    - hi, i am [Giusy_5](username) and I want to add a new activity to [daily](category) list at 9:40
-    - hi, i am [camilla@2](username), I want to insert an activity to [commitments](category) list at 19:00
-    - hi, i am [antonio68](username) I want to enter the activity to [projects](category) list at 16:30
-    - hi, i am [mattia21](username) I want to put an activity to [monthly](category) list at 7:00
-    - hi, i am [ferdinando1907](username) and I want to add an activity to [quickly](category) list at 6:30
-    - hi, i am [mattia21](username) I want to add an activity to [weekly](category) list at 18:30
-    - hi, i am [alessia19_07](username), I want to create an activity to [daily](category) list at 17:30
-    - hi, i am [mattia21](username), and I want to insert an activity to [commitments](category) list at 22:20
-    - hi, i am [antonio68](username), I want to add an activity to [projects](category) list at 16:00
-    - hi, i am [camilla@2](username) I want to enter an activity to [monthly](category) list at 14:50
-    - hi, i am [Giusy_5](username) I want to insert an activity to [quickly](category) list at 3:29
-    - hi, i am [ferdinando1907](username) and I want to put an activity to my list at 12:37
-    - hi, i am [alessia19_07](username) I want to insert an activity to my list at 18:14
+    - hi, enter [run](activity)
+    - hi, insert [bed](activity)
+    - hi, put [stand_up](activity)
+    - hi, add [swimmming](activity)
+    - hi, put in [play](activity)
+    - hi, add new [jogging](activity)
+    - hi, enter [run](activity) in [daily](category)
+    - hi, in [daily](category) enter [run](activity) 
+    - hi, [personal](category) add [beautician](activity) 
+    - hi, put [bed](activity) in [projects](category)
+    - hi, insert [stand_up](activity) in [weekly](category)
+    - hi, add [swimmming](activity) in [monthly](category)
+    - hi, enter [play](activity) in [commitments](category)
+    - hi, put [jogging](activity) in [quickly](category)
+    - hi, insert activity [run](activity) in [weekly](category)
+    - hi, add activity [bed](activity) in [daily](category)
+    - hi, enter activity [stand_up](activity) in [commitments](category)
+    - hi, add new activity [study](activity) in [projects](category)
+    - hi, insert the activity [play](activity) in [monthly](category)
+    - hi, enter an activity [jogging](activity) in [quickly](category)
+    - hi, put [run](activity) in category [commitments](category)
+    - hi, add a [bed](activity) in category [weekly](category)
+    - hi, insert [stand_up](activity) in category [daily](category)
+    - hi, create [swimmming](activity) in category [quickly](category)
+    - hi, enter [play](activity) in category [projects](category)
+    - hi, put [jogging](activity) in the category [monthly](category)
+    - hi, add activity [run](activity) in category [monthly](category)
+    - hi, insert activity [bed](activity) in the category [quickly](category)
+    - hi, enter activity [stand_up](activity) in category [projects](category)
+    - hi, add activity [swimmming](activity) in category [commitments](category)
+    - hi, put activity [play](activity) in category [daily](category)
+    - hi, insert activity [jogging](activity) in category [weekly](category)
+    - hello, and I want to add an activity
+    - hello, I want to enter an activity to a list
+    - hello, and I want to insert an activity [run](activity) to [weekly](category) category
+    - hello, I want to put a new activity [swimmming](activity) in [daily](category) list
+    - hello, I want to add the activity [play](activity) to [commitments](category) list
+    - hello, I want to enter a new activity [stand_up](activity) to [projects](category) category
+    - hello, I want to put in an activity [jogging](activity) to [monthly](category) list
+    - hello, and I want to create the activity [shopping](activity) to [quickly](category) list
+    - hello, I want to add an activity [run](activity) to [weekly](category)
+    - hello, I want to insert an activity [study](activity) to [daily](category)
+    - hello, I want to insert an activity [payments](activity) to [commitments](category)
+    - hello, and I want to enter an activity [stand_up](activity) to [projects](category)
+    - hello, and I want to add an activity [jogging](activity) to [monthly](category)
+    - hello, I want to enter an activity [shopping](activity) to [quickly](category)
+    - hello, I want to put an activity to [weekly](category) list
+    - hello, I want to insert an activity to [daily](category) list
+    - hello, and I want to insert an activity to [commitments](category) list
+    - hello, I want to insert an activity to [projects](category) list
+    - hello, I want to add an activity to [monthly](category) list
+    - hello, I want to add an activity to [quickly](category) list
+    - hello, I want to enter an activity to [weekly](category) list
+    - I want to add an activity to [daily](category) list
+    - I want to insert an activity to [commitments](category) list
+    - and I want to put a new activity to [projects](category) list
+    - I want to add a activity to [monthly](category) list
+    - I want to enter an activity to [quickly](category) list
+    - and I want to insert an activity to my list
+    - I want to create an activity to my list
+    - add [run](activity) at 11:00
+    - add [bed](activity) at 13:00
+    - insert [stand_up](activity) at 9:30
+    - add [swimmming](activity) at 01:45
+    - , insert [play](activity) at 00:00
+    - enter [jogging](activity) at 3:00
+    - put [run](activity) in [daily](category) at 4:25
+    - put [bed](activity) in [projects](category) at 2:55
+    - insert [stand_up](activity) in [weekly](category) at 16:00
+    - add [swimmming](activity) in [monthly](category) at 20:00
+    - enter [play](activity) in [commitments](category) at 22:20
+    - put [jogging](activity) in [quickly](category) at 14:50
+    - insert activity [run](activity) in [weekly](category) at 19:41
+    - and add new activity [bed](activity) in [daily](category) at 12:35
+    -  enter the activity [stand_up](activity) in [commitments](category) at 17:30
+    - put activity [swimmming](activity) in [projects](category) at 18:30
+    - insert activity [play](activity) in [monthly](category) at 9:40
+    - put activity [jogging](activity) in [quickly](category) at 7:00
+    - add [run](activity) in category [commitments](category) at 6:30
+    - insert [bed](activity) in category [weekly](category) at 8:00
+    - enter [stand_up](activity) in category [daily](category) at 10:25
+    - and put activity [run](activity) in category [monthly](category) at 21:10
+    - add [swimmming](activity) in category [quickly](category) at 16:30
+    - insert [play](activity) in category [projects](category) at 19:00
+    - enter [jogging](activity) in category [monthly](category) at 20:30
+    - put activity [bed](activity) in category [quickly](category) at 9:40
+    - add activity [stand_up](activity) in category [projects](category) at 5:12
+    - insert activity [swimmming](activity) in category [commitments](category) at 13:39
+    - put activity [play](activity) in category [daily](category) at 3:29
+    - add activity [jogging](activity) in category [weekly](category) at 11:00
+    - I want to add an activity at 11:00
+    - hi, I want to enter an activity to a list at 13:39
+    - hi, I want to insert an activity to [weekly](category) list at 21:10
+    - hi, and I want to add a new activity to [daily](category) list at 9:40
+    - hi, I want to insert an activity to [commitments](category) list at 19:00
+    - hi, I want to enter the activity to [projects](category) list at 16:30
+    - hi, I want to put an activity to [monthly](category) list at 7:00
+    - hi, and I want to add an activity to [quickly](category) list at 6:30
+    - hi, I want to add an activity to [weekly](category) list at 18:30
+    - hi, I want to create an activity to [daily](category) list at 17:30
+    - hi, and I want to insert an activity to [commitments](category) list at 22:20
+    - hi, I want to add an activity to [projects](category) list at 16:00
+    - hi, I want to enter an activity to [monthly](category) list at 14:50
+    - hi, I want to insert an activity to [quickly](category) list at 3:29
+    - hi, and I want to put an activity to my list at 12:37
+    - hi, I want to insert an activity to my list at 18:14
 
     
 - intent: remove_item
@@ -746,98 +746,6 @@ nlu:
     - hello, I want to delete an activity to [quickly](category) list at 3:29
     - hello I want to remove an activity to my list at 12:37
     - hi I want to delete an activity to my list at 18:14
-    - hello, I'm [mattia99](username), remove [run](activity)
-    - hello, I'm [antonio68](username), delete [study](activity)
-    - hello, I'm [ferdinando1907](username), del [stand_up](activity)
-    - hello, I'm [alessia19_07](username), delete [swimmming](activity)
-    - hello, I'm [camilla@2](username), delete [play](activity)
-    - hello, I'm [Giusy_5](username), del [jogging](activity)
-    - hello, I am [Simone](username), remove [run](activity) in [daily](category)
-    - hello, I am [mattia99](username), delete [bed](activity) in [projects](category)
-    - hello, I am [ferdinando1907](username), cancel [stand_up](activity) in [weekly](category)
-    - hello, I am [camilla@2](username), del [swimmming](activity) in [monthly](category)
-    - hello, I am [alessia19_07](username), delete [play](activity) in [commitments](category)
-    - hello, I am [mattia99](username), remove [jogging](activity) in [quickly](category)
-    - hello, I am [ferdinando1907](username), del activity [run](activity) in [weekly](category)
-    - hello, I am [mattia99](username), delete activity [bed](activity) in [daily](category)
-    - hello, I am [Giusy_5](username), remove activity [stand_up](activity) in [commitments](category)
-    - hello, I am [alessia19_07](username), del activity [swimmming](activity) in [projects](category)
-    - hello, I am [ferdinando1907](username), delete activity [play](activity) in [monthly](category)
-    - hello, I am [Giusy_5](username), cancel activity [jogging](activity) in [quickly](category)
-    - hello, I am [camilla@2](username), delete [run](activity) in category [commitments](category)
-    - hello, I am [ferdinando1907](username), remove [bed](activity) in category [weekly](category)
-    - hello, I am [alessia19_07](username), delete [stand_up](activity) in category [daily](category)
-    - hello, I am [Giusy_5](username), del [swimmming](activity) in category [quickly](category)
-    - hello, I am [ferdinando1907](username), remove [play](activity) in category [projects](category)
-    - hello, I'm [mattia99](username), delete [jogging](activity) in category [monthly](category)
-    - hello, I'm [alessia19_07](username), del activity [run](activity) in category [monthly](category)
-    - hello, I'm [camilla@2](username), delete activity [bed](activity) in category [quickly](category)
-    - I'm [mattia99](username), del activity [stand_up](activity) in category [projects](category)
-    - I'm [Giusy_5](username), remove activity [swimmming](activity) in category [commitments](category)
-    - I'm [ferdinando1907](username), delete activity [play](activity) in category [daily](category)
-    - I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category)
-    - I'm [alessia19_07](username), I want to del an activity
-    - I'm [camilla@2](username), I want to delete an activity to a list
-    - I'm [ferdinando1907](username), I want to remove an activity to [weekly](category) list
-    - I'm [mattia99](username), I want to del an activity to [daily](category) list
-    - I'm [Giusy_5](username), I want to delete an activity to [commitments](category) list
-    - I am [camilla@2](username), I want to cancel an activity to [projects](category) list
-    - I am [alessia19_07](username), I want to delete an activity to [monthly](category) list
-    - I am [Giusy_5](username), I want to remove an activity to [quickly](category) list
-    - I am [mattia99](username), hi, I want to del an activity to [weekly](category) list
-    - I am [ferdinando1907](username), hi, I want to del an activity to [daily](category) list
-    - I am [alessia19_07](username), hi, I want to cancel an activity to [commitments](category) list
-    - I am [mattia99](username), hi, I want to delete an activity to [projects](category) list
-    - I am [Giusy_5](username), hello, I want to del an activity to [monthly](category) list
-    - I am [mattia99](username), hello, I want to remove an activity to [quickly](category) list
-    - I am [alessia19_07](username), hello I want to delete an activity to my list
-    - I am [camilla@2](username), hi I want to remove an activity to my list
-    - I am [Giusy_5](username), cancel [run](activity) at 11:00
-    - I am [ferdinando1907](username), delete [bed](activity) at 13:00
-    - I am [alessia19_07](username), del [stand_up](activity) at 9:30
-    - I am [Giusy_5](username), remove [swimmming](activity) at 01:45
-    - I'm [mattia99](username), delete [play](activity) at 00:00
-    - hi, I'm [alessia19_07](username), del [jogging](activity) at 3:00
-    - hi, I'm [ferdinando1907](username), delete [study](activity) in [daily](category) at 4:25
-    - hi, I'm [camilla@2](username), remove [bed](activity) in [projects](category) at 2:55
-    - hi, I'm [Giusy_5](username), cancel [stand_up](activity) in [weekly](category) at 16:00
-    - hi, I am [alessia19_07](username), remove [swimmming](activity) in [monthly](category) at 20:00
-    - hi, I'm [mattia99](username), remove [play](activity) in [commitments](category) at 22:20
-    - hi, I'm [mattia99](username), delete [jogging](activity) in [quickly](category) at 14:50
-    - hi, I'm [ferdinando1907](username), delete activity [run](activity) in [weekly](category) at 19:41
-    - hi, I'm [Giusy_5](username), del activity [bed](activity) in [daily](category) at 12:35
-    - hi, I'm [mattia99](username), cancel activity [stand_up](activity) in [commitments](category) at 17:30
-    - hi, I'm [alessia19_07](username), del activity [swimmming](activity) in [projects](category) at 18:30
-    - hi, I am [mattia99](username), delete activity [play](activity) in [monthly](category) at 9:40
-    - hi, I'm [mattia99](username), del activity [jogging](activity) in [quickly](category) at 7:00
-    - hi, I'm [Giusy_5](username), remove [run](activity) in category [commitments](category) at 6:30
-    - hi, I'm [alessia19_07](username), cancel [bed](activity) in category [weekly](category) at 8:00
-    - hi, I'm [ferdinando1907](username), delete [stand_up](activity) in category [daily](category) at 10:25
-    - hi, I am [alessia19_07](username), remove [swimmming](activity) in category [quickly](category) at 16:30
-    - hi, I'm [mattia99](username), delete [play](activity) in category [projects](category) at 19:00
-    - hi, I'm [Giusy_5](username), remove [jogging](activity) in category [monthly](category) at 20:30
-    - hi, I'm [ferdinando1907](username), delete activity [run](activity) in category [monthly](category) at 21:10
-    - hi, I'm [Giusy_5](username), cancel activity [bed](activity) in category [quickly](category) at 9:40
-    - hi, I am [alessia19_07](username), del activity [stand_up](activity) in category [projects](category) at 5:12
-    - hello, I'm [mattia99](username), cancel activity [swimmming](activity) in category [commitments](category) at 13:39
-    - hello, I'm [alessia19_07](username), remove activity [play](activity) in category [daily](category) at 13:29
-    - hello, I'm [mattia99](username), remove activity [jogging](activity) in category [weekly](category) at 11:00
-    - I'm [Giusy_5](username), I want to delete an activity at 11:00
-    - I'm [camilla@2](username), I want to del an activity to a list at 13:39
-    - I'm [ferdinando1907](username), I want to cancel an activity to [weekly](category) list at 21:10
-    - I'm [mattia99](username), I want to remove an activity to [daily](category) list at 9:40
-    - I am [mattia99](username) want to delete an activity to [commitments](category) list at 19:00
-    - I'm [alessia19_07](username) want to remove an activity to [projects](category) list at 16:30
-    - I'm [Giusy_5](username) want to del an activity to [monthly](category) list at 7:00
-    - I'm [alessia19_07](username) want to cancel an activity to [quickly](category) list at 6:30
-    - hi, I'm [mattia99](username) want to delete an activity to [weekly](category) list at 18:30
-    - hi, I'm [camilla@2](username) want to remove an activity to [daily](category) list at 17:30
-    - hi, I am [ferdinando1907](username) want to delete an activity to [commitments](category) list at 22:20
-    - hi, I'm [mattia99](username) want to cancel an activity to [projects](category) list at 16:00
-    - hello, I'm [mattia99](username) want to remove an activity to [monthly](category) list at 14:50
-    - I'm [mattia99](username) want to delete an activity to [quickly](category) list at 3:29
-    - hello I am [alessia19_07](username) want to del an activity to my list at 12:37
-    - hi I'm [alessia19_07](username) want to delete an activity to my list at 18:14
 
 - intent: set_status_activity
   examples: |
@@ -962,6 +870,129 @@ nlu:
     - undo [complete](activity_status) activity [swimmming](activity) in [projects](category)
     - undo [complete](activity_status) activity [play](activity) in [monthly](category)
     
+- intent: presentation+set_status_activity
+  examples: |
+    - i am [mattia21](username) , set activity [complete](activity_status) 
+    - Hi, i'm [f5rdinOndo1907](username) set activity [complete](activity_status)
+    - i'm [ferdinando1907](username) , set up [complete](activity_status) [run](activity)
+    - i'm [Giusy_5](username) , set done [bed](activity)
+    - I'm [ferdinando1907](username) , set [complete](activity_status) [stand_up](activity)
+    - i am [mattia21](username) , set up [completed](activity_status) [swimmming](activity)
+    - i'm [Giusy_5](username) , set [complete](activity_status) [play](activity)
+    - I'm [alessia19_07](username) , set done [jogging](activity)
+    - I am [mattia21](username) , set [complete](activity_status) [run](activity) in [daily](category)
+    - i am [camilla@2](username) and set [completed](activity_status) [bed](activity) in [projects](category)
+    - i'm [nando](username) set up [complete](activity_status) [stand_up](activity) in [weekly](category)
+    - i am [Al3ssia53_07](username) set [complete](activity_status) [swimmming](activity) in [monthly](category)
+    - I'm [alessia19_07](username) , set done [play](activity) in [commitments](category)
+    - i am [Al3ssia53_07](username) set [complete](activity_status) [jogging](activity) in [quickly](category)
+    - I am [mattia21](username) , set [completed](activity_status) activity [run](activity) in [weekly](category)
+    - I'm [nando](username) , set [complete](activity_status) activity [bed](activity) in [daily](category)
+    - I am [mattia21](username) set [completed](activity_status) activity [study](activity) in [commitments](category)
+    - i am [Al3ssia53_07](username) set done activity [swimmming](activity) in [projects](category)
+    - I'm [alessia19_07](username) set [complete](activity_status) activity [play](activity) in [monthly](category)
+    - I am [Al3ssia53_07](username) , set [completed](activity_status) activity [jogging](activity) in [quickly](category)
+    - I am [mattia21](username) set done [run](activity) in category [commitments](category)
+    - i'm [ferdinando1907](username) , set [complete](activity_status) [bed](activity) in category [weekly](category)
+    - I'm [alessia19_07](username) set up [completed](activity_status) [stand_up](activity) in category [daily](category)
+    - i'm [ferdinando1907](username) , set [complete](activity_status) [swimmming](activity) in category [quickly](category)
+    - I am [Al3ssia53_07](username) , set [completed](activity_status) [play](activity) in category [projects](category)
+    - I am [mattia21](username) , set done [jogging](activity) in category [monthly](category)
+    - i'm [f5rdinOndo1907](username) set [complete](activity_status) activity [run](activity) in category [monthly](category)
+    - I'm [Giusy_5](username) , set [complete](activity_status) activity [bed](activity) in category [quickly](category)
+    - i'm [f5rdinOndo1907](username) , set done activity [stand_up](activity) in category [projects](category)
+    - I'm [ferdinando1907](username) , set [completed](activity_status) activity [swimmming](activity) in category [commitments](category)
+    - i am [mattia21](username) , set [complete](activity_status) activity [play](activity) in category [daily](category)
+    - I'm [f5rdinOndo1907](username) set [completed](activity_status) activity [jogging](activity) in category [weekly](category)
+    - i am [camilla@2](username) and I want to set [complete](activity_status) an activity 
+    - I am [mattia21](username) and I want to set done an activity in a list 
+    - i'm [alessia19_07](username) and I want to set [completed](activity_status) an activity in [weekly](category) list 
+    - i'm [f5rdinOndo1907](username) I want to set [complete](activity_status) an activity in [daily](category) list
+    - i'm [nando](username) , I want to set done an activity in [commitments](category) list 
+    - I'm [ferdinando1907](username) , I want to set [complete](activity_status) an activity in [projects](category) list 
+    - I am [mattia21](username) and I want to set [complete](activity_status) an activity in [monthly](category) list
+    - I am [mattia21](username) , I want to set done an activity in [quickly](category) list
+    - hi, I am [Al3ssia53_07](username) and I want to set [completed](activity_status) an activity in [weekly](category) list 
+    - hi, i am [camilla@2](username) and I want to set [complete](activity_status) an activity in [daily](category) list 
+    - hi, I am [mattia21](username) , I want to set done an activity in [commitments](category) list 
+    - hi, i'm [alessia19_07](username) and I want to set [completed](activity_status) an activity in [projects](category) list 
+    - hello, i'm [f5rdinOndo1907](username) and I want to set done an activity in [monthly](category) list 
+    - I'm [Giusy_5](username) , hello, I want to set [complete](activity_status) an activity in [quickly](category) list
+    - hello i am [mattia21](username) , I want to set [complete](activity_status) an activity in my list 
+    - I am [camilla@2](username) hi I want to set up [complete](activity_status) an activity in my list 
+    - Hi i'm [nando](username) and I want to set done all activity in [monthly](category) list
+    - i am [Al3ssia53_07](username) and I have [complete](activity_status) activity [swimming](activity) in category [gym](category)
+    - I'm [Giusy_5](username) , I have done activity [run](activity) in category [commitments](category)
+    - I am [Al3ssia53_07](username) and I have [completed](activity_status) activity [play](activity) in category [projects](category)
+    - I am [mattia21](username) , I have [complete](activity_status) activity [stand_up](activity) in category [daily](category)
+    - I am [camilla@2](username) and I have done activity [jogging](activity) in category [gym](category)
+    - I'm [antonio68](username) and set activity [incomplete](activity_status) 
+    - Hi, I'm [Giusy_5](username) set activity [incomplete](activity_status)
+    - I am [camilla@2](username) set [incomplete](activity_status) [run](activity)
+    - I'm [ferdinando1907](username) , set [incomplete](activity_status) [bed](activity)
+    - I am [mattia21](username) set undone [stand_up](activity)
+    - i'm [Giusy_5](username) set [incomplete](activity_status) [swimmming](activity)
+    - i'm [alessia19_07](username) set [incomplete](activity_status) [play](activity)
+    - I'm [antonio68](username) and set undone [jogging](activity)
+    - I'm [nando](username) , set [incomplete](activity_status) [run](activity) in [daily](category)
+    - I'm [antonio68](username) and set [incomplete](activity_status) [bed](activity) in [projects](category)
+    - I am [mattia21](username) set [incomplete](activity_status) [stand_up](activity) in [weekly](category)
+    - i am [camilla@2](username) set undone [swimmming](activity) in [monthly](category)
+    - I am [mattia21](username) set [incomplete](activity_status) [play](activity) in [commitments](category)
+    - I'm [ferdinando1907](username) , set [incomplete](activity_status) [jogging](activity) in [quickly](category)
+    - i'm [nando](username) set [incomplete](activity_status) activity [run](activity) in [weekly](category)
+    - i'm [antonio68](username) and set [incomplete](activity_status) activity [study](activity) in [daily](category)
+    - I am [mattia21](username) , set undone activity [stand_up](activity) in [commitments](category)
+    - i'm [nando](username) set [incomplete](activity_status) activity [swimmming](activity) in [projects](category)
+    - I'm [Giusy_5](username) , set [incomplete](activity_status) activity [play](activity) in [monthly](category)
+    - i'm [alessia19_07](username) , set [incomplete](activity_status) activity [jogging](activity) in [quickly](category)
+    - i'm [alessia19_07](username) set [incomplete](activity_status) [run](activity) in category [commitments](category)
+    - I am [camilla@2](username) set undone [bed](activity) in category [weekly](category)
+    - I'm [Giusy_5](username) set [incomplete](activity_status) [stand_up](activity) in category [daily](category)
+    - I'm [Giusy_5](username) , set [incomplete](activity_status) [swimmming](activity) in category [quickly](category)
+    - i am [camilla@2](username) set [incomplete](activity_status) [play](activity) in category [projects](category)
+    - i'm [antonio68](username) set [incomplete](activity_status) [jogging](activity) in category [monthly](category)
+    - I'm [ferdinando1907](username) , set [incomplete](activity_status) activity [run](activity) in category [monthly](category)
+    - I'm [Giusy_5](username) , set [incomplete](activity_status) activity [bed](activity) in category [quickly](category)
+    - i'm [f5rdinOndo1907](username) set [incomplete](activity_status) activity [stand_up](activity) in category [projects](category)
+    - I am [mattia21](username) , set [incomplete](activity_status) activity [swimmming](activity) in category [commitments](category)
+    - i'm [alessia19_07](username) set undone activity [play](activity) in category [daily](category)
+    - I'm [Giusy_5](username) , set [incomplete](activity_status) activity [jogging](activity) in category [weekly](category)
+    - i am [camilla@2](username) I want to set [incomplete](activity_status) an activity 
+    - i'm [antonio68](username) and I want to set [incomplete](activity_status) an activity in a list 
+    - I'm [nando](username) , I want to set [incomplete](activity_status) an activity in [weekly](category) list 
+    - I am [camilla@2](username) , I want to set [incomplete](activity_status) an activity in [daily](category) list
+    - I'm [ferdinando1907](username) , I want to set undone an activity in [study](category) list 
+    - I'm [Giusy_5](username) , I want to set [incomplete](activity_status) an activity in [projects](category) list 
+    - i'm [alessia19_07](username) I want to set [incomplete](activity_status) an activity in [monthly](category) list
+    - i'm [f5rdinOndo1907](username) I want to set [incomplete](activity_status) an activity in [quickly](category) list
+    - I am [mattia21](username) , hi, I want to set [incomplete](activity_status) an activity in [weekly](category) list 
+    - hi, i'm [f5rdinOndo1907](username) and I want to set undone an activity in [daily](category) list 
+    - i'm [alessia19_07](username) hi, I want to set undone an activity in [commitments](category) list 
+    - hi, I'm [Giusy_5](username) and I want to set [incomplete](activity_status) an activity in [projects](category) list 
+    - hello, i'm [antonio68](username) and I want to set [incomplete](activity_status) an activity in [monthly](category) list 
+    - hello, i'm [antonio68](username) and I want to set [incomplete](activity_status) an activity in [quickly](category) list
+    - i am [camilla@2](username) hello I want to set [incomplete](activity_status) an activity in my list 
+    - hi I am [mattia21](username) and I want to set [incomplete](activity_status) an activity in my list 
+    - Hi I'm [nando](username) , I want to set undone all activity in [monthly](category) list
+    - i'm [antonio68](username) undo [complete](activity_status) [run](activity)
+    - I'm [ferdinando1907](username) , undo [complete](activity_status) [bed](activity)
+    - I am [camilla@2](username) , undo [complete](activity_status) [stand_up](activity)
+    - i'm [antonio68](username) , undo [complete](activity_status) [swimmming](activity)
+    - i'm [alessia19_07](username) undo [complete](activity_status) [play](activity)
+    - I am [mattia21](username) and undo [complete](activity_status) [jogging](activity)
+    - I'm [ferdinando1907](username) , undo [complete](activity_status) [run](activity) in [daily](category)
+    - i'm [antonio68](username) undo [complete](activity_status) [bed](activity) in [projects](category)
+    - I'm [Giusy_5](username) undo [complete](activity_status) [stand_up](activity) in [weekly](category)
+    - I am [mattia21](username) , undo [complete](activity_status) [swimmming](activity) in [monthly](category)
+    - i'm [antonio68](username) undo [complete](activity_status) [play](activity) in [commitments](category)
+    - I'm [nando](username) , undo [complete](activity_status) [study](activity) in [quickly](category)
+    - i'm [alessia19_07](username) undo [complete](activity_status) activity [run](activity) in [weekly](category)
+    - i'm [antonio68](username) undo [complete](activity_status) activity [bed](activity) in [daily](category)
+    - I'm [Giusy_5](username) , undo [complete](activity_status) activity [stand_up](activity) in [commitments](category)
+    - I'm [ferdinando1907](username) , undo [complete](activity_status) activity [swimmming](activity) in [projects](category)
+    - i am [camilla@2](username) undo [complete](activity_status) activity [play](activity) in [monthly](category)
+
 - intent: add_category
   examples: |
     - add the category [study](category)
@@ -1111,6 +1142,28 @@ nlu:
     - show [completed](activity_status) activities
     - show [completed](activity_status) activity
 
+- intent: presentation+view_activities
+  examples: |
+    - i'm [Giusy_5](username) and I want to see all my activities
+    - I'm [Simone](username) , want to see all my [uncompleted](activity_status) activities
+    - I'm [antonio68](username) ,I want to see all my [[completed](activity_status) activities
+    - i am [alessia19_07](username) , show my [undeveloped](activity_status) activities
+    - i am [mattia21](username) Show my [done](activity_status) activities
+    - I'm [antonio68](username) , Which are my activities?
+    - I'm [Simone](username) which are [concluded](activity_status) my activities?
+    - i am [mattia21](username) what are my [uncompleted](activity_status) activities?
+    - i am [mattia21](username) what are my activities?
+    - i'm [camilla@2](username) What are my [finished](activity_status) activities?
+    - I am [mattia21](username) , What are my [unexecuted](activity_status) activities?
+    - i am [alessia19_07](username) , show activity in [gym](category) category
+    - I'm [antonio68](username) show all my [developed](activity_status) activity in [monthly](category) category
+    - i'm [Giusy_5](username) show my [undone](activity_status) activity in [commitments](category) category
+    - I'm [Giusy_5](username) show [executed](activity_status) activity in [work](category) category
+    - i'm [camilla@2](username) show activity in [projects](category) category
+    - I am [alessia19_07](username) , show [unfinished](activity_status) activity in [work](category) category
+    - I'm [Simone](username) show [completed](activity_status) activities
+    - i'm [Giusy_5](username) show [completed](activity_status) activity
+
 - intent: clean_activities
   examples: |
     - clean all my completed activities 
@@ -1249,6 +1302,28 @@ nlu:
     - what are my categories?
     - What are my categories?
 
+- intent: presentation+view_categories
+  examples: |
+    - i'm [Giusy_5](username) and I want to see all my categories
+    - I'm [Simone](username) , Which are my categories?
+    - i'm [Giusy_5](username) Show my categories
+    - i am [mattia21](username) Which are my categories?
+    - i'm [camilla@2](username) which are my categories?
+    - I'm [antonio68](username) , which are my categories?
+    - I'm [Simone](username) , I want to see all my categories
+    - i am [alessia19_07](username) , what are my categories?
+    - I'm [antonio68](username) What are my categories?
+    - I'm [antonio68](username) show all my categories
+    - i am [alessia19_07](username) , what are my categories?
+    - i'm [Simone](username) , What are my categories?
+    - i'm [camilla@2](username) show my categories
+    - I am [mattia21](username) show all my categories
+    - i'm [antonio68](username) what are my categories?
+    - i'm [antonio68](username) show my categories
+    - i am [alessia19_07](username) , Show all my categories
+    - I'm [antonio68](username) Show my categories
+    - i am [mattia21](username) Show all my categories
+
 - intent: remind_me_of
   examples: |
     - remind me to [shopping](activity) into the category [household](category) at 8:30
@@ -1258,13 +1333,27 @@ nlu:
     - remind me the [exam](activity) on tomorrow morning
     - don't forget of [shopping](activity) at 19:00
     - I want to set a reminder 
-    - I want you help me to remind
-    - my username is [luigi](username), please remind me of [shopping](activity) tomorrow evening
-    - I'm [Salvo](username), please help me to don't forget the activity [project](activity) in the category [work](category) of next Friday
+    - want you help me to remind
     - I can't forget to do the activity [exam](activity) of the category [university](category) of next Monday
     - I want to set a reminder for the actvivity [hairdresser](activity)
     - remind me the [dinner](activity)
-    
+
+- intent: presentation+remind_me_of
+  examples: |
+    - i am [mattia21](username) emind me to [shopping](activity) into the category [household](category) at 8:30
+    - i'm [camilla@2](username) set a reminder for the activiy [call](activity) into the category [relations](category) of next morning
+    - I'm [Simone](username) , help me to not forget the activity [study](activity) in the category [university](category) for Tomorrow
+    - i am [mattia21](username) help me to remind my [birtday](activity) on 12/18/2022
+    - i'm [camilla@2](username) remind me the [exam](activity) on tomorrow morning
+    - i am [alessia19_07](username) , don't forget of [shopping](activity) at 19:00
+    - I'm [Simone](username) , I want to set a reminder 
+    - I'm [Simone](username) , I want you help me to remind
+    - my username is [luigi](username) , please remind me of [shopping](activity) tomorrow evening
+    - I'm [Salvo](username) , please help me to don't forget the activity [project](activity) in the category [work](category) of next Friday
+    - i'm [camilla@2](username) I can't forget to do the activity [exam](activity) of the category [university](category) of next Monday
+    - i'm [camilla@2](username) I want to set a reminder for the actvivity [hairdresser](activity)
+    - i am [alessia19_07](username) , remind me the [dinner](activity)
+
 - synonym: add
   examples: |
     - insert

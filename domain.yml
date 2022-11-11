@@ -24,10 +24,12 @@ intents:
   - modify_activity_category
   - modify_activity_deadline
   - modify_activity_name
-  - modify_activity_name+modify_activity_deadline
-  - modify_activity_name+modify_activity_category
-  - modify_activity_category+modify_activity_deadline
+  - presentation+remove_item
   - remind_me_of
+  - presentation+remind_me_of
+  - presentation+view_categories
+  - presentation+view_activities
+  - presentation+set_status_activity
 
 entities:
   - activity
