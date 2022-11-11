@@ -67,7 +67,9 @@ actions:
   - action_reset_slot
   - action_reminder_item
   - action_ask_category_old
+  - action_ask_category_new
   - action_ask_activity_old
+  - action_ask_activity_new
   - my_action_fallback
 
 
@@ -75,10 +77,16 @@ slots:
   activity_old:
     type: text
     influence_conversation: false
+  activity_new:
+    type: text
+    influence_conversation: false
   activity:
     type: text
     influence_conversation: false
   category_old:
+    type: text
+    influence_conversation: false
+  category_new:
     type: text
     influence_conversation: false
   category:
@@ -183,13 +191,15 @@ forms:
       username:
         - type: from_entity
           entity: username
-      category:
-        - type: from_entity
-          entity: category   
       category_old:
         - type: from_entity
           entity: category
           role: old
+      category_new:
+        - type: from_entity
+          entity: category  
+          role: new 
+      
 
   modify_activity_category_form:
     required_slots:
@@ -199,13 +209,15 @@ forms:
       activity:
         - type: from_entity
           entity: activity
-      category:
-        - type: from_entity
-          entity: category
       category_old:
         - type: from_entity
           entity: category
           role: old
+      category_new:
+        - type: from_entity
+          entity: category
+          role: new
+      
 
   modify_activity_name_form:
     required_slots:
@@ -215,14 +227,15 @@ forms:
       category:
         - type: from_entity
           entity: category
-      activity:
-        - type: from_entity
-          entity: activity
       activity_old:
         - type: from_entity
           entity: activity
           role: old
-
+      activity_new:
+        - type: from_entity
+          entity: activity
+          role: new
+      
   modify_activity_deadline_form:
     required_slots:
       username:

@@ -268,7 +268,7 @@ class actionModifyCategory(Action):
 
         username = tracker.get_slot("username")
         category_old = tracker.get_slot("category_old")
-        category_new = tracker.get_slot("category")
+        category_new = tracker.get_slot("category_new")
         
         if(Database.doesUserExists(username)):
             if (Database.doesPossessionExists(username,category_new) == False):
@@ -282,8 +282,8 @@ class actionModifyCategory(Action):
                 dispatcher.utter_message(text=f"Ops! {username} the {category_new} already exists!") 
         else:
             dispatcher.utter_message(text=f"This username does not exists!") 
-            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("category", None)]
-        return [SlotSet("category_old", None),SlotSet("category", None)]
+            return [SlotSet("username",None),SlotSet("category_old", None),SlotSet("category_new", None)]
+        return [SlotSet("category_old", None),SlotSet("category_new", None)]
 
 class actionModifyActivity(Action):
     def name(self) -> Text:
@@ -437,11 +437,31 @@ class actionAskCategoryOld(Action):
 
         category_old = tracker.get_slot("category_old")
         category = tracker.get_slot("category")
-        if(category_old == None):
-            dispatcher.utter_message(text=f"Please insert the category new ")
-            return[SlotSet("category_old",category),SlotSet("category",None)]    
-        return []
+        if(category_old == None and category == None):
+            dispatcher.utter_message(text=f"Please insert the category to be modified")
+            return[SlotSet("requested_slot","category")]
+        else:
+            dispatcher.utter_message(text=f"Please insert the category new")
+            return[SlotSet("category_old",category),SlotSet("category",None),SlotSet("category_new",None),SlotSet("requested_slot","category")]    
+        
 
+
+class actionAskCategoryNew(Action):
+    def name(self) -> Text:
+        return "action_ask_category_new"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        category_new = tracker.get_slot("category_new")
+        category = tracker.get_slot("category")
+        if(category_new == None and category == None):
+            dispatcher.utter_message(text=f"Please insert the category new")
+            return[SlotSet("requested_slot","category")]
+        else:
+            return[SlotSet("category_new",category),SlotSet("category",None),SlotSet("requested_slot",None)]    
+        
 
 class actionAskActivityOld(Action):
     def name(self) -> Text:
@@ -453,10 +473,31 @@ class actionAskActivityOld(Action):
 
         activity_old = tracker.get_slot("activity_old")
         activity = tracker.get_slot("activity")
-        if(activity_old == None):
+        if(activity_old == None and activity == None):
+            dispatcher.utter_message(text=f"Please insert the activity to be modified")
+            return[SlotSet("requested_slot","activity")]
+        else:
             dispatcher.utter_message(text=f"Please insert the activity new")
-            return[SlotSet("activity_old",activity),SlotSet("activity",None)]    
-        return []
+            return[SlotSet("activity_old",activity),SlotSet("activity",None),SlotSet("activity_new",None),SlotSet("requested_slot","activity")]    
+
+class actionAskActivityNew(Action):
+    def name(self) -> Text:
+        return "action_ask_activity_new"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        activity_new = tracker.get_slot("activity_new")
+        activity = tracker.get_slot("activity")
+        if(activity_new == None and activity == None):
+            dispatcher.utter_message(text=f"Please insert the activity new")
+            return[SlotSet("requested_slot","activity")]
+        else:
+            return[SlotSet("activity_new",activity),SlotSet("activity",None),SlotSet("requested_slot",None)]    
+        
+
+
 
 class actionDefaultFallBack(Action):
     def name(self) -> Text:
@@ -474,26 +515,26 @@ class actionDefaultFallBack(Action):
         SlotSet("time",None),
         SlotSet("activity_status",None)]
 
-class ValidateModifyCategoryForm(FormValidationAction):
-    def name(self) -> Text:
-        return "validate_modify_category_form"
+# class ValidateModifyCategoryForm(FormValidationAction):
+#     def name(self) -> Text:
+#         return "validate_modify_category_form"
 
-    def validate_category_old(
-        self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> Dict[Text, Any]:
+#     def validate_category_old(
+#         self,
+#         value: Text,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: DomainDict,
+#     ) -> Dict[Text, Any]:
 
-        dispatcher.utter_message(text=f"Alfredo")
+#         dispatcher.utter_message(text=f"Alfredo")
 
-    def validate_category(
-        self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> Dict[Text, Any]:
+#     def validate_category(
+#         self,
+#         value: Text,
+#         dispatcher: CollectingDispatcher,
+#         tracker: Tracker,
+#         domain: DomainDict,
+#     ) -> Dict[Text, Any]:
 
-        dispatcher.utter_message(text=f"Mario")
+#         dispatcher.utter_message(text=f"Mario")
